@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const models = require("../models");
 // récupérer l'ensemble des brands OK
 const getCities = (req, res) => {
@@ -141,6 +142,46 @@ const getCitiesByDep = (req, res) => {
       res.sendStatus(500);
     });
 };
+const getCitiesByCode = (req, res) => {
+  const codeId = req.params.code_id;
+  console.log("###codeId",codeId, typeof(codeId));
+  if (!codeId) {
+    return res.status(400).send("code_id is required");
+  }
+  models.cities
+    .findCitiesByCode(codeId)
+    .then(([result]) => {
+      if (result.length) {
+        res.status(200).json(result);
+      } else {
+        res.sendStatus(404);
+      }
+    })
+    .catch((err) => {
+      console.error(err.message);
+      res.sendStatus(500);
+    });
+};
+const getDatasByCity = (req, res) => {
+  const cityName = req.params.city_name;
+  console.log("###cityName",cityName, typeof(cityName));
+  if (!cityName) {
+    return res.status(400).send("city_name is required");
+  }
+  models.cities
+    .findDatasByCity(cityName)
+    .then(([result]) => {
+      if (result.length) {
+        res.status(200).json(result);
+      } else {
+        res.sendStatus(404);
+      }
+    })
+    .catch((err) => {
+      console.error(err.message);
+      res.sendStatus(500);
+    });
+};
 module.exports = {
   getCities,
   getCityById,
@@ -149,5 +190,7 @@ module.exports = {
   deleteCity,
   getDepartements,
   getRegions,
-  getCitiesByDep
+  getCitiesByDep,
+  getCitiesByCode,
+  getDatasByCity
 };

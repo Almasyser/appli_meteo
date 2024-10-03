@@ -4,9 +4,7 @@ import "./coordonnees.css";
 import { PropTypes } from 'prop-types';
 function Coordonnees (props){
   // eslint-disable-next-line react/prop-types
-  const { setCityDatas, cityDatas, setSearchModal } = props;
-  console.log("##cityDatas",cityDatas);
-  
+  const { setCityDatas, setSearchModal } = props;
   const [searchName, setSearchName]=useState("");
   const [searchDep, setSearchDep]=useState("");
   const [searchCP, setSearchCP] = useState("");

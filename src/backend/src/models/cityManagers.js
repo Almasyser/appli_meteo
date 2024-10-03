@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const AbstractManager = require('./AbstractManager');
 class cityManagers extends AbstractManager{
   constructor(){
@@ -21,7 +22,14 @@ class cityManagers extends AbstractManager{
     return this.pool.query(`select distinct region_name from  ${this.table}`);
   }
   findCitiesByDep(depId){
-    return this.pool.query(`select label, zip_code from ${this.table} where department_number=?;`,[depId]);
+    return this.pool.query(`select city_code, zip_code from ${this.table} where department_number=? order by zip_code;`,[depId]);
+  }
+  findCitiesByCode(codeId){
+    return this.pool.query(`select city_code, zip_code from ${this.table} where zip_code=? order by city_code;`,[codeId]);
+  }
+  findDatasByCity(cityName){
+    return this.pool.query(`select city_code, zip_code,latitude, longitude, department_name, department_number, region_name from ${this.table} where city_code=? order by city_code;`,[cityName]);
   }
 }
+
 module.exports = cityManagers;
