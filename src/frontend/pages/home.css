@@ -1,0 +1,26 @@
+* {
+  color: aquamarine;
+}
+
+.data-container {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.data-box {
+  background-color: #444444;
+  border: 1px solid #545454;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  min-width: 4rem;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.data-box p {
+  text-align: center;
+  padding: 0 1rem 0 1rem;
+  margin: 0.5rem 0 0.25rem 0;
+}/*# sourceMappingURL=home.css.map */

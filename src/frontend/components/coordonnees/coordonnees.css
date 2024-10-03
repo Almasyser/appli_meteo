@@ -1,0 +1,30 @@
+* {
+  font-size: 1rem;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  height: 19px;
+}
+.searchBar input {
+  width: 149px;
+}
+
+.label {
+  width: 149px;
+  height: 23px;
+  line-height: 19px;
+  border: 1px solid rgb(160, 160, 160);
+  color: rgb(160, 160, 160);
+  padding-left: 0.5rem;
+}
+
+.search-result {
+  display: flex;
+  justify-content: left;
+}
+.search-result div {
+  width: 158px;
+  text-align: center;
+}/*# sourceMappingURL=coordonnees.css.map */
