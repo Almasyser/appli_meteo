@@ -7,21 +7,14 @@ import Coordonnees from "../components/coordonnees/Coordonnees";
 function Home() {
   const [searchModal, setSearchModal] = useState(false);
   const [cityDatas, setCityDatas] = useState();
-
-  //    lat: "47.368383721",
-  // long: "16.871414913"
-  console.log("-----",cityDatas);
   const [data_keys, setData_keys] = useState()
   const [data, setData] = useState();
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${cityDatas?.lat}&longitude=${cityDatas?.long}&hourly=temperature_2m,precipitation,rain&timezone=GMT&forecast_days=1&models=meteofrance_seamless`;
- console.log("url---",url);
- 
-  // const [temperature, setTemperature] = useState();
+  // n'executer que si cityDatas est valide.REACT_PORT
   const handleClick = async()=>{
       try{
         const res = await axios.get(url);
         const newReponse = res.data;
-        // console.log("newReponse",newReponse);
         if (newReponse) {
           setData(newReponse);
           setData_keys(newReponse.hourly? Object.keys(newReponse.hourly):[]);
@@ -30,14 +23,13 @@ function Home() {
         console.error(error);
       }
     }
-
+    // return <coordonnees> dans cityDatas
     return(
       <>
         <h3>Page home</h3>
         <button type="button" onClick={()=>setSearchModal(true)}>choisir</button>
         {searchModal && searchModal? <Coordonnees setCityDatas={setCityDatas} setSearchModal={setSearchModal}/>:null}
         <button type="button" onClick={handleClick}>peupler</button>
-        {/* <Coordonnees setCityDatas={setCityDatas}/> */}
         {data?
         <section>
           <h1>Latitude {data.latitude}</h1>
@@ -65,5 +57,5 @@ function Home() {
     cityContext: PropTypes.any
     
   }
-
 export default Home;
+// completer le form avec les city, departement... issus de cityDatas.
