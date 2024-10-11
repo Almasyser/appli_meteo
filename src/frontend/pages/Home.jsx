@@ -1,61 +1,68 @@
 import { useState } from "react";
 import { PropTypes } from 'prop-types';
-import axios from "axios";
 import "./home.css";
 import Coordonnees from "../components/coordonnees/Coordonnees";
+import Fetch_api from "../components/fetch_api/Fetch_api";
 // import { fetchWeatherApi } from 'openmeteo';
 function Home() {
-  const [searchModal, setSearchModal] = useState(false);
-  const [cityDatas, setCityDatas] = useState();
-  const [data_keys, setData_keys] = useState()
-  const [data, setData] = useState();
-  const url = `https://api.open-meteo.com/v1/forecast?latitude=${cityDatas?.lat}&longitude=${cityDatas?.long}&hourly=temperature_2m,precipitation,rain&timezone=GMT&forecast_days=1&models=meteofrance_seamless`;
-  // n'executer que si cityDatas est valide.REACT_PORT
-  const handleClick = async()=>{
-      try{
-        const res = await axios.get(url);
-        const newReponse = res.data;
-        if (newReponse) {
-          setData(newReponse);
-          setData_keys(newReponse.hourly? Object.keys(newReponse.hourly):[]);
-        }}
-        catch(error) {
-        console.error(error);
+  const [searchModal, setSearchModal] = useState(true);
+  const [meteoData, setMeteoData ] = useState();
+  const [meteoData_keys, setMeteoData_keys] = useState();
+  const [cityDatas, setCityDatas] = useState({
+    latitude: "",
+    longitude: "",
+    city_code:"",
+    zip_code: "",
+    department_name: "",
+    department_number: "",
+    region_name:""
+  });
+console.log(meteoData_keys);
+
+  return(
+    <section className="container">
+      {!searchModal && 
+        <button type="button" onClick={()=>setSearchModal(true)}>Changer la ville</button>
       }
-    }
-    // return <coordonnees> dans cityDatas
-    return(
-      <>
-        <h3>Page home</h3>
-        <button type="button" onClick={()=>setSearchModal(true)}>choisir</button>
-        {searchModal && searchModal? <Coordonnees setCityDatas={setCityDatas} setSearchModal={setSearchModal}/>:null}
-        <button type="button" onClick={handleClick}>peupler</button>
-        {data?
-        <section>
-          <h1>Latitude {data.latitude}</h1>
-          <h1>Longitude {data.longitude}</h1>
-          <h1>Temps ref {data.timezone}</h1>
-          <section className="data-container">
-            {data_keys && data_keys.map((el_key,index)=>{
-              return(
-                <div className="data-box" key={index}>
-                  <p>{el_key}</p>
-                  {data.hourly[el_key]? data.hourly[el_key].map((el)=>{
-                    return(
-                      <p key={el.time}>{el} {data.hourly_units[el_key]}</p>
-                    )
-                  }):null}
-                </div>
-              )})}
-          </section>
-        </section>
-        :null }
-      </>
-    )
-  }
-  Home.propType = {
-    cityContext: PropTypes.any
-    
-  }
+      {searchModal && <Coordonnees setCityDatas={setCityDatas} setSearchModal={setSearchModal}/>}
+      <div className="box-container">
+        <p>cité: {cityDatas.city_code}</p>
+        <p>code postal: {cityDatas.zip_code}</p>
+        <span className="dep-box">
+          <p>numéro: {cityDatas.department_number}</p>
+          <p>département: {cityDatas.department_name}</p>
+        </span>
+        <p>région: {cityDatas.region_name}</p>
+        <p>latitude: {cityDatas.latitude}</p>
+        <p>longitude: {cityDatas.longitude}</p>
+      </div>
+      {cityDatas? 
+        <Fetch_api lat={cityDatas.latitude} long={cityDatas.longitude} setMeteoData={setMeteoData} setMeteoData_keys={setMeteoData_keys} />:null
+      }
+      <span className="meteo-box">
+        <table>
+          <thead>
+            <tr className="titles">
+              <th>Heure</th>
+              <th>Température</th>
+              <th>Précipitation</th>
+              <th>Pluie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="lines">{meteoData && meteoData.hourly.time.map((el,index)=> <td key={index}>{el}</td>)}</tr>
+            <tr className="lines">{meteoData && meteoData.hourly.temperature_2m.map((el,index)=> <td key={index}>{el}</td>)}</tr>
+            <tr className="lines">{meteoData && meteoData.hourly.precipitation.map((el,index)=> <td key={index}>{el}</td>)}</tr>
+            <tr className="lines">{meteoData && meteoData.hourly.rain.map((el,index)=> <td key={index}>{el}</td>)}</tr>
+         
+          </tbody>
+        </table>
+    </span>
+  </section>
+)
+}
+Home.propType = {
+  cityContext: PropTypes.any
+}
 export default Home;
 // completer le form avec les city, departement... issus de cityDatas.

@@ -27,4 +27,13 @@
 .search-result div {
   width: 158px;
   text-align: center;
+}
+
+.city-list {
+  display: flex;
+  gap: 1rem;
+}
+.city-list:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }/*# sourceMappingURL=coordonnees.css.map */

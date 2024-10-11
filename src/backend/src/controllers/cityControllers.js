@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const models = require("../models");
-// récupérer l'ensemble des brands OK
+
 const getCities = (req, res) => {
   models.cities
     .findAll()
@@ -16,7 +16,37 @@ const getCities = (req, res) => {
       res.sendStatus(500);
     });
 };
-// récupérer un brand OK
+const getDepartments = (req, res) => {
+  models.cities
+    .findAllDepartments()
+    .then(([result]) => {
+      if (result.length) {
+        res.status(200).json(result);
+      } else {
+        res.sendStatus(404);
+      }
+    })
+    .catch((err) => {
+      console.error(err.message);
+      res.sendStatus(500);
+    });
+};
+const getRegions = (req, res) => {
+  models.cities
+    .findAllRegions()
+    .then(([result]) => {
+      if (result.length) {
+        res.status(200).json(result);
+      } else {
+        res.sendStatus(404);
+      }
+    })
+    .catch((err) => {
+      console.error(err.message);
+      res.sendStatus(500);
+    });
+};
+
 const getCityById = (req, res) => {
   const cityId = req.params.city_id;
   if (!cityId) {
@@ -37,7 +67,6 @@ const getCityById = (req, res) => {
       res.sendStatus(500);
     });
 };
-// ajouter un brand OK
 const addCity = (req, res) => {
   const el = req.body;
   models.cities
@@ -77,7 +106,6 @@ const updateCity = (req, res) => {
 };
 const deleteCity = (req, res) => {
   const cityId = req.params.city_id;
-  
   models.cities
     .delete(cityId)
     .then(([rows]) => {
@@ -92,9 +120,14 @@ const deleteCity = (req, res) => {
       res.sendStatus(500);
     });
 };
-const getDepartements = (req, res) => {
+const getCity = (req, res) => {
+  const char = req.params.char;
+  console.log("###char",char, typeof(char));
+  if (!char) {
+    return res.status(400).send("char is required");
+  }
   models.cities
-    .findAllDepartments()
+    .findCity(char)
     .then(([result]) => {
       if (result.length) {
         res.status(200).json(result);
@@ -107,9 +140,14 @@ const getDepartements = (req, res) => {
       res.sendStatus(500);
     });
 };
-const getRegions = (req, res) => {
+const getDepartment = (req, res) => {
+  const char = req.params.char;
+  console.log("###char",char, typeof(char));
+  if (!char) {
+    return res.status(400).send("char is required");
+  }
   models.cities
-    .findAllRegions()
+    .findDepartment(char)
     .then(([result]) => {
       if (result.length) {
         res.status(200).json(result);
@@ -122,6 +160,27 @@ const getRegions = (req, res) => {
       res.sendStatus(500);
     });
 };
+const getRegion = (req, res) => {
+  const char = req.params.char;
+  console.log("###char",char, typeof(char));
+  if (!char) {
+    return res.status(400).send("char is required");
+  }
+  models.cities
+    .findRegion(char)
+    .then(([result]) => {
+      if (result.length) {
+        res.status(200).json(result);
+      } else {
+        res.sendStatus(404);
+      }
+    })
+    .catch((err) => {
+      console.error(err.message);
+      res.sendStatus(500);
+    });
+};
+
 const getCitiesByDep = (req, res) => {
   const depId = req.params.dep_id;
   console.log("###depId",depId, typeof(depId));
@@ -164,7 +223,6 @@ const getCitiesByCode = (req, res) => {
 };
 const getDatasByCity = (req, res) => {
   const cityName = req.params.city_name;
-  console.log("###cityName",cityName, typeof(cityName));
   if (!cityName) {
     return res.status(400).send("city_name is required");
   }
@@ -184,12 +242,15 @@ const getDatasByCity = (req, res) => {
 };
 module.exports = {
   getCities,
+  getDepartments,
+  getRegions,
   getCityById,
   addCity,
   updateCity,
   deleteCity,
-  getDepartements,
-  getRegions,
+  getCity,
+  getDepartment,
+  getRegion,
   getCitiesByDep,
   getCitiesByCode,
   getDatasByCity
