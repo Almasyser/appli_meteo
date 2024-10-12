@@ -1,13 +1,15 @@
 import axios from "axios";
 import { useEffect } from "react";
 function Fetch_api(props){
-  const {lat, long,  setMeteoData, setMeteoData_keys} = props;
-  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m,precipitation,rain&timezone=GMT&forecast_days=1&models=meteofrance_seamless`;
+  const {lat, long, urlOptions, setMeteoData, setMeteoData_keys} = props;
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}${urlOptions}`; 
   const api = async(item)=>{
      try{
       const res = await axios.get(item);
       const newReponse = res.data;
-      // console.log("newReponse",newReponse);
+      console.log("item",item);
+      
+      console.log("newReponse",newReponse);
       if (newReponse) {
         setMeteoData(newReponse);
         setMeteoData_keys(newReponse.hourly? Object.keys(newReponse.hourly):[]);
@@ -22,5 +24,7 @@ function Fetch_api(props){
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
   }
+
    
   export default Fetch_api;
+  // `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m,precipitation,rain&timezone=GMT&forecast_days=1&models=meteofrance_seamless`;

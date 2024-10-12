@@ -1,20 +1,19 @@
-import "./compose-url.css";
+import "./compose_url.css";
 import options from "../../assets/options.json";
-import { useState } from "react";
-
-function Compose_url() {
-  const lat=42.12356;
-  const long=6.32511;
-  const [urlFinal, setUrlFinal ]= useState(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m`);
+import { PropTypes } from 'prop-types';
+function Compose_url(props) {
+ const { urlOptions, setUrlOptions, setSelectModal } = props;
+  
   const handleClick = ()=>{
     console.log("Validé!");
+    setSelectModal(false);
   }
   const handleChange = (e)=>{
     const el = e.target;
     if(el.checked){
-      setUrlFinal(urlFinal+el.id);
+      setUrlOptions(urlOptions+el.id);
     } else {
-      setUrlFinal(urlFinal.replace(el.id,''));
+      setUrlOptions(urlOptions.replace(el.id,''));
     }
   }
   return(
@@ -32,9 +31,14 @@ function Compose_url() {
     </ul>
       <section className="btn-container">
         <p className="title-label">Valider cette URL:</p>
-        <button type="button" id="valide" className="btn-envoyer" onClick={handleClick}>{urlFinal}</button>
+        <button type="button" id="valide" className="btn-envoyer" onClick={handleClick}>{urlOptions}</button>
     </section>
     </>
   )
+}
+Compose_url.propTypes = {
+  urlOptions: PropTypes.any,
+  setUrlOptions: PropTypes.any,
+  setSelectModal: PropTypes.any
 }
 export default Compose_url;

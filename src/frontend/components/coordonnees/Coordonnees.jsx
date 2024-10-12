@@ -29,13 +29,10 @@ function Coordonnees (props){
     console.log("el ",el);
     setCityDatas(el);
     setSearchModal(false);
-
   }
- 
   return(
     <>
     <div>
-
       <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
       {(cityName !== "")?
       <>
@@ -52,13 +49,11 @@ function Coordonnees (props){
           </span>
         )
       })
-
     }
     </div>
     </>
   )
 }
-
 Coordonnees.propType = {
   setCityDatas: PropTypes.any,
 }

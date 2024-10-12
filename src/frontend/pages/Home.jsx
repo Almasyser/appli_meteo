@@ -3,23 +3,35 @@ import { PropTypes } from 'prop-types';
 import "./home.css";
 import Coordonnees from "../components/coordonnees/Coordonnees";
 import Fetch_api from "../components/fetch_api/Fetch_api";
+import Compose_url from "../components/compose_url/Compose_url";
 // import { fetchWeatherApi } from 'openmeteo';
 function Home() {
   const [searchModal, setSearchModal] = useState(true);
+  const [selectModal, setSelectModal] = useState(false);
+  const [urlOptions, setUrlOptions ]= useState(`&hourly=temperature_2m`);
   const [meteoData, setMeteoData ] = useState();
   const [meteoData_keys, setMeteoData_keys] = useState();
   const [cityDatas, setCityDatas] = useState({
-    latitude: "",
-    longitude: "",
+    latitude: "42.12",
+    longitude: "6.12",
     city_code:"",
     zip_code: "",
     department_name: "",
     department_number: "",
     region_name:""
   });
-console.log(meteoData_keys);
+console.log(urlOptions);
+console.log("meteoData",meteoData);
+console.log("meteoData_keys",meteoData_keys);
+
+
 
   return(
+  <>
+    <button type="button" onClick={()=> setSelectModal(true)}>Sélecteur de paramètres</button>
+    {selectModal?
+      <Compose_url urlOptions={urlOptions} setUrlOptions={setUrlOptions} setSelectModal={setSelectModal} />:null  
+    }
     <section className="container">
       {!searchModal && 
         <button type="button" onClick={()=>setSearchModal(true)}>Changer la ville</button>
@@ -36,29 +48,14 @@ console.log(meteoData_keys);
         <p>latitude: {cityDatas.latitude}</p>
         <p>longitude: {cityDatas.longitude}</p>
       </div>
-      {cityDatas? 
-        <Fetch_api lat={cityDatas.latitude} long={cityDatas.longitude} setMeteoData={setMeteoData} setMeteoData_keys={setMeteoData_keys} />:null
+      {cityDatas && urlOptions? 
+        <Fetch_api lat={cityDatas.latitude} long={cityDatas.longitude} urlOptions={urlOptions} setMeteoData={setMeteoData} setMeteoData_keys={setMeteoData_keys} />:null
       }
       <span className="meteo-box">
-        <table>
-          <thead>
-            <tr className="titles">
-              <th>Heure</th>
-              <th>Température</th>
-              <th>Précipitation</th>
-              <th>Pluie</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="lines">{meteoData && meteoData.hourly.time.map((el,index)=> <td key={index}>{el}</td>)}</tr>
-            <tr className="lines">{meteoData && meteoData.hourly.temperature_2m.map((el,index)=> <td key={index}>{el}</td>)}</tr>
-            <tr className="lines">{meteoData && meteoData.hourly.precipitation.map((el,index)=> <td key={index}>{el}</td>)}</tr>
-            <tr className="lines">{meteoData && meteoData.hourly.rain.map((el,index)=> <td key={index}>{el}</td>)}</tr>
-         
-          </tbody>
-        </table>
-    </span>
+        <p>datas meteo</p>
+      </span>
   </section>
+  </>
 )
 }
 Home.propType = {
