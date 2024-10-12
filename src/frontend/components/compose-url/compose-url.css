@@ -1,3 +1,49 @@
 * {
   color: cadetblue;
+}
+
+.menu-container {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-container .menu-line {
+  width: 25%;
+  min-width: 12rem;
+  display: flex;
+  text-align: left;
+  padding-left: 0.5rem;
+  gap: 0.8rem;
+}
+.menu-container .menu-line:hover {
+  background-color: rgb(40, 64, 103);
+}
+.menu-container .menu-line:hover label {
+  color: rgb(122, 203, 205);
+  cursor: pointer;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-label {
+  font-size: 1rem;
+  color: goldenrod;
+}
+
+.btn-envoyer {
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+}
+.btn-envoyer:hover {
+  background-color: rgb(40, 64, 103);
+  color: rgb(122, 203, 205);
+  cursor: pointer;
 }/*# sourceMappingURL=compose-url.css.map */

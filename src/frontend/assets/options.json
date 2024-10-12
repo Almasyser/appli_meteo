@@ -2,111 +2,155 @@
   {
     "id": 0,
     "label": "Température",
-    "name": "temperature_2m"
+    "name": "temperature_2m",
+    "checked": true,
+    "disabled": true
   },
   {
     "id": 1,
     "label": "Précipitations",
-    "name": ",precipitation"
+    "name": ",precipitation",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 2,
     "label": "Probabilité pluie",
-    "name": ",precipitation_probability"
+    "name": ",precipitation_probability",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 3,
     "label": "Visibilité",
-    "name": ",visibility"
+    "name": ",visibility",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 4,
     "label": "Vitesse du vent",
-    "name": ",wind_speed_10m"
+    "name": ",wind_speed_10m",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 5,
     "label": "Direction du vent",
-    "name": ",wind_direction_10m"
+    "name": ",wind_direction_10m",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 6,
     "label": "Taux d'humidité",
-    "name": ",relative_humidity_2m"
+    "name": ",relative_humidity_2m",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 7,
     "label": "Pluie",
-    "name": ",rain"
+    "name": ",rain",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 8,
     "label": "Averse",
-    "name": ",showers"
+    "name": ",showers",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 9,
     "label": "Chute de neige",
-    "name": ",snowfall"
+    "name": ",snowfall",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 10,
     "label": "Épaisseur de la neige",
-    "name": ",snow_depth"
+    "name": ",snow_depth",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 11,
     "label": "Point de rosée",
-    "name": ",dew_point_2m"
+    "name": ",dew_point_2m",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 12,
     "label": "Température ressentie",
-    "name": ",apparent_temperature"
+    "name": ",apparent_temperature",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 13,
     "label": "Nébulosité",
-    "name": ",cloud_cover"
+    "name": ",cloud_cover",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 14,
     "label": "Nébulosité basse",
-    "name": ",cloud_cover_low"
+    "name": ",cloud_cover_low",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 15,
     "label": "Nébulosité moyenne",
-    "name": ",cloud_cover_mid"
+    "name": ",cloud_cover_mid",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 16,
     "label": "Nébulosité haute",
-    "name": ",cloud_cover_high"
+    "name": ",cloud_cover_high",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 17,
     "label": "Hauteur pluie",
-    "name": "&daily=precipitation_sum"
+    "name": "&daily=precipitation_sum",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 18,
     "label": "durée ensoleillement",
-    "name": ",sunshine_duration"
+    "name": ",sunshine_duration",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 19,
     "label": "Jour ou nuit",
-    "name": ",is_day"
+    "name": ",is_day",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 20,
     "label": "Timezone GMT",
-    "name": "&timezone=GMT"
+    "name": "&timezone=GMT",
+    "checked": null,
+    "disabled": false
   },
   {
     "id": 21,
     "label": "Modèle meteo France",
-    "name": "&models=meteofrance_seamless"
+    "name": "&models=meteofrance_seamless",
+    "checked": null,
+    "disabled": false
   }
 ]
