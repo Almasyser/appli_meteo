@@ -1,0 +1,112 @@
+[
+  {
+    "id": 0,
+    "label": "Température",
+    "name": "temperature_2m"
+  },
+  {
+    "id": 1,
+    "label": "Précipitations",
+    "name": ",precipitation"
+  },
+  {
+    "id": 2,
+    "label": "Probabilité pluie",
+    "name": ",precipitation_probability"
+  },
+  {
+    "id": 3,
+    "label": "Visibilité",
+    "name": ",visibility"
+  },
+  {
+    "id": 4,
+    "label": "Vitesse du vent",
+    "name": ",wind_speed_10m"
+  },
+  {
+    "id": 5,
+    "label": "Direction du vent",
+    "name": ",wind_direction_10m"
+  },
+  {
+    "id": 6,
+    "label": "Taux d'humidité",
+    "name": ",relative_humidity_2m"
+  },
+  {
+    "id": 7,
+    "label": "Pluie",
+    "name": ",rain"
+  },
+  {
+    "id": 8,
+    "label": "Averse",
+    "name": ",showers"
+  },
+  {
+    "id": 9,
+    "label": "Chute de neige",
+    "name": ",snowfall"
+  },
+  {
+    "id": 10,
+    "label": "Épaisseur de la neige",
+    "name": ",snow_depth"
+  },
+  {
+    "id": 11,
+    "label": "Point de rosée",
+    "name": ",dew_point_2m"
+  },
+  {
+    "id": 12,
+    "label": "Température ressentie",
+    "name": ",apparent_temperature"
+  },
+  {
+    "id": 13,
+    "label": "Nébulosité",
+    "name": ",cloud_cover"
+  },
+  {
+    "id": 14,
+    "label": "Nébulosité basse",
+    "name": ",cloud_cover_low"
+  },
+  {
+    "id": 15,
+    "label": "Nébulosité moyenne",
+    "name": ",cloud_cover_mid"
+  },
+  {
+    "id": 16,
+    "label": "Nébulosité haute",
+    "name": ",cloud_cover_high"
+  },
+  {
+    "id": 17,
+    "label": "Hauteur pluie",
+    "name": "&daily=precipitation_sum"
+  },
+  {
+    "id": 18,
+    "label": "durée ensoleillement",
+    "name": ",sunshine_duration"
+  },
+  {
+    "id": 19,
+    "label": "Jour ou nuit",
+    "name": ",is_day"
+  },
+  {
+    "id": 20,
+    "label": "Timezone GMT",
+    "name": "&timezone=GMT"
+  },
+  {
+    "id": 21,
+    "label": "Modèle meteo France",
+    "name": "&models=meteofrance_seamless"
+  }
+]

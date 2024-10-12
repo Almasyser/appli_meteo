@@ -1,10 +1,12 @@
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
+import Compose_url from "./components/compose-url/Compose-url"
 
 function App() {
   
   return (
     <>
-      <Home />
+      {/* <Home /> */}
+      <Compose_url />
     </>
   )
 }
