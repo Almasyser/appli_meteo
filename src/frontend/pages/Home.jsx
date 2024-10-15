@@ -20,11 +20,6 @@ function Home() {
     department_number: "",
     region_name:""
   });
-// console.log("Home urlOptions",urlOptions);
-console.log("Home meteoData",meteoData?.hourly[2]);
-// console.log("Home meteoData_keys",meteoData_keys);
-
-
 
   return(
   <>
@@ -37,35 +32,57 @@ console.log("Home meteoData",meteoData?.hourly[2]);
         <button type="button" onClick={()=>setSearchModal(true)}>Changer la ville</button>
       }
       {searchModal && <Coordonnees setCityDatas={setCityDatas} setSearchModal={setSearchModal}/>}
-      <div className="box-container">
-        <p>cité: {cityDatas.city_code}</p>
-        <p>code postal: {cityDatas.zip_code}</p>
-        <span className="dep-box">
-          <p>numéro: {cityDatas.department_number}</p>
-          <p>département: {cityDatas.department_name}</p>
-        </span>
-        <p>région: {cityDatas.region_name}</p>
-        <p>latitude: {cityDatas.latitude}</p>
-        <p>longitude: {cityDatas.longitude}</p>
-      </div>
+      <table id="city_table">
+        <tr className="table-labels">
+          <td>cité:</td> 
+          <td>code postal:</td> 
+          <td >département:</td>
+          <td>région:</td> 
+          <td>latitude:</td> 
+          <td>longitude:</td>
+        </tr>
+        <tr className="table-values">
+          <td>{cityDatas.city_code}</td>
+          <td>{cityDatas.zip_code}</td>
+          <td>{cityDatas.department_number} {cityDatas.department_name}</td>
+          <td>{cityDatas.region_name}</td>
+          <td>{cityDatas.latitude}</td>
+          <td>{cityDatas.longitude}</td>
+
+
+        </tr>
+
+      </table>
       {cityDatas && urlOptions? 
         <Fetch_api lat={cityDatas.latitude} long={cityDatas.longitude} urlOptions={urlOptions} setMeteoData={setMeteoData} setMeteoData_keys={setMeteoData_keys} meteoData={meteoData} meteoData_keys={meteoData_keys}/>:null
       }
       <span className="meteo-box">
-        <p>datas meteo</p>
-        {meteoData_keys && meteoData_keys.map((el,index)=>{
+      <div className="meteo-entete">
+        {meteoData_keys && meteoData_keys.map((el)=>{
           return(
-            <div key={el.generationtime_ms}>
-              {meteoData.hourly && meteoData.hourly[index].map((sel, sindex)=>{
-                return(
-                  <p key={sindex} className="datakeys">{sel}</p>
-                )
-              }
-              )}
- 
+            <div key={el}>
+              <p>{el}</p>
             </div>
-          );
+          )
         })}
+      </div>
+      {meteoData && meteoData.hourly && Object.keys(meteoData.hourly).length > 0 ? (
+        <div className="meteo-colonnes">
+          {/* Parcourir toutes les clés de l'objet hourly */}
+          {Object.keys(meteoData.hourly).map((key) => (
+            <div key={key}>
+              {/* Afficher les valeurs de cette clé */}
+              {meteoData.hourly[key].map((value, index) => (
+                <div key={index}>
+                  <p>{value}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>Pas de données météo disponibles.</p>
+      )}
       </span>
   </section>
   </>
@@ -75,4 +92,3 @@ Home.propType = {
   cityContext: PropTypes.any
 }
 export default Home;
-// completer le form avec les city, departement... issus de cityDatas.

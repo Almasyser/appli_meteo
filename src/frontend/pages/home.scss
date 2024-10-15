@@ -5,44 +5,36 @@
   width: max-content;
   height:80vh;
 }
-.box-container{
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 0 0 0;
+table{
+  background: rgb(92, 69, 88);
+  .table-labels td{
+    width: 10rem;
+    text-align: center;
+    color: rgb(49, 177, 232);
+    
+  }
+  .table-values td{
+    width: 10rem;
+    text-align: center;
+    color: rgb(159, 166, 30);
+    font-size: 1.2rem;
+
+  }
 }
-.dep-box{
-  border-radius: 16px;
-  display: flex;
-  min-width: 4rem;
-  width: max-content;
-  height: max-content;
-}
-p{
-  padding: 0 0.5rem 0 0.5rem; 
-}
+
 .meteo-box{
   width: auto;
   height: 100vh;
-  .titles{
-    display: flex;
-  }
-  th, td{
-    width: 12rem;
-    text-align: center;
-    color:burlywood;
-    padding: 0 0.5rem 0 0.5rem;
-  }
-  tbody{
-    display: flex;
-  }
-  .lines{
-    display: flex;
-    flex-direction: column;
-  }
-
 }
-.datakeys{
-  color:chartreuse
+.meteo-entete{
+  display: flex;
+  p{
+    width: 12rem;
+  }
+}
+.meteo-colonnes{
+  display: flex;
+  p{
+    width: 12rem;
+  }
 }

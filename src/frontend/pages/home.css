@@ -8,49 +8,36 @@
   height: 80vh;
 }
 
-.box-container {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 0 0 0;
+table {
+  background: rgb(92, 69, 88);
 }
-
-.dep-box {
-  border-radius: 16px;
-  display: flex;
-  min-width: 4rem;
-  width: -moz-max-content;
-  width: max-content;
-  height: -moz-max-content;
-  height: max-content;
+table .table-labels td {
+  width: 10rem;
+  text-align: center;
+  color: rgb(49, 177, 232);
 }
-
-p {
-  padding: 0 0.5rem 0 0.5rem;
+table .table-values td {
+  width: 10rem;
+  text-align: center;
+  color: rgb(159, 166, 30);
+  font-size: 1.2rem;
 }
 
 .meteo-box {
   width: auto;
   height: 100vh;
 }
-.meteo-box .titles {
+
+.meteo-entete {
   display: flex;
 }
-.meteo-box th, .meteo-box td {
+.meteo-entete p {
   width: 12rem;
-  text-align: center;
-  color: burlywood;
-  padding: 0 0.5rem 0 0.5rem;
-}
-.meteo-box tbody {
-  display: flex;
-}
-.meteo-box .lines {
-  display: flex;
-  flex-direction: column;
 }
 
-.datakeys {
-  color: chartreuse;
+.meteo-colonnes {
+  display: flex;
+}
+.meteo-colonnes p {
+  width: 12rem;
 }/*# sourceMappingURL=home.css.map */
