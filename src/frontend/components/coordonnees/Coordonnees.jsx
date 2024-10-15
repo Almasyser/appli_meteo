@@ -26,7 +26,7 @@ function Coordonnees (props){
     setCityName("");
   }
   const handleSelectCity = (el)=>{
-    console.log("el ",el);
+    // console.log("el ",el);
     setCityDatas(el);
     setSearchModal(false);
   }

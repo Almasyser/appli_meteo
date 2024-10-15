@@ -20,9 +20,9 @@ function Home() {
     department_number: "",
     region_name:""
   });
-console.log(urlOptions);
-console.log("meteoData",meteoData);
-console.log("meteoData_keys",meteoData_keys);
+// console.log("Home urlOptions",urlOptions);
+console.log("Home meteoData",meteoData?.hourly[2]);
+// console.log("Home meteoData_keys",meteoData_keys);
 
 
 
@@ -49,10 +49,23 @@ console.log("meteoData_keys",meteoData_keys);
         <p>longitude: {cityDatas.longitude}</p>
       </div>
       {cityDatas && urlOptions? 
-        <Fetch_api lat={cityDatas.latitude} long={cityDatas.longitude} urlOptions={urlOptions} setMeteoData={setMeteoData} setMeteoData_keys={setMeteoData_keys} />:null
+        <Fetch_api lat={cityDatas.latitude} long={cityDatas.longitude} urlOptions={urlOptions} setMeteoData={setMeteoData} setMeteoData_keys={setMeteoData_keys} meteoData={meteoData} meteoData_keys={meteoData_keys}/>:null
       }
       <span className="meteo-box">
         <p>datas meteo</p>
+        {meteoData_keys && meteoData_keys.map((el,index)=>{
+          return(
+            <div key={el.generationtime_ms}>
+              {meteoData.hourly && meteoData.hourly[index].map((sel, sindex)=>{
+                return(
+                  <p key={sindex} className="datakeys">{sel}</p>
+                )
+              }
+              )}
+ 
+            </div>
+          );
+        })}
       </span>
   </section>
   </>

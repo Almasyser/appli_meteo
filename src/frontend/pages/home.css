@@ -49,4 +49,8 @@ p {
 .meteo-box .lines {
   display: flex;
   flex-direction: column;
+}
+
+.datakeys {
+  color: chartreuse;
 }/*# sourceMappingURL=home.css.map */
