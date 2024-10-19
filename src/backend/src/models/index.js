@@ -27,6 +27,12 @@ const models = {};
 const cityManager = require("./cityManagers");
 models.cities = new cityManager();
 models.cities.setDatabase(pool);
+// URLS
+const urlManagers = require("./urlManagers");
+models.urls = new urlManagers();
+models.urls.setDatabase(pool);
+
+
 const handler = {
   get(obj, prop) {
     if (prop in obj) {

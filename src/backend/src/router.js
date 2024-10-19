@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 /* ---- CITIES ROUTES ---- */
 const citiesControllers = require("./controllers/cityControllers");
+const urlControllers = require("./controllers/urlControllers");
 // afficher 
 router.get("/cities", citiesControllers.getCities);
 // affiche les departements n° et texte
@@ -31,6 +32,14 @@ router.get("/citiesbydep/:dep_id", citiesControllers.getCitiesByDep);
 router.get("/citiesbycode/:code_id", citiesControllers.getCitiesByCode);
 // affiche infos from city
 router.get("/datasByCity/:city_name", citiesControllers.getDatasByCity);
+// affiche les urls
+router.get("/urls", urlControllers.getUrls);
+// affiche url selon Id
+router.get("/urls/:url_id", urlControllers.getUrlById);
+// ajoute une url
+router.post("/urls", urlControllers.addUrl);
+// efface une url
+router.delete("/urls/:url_id", urlControllers.deleteUrl);
 
 
 module.exports = router;

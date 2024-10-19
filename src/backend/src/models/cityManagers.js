@@ -3,7 +3,7 @@ const AbstractManager = require('./AbstractManager');
 class cityManagers extends AbstractManager{
   constructor(){
     super({
-      table: "cities"
+      table: "cities",
     })
   }
   modify(cityId, el) {
@@ -42,6 +42,7 @@ class cityManagers extends AbstractManager{
   findDatasByCity(cityName){
     return this.pool.query(`select city_code, zip_code,latitude, longitude, department_name, department_number, region_name from ${this.table} where city_code like '${cityName}%' order by city_code;`);
   }
+
 }
 
 module.exports = cityManagers;

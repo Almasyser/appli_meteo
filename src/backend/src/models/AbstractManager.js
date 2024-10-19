@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 class AbstractManager{
   constructor({table}){
     this.table = table;
