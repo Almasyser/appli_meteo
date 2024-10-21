@@ -2,7 +2,7 @@
   color: rgb(237, 252, 247);
 }
 
-.container {
+.city-container {
   width: -moz-max-content;
   width: max-content;
   height: 80vh;
@@ -29,15 +29,28 @@ table .table-values td {
 }
 
 .meteo-entete {
+  top: 8rem;
   display: flex;
 }
 .meteo-entete p {
-  width: 12rem;
+  width: 10rem;
+  text-align: center;
+  color: rgb(49, 177, 232);
 }
 
 .meteo-colonnes {
+  background-color: rgb(7, 21, 71);
   display: flex;
 }
 .meteo-colonnes p {
-  width: 12rem;
+  width: 10rem;
+  line-height: 1.2rem;
+  margin: 0;
+  text-align: center;
+  border-left: 1px solid rgb(49, 177, 232);
+}
+
+.btn-envoyer {
+  background-color: blue;
+  cursor: pointer;
 }/*# sourceMappingURL=home.css.map */

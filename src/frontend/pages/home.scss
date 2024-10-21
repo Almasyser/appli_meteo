@@ -1,7 +1,7 @@
 *{
   color: rgb(237, 252, 247);
 }
-.container{
+.city-container{
   width: max-content;
   height:80vh;
 }
@@ -11,30 +11,41 @@ table{
     width: 10rem;
     text-align: center;
     color: rgb(49, 177, 232);
-    
   }
   .table-values td{
     width: 10rem;
     text-align: center;
     color: rgb(159, 166, 30);
     font-size: 1.2rem;
-
   }
 }
 
 .meteo-box{
   width: auto;
   height: 100vh;
+  
 }
 .meteo-entete{
+  top: 8rem;
   display: flex;
   p{
-    width: 12rem;
+    width: 10rem;
+    text-align: center;
+    color:rgb(49, 177, 232);
   }
 }
 .meteo-colonnes{
+  background-color: rgb(7, 21, 71);
   display: flex;
   p{
-    width: 12rem;
+    width: 10rem;
+    line-height: 1.2rem;
+    margin: 0;
+    text-align: center;
+    border-left: 1px solid rgb(49, 177, 232);
   }
+}
+.btn-envoyer{
+  background-color: blue;
+  cursor: pointer;
 }

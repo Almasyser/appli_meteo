@@ -2,8 +2,6 @@ import axios from "axios";
 import { useEffect } from "react";
 function Fetch_api(props){
   const { lat, long, urlOptions, setMeteoData, setMeteoData_keys } = props;
-  console.log("fetch ulrOptions",urlOptions);
-  
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}${urlOptions}`; 
   const api = async(item)=>{
      try{

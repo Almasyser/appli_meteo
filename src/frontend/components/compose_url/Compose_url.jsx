@@ -1,10 +1,11 @@
 import "./compose_url.css";
 import options from "../../assets/options.json";
 import { PropTypes } from 'prop-types';
-import axios from "axios";
 // import axios from "axios";
 function Compose_url(props) {
-  const { urlOptions, setUrlOptions, setSelectModal } = props;
+  const {urlOptions, setUrlOptions, setSelectModal } = props;
+
+  console.log("==> compose urlOptions ",urlOptions," -- ",typeof(urlOptions));
   const handleChange = (e)=>{
     const el = e.target;
     if(el.checked){
@@ -15,19 +16,20 @@ function Compose_url(props) {
   }
   const handleClick = (e) => {
     e.preventDefault();
-    postUrl(urlOptions);
+ 
+    // postUrl(temp);
     setSelectModal(false);
   }
-  const postUrl = async(item)=>{
-    try {
-      const res = await axios.post(`http://localhost:5050/urls`, item);
-      console.log(res.status);
-    } 
-    catch (error) {
-      console.error(error);
-    }
-  }
-  console.log("compose urlOptions ",urlOptions,typeof(urlOptions));
+  // const postUrl = async(item)=>{
+  //   try {
+  //     const res = await axios.post(`http://localhost:5050/urls`, item);
+  //     console.log(res.status);
+  //   } 
+  //   catch (error) {
+  //     console.error(error);
+  //   }
+  // }
+  // 
     
   return(
     <>
