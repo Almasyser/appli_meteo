@@ -36,9 +36,10 @@ const getUrlById = (req, res) => {
     });
 };
 const addUrl = (req, res) => {
-  const el = req.body;
+  console.log("REQ",req.body);
+  
   models.urls
-    .addUrl(el)
+    .addUrl( req.body)
     .then(([rows]) => {
       if (rows.affectedRows) {
         res.status(201).send(rows);
@@ -57,7 +58,7 @@ const addUrl = (req, res) => {
 };
 const deleteUrl = (req, res) => {
   const urlId = req.params.url_id;
-  models.cities
+  models.urls
     .deleteUrl(urlId)
     .then(([rows]) => {
       if (rows) {

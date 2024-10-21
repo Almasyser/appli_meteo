@@ -1,13 +1,10 @@
 import "./compose_url.css";
 import options from "../../assets/options.json";
 import { PropTypes } from 'prop-types';
+import axios from "axios";
+// import axios from "axios";
 function Compose_url(props) {
- const { urlOptions, setUrlOptions, setSelectModal } = props;
-  
-  const handleClick = ()=>{
-    console.log("Validé!");
-    setSelectModal(false);
-  }
+  const { urlOptions, setUrlOptions, setSelectModal } = props;
   const handleChange = (e)=>{
     const el = e.target;
     if(el.checked){
@@ -16,6 +13,22 @@ function Compose_url(props) {
       setUrlOptions(urlOptions.replace(el.id,''));
     }
   }
+  const handleClick = (e) => {
+    e.preventDefault();
+    postUrl(urlOptions);
+    setSelectModal(false);
+  }
+  const postUrl = async(item)=>{
+    try {
+      const res = await axios.post(`http://localhost:5050/urls`, item);
+      console.log(res.status);
+    } 
+    catch (error) {
+      console.error(error);
+    }
+  }
+  console.log("compose urlOptions ",urlOptions,typeof(urlOptions));
+    
   return(
     <>
     <p className="title-label">Sélectionner les valeurs à interroger:</p>
@@ -37,8 +50,9 @@ function Compose_url(props) {
   )
 }
 Compose_url.propTypes = {
-  urlOptions: PropTypes.any,
+  urlOptions: PropTypes.string,
   setUrlOptions: PropTypes.any,
   setSelectModal: PropTypes.any
 }
 export default Compose_url;
+

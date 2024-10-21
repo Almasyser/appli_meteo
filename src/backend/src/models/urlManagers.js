@@ -7,20 +7,21 @@ class urlManagers extends AbstractManager{
     })
   }
   findUrls(){
-    return this.pool.query(`select name, lexique from ${this.table}`);
+    return this.pool.query(`select id, idurls, name from ${this.table}`);
   }
   findUrlById(urlId){
-    return(`select name, lexique from ${this.table} where idurls=?`, [urlId]);
+    return this.pool.query(`select id, idurls, name  from ${this.table} where id = ?`, [urlId]);
   }
   addUrl(el) {
+    console.log("############ ",el);
     return this.pool.query(
-      `INSERT INTO ${this.table} (name, lexique) values (?, ?)`,
-      [el.name, el.lexique]
+      `INSERT INTO ${this.table} (name) VALUES (?)`,
+      [el]
     );
   }
   deleteUrl(urlId) {
-    return this.pool.query(`DELETE FROM ${this.table} WHERE idurls = ?`, [
-      urlId]);
+    return this.pool.query(
+      `DELETE FROM ${this.table} WHERE id = ?`, [urlId]);
   }
 }
 module.exports = urlManagers;

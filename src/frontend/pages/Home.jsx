@@ -20,10 +20,15 @@ function Home() {
     department_number: "",
     region_name:""
   });
+  const handleClick = ()=>{
+    setUrlOptions(`&hourly=temperature_2m`);
+    setSelectModal(true);
+
+  }
 
   return(
   <>
-    <button type="button" onClick={()=> setSelectModal(true)}>Sélecteur de paramètres</button>
+    <button type="button" onClick={handleClick}>Sélecteur de paramètres</button>
     {selectModal?
       <Compose_url urlOptions={urlOptions} setUrlOptions={setUrlOptions} setSelectModal={setSelectModal} />:null  
     }
@@ -33,6 +38,7 @@ function Home() {
       }
       {searchModal && <Coordonnees setCityDatas={setCityDatas} setSearchModal={setSearchModal}/>}
       <table id="city_table">
+        <tbody>
         <tr className="table-labels">
           <td>cité:</td> 
           <td>code postal:</td> 
@@ -51,6 +57,7 @@ function Home() {
 
 
         </tr>
+        </tbody>
 
       </table>
       {cityDatas && urlOptions? 
