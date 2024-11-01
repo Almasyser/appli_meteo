@@ -1,36 +1,29 @@
 *{
   font-size: 1rem;
 }
-.searchBar{
-  display: flex;
-  align-items: center;
-  height: 19px;
+.city-search{
   input{
-    width: 149px;
-  }
-}
-.label{
-  width: 149px;
-  height: 23px;
-  line-height: 19px;
-  border: 1px solid rgb(160, 160, 160);
-  color: rgb(160, 160, 160);
-  padding-left: 0.5rem;
-}
-.search-result{
-  display: flex;
-  justify-content: left;
-  div{
-    width: 158px;
-    text-align: center;
-    
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
 .city-list{
-  display: flex;
+  position: absolute;
+  height: 60vh;
+  overflow: auto;
+  background-color: rgb(10, 10, 11);
   gap: 1rem;
   &:hover{
-    opacity: 0.8;
+    color: cornsilk;
     cursor: pointer;
+  }
+  span{
+    display: flex;
+    p{
+      width: 16rem;
+      line-height: 1rem;
+      margin: 0.2rem;
+    }
   }
 }

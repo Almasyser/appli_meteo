@@ -24,39 +24,39 @@ function Home() {
     setUrlOptions("&hourly=temperature_2m");
     setSelectModal(true);
   }
-
   return(
-  <section>
-    <button type="button" onClick={handleClick}>Sélecteur de paramètres</button>
-    {selectModal?
-      <Compose_url urlOptions={urlOptions} setUrlOptions={setUrlOptions} setSelectModal={setSelectModal} />:null  
-    }
-    <section className="city-container">
-      {!searchModal && 
-        <button type="button" onClick={()=>setSearchModal(true)}>Changer la ville</button>
+  <div className="container">
+    <div className="entete-box">
+      <button className="btn-selecteur" type="button" onClick={handleClick}>Sélecteur de paramètres</button>
+      {selectModal?
+        <Compose_url urlOptions={urlOptions} setUrlOptions={setUrlOptions} setSelectModal={setSelectModal} />:null  
       }
-      {searchModal && <Coordonnees setCityDatas={setCityDatas} setSearchModal={setSearchModal}/>}
-      <table id="city_table">
-        <tbody>
-          <tr className="table-labels">
-            <td>cité:</td> 
-            <td>code postal:</td> 
-            <td >département:</td>
-            <td>région:</td> 
-            <td>latitude:</td> 
-            <td>longitude:</td>
-          </tr>
-          <tr className="table-values">
-            <td>{cityDatas.city_code}</td>
-            <td>{cityDatas.zip_code}</td>
-            <td>{cityDatas.department_number} {cityDatas.department_name}</td>
-            <td>{cityDatas.region_name}</td>
-            <td>{cityDatas.latitude}</td>
-            <td>{cityDatas.longitude}</td>
-        </tr>
-        </tbody>
-
-      </table>
+      <div className="city-container">
+        {!searchModal && 
+          <button className="btn-changer" type="button" onClick={()=>setSearchModal(true)}>Changer la ville</button>
+        }
+        {searchModal && <Coordonnees setCityDatas={setCityDatas} setSearchModal={setSearchModal}/>}
+        <table id="table-city">
+          <tbody>
+            <tr className="table-labels">
+              <td>cité:</td> 
+              <td>code postal:</td> 
+              <td>département:</td>
+              <td>région:</td> 
+              <td>latitude:</td> 
+              <td>longitude:</td>
+            </tr>
+            <tr className="table-values">
+              <td>{cityDatas.city_code}</td>
+              <td>{cityDatas.zip_code}</td>
+              <td>{cityDatas.department_number} {cityDatas.department_name}</td>
+              <td>{cityDatas.region_name}</td>
+              <td>{cityDatas.latitude}</td>
+              <td>{cityDatas.longitude}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       {cityDatas && urlOptions? 
         <Fetch_api lat={cityDatas.latitude} long={cityDatas.longitude} urlOptions={urlOptions} setMeteoData={setMeteoData} setMeteoData_keys={setMeteoData_keys} meteoData={meteoData} meteoData_keys={meteoData_keys}/>:null
       }
@@ -66,29 +66,32 @@ function Home() {
             return(
               <div key={el}>
                 <p>{el}</p>
+                <p> {meteoData.hourly_units[el]}</p>
               </div>
             )
           })}
         </div>
-        {meteoData && meteoData.hourly && Object.keys(meteoData.hourly).length > 0 ? (
-          <div className="meteo-colonnes">
-            {/* Parcourir toutes les clés de l'objet hourly */}
-            {Object.keys(meteoData.hourly).map((key) => (
-              <div key={key}>
-                {/* Afficher les valeurs de cette clé */}
-                {meteoData.hourly[key].map((value, index) => (
-                  <div key={index}>
-                    <p>{value}</p>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        ) : (<p>Pas de données météo disponibles.</p>)
-        }
       </span>
-    </section>
-  </section>
+    </div>
+    <div className="body-box">
+      {meteoData && meteoData.hourly && Object.keys(meteoData.hourly).length > 0 ? (
+        <div className="meteo-colonnes">
+          {/* Parcourir toutes les clés de l'objet hourly */}
+          {Object.keys(meteoData.hourly).map((key) => (
+            <div key={key}>
+              {/* Afficher les valeurs de cette clé */}
+              {meteoData.hourly[key].map((value, index) => (
+                <div key={index}>
+                  <p>{value}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        ) : (<p>Pas de données météo disponibles.</p>)
+      }
+    </div>
+  </div>
 )
 }
 Home.propType = {

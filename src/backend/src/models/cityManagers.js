@@ -40,7 +40,7 @@ class cityManagers extends AbstractManager{
     return this.pool.query(`select city_code, zip_code from ${this.table} where zip_code=? order by city_code;`,[codeId]);
   }
   findDatasByCity(cityName){
-    return this.pool.query(`select city_code, zip_code,latitude, longitude, department_name, department_number, region_name from ${this.table} where city_code like '${cityName}%' order by city_code;`);
+    return this.pool.query(`select city_code, zip_code, latitude, longitude, department_name, department_number, region_name from ${this.table} where city_code like '${cityName}%' order by zip_code;`);
   }
 
 }

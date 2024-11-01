@@ -1,56 +1,67 @@
-* {
-  color: rgb(237, 252, 247);
-}
-
-.city-container {
-  width: -moz-max-content;
-  width: max-content;
-  height: 80vh;
-}
-
-table {
-  background: rgb(92, 69, 88);
-}
-table .table-labels td {
-  width: 10rem;
-  text-align: center;
-  color: rgb(49, 177, 232);
-}
-table .table-values td {
-  width: 10rem;
-  text-align: center;
-  color: rgb(159, 166, 30);
-  font-size: 1.2rem;
-}
-
-.meteo-box {
-  width: auto;
-  height: 100vh;
-}
-
-.meteo-entete {
-  top: 8rem;
-  display: flex;
-}
-.meteo-entete p {
-  width: 10rem;
-  text-align: center;
-  color: rgb(49, 177, 232);
-}
-
-.meteo-colonnes {
-  background-color: rgb(7, 21, 71);
-  display: flex;
-}
-.meteo-colonnes p {
-  width: 10rem;
-  line-height: 1.2rem;
+.container {
+  box-sizing: border-box;
   margin: 0;
-  text-align: center;
-  border-left: 1px solid rgb(49, 177, 232);
+  padding: 0;
+  color: aquamarine;
+  position: relative;
+  top: 0;
 }
 
-.btn-envoyer {
-  background-color: blue;
-  cursor: pointer;
+.entete-box {
+  height: -moz-max-content;
+  height: max-content;
+  position: sticky;
+  top: 0;
+  background-color: darkslategray;
+  z-index: 1000;
+}
+.entete-box .meteo-entete {
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+.entete-box .meteo-entete p {
+  width: 10rem;
+  color: cornsilk;
+}
+.entete-box #table-city {
+  width: 100%;
+  background-color: rgb(113, 90, 60);
+  padding-left: 4rem;
+}
+
+.btn-selecteur {
+  padding: 0.5rem;
+  margin: 1rem 0.5rem;
+}
+.btn-selecteur:hover {
+  color: burlywood;
+  background-color: cadetblue;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-changer {
+  margin: 0 0 1rem 0.5rem;
+}
+
+.table-labels td {
+  color: bisque;
+  text-align: center;
+}
+
+.table-values td {
+  color: cornsilk;
+  text-align: center;
+}
+
+.body-box {
+  position: relative;
+}
+.body-box .meteo-colonnes {
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+.body-box .meteo-colonnes p {
+  width: 10rem;
 }/*# sourceMappingURL=home.css.map */

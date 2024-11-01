@@ -26,30 +26,30 @@ function Coordonnees (props){
     setCityName("");
   }
   const handleSelectCity = (el)=>{
-    // console.log("el ",el);
     setCityDatas(el);
     setSearchModal(false);
   }
   return(
     <>
-    <div>
+    <div className="city-search">
       <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
       {(cityName !== "")?
       <>
         <button type="button" onClick={handleChoiceCity}>valid</button>
         <button type="button" onClick={handleChoiceCancel}>X</button>
       </> :null }
+      <div className="city-list">
       {cityList && cityList.map((el,index)=>{
         return(
-          <span key={index} className="city-list" onClick={()=>handleSelectCity(el)}>
+          <span key={index} onClick={()=>handleSelectCity(el)}>
             <p>{el.city_code}</p>
             <p>{el.department_number} {el.department_name}</p>
             <p>{el.region_name}</p>
-
           </span>
         )
       })
     }
+    </div>
     </div>
     </>
   )
@@ -58,19 +58,3 @@ Coordonnees.propType = {
   setCityDatas: PropTypes.any,
 }
 export default Coordonnees;
-// ajouter button handleExit. Valider le choix. valider cityDatas (format, datas).retour vers home.
-
-  // const handleValidCityDatas= ()=>{
-  //   async()=>{
-  //     try {
-  //       const response = await axios.get(`http://localhost:5050/cities`);
-  //       console.log("response.data",response.data);
-        
-  //       setCityDatas(...cityDatas,response.data); 
-  //       setSearchModal(false);
-  //     } 
-  //     catch (error) {
-  //       console.error(error);
-  //     }
-  //   }
-  // }
