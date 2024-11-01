@@ -91,6 +91,7 @@ function Home() {
         ) : (<p>Pas de données météo disponibles.</p>)
       }
     </div>
+    
   </div>
 )
 }
