@@ -24,6 +24,8 @@ function Home() {
     setUrlOptions("&hourly=temperature_2m");
     setSelectModal(true);
   }
+  console.log("meteoData ",meteoData);
+  
   return(
   <div className="container">
     <div className="entete-box">
