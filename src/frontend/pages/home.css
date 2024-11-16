@@ -36,12 +36,21 @@
 }
 .btn-selecteur:hover {
   color: burlywood;
-  background-color: cadetblue;
-  transition: 0.3s ease-in-out;
+  background-color: rgba(95, 158, 160, 0.1);
+  transition: 0.2s ease-in-out;
 }
 
 .btn-changer {
   margin: 0 0 1rem 0.5rem;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background-color: cadetblue;
+  color: rgb(247, 208, 10);
+}
+.btn-changer:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .table-labels td {
@@ -50,8 +59,9 @@
 }
 
 .table-values td {
-  color: cornsilk;
+  color: rgb(247, 208, 10);
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .body-box {

@@ -31,7 +31,7 @@ function Home() {
   });
   const handleClick = ()=>{
     setUrlOptions("&hourly=temperature_2m");
-    setSelectModal(true);
+    setSelectModal(!selectModal);
   }
  
   return(
@@ -43,7 +43,7 @@ function Home() {
       }
       <div className="city-container">
         {!searchModal && 
-          <button className="btn-changer" type="button" onClick={()=>setSearchModal(true)}>Changer la ville</button>
+          <button className="btn-selecteur" type="button" onClick={()=>setSearchModal(true)}>Choisir une ville</button>
         }
         {searchModal && <Coordonnees setCityDatas={setCityDatas} setSearchModal={setSearchModal}/>}
         <table id="table-city">
