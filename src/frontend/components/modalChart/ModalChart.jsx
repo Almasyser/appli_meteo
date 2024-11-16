@@ -1,8 +1,9 @@
 import { Tooltip } from "recharts";
-import { AreaChart, Area, ResponsiveContainer, XAxis, YAxis, CartesianGrid } from "recharts";
+import { AreaChart, Area, ResponsiveContainer, XAxis,  CartesianGrid } from "recharts";
 import PropTypes from "prop-types";
 import "./modalchart.css";
-
+import { useState } from "react";
+import FormatDate from "../utils/formatDateCharts/FormatDateCharts";
 // PROPS:
 // sizeWidth sizeHeight : en % du parent
 // data :array cle/value
@@ -11,22 +12,26 @@ import "./modalchart.css";
 // dataX: label axis X => name column  strokeX: color labels
 // dataY: label axis Y => name column  strokeY: color labels
 // gradColorStart, gradColorEnd : colors gradient
-
-export default function ModalChart(props) {
-  const { sizeWidth, sizeHeight, data, dashGrid, strokeGrid, dataArea, strokeArea, fillArea, dataX, strokeX, dataY, strokeY, gradColorStart, gradColorEnd } = props;
-  console.log(data);
+export default function ModalChart({ sizeWidth, sizeHeight, data, dashGrid, strokeGrid, strokeArea, fillArea, strokeX, intervX,  gradColorStart, gradColorEnd }) {
+  const [datas]= useState(data);
+  
+  const {time, temperature_2m} = datas.hourly;
+  const formatData = time.map((el, index)=> ({
+    time: FormatDate(el),
+    temperature: temperature_2m[index]
+    }))
   return (
     <div className="chart-container">
       <div className="chart-box">
         <ResponsiveContainer width={sizeWidth} height={sizeHeight}>
-          <AreaChart data={data} isAnimationActive={false}>
+          <AreaChart data={formatData} isAnimationActive={false}>
           <CartesianGrid strokeDasharray={dashGrid} stroke={strokeGrid} vertical={false}/>
-            <Area dataKey={dataArea} type='monotone' stroke={strokeArea} fill={fillArea}/>
+            <Area dataKey={"temperature"} type='monotone' stroke={strokeArea} fill={fillArea}/>
             {/* <Area dataKey="cashOut" type='monotone' stroke={colors.six} fill="transparent"/> */}
-            <XAxis dataKey={dataX} stroke={strokeX} interval={1} tickFormatter={(el)=>{
-              return el.split("-").reverse().slice(0,2).join("/");
+            <XAxis dataKey={"time"} stroke={strokeX} interval={intervX} tickFormatter={(el)=>{
+              return (el)
             }}></XAxis>
-            <YAxis dataKey={dataY} stroke={strokeY}></YAxis>
+            {/* <YAxis dataKey={dataY} stroke={strokeY}></YAxis> */}
             <Tooltip 
               cursor={{ stroke:false, strokeWidth: 1}}
               content={({active, payload})=>{
@@ -35,7 +40,7 @@ export default function ModalChart(props) {
                 }
                 return(
                 <div className="content">
-                  <p className="cashin">Crédit {payload[0].payload.cashIn}</p>
+                  <p className="cashin">{payload[0].payload.temperature}°C</p>
                 </div>
                 )
               }}
@@ -63,6 +68,7 @@ ModalChart.propTypes = {
   fillArea: PropTypes.string,
   dataX: PropTypes.string,
   strokeX: PropTypes.string,
+  intervX: PropTypes.number,
   dataY: PropTypes.string,
   strokeY: PropTypes.string,
   gradColorStart: PropTypes.string, 

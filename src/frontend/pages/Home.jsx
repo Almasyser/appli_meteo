@@ -4,6 +4,7 @@ import "./home.css";
 import Coordonnees from "../components/coordonnees/Coordonnees";
 import Fetch_api from "../components/fetch_api/Fetch_api";
 import Compose_url from "../components/compose_url/Compose_url";
+import ModalChart from "../components/modalChart/ModalChart";
 // import { fetchWeatherApi } from 'openmeteo';
 function Home() {
   const [searchModal, setSearchModal] = useState(true);
@@ -11,6 +12,14 @@ function Home() {
   const [urlOptions, setUrlOptions ]= useState("&hourly=temperature_2m");
   const [meteoData, setMeteoData ] = useState();
   const [meteoData_keys, setMeteoData_keys] = useState();
+  const [colors] = useState(
+    {primary:"#383939",
+    second: "#006465",
+    third: "#0f928c",
+    fourth: "#00c9d2",
+    fifth: "#484848",
+    six: "#ffaf00"}
+  )
   const [cityDatas, setCityDatas] = useState({
     latitude: "42.12",
     longitude: "6.12",
@@ -24,8 +33,7 @@ function Home() {
     setUrlOptions("&hourly=temperature_2m");
     setSelectModal(true);
   }
-  console.log("meteoData ",meteoData);
-  
+ 
   return(
   <div className="container">
     <div className="entete-box">
@@ -93,7 +101,25 @@ function Home() {
         ) : (<p>Pas de données météo disponibles.</p>)
       }
     </div>
-    
+    {meteoData && 
+      <ModalChart 
+      sizeWidth={"100%"} 
+      sizeHeight={"100%"} 
+      data={meteoData}
+      dashGrid={"2 8"} 
+      strokeGrid={colors.third} 
+      dataArea={""} 
+      strokeArea={colors.primary} 
+      fillArea={`url(#gradient)`} 
+      dataX={""} 
+      strokeX={colors.second} 
+      intervX={14}
+      dataY={""} 
+      strokeY={colors.second} 
+      gradColorStart={colors.fifth} 
+      gradColorEnd={colors.six} 
+      /> 
+    }
   </div>
 )
 }
