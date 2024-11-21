@@ -4,9 +4,8 @@ import pastdays from "../assets/pastdays.json";
 import forecasthours from "../assets/forecasthours.json";
 import "./selectitem.css";
 import { useEffect, useState } from 'react';
-export default function SelectItems({idItem}){
+export default function SelectItems({idItem = "0"}){
   const [list, setList]=useState([]);
-
   useEffect(()=>{
     if(idItem == "0"){
       setList(forecastdays)
@@ -16,13 +15,9 @@ export default function SelectItems({idItem}){
       setList(forecasthours)
     }
   },[idItem]);
-  console.log("LIST ",list);
-  
-  
   return(
   <div className="list-days">
-    
-    <label htmlFor="list-days-selector"></label>
+    <label htmlFor="list-days-selector">Choisir la durée</label>
     <select name="list-days" id="list-days-selector">
       {list && list.map((el)=>{
       return(

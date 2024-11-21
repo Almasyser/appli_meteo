@@ -1,4 +1,7 @@
 .list-days {
   color: burlywood;
   gap: 1rem;
+}
+.list-days label {
+  padding: 0 0.6rem;
 }/*# sourceMappingURL=selectitem.css.map */
