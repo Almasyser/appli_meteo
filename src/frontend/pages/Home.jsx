@@ -5,6 +5,7 @@ import Coordonnees from "../components/coordonnees/Coordonnees";
 import Fetch_api from "../components/fetch_api/Fetch_api";
 import Compose_url from "../components/compose_url/Compose_url";
 import ModalChart from "../components/modalChart/ModalChart";
+import ColorsChart from "../assets/colorschart.json";
 // import { fetchWeatherApi } from 'openmeteo';
 function Home() {
   const [searchModal, setSearchModal] = useState(true);
@@ -12,14 +13,7 @@ function Home() {
   const [urlOptions, setUrlOptions ]= useState("&hourly=temperature_2m");
   const [meteoData, setMeteoData ] = useState();
   const [meteoData_keys, setMeteoData_keys] = useState();
-  const [colors] = useState(
-    {primary:"#383939",
-    second: "#006465",
-    third: "#0f928c",
-    fourth: "#00c9d2",
-    fifth: "#484848",
-    six: "#ffaf00"}
-  )
+  const [colors] = useState(ColorsChart[0])
   const [cityDatas, setCityDatas] = useState({
     latitude: "42.12",
     longitude: "6.12",

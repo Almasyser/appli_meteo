@@ -7,8 +7,6 @@ import { useState } from "react";
 function Compose_url(props) {
   const {urlOptions, setUrlOptions, setSelectModal } = props;
   const [idItem, setIdItem]=useState();
-
-  console.log("==> compose urlOptions ",urlOptions," -- ",typeof(urlOptions));
   const handleChange = (e)=>{
     const el = e.target;
     if(el.checked){
@@ -19,25 +17,13 @@ function Compose_url(props) {
   }
   const handleClick = (e) => {
     e.preventDefault();
- 
-    // postUrl(temp);
     setSelectModal(false);
+    // postUrl(temp);
   }
-  // const postUrl = async(item)=>{
-  //   try {
-  //     const res = await axios.post(`http://localhost:5050/urls`, item);
-  //     console.log(res.status);
-  //   } 
-  //   catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-  // 
   const handleTimeSet = (e)=>{
     setIdItem(e.target.id);
   }
   console.log("idItem ",idItem,typeof(idItem));
-  
   return(
     <>
     <form onChange={handleTimeSet}>
@@ -56,9 +42,7 @@ function Compose_url(props) {
     </form>
     <section className="selector-container">
       <SelectItems idItem={idItem}/>
-      
     </section> 
-    
     <p className="title-label">Sélectionner les valeurs à interroger:</p>
     <ul className="menu-container" >
       {options && options.map((el)=>{
@@ -84,3 +68,13 @@ Compose_url.propTypes = {
 }
 export default Compose_url;
 
+  // const postUrl = async(item)=>{
+  //   try {
+  //     const res = await axios.post(`http://localhost:5050/urls`, item);
+  //     console.log(res.status);
+  //   } 
+  //   catch (error) {
+  //     console.error(error);
+  //   }
+  // }
+  // 
