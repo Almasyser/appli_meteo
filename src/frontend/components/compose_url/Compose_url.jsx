@@ -1,12 +1,12 @@
 import "./compose_url.css";
 import options from "../../assets/options.json";
-import SelectItems from "../utils/selectItems/SelectItems";
+// import SelectItems from "../utils/selectItems/SelectItems";
 import { PropTypes } from 'prop-types';
 import { useState } from "react";
 // import axios from "axios";
 function Compose_url(props) {
   const {urlOptions, setUrlOptions, setSelectModal } = props;
-  const [idItem, setIdItem]=useState();
+  const [idItem, setIdItem]=useState("100");
   const handleChange = (e)=>{
     const el = e.target;
     if(el.checked){
@@ -41,7 +41,7 @@ function Compose_url(props) {
       </div>
     </form>
     <section className="selector-container">
-      <SelectItems idItem={idItem}/>
+      {/* <SelectItems idItem={idItem}/> */}
     </section> 
     <p className="title-label">Sélectionner les valeurs à interroger:</p>
     <ul className="menu-container" >
