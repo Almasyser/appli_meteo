@@ -3,16 +3,20 @@ import forecastdays from "../assets/forecastdays.json";
 import pastdays from "../assets/pastdays.json";
 import forecasthours from "../assets/forecasthours.json";
 import "./selectitem.css";
-import { useState } from 'react';
-export default function SelectItems({idItem="100"}){
-  const [list, setList]=useState();
-  if(idItem === "100"){
-    setList(forecastdays)
-  } else if(idItem === 101){
-    setList(pastdays)
-  } else {
-    setList(forecasthours)
-  }
+import { useEffect, useState } from 'react';
+export default function SelectItems({idItem}){
+  const [list, setList]=useState([]);
+
+  useEffect(()=>{
+    if(idItem == "0"){
+      setList(forecastdays)
+    } else if(idItem == "1"){
+      setList(pastdays)
+    } else {
+      setList(forecasthours)
+    }
+  },[idItem]);
+  console.log("LIST ",list);
   
   
   return(

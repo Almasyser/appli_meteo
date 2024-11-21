@@ -1,12 +1,12 @@
 import "./compose_url.css";
 import options from "../../assets/options.json";
-// import SelectItems from "../utils/selectItems/SelectItems";
+import SelectItems from "../utils/selectItems/SelectItems";
 import { PropTypes } from 'prop-types';
 import { useState } from "react";
 // import axios from "axios";
 function Compose_url(props) {
   const {urlOptions, setUrlOptions, setSelectModal } = props;
-  const [idItem, setIdItem]=useState("100");
+  const [idItem, setIdItem]=useState("forecastdays");
   const handleChange = (e)=>{
     const el = e.target;
     if(el.checked){
@@ -28,20 +28,20 @@ function Compose_url(props) {
     <>
     <form onChange={handleTimeSet}>
       <div>
-        <input type="radio" id="100" name="radio"  value="Prévisions à" defaultChecked />
-        <label htmlFor="100">Prévisions</label>
+        <input type="radio" id="0" name="radio"  value="Prévisions à" defaultChecked />
+        <label htmlFor="0">Prévisions</label>
       </div>
       <div>
-        <input type="radio" id="pastdays" name="radio" value="Historique"/>
-        <label htmlFor="pastdays">Historique</label>
+        <input type="radio" id="1" name="radio" value="Historique"/>
+        <label htmlFor="1">Historique</label>
       </div>
       <div>
-        <input type="radio" id="forecasthours" name="radio" value="Prévisions à" />
-        <label htmlFor="forecasthours">Prochaines heures</label>
+        <input type="radio" id="2" name="radio" value="Prévisions à" />
+        <label htmlFor="2">Prochaines heures</label>
       </div>
     </form>
     <section className="selector-container">
-      {/* <SelectItems idItem={idItem}/> */}
+      {idItem? <SelectItems idItem={idItem}/>:null }
     </section> 
     <p className="title-label">Sélectionner les valeurs à interroger:</p>
     <ul className="menu-container" >
