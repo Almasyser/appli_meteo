@@ -1,9 +1,12 @@
 .list-days{
-  color: burlywood;
   gap: 1rem;
   label{
     padding: 0 0.6rem;
   }
+  option{
+    color: cadetblue;
+  }
 }
+
 
 
