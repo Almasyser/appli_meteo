@@ -9,10 +9,7 @@ function Compose_url(props) {
   const [idItem, setIdItem]=useState("0");
   const [duration, setDuration]=useState("");
   const handleChange = (e)=>{
-    const duree =urlOptions+duration;
-    console.log("duree=",duree,"  ",el.value);
-    
-    const el = e.target;
+     const el = e.target;
     if(el.checked){
       setUrlOptions(urlOptions+el.id);
     } else {
@@ -27,7 +24,7 @@ function Compose_url(props) {
   const handleTimeSet = (e)=>{
     setIdItem(e.target.value+e.target.id);
   }
-  console.log("idItem ",idItem,typeof(idItem));
+  console.log("duration  ",duration);
   return(
     <>
     <section className="selector-container">

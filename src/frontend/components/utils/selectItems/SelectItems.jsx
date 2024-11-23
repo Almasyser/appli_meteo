@@ -15,13 +15,18 @@ export default function SelectItems({idItem, setDuration}){
       setList(forecasthours)
     }
   },[idItem]);
+  const handleClick = (e)=>{
+    console.log("param ",e.target.value);
+    setDuration(e.target.value);
+    
+  }
   return(
   <div className="list-days">
     <label htmlFor="list-days-selector">Choisir la durée</label>
     <select name="list-days" id="list-days-selector">
       {list && list.map((el)=>{
       return(
-        <option key={el.id} value={el.value}>{el.label}</option>
+        <option key={el.id} value={el.value} onClick={handleClick}>{el.label}</option>
       )
       })}
     </select>
@@ -30,5 +35,6 @@ export default function SelectItems({idItem, setDuration}){
 }
 SelectItems.propTypes = {
   idItem: PropTypes.any,
+  setDuration: PropTypes.any
 
 }
