@@ -16,9 +16,7 @@ export default function SelectItems({idItem, setDuration}){
     }
   },[idItem]);
   const handleClick = (e)=>{
-    console.log("param ",e.target.value);
     setDuration(e.target.value);
-    
   }
   return(
   <div className="list-days">

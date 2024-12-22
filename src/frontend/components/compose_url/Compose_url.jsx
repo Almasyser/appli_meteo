@@ -6,25 +6,29 @@ import { useState } from "react";
 // import axios from "axios";
 function Compose_url(props) {
   const {urlOptions, setUrlOptions, setSelectModal } = props;
+  const [weatherOptions, setWeatherOptions] = useState(urlOptions);
+  const [duration, setDuration]=useState("&forecastdays=1");
   const [idItem, setIdItem]=useState("0");
-  const [duration, setDuration]=useState("");
   const handleChange = (e)=>{
      const el = e.target;
     if(el.checked){
-      setUrlOptions(urlOptions+el.id);
+      setWeatherOptions(weatherOptions+el.id);
     } else {
-      setUrlOptions(urlOptions.replace(el.id,''));
+      setWeatherOptions(weatherOptions.replace(el.id,''));
     }
   }
   const handleClick = (e) => {
     e.preventDefault();
     setSelectModal(false);
-    // postUrl(temp);
   }
   const handleTimeSet = (e)=>{
-    setIdItem(e.target.value+e.target.id);
+    setIdItem(e.target.id);
   }
-  console.log("duration  ",duration);
+  const handleValid =()=>{
+    duration && weatherOptions &&
+    setUrlOptions(duration + weatherOptions);
+  }
+  console.log("Url :",urlOptions);
   return(
     <>
     <section className="selector-container">
@@ -43,6 +47,7 @@ function Compose_url(props) {
         </div>
       </form>
       {idItem? <SelectItems idItem={idItem} setDuration={setDuration} />:null }
+      <button onClick={handleValid}>Valider</button>
     </section> 
     <p className="title-label">Sélectionner les valeurs à interroger:</p>
     <ul className="menu-container" >
