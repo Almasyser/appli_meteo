@@ -68,14 +68,3 @@ Compose_url.propTypes = {
   setSelectModal: PropTypes.any
 }
 export default Compose_url;
-
-  // const postUrl = async(item)=>{
-  //   try {
-  //     const res = await axios.post(`http://localhost:5050/urls`, item);
-  //     console.log(res.status);
-  //   } 
-  //   catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-  // 

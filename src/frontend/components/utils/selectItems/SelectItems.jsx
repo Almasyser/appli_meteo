@@ -7,9 +7,9 @@ import { useEffect, useState } from 'react';
 export default function SelectItems({idItem, setDuration}){
   const [list, setList]=useState([]);
   useEffect(()=>{
-    if(idItem == "0"){
+    if(idItem === "0"){
       setList(forecastdays)
-    } else if(idItem == "1"){
+    } else if(idItem === "1"){
       setList(pastdays)
     } else {
       setList(forecasthours)

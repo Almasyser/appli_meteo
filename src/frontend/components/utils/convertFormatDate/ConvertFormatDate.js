@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import "./ConvertFormatDate.css";
 function ConvertFormatDate({date}){
   const [names, setNames]=useState([
     {
@@ -10,13 +9,6 @@ function ConvertFormatDate({date}){
   const year =date.slice(0, 4);
   const day = date.slice(8, 10);
   const hour = date.slice(11, 13);
-  // DEPLACER DANS LE PARENT:
-  // const [names, setNames] = useState([
-  //   {
-  //     day:"",
-  //     month:""
-  //   }
-  // ])
   useMemo(()=>{
     getDayName(date,setNames,names);
     console.log("########");    
