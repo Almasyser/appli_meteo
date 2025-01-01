@@ -24,10 +24,37 @@
   color: #F5CDC6;
   padding-left: 0.5rem;
 }
-.header-container .header-hour {
+.header-container .hour-box {
+  width: 26%;
+  display: flex;
+}
+.header-container .hour-box .header-hour {
+  width: -moz-max-content;
+  width: max-content;
   font-family: "barlow", sans-serif;
+  font-size: 1.8rem;
   letter-spacing: 0.2rem;
+  color: #F1F5AD;
+}
+.header-container .hour-box .hour-dots {
+  font-family: "barlow", sans-serif;
   font-size: 1.8rem;
   color: #F1F5AD;
-  padding-right: 0.5rem;
+  animation: infinite ease-out;
+  animation-name: clignote;
+  animation-duration: 1s;
+}
+@keyframes clignote {
+  0% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=header.css.map */
