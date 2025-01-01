@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *;
+.weather-container{
+  width: 100%;
+  height: 280px;
+  margin-top: 16px;
+}
+.weather-text{
+  width: 92%;
+  margin: 0 auto;
+  color: $WeatherText;
+  font-family: "ubuntu", sans-serif;
+  font-size: 1.2rem;
+}
+.weather-box{
+  width: 100%;
+  display: flex;
+  img{
+    scale: 0.5;
+  }
+  p{
+    width: 50%;
+    font-family: "courgette", sans-serif;
+    font-size: 3rem;
+    line-height: 252px;
+    color: $WeatherText;
+  }
+}

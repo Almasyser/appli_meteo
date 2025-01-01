@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "courgette";
+  src: local("courgette"), url("../assets/Courgette-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "barlow";
+  src: local("barlow"), url("../assets/Barlow-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ubuntu";
+  src: local("ubuntu"), url("../assets/Ubuntu-Regular.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  position: relative;
+  top: 8px;
+  left: 48px;
+  width: 412px;
+  height: 917px;
+  background: #0A3239;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}/*# sourceMappingURL=home.css.map */

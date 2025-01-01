@@ -1,0 +1,37 @@
+@use "../../styles/variables" as *;
+.footer-container{
+  width: 100%;
+  height: 128px;
+  border-radius: 0 0 16px 16px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background: transparent;
+  .footer-text{
+    width: max-content;
+    margin-top: 0.5rem;
+    color: $ButtonText;
+    text-align: center;
+    opacity: 0.2;
+    transition: opacity 0.2s ease-in-out;
+  }
+  img{
+    width: 64px;
+    height: 64px;
+    margin-top: 0.5rem;
+    transition: all 0.14s ease-in-out;
+    &:hover{
+      scale:0.96;
+      cursor: grab;
+    }
+    &:hover ~ .footer-text{
+      opacity: 1;
+    }
+    &:active{
+      cursor: grabbing;
+      transform: translateY(14px);
+    }
+  }
+}

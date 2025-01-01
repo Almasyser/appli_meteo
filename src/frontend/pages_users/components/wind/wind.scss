@@ -1,0 +1,48 @@
+@use "../../styles/variables" as *;
+.wind-container{
+  display: flex;
+  width: 92%;
+  height: 128px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: $WindBackground;
+  img{
+    scale: 0.8;
+   
+  }
+}
+.wind-box{
+  display: flex;
+
+}
+.wind-speed{
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+  height: 128px;
+}
+.wind-rain{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 128px;
+}
+.wind-label{
+  font-family: "barlow",sans-serif;
+  font-size: 0.9rem;
+  color: $WindTextLabels;
+  margin: 16px auto;
+}
+.wind-value{
+  font-family: "ubuntu", sans-serif;
+  font-size: 1.4rem;
+  color: $WindValues;
+  text-align: center;
+}
+.wind-text{
+  font-family: "barlow", sans-serif;
+  font-size: 0.8rem;
+  color: $WindTextLabels;
+  text-align: center;
+  margin-top: 16px;
+}

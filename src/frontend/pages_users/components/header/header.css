@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "courgette";
+  src: local("courgette"), url("../assets/Courgette-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "barlow";
+  src: local("barlow"), url("../assets/Barlow-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ubuntu";
+  src: local("ubuntu"), url("../assets/Ubuntu-Regular.ttf") format("truetype");
+}
+.header-container {
+  width: 100%;
+  height: 48px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .header-date {
+  font-family: "ubuntu", sans-serif;
+  font-size: 1.2rem;
+  color: #F5CDC6;
+  padding-left: 0.5rem;
+}
+.header-container .header-hour {
+  font-family: "barlow", sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+  color: #F1F5AD;
+  padding-right: 0.5rem;
+}/*# sourceMappingURL=header.css.map */

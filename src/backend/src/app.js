@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: process.env.REACT_FRONTEND_URL,
+    origin: process.env.REACT_APP_FRONTEND_URL,
     optionsSuccessStatus: 200,
   })
 );

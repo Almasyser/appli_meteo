@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "courgette";
+  src: local("courgette"), url("../assets/Courgette-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "barlow";
+  src: local("barlow"), url("../assets/Barlow-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ubuntu";
+  src: local("ubuntu"), url("../assets/Ubuntu-Regular.ttf") format("truetype");
+}
+.location-container {
+  width: 94%;
+  height: 144px;
+  margin: 16px auto;
+  border-top: 1px solid #87E9BB;
+  border-bottom: 1px solid #87E9BB;
+  display: flex;
+}
+
+.location-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.location-text .location-town {
+  font-family: "barlow", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+}
+.location-text .location-departement {
+  font-family: "courgette", sans-serif;
+  font-size: 0.8rem;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.location-text .location-region {
+  font-family: "courgette", sans-serif;
+  font-size: 1rem;
+  padding-left: 1.2rem;
+  letter-spacing: 0.05rem;
+  margin-top: 1rem;
+}
+
+.location-button {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.btn-box {
+  width: 128px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 32px;
+  background: rgba(65, 233, 239, 0.2);
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+.btn-box:hover {
+  opacity: 1;
+  scale: 0.97;
+  cursor: pointer;
+}
+
+.btn-text {
+  font-family: "ubuntu", sans-serif;
+  color: rgba(190, 240, 119, 0.8);
+  margin-left: 1.2rem;
+}
+
+.btn-img {
+  width: 38px;
+  height: 38px;
+  margin-right: 0.3rem;
+}/*# sourceMappingURL=location.css.map */
