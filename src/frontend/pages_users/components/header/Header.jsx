@@ -1,20 +1,15 @@
 import "./header.css";
-import ConvertDateJMA from "../utils/ConvertDateJMA";
+import { useDate } from "../../hooks/useDate";
+import { useMemo } from "react";
 function Header() {
-  const jours = [
-    "dimanche",
-    "lundi",
-    "mardi",
-    "mercredi",
-    "jeudi",
-    "vendredi",
-    "samedi"
-  ];
-  const now = new Date();
-  const dateJMA = ConvertDateJMA(now);
-  const jour = jours[now.getDay()];
-  const heure = String(now.getHours()).padStart(2,'0');
-  const minute = String(now.getMinutes()).padStart(2,'0');
+  const { today, updateToday, dateJMA, jour, heure, minute } = useDate()
+
+  useMemo(() =>{
+    updateToday();
+  },[updateToday])
+ 
+
+  console.log("todayNow",today);
   
   return (
     <div className="header-container">

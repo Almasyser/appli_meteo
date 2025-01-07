@@ -6,5 +6,5 @@ export const useLocation = create(() =>({
     region_name: "Occitanie",
     latitude: "55.12",
     longitude: "45.25"
-  }))
-
+  }));
+  

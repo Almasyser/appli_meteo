@@ -1,0 +1,15 @@
+@mixin textMedium($fm, $fs, $ls, $pl, $mt){
+  @if $fs="barlow"{
+    font-family: "barlox", sans-serif;
+  } 
+  @else if $fs="courgette"{
+    font-family: "courgette",sans-serif;
+  }
+  @else{
+    font-family: "ubuntu",sans-serif;
+  }
+  font-size: $fs;
+  letter-spacing: $ls;
+  padding-left: $pl;
+  margin-top: $mt;
+}
