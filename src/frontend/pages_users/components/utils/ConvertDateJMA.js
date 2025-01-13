@@ -1,7 +1,5 @@
 function ConvertDateJMA(dateISO){
   const date = new Date(dateISO);
-  console.log("date",date);
-  
   const options = { day: '2-digit', month: 'long', year: 'numeric'};
   const dateFormat = date.toLocaleDateString('fr-fr', options);
   return dateFormat;

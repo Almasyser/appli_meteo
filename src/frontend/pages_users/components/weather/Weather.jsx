@@ -2,9 +2,7 @@ import "./weather.css";
 import FetchApiStatic from "../utils/FetchApiStatic";
 import weatherImg from "../../assets/Soleil nuageux.png";
 import { useEffect, useState } from "react";
-import { useDate } from "../../hooks/useDate";
 function ModalWeather(){
-  const { today } = useDate();
   const [meteoData, setMeteoData] = useState();
   const [meteoData_keys, setMeteoData_keys] = useState();
   const lat = "52.52";
@@ -13,8 +11,6 @@ useEffect(()=>{
   FetchApiStatic(lat, long, meteoData, setMeteoData, meteoData_keys, setMeteoData_keys);
 // eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
-
-console.log("today ",today);
 
 
   return(
