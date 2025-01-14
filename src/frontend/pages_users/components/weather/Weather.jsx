@@ -21,24 +21,25 @@ useEffect(()=>{
         <p>21°</p>
       </span>
       <div className="body-box">
-      {meteoData && meteoData.hourly && Object.keys(meteoData.hourly).length > 0 ? (
-        <div className="meteo-colonnes">
-          {/* Parcourir toutes les clés de l'objet hourly */}
-          {Object.keys(meteoData.hourly).map((key) => (
-          <div key={key}>
-            {/* Afficher les valeurs de cette clé */}
-            {meteoData.hourly[key].map((value, index) => (
-            <div key={index}>
-              <p className="value">{value}</p>
-            </div>
-            ))}
-          </div>
-        ))}
-      </div>
-      ) : (<p>Pas de données météo disponibles.</p>)
-    }
+      
     </div>
   </div>
   )
 }
 export default ModalWeather;
+// {meteoData && meteoData.hourly && Object.keys(meteoData.hourly).length > 0 ? (
+//   <div className="meteo-colonnes">
+//     {/* Parcourir toutes les clés de l'objet hourly */}
+//     {Object.keys(meteoData.hourly).map((key) => (
+//     <div key={key}>
+//       {/* Afficher les valeurs de cette clé */}
+//       {meteoData.hourly[key].map((value, index) => (
+//       <div key={index}>
+//         <p className="value">{value}</p>
+//       </div>
+//       ))}
+//     </div>
+//   ))}
+// </div>
+// ) : (<p>Pas de données météo disponibles.</p>)
+// }

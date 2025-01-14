@@ -1,14 +1,14 @@
 @font-face {
   font-family: "courgette";
-  src: local("courgette"), url("../assets/Courgette-Regular.ttf") format("truetype");
+  src: url("../../assets/Roboto_Mono/static/RobotoMono-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "barlow";
-  src: local("barlow"), url("../assets/Barlow-Regular.ttf") format("truetype");
+  src: url("../../assets/Barlow/Barlow-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "ubuntu";
-  src: local("ubuntu"), url("../assets/Ubuntu-Regular.ttf") format("truetype");
+  src: url("../../assets/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
 }
 .comments-container {
   width: 100%;
