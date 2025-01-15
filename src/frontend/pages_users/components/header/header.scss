@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   .header-date{
-    font-family: "ubuntu", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 1.2rem;
     color: $HeaderText;
     padding-left: 0.5rem;
@@ -17,13 +17,13 @@
     display: flex;
     .header-hour{
       width: max-content;
-      font-family: "barlow", sans-serif;
+      font-family: "Barlow", sans-serif;
       font-size: 1.8rem;
       letter-spacing: 0.2rem;
       color: $HeaderHour;
     }
     .hour-dots{
-      font-family: "barlow", sans-serif;
+      font-family: "Barlow", sans-serif;
       font-size: 1.8rem;
       color: $HeaderHour;
       animation: infinite ease-out;
@@ -35,6 +35,14 @@
         90%{opacity: 1;}
         100%{opacity: 1;}
       }
+    }
+    .header-second{
+      width: max-content;
+      padding-top: 0.4rem;
+      font-family: "Barlow", sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.05rem;
+      color: $HeaderHour;
     }
   }
 }

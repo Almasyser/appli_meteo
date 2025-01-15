@@ -1,8 +1,8 @@
 @mixin textMedium($fm, $fs, $ls, $pl, $mt){
-  @if $fs="barlow"{
-    font-family: "barlox", sans-serif;
+  @if $fm == "barlow"{
+    font-family: "barlow", sans-serif;
   } 
-  @else if $fs="courgette"{
+  @else if $fm == "courgette"{
     font-family: "courgette",sans-serif;
   }
   @else{

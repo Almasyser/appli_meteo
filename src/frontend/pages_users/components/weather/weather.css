@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "courgette";
-  src: url("../../assets/Roboto_Mono/static/RobotoMono-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "barlow";
-  src: url("../../assets/Barlow/Barlow-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "ubuntu";
-  src: url("../../assets/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
-}
 .weather-container {
   width: 100%;
   height: 280px;
@@ -20,7 +8,7 @@
   width: 92%;
   margin: 0 auto;
   color: #F2F995;
-  font-family: "ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
 }
 
@@ -33,12 +21,21 @@
 }
 .weather-box p {
   width: 50%;
-  font-family: "courgette", sans-serif;
+  font-family: "Courgette", sans-serif;
   font-size: 3rem;
   line-height: 252px;
   color: #F2F995;
 }
 
-.value {
+.body-box {
+  width: 100%;
+}
+.body-box .meteo-colonnes {
+  display: flex;
+  justify-content: space-evenly;
+}
+.body-box .value {
   color: rgb(150, 202, 241);
+  padding: 0 0.2rem;
+  text-align: center;
 }/*# sourceMappingURL=weather.css.map */

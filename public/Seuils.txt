@@ -1,0 +1,89 @@
+Ciel dégagé : 0% à 20%
+
+    Très peu ou pas de nuages visibles, ciel bleu.
+
+Partiellement nuageux : 21% à 50%
+
+    Alternance de zones de ciel bleu et de nuages.
+
+Nuageux : 51% à 75%
+
+    La majorité du ciel est couvert, mais quelques zones claires subsistent.
+
+Très nuageux : 76% à 86%
+
+    Le ciel est presque totalement couvert, mais sans obscurité totale.
+
+Couvert : 86% à 91%
+
+    Le ciel est entièrement couvert de nuages, aucune zone claire visible.
+	
+Orageux : 91% à 100%
+
+	Le ciel est bas et sombre.
+	
+Seuils et labels :
+
+    0% à 10% - Ciel dégagé
+        Peu ou pas de nuages bas, ciel essentiellement bleu.
+
+    11% à 30% - Partiellement dégagé
+        Quelques nuages bas épars, laissant une bonne visibilité du ciel.
+
+    31% à 60% - Partiellement nuageux
+        Présence notable de nuages bas, mais avec des zones claires encore visibles.
+
+    61% à 90% - Très nuageux
+        La majorité du ciel est couvert par des nuages bas, lumière atténuée.
+
+    91% à 100% - Totalement couvert
+        Le ciel est entièrement obstrué par des nuages bas, aucune zone dégagée visible.
+
+
+Pas de pluie : 0% à 10%
+
+    Très faible probabilité de précipitations, conditions généralement sèches.
+
+Risque faible : 11% à 30%
+
+    Possibilité de pluie légère ou sporadique, mais peu probable.
+
+Risque modéré : 31% à 60%
+
+    Probabilité significative de précipitations, envisageable de se préparer.
+
+Risque élevé : 61% à 90%
+
+    Forte chance de pluie, des averses sont très probables.
+
+Pluie certaine : 91% à 100%
+
+    La pluie est quasi garantie, prévoyez un parapluie ou un abri.
+	
+	
+Voici des seuils remarquables pour apparent_temperature, avec des pourcentages et des labels adaptés à la perception humaine de la température (tenant compte de facteurs comme le vent et l'humidité) :
+Seuils et labels :
+
+    < -10°C - Froid extrême
+        Sensation de froid intense, risques élevés d’engelures ou d’hypothermie.
+        Exemple de label : 🥶 "Glacial"
+
+    -10°C à 0°C - Très froid
+        Températures froides nécessitant une bonne isolation.
+        Exemple de label : ❄️ "Très froid"
+
+    1°C à 15°C - Frais
+        Températures agréables à fraîches, nécessitant une légère protection.
+        Exemple de label : 🌬️ "Frais"
+
+    16°C à 25°C - Confortable
+        Zone de confort thermique pour la plupart des activités en extérieur.
+        Exemple de label : 🌤️ "Tempéré"
+
+    26°C à 35°C - Chaleur modérée
+        Sensation de chaleur supportable, mais pouvant devenir inconfortable pour certains.
+        Exemple de label : 🌞 "Chaud"
+
+    > 35°C - Chaleur extrême
+        Risque de coup de chaleur, nécessité de s’hydrater et de se protéger.
+        Exemple de label : 🥵 "Caniculaire"

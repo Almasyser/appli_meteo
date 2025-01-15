@@ -31,18 +31,7 @@ $ColTitleText: $TextLight;
 $CeilBackground: #24464D;
 $CeilValues: #F2F995;
 $CeilLabels: $TextLight;
-@font-face {
-  font-family: 'courgette';
-  src: url("../../assets/Roboto_Mono/static/RobotoMono-Regular.ttf") format('truetype') ;
-}
-@font-face {
-  font-family: 'barlow';
-  src: url("../../assets/Barlow/Barlow-Regular.ttf") format('truetype') ;
-}
-@font-face {
-  font-family: 'ubuntu';
-  src: url("../../assets/Ubuntu/Ubuntu-Regular.ttf") format('truetype') ;
-}
+
 
 $BodyWith: 412px;
 $BodyHeight: 917px;

@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "courgette";
-  src: url("../../assets/Roboto_Mono/static/RobotoMono-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "barlow";
-  src: url("../../assets/Barlow/Barlow-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "ubuntu";
-  src: url("../../assets/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
-}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +7,7 @@
 .body {
   position: relative;
   top: 8px;
-  left: 48px;
+  left: 512px;
   width: 412px;
   height: 917px;
   background: #0A3239;

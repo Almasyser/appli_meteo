@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "courgette";
-  src: url("../../assets/Roboto_Mono/static/RobotoMono-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "barlow";
-  src: url("../../assets/Barlow/Barlow-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "ubuntu";
-  src: url("../../assets/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
-}
 .header-container {
   width: 100%;
   height: 48px;
@@ -19,7 +7,7 @@
   align-items: center;
 }
 .header-container .header-date {
-  font-family: "ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
   color: #F5CDC6;
   padding-left: 0.5rem;
@@ -31,13 +19,13 @@
 .header-container .hour-box .header-hour {
   width: -moz-max-content;
   width: max-content;
-  font-family: "barlow", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
   color: #F1F5AD;
 }
 .header-container .hour-box .hour-dots {
-  font-family: "barlow", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
   color: #F1F5AD;
   animation: infinite ease-out;
@@ -57,4 +45,13 @@
   100% {
     opacity: 1;
   }
+}
+.header-container .hour-box .header-second {
+  width: -moz-max-content;
+  width: max-content;
+  padding-top: 0.4rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  color: #F1F5AD;
 }/*# sourceMappingURL=header.css.map */

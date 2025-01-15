@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "courgette";
-  src: url("../../assets/Roboto_Mono/static/RobotoMono-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "barlow";
-  src: url("../../assets/Barlow/Barlow-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "ubuntu";
-  src: url("../../assets/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
-}
 .wind-container {
   display: flex;
   width: 92%;
@@ -41,21 +29,21 @@
 }
 
 .wind-label {
-  font-family: "barlow", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 0.9rem;
   color: #FFFFFF;
   margin: 16px auto;
 }
 
 .wind-value {
-  font-family: "ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.4rem;
   color: #F2F995;
   text-align: center;
 }
 
 .wind-text {
-  font-family: "barlow", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 0.8rem;
   color: #FFFFFF;
   text-align: center;

@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
-@use "../../styles/mixins";
+@use "../../styles/mixins" as *;
 .location-container{
-  width: 94%;
+  width: 96%;
   height: 144px;
   margin: 16px auto;
   display: flex;
@@ -12,16 +12,15 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  .location-town{
-    @include textMedium("barlow", 1.4rem, 0.1rem, 1rem, 1.5rem)
-  }
-  .location-departement{
-    @include textMedium("courgette", 0.8rem, 1.2rem, 1.2rem, 0.5rem)
-  }
-  .location-region{
-    font-family: "courgette", sans-serif;
-    @include textMedium("courgette", 1rem, 0.05rem, 1.2rem, 1rem)
-  }
+}
+.location-town{
+  @include textMedium("barlow", 1.4rem, 0.1rem, 1rem, 1.5rem);
+}
+.location-department{
+  @include textMedium("courgette", 0.8rem, 0.05rem, 1.2rem, 0.6rem);
+}
+.location-region{
+  @include textMedium("courgette", 1rem, 0.05rem, 1.2rem, 1rem);
 }
 .location-button{
   width: 50%;
@@ -47,18 +46,16 @@
     cursor: pointer;
   }
 }
-
 .btn-text{
-  font-family: "ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: $ButtonText;
   margin-left: 1.2rem;
-    
 }
 .btn-img{
   width: 38px;
   height: 38px;
   margin-right: 0.3rem;
 }
-    // border: 1px solid greenyellow;
+
     
 

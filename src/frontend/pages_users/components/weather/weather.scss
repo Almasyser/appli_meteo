@@ -8,7 +8,7 @@
   width: 92%;
   margin: 0 auto;
   color: $WeatherText;
-  font-family: "ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
 }
 .weather-box{
@@ -19,13 +19,21 @@
   }
   p{
     width: 50%;
-    font-family: "courgette", sans-serif;
+    font-family: "Courgette", sans-serif;
     font-size: 3rem;
     line-height: 252px;
     color: $WeatherText;
   }
 }
-
-.value{
-  color: rgb(150, 202, 241);
+.body-box{
+  width: 100%;
+  .meteo-colonnes{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .value{
+    color: rgb(150, 202, 241);
+    padding: 0 0.2rem;
+    text-align: center;
+  }
 }
