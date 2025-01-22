@@ -27,9 +27,13 @@
 }
 .body-box{
   width: 100%;
+  
   .meteo-colonnes{
+    margin-top: 200px;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    gap: 0.5rem;
   }
   .value{
     color: rgb(150, 202, 241);

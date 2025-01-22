@@ -6,7 +6,7 @@ import "./selectCity.css";
 function SelectCity (props){
   // eslint-disable-next-line react/prop-types
   const { setVisible } = props;
-  const {updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocation();
+  const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocation();
   const [cityName, setCityName] = useState("");
   const [cityList, setCityList] = useState("");
   const handleChangeCity = (el)=>{
@@ -27,7 +27,8 @@ function SelectCity (props){
   }
   const handleSelectCity = (el)=>{
     console.log("EL", el);
-    
+    updateLatitude(el.latitude);
+    updateLongitude(el.longitude);
     updateCity_code(el.city_code);
     updateDepartment_code(el.department_number);
     updateDepartment_name(el.department_name);
