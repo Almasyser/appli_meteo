@@ -8,7 +8,7 @@
   width: 92%;
   margin: 0 auto;
   color: $WeatherText;
-  font-family: "Ubuntu", sans-serif;
+  font-family: $ubuntu;
   font-size: 1.2rem;
 }
 .weather-box{
@@ -19,7 +19,7 @@
   }
   p{
     width: 50%;
-    font-family: "Courgette", sans-serif;
+    font-family: $courgette;
     font-size: 3rem;
     line-height: 252px;
     color: $WeatherText;

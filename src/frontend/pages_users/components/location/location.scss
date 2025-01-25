@@ -14,13 +14,13 @@
   flex-direction: column;
 }
 .location-town{
-  @include textMedium("ubuntu", 1.4rem, 0.1rem, 0.6rem, 1.5rem);
+  @include textMedium($ubuntu, 1.4rem, 0.1rem, 0.6rem, 1.5rem);
 }
 .location-department{
-  @include textMedium("ubuntu", 0.8rem, 0.02rem, 0.8rem, 0.6rem);
+  @include textMedium($ubuntu, 0.8rem, 0.02rem, 0.8rem, 0.6rem);
 }
 .location-region{
-  @include textMedium("courgette", 1rem, 0.05rem, 0.8rem, 1rem);
+  @include textMedium($barlow, 1rem, 0.05rem, 0.8rem, 1rem);
 }
 .location-button{
   width: 20%;
@@ -47,7 +47,7 @@
   }
 }
 .btn-text{
-  font-family: "Ubuntu", sans-serif;
+  font-family: $ubuntu;
   color: $ButtonText;
   margin-left: 1.2rem;
 }
