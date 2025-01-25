@@ -23,8 +23,12 @@ router.delete("/deletecities/:city_id", citiesControllers.deleteCity);
 router.get("/city/:char", citiesControllers.getCity);
 // afficher liste departement a la saisie
 router.get("/departement/:char", citiesControllers.getDepartment);
+// modifier
+router.put("/updatecdepartement/:departement_id", citiesControllers.updateDepartement);
 // afficher liste region a la saisie
 router.get("/region/:char", citiesControllers.getRegion);
+// modifier
+router.put("/updateregion/:region_id", citiesControllers.updateRegion);
 
 // affiche les villes d'un departement
 router.get("/citiesbydep/:dep_id", citiesControllers.getCitiesByDep);

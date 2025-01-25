@@ -88,10 +88,10 @@ const addCity = (req, res) => {
     });
 };
 const updateCity = (req, res) => {
-  const cityId = req.params.city_id;
+  const Id = req.params.city_id;
   const el = req.body;
   models.cities
-    .modify(cityId, el)
+    .modify(Id, el)
     .then(([rows]) => {
       if (rows) {
         res.status(200).send(el);
@@ -105,9 +105,9 @@ const updateCity = (req, res) => {
     });
 };
 const deleteCity = (req, res) => {
-  const cityId = req.params.city_id;
+  const Id = req.params.city_id;
   models.cities
-    .delete(cityId)
+    .delete(Id)
     .then(([rows]) => {
       if (rows) {
         res.sendStatus(204);
@@ -160,12 +160,46 @@ const getDepartment = (req, res) => {
       res.sendStatus(500);
     });
 };
+const updateDepartement = (req, res) => {
+  const Id = req.params.departement_id;
+  const el = req.body;
+  models.cities
+    .modify(Id, el)
+    .then(([rows]) => {
+      if (rows) {
+        res.status(200).send(el);
+      } else {
+        res.sendStatus(404);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
 const getRegion = (req, res) => {
   const char = req.params.char;
   console.log("###char",char, typeof(char));
   if (!char) {
     return res.status(400).send("char is required");
   }
+  };
+  const updateRegion = (req, res) => {
+    const Id = req.params.region_id;
+    const el = req.body;
+    models.cities
+      .modify(Id, el)
+      .then(([rows]) => {
+        if (rows) {
+          res.status(200).send(el);
+        } else {
+          res.sendStatus(404);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
   models.cities
     .findRegion(char)
     .then(([result]) => {
@@ -243,7 +277,9 @@ const getDatasByCity = (req, res) => {
 module.exports = {
   getCities,
   getDepartments,
+  updateDepartement,
   getRegions,
+  updateRegion,
   getCityById,
   addCity,
   updateCity,
