@@ -1,5 +1,4 @@
 import "./location.css";
-
 import { useLocation }  from "../../hooks/useLocation";
 import changeImg from "../../assets/Change_green-128.png";
 import SelectCity from "../utils/selectCity/SelectCity";

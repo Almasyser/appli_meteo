@@ -8,8 +8,8 @@ const port = process.env.REACT_APP_PORT;
 
 app.listen(port, (err) => {
   if (err) {
-    console.error("Something bad happened");
+    console.error("Serveur inaccessible");
   } else {
-    console.log(`Server is listening on ${port}`);
+    console.log(`Le serveur écoute sur le port: ${port}`);
   }
 });
