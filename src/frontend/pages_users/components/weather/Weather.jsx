@@ -4,6 +4,7 @@ import { useLocation } from "../../hooks/useLocation";
 import FetchApiStatic from "../utils/FetchApiStatic";
 import weatherImg from "../../assets/Soleil nuageux.png";
 import ConvertDateToCustom from "../utils/ConvertDateToCustom";
+import SelectNebulositeImg from "../utils/SelectNebulositeImg";
 import "./weather.css";
 function ModalWeather() {
   const {
@@ -14,6 +15,8 @@ function ModalWeather() {
     updateCloud_cover_low,
     updateWind_speed_10m,
     updateWind_direction_10m,
+    cloud_cover_low,
+    precipitation
   } = useWeatherDatas();
   const { latitude, longitude } = useLocation();
   const [meteoData, setMeteoData] = useState(null);
@@ -56,6 +59,7 @@ function ModalWeather() {
       <p className="weather-text">Couvert, éclaircies éparses</p>
       <span className="weather-box">
         <img src={weatherImg} alt="Weather icon" />
+        <SelectNebulositeImg cloud_cover_low={cloud_cover_low} precipitation={precipitation} />
         <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
       </span>
     </div>

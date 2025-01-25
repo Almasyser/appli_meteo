@@ -14,7 +14,7 @@ function ModalWind () {
         </div>
         <span className="wind-speed">
           <label className="wind-label">Vitesse du vent</label>
-          <p className="wind-value">{wind_speed_10m} km/h</p>
+          <p className="wind-value">{Math.round(wind_speed_10m)} km/h</p>
           <div className="wind-text">
             {wind_direction_10m &&
               <ConvertWindDirection angle={wind_direction_10m} />
