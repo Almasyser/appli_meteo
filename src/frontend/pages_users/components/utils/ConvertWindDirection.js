@@ -1,11 +1,7 @@
-
-
 function ConvertWindDirection (props) {
   const { angle } = props;
-  const arrayWind =["Sud","Sud-Ouest","Ouest","Nord-Ouest","Nord","Nord-Est","Est","Sud-Est","Sud"]
+  const arrayWind =["Vent du Sud","Vent du Sud-Ouest","Vent d'Ouest","Vent du Nord-Ouest","Vent du Nord","Vent du Nord-Est","Vent d'Est","Vent du Sud-Est","Vent du Sud"]
   const value = Math.round(angle/45);
-  console.log(angle,"   ",value);
-
   return arrayWind[value]
 
 }

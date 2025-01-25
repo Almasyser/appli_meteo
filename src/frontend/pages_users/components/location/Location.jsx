@@ -14,7 +14,7 @@ function ModalLocation (){
       <div className="location-container">
         <span className="location-text">
           <p className="location-town">{city_code.charAt(0).toUpperCase() + city_code.slice(1).toLowerCase()}</p>
-          <p className="location-department">{department_code}{department_name}</p>
+          <p className="location-department">{department_code}&nbsp;{department_name}</p>
           <p className="location-region">{region_name}</p>
         </span>
         <span className="location-button">
