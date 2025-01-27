@@ -52,7 +52,6 @@ const getCityById = (req, res) => {
   if (!cityId) {
     return res.status(400).send("city_id is required");
   }
-  console.log("######",cityId);
   models.cities
     .find(cityId)
     .then(([result]) => {

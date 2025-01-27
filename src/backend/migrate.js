@@ -17,7 +17,7 @@ const migrate = async () => {
   await connection.query(`create database ${REACT_APP_DB_NAME}`);
   await connection.query(`use ${REACT_APP_DB_NAME}`);
 
-  const sql = fs.readFileSync("./asset/coordonnees_gps.sql", "utf8");
+  const sql = fs.readFileSync("./asset/coordonnees_csv.sql", "utf8");
 
   await connection.query(sql);
 

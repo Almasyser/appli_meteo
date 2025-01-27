@@ -11,7 +11,7 @@ class cityManagers extends AbstractManager{
     const values = Object.values(el);
     const valueQuery = keys.map((key) => `${key} = ?`).join(", ");
     return this.pool.query(
-      `UPDATE ${this.table} SET ${valueQuery} WHERE idCities = ?;`,
+      `UPDATE ${this.table} SET ${valueQuery} WHERE id_cities = ?;`,
       [...values, Id]
     );
   }

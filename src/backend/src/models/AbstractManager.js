@@ -8,11 +8,11 @@ class AbstractManager{
   }
   find(id){
     console.log("ID passed to find method:", id); 
-    return this.pool.query(`select * from ${this.table} where idcities = ?`, 
+    return this.pool.query(`select * from ${this.table} where id_cities = ?`, 
       [id]);
   }
   delete(id) {
-    return this.pool.query(`delete from ${this.table} where idcities = ?`,
+    return this.pool.query(`delete from ${this.table} where id_cities = ?`,
       [id]);
   }
   setDatabase(pool){
