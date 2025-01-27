@@ -18,7 +18,7 @@ function Header() {
     }, 1000);
     return () => clearInterval(interval);
   },[]);
-  const dateJMA = ConvertDateJMA(today); // ConvertDateJMA(today),
+  const dateJMA = ConvertDateJMA(today); 
   const jour = jours[today.getDay()];
   const heure = String(today.getHours()).padStart(2, '0');
   const minute = String(today.getMinutes()).padStart(2, '0');

@@ -41,8 +41,8 @@ function SelectCity (props){
         <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
         {(cityName !== "")?
         <>
-          <button type="button" onClick={handleChoiceCity}>valid</button>
-          <button type="button" onClick={handleChoiceCancel}>X</button>
+          <button className="city-btn-choice" type="button" onClick={handleChoiceCity}>valid</button>
+          <button className="city-btn-cancel" type="button" onClick={handleChoiceCancel}>X</button>
         </> :null }
         <div className="city-list">
           {cityList && cityList.map((el,index)=>{

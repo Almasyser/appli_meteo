@@ -2,8 +2,8 @@
   @if $fm == "barlow"{
     font-family: "barlow", sans-serif;
   } 
-  @else if $fm == "courgette"{
-    font-family: "courgette",sans-serif;
+  @else if $fm == "roboto"{
+    font-family: "roboto",sans-serif;
   }
   @else{
     font-family: "ubuntu",sans-serif;

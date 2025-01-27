@@ -53,15 +53,17 @@
 @keyframes clignote {
   0% {
     opacity: 0.2;
+    scale: 0.1;
   }
-  80% {
+  40% {
     opacity: 0.4;
   }
-  90% {
+  70% {
     opacity: 1;
   }
   100% {
     opacity: 1;
+    scale: 1;
   }
 }
 .header-container .hour-box .header-second {

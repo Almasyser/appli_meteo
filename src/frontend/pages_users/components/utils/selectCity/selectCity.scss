@@ -1,3 +1,25 @@
-*{
-  margin: 0;
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+.city-search{
+  position: absolute;
+  top: 12vh;
+  left: 2%;
+  display: flex;
+  align-items: center;
+  width: 92%;
+  height: 15vh;
+  border: 1px solid red;
+  background-color: $BodyBackground;
+  opacity: 0.8;
+  input{
+    width: 10rem;
+    height: 1.8rem;
+    margin-left: 1.4rem;
+    padding-left: 0.4rem;
+    background-color: $ButtonBackground;
+    color: $ButtonText;
+    @include textMedium("ubuntu",1.2rem,0.1rem,0.4rem,0.3rem)
+  }
 }
+.city-btn-choice{}
+.city-btn-cancel{}

@@ -1,3 +1,43 @@
-* {
-  margin: 0;
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../assets/Ubuntu-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../../assets/Barlow/Barlow-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/Roboto/static/Roboto-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+.city-search {
+  position: absolute;
+  top: 12vh;
+  left: 2%;
+  display: flex;
+  align-items: center;
+  width: 92%;
+  height: 15vh;
+  border: 1px solid red;
+  background-color: #0A3239;
+  opacity: 0.8;
+}
+.city-search input {
+  width: 10rem;
+  height: 1.8rem;
+  margin-left: 1.4rem;
+  padding-left: 0.4rem;
+  background-color: rgba(65, 233, 239, 0.2);
+  color: rgba(190, 240, 119, 0.8);
+  font-family: "ubuntu", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  padding-left: 0.4rem;
+  margin-top: 0.3rem;
 }/*# sourceMappingURL=selectCity.css.map */
