@@ -39,19 +39,21 @@ function SelectCity (props){
       <div className="city-search">
         <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
         {(cityName !== "")?
-        <>
-          <button className="city-btn-choice" type="button" onClick={handleChoiceCity}>valid</button>
-          <button className="city-btn-cancel" type="button" onClick={handleChoiceCancel}>X</button>
-        </> :null }
+          <>
+            <button className="city-btn-choice" type="button" onClick={handleChoiceCity}>valid</button>
+            <button className="city-btn-cancel" type="button" onClick={handleChoiceCancel}>X</button>
+          </> :null }
         <div className="city-list">
-          {cityList && cityList.map((el,index)=>{
+          {cityList && cityList.filter((el,index, self) =>
+            index === self.findIndex((t) => t.city_code === el.city_code)
+          )
+          .map((el, index)=>{
             return(
               <span className="city-item" key={index} onClick={()=>handleSelectCity(el)}>
                 <p>{el.city_code}</p>
               </span>
-            )
-          })
-        }
+            );
+          })}
         </div>
       </div>
     </>
