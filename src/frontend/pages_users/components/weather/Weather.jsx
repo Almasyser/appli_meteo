@@ -6,6 +6,7 @@ import ConvertDateToCustom from "../utils/ConvertDateToCustom";
 import SelectNebulositeImg from "../utils/SelectNebulositeImg/SelectNebulositeImg";
 import "./weather.css";
 function ModalWeather() {
+  const [nebulositeText, setNebulositeText] = useState(null); // incorporer aux zustand
   const {
     updateTemperature_2m,
     updateApparent_temperature,
@@ -20,7 +21,6 @@ function ModalWeather() {
   const { latitude, longitude } = useLocation();
   const [meteoData, setMeteoData] = useState(null);
   const [meteoDataKeys, setMeteoDataKeys] = useState(null);
-  // const [nebulositeImg, setNebulositeImg] = useState();
   const lat = latitude || "52.52";
   const long = longitude || "13.41";
   useMemo(() => {
@@ -54,9 +54,9 @@ function ModalWeather() {
   };
   return (
     <div className="weather-container">
-      <p className="weather-text">nuage:{cloud_cover_low} pluie:{precipitation}</p>
+      {cloud_cover_low && nebulositeText && <p className="weather-text">{nebulositeText}</p>}
       <span className="weather-box">
-        <SelectNebulositeImg cloud_cover_low={cloud_cover_low} precipitation={precipitation} />
+        <SelectNebulositeImg cloud_cover_low={cloud_cover_low} precipitation={precipitation} setNebulositeText={setNebulositeText} />
         <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
       </span>
     </div>

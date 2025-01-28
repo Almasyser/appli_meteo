@@ -14,18 +14,18 @@ import averse from "./assets/13_Averse.png";
 import deluge from "./assets/14_Deluge.png";
 
 function SelectNebulositeImg(props){
-  const {cloud_cover_low, precipitation} = props;
+  const {cloud_cover_low, precipitation, setNebulositeText} = props;
   const [nebulositeImg, setNebulositeImg] = useState(null);
-  console.log(cloud_cover_low,"   ", precipitation);
+  console.log("props ",cloud_cover_low,"   ", precipitation);
   useEffect(() =>{
   const nebulositeArray = [
-    degage,
-    partiel_degage,
-    partiel_couvert,
-    nuageux,
-    tres_nuageux,
-    couvert,
-    orageux
+    {name: degage, text:"Ciel dégagé"},
+    {name: partiel_degage, text:"Nuages rares"},
+    {name: partiel_couvert, text:"ciel voilé"},
+    {name: nuageux, text:"ciel nuageux"},
+    {name: tres_nuageux, text:"ciel bouché"},
+    {name: couvert, text:"ciel couvert"},
+    {name: orageux, text:"Nuages d'orage"}
   ];
   const seuilsArray = [
     0,
@@ -44,42 +44,45 @@ function SelectNebulositeImg(props){
     deluge
   ]
   const hauteurArray = [
-    {bas: 0, haut: 0.5},
-    {bas: 0.5, haut: 2},
-    {bas: 2, haut: 10},
-    {bas: 30, haut: 100}
+    {bas: 0, haut: 0.1, text:"temps brumeux"},
+    {bas: 0.1, haut: 2, text:"Pluies fines éparses"},
+    {bas: 2, haut: 10, text:"Fortes pluies"},
+    {bas: 30, haut: 60, text:"Averses"},
+    {bas: 60, haut: 100, text:"Déluge"}
   ]
   if(cloud_cover_low && precipitation === 0){
     const index = seuilsArray.findIndex(
       (el) => cloud_cover_low > el && cloud_cover_low <= el + 16
     );
     if(index !== -1){
-      setNebulositeImg(nebulositeArray[index]);
+      setNebulositeImg(nebulositeArray[index].name);
+      setNebulositeText(nebulositeArray[index].text);
     }
     else {
       setNebulositeImg(nebulositeArray[null]);
+      setNebulositeText(nebulositeArray[null]);
     }
-    console.log("index",index);
-    
   }  
   if(precipitation > 0){
     const index = hauteurArray.findIndex(
-      (el) => precipitation > el.bas && cloud_cover_low <= el.haut
+      (el) => precipitation > el.bas && precipitation <= el.haut
     );
     if(index !== -1){
       setNebulositeImg(pluieArray[index]);
+      setNebulositeText(hauteurArray[index].text)
+      console.log("--------", index,"- ",hauteurArray[index].bas,"   ",hauteurArray[index].haut);
     }
     else {
       setNebulositeImg(pluieArray[null]);
     }
-    console.log(index);
   }
-  },[cloud_cover_low, precipitation]);
-  
-  return nebulositeImg ? (<img src={nebulositeImg} alt="Ciel"></img>):null;
+  },[cloud_cover_low, precipitation, setNebulositeImg, setNebulositeText]);
+  return nebulositeImg ? (<img src={nebulositeImg} />):null;
 }
 SelectNebulositeImg.propTypes = {
-  cloud_cover_low: PropTypes.number,
-  precipitation: PropTypes.any
+  cloud_cover_low: PropTypes.any,
+  precipitation: PropTypes.any,
+  setPluieImg: PropTypes.any,
+  setNebulositeText: PropTypes.any
 }
 export default SelectNebulositeImg;

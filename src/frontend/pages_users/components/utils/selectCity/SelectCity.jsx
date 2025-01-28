@@ -26,7 +26,6 @@ function SelectCity (props){
     setCityName("");
   }
   const handleSelectCity = (el)=>{
-    console.log("EL", el);
     updateLatitude(el.latitude);
     updateLongitude(el.longitude);
     updateCity_code(el.city_code);
@@ -47,7 +46,7 @@ function SelectCity (props){
         <div className="city-list">
           {cityList && cityList.map((el,index)=>{
             return(
-              <span key={index} onClick={()=>handleSelectCity(el)}>
+              <span className="city-item" key={index} onClick={()=>handleSelectCity(el)}>
                 <p>{el.city_code}</p>
               </span>
             )
