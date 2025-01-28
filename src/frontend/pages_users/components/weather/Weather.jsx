@@ -2,9 +2,8 @@ import { useEffect, useState, useMemo } from "react";
 import { useWeatherDatas } from "../../hooks/useWeatherDatas";
 import { useLocation } from "../../hooks/useLocation";
 import FetchApiStatic from "../utils/FetchApiStatic";
-import weatherImg from "../../assets/Soleil nuageux.png";
 import ConvertDateToCustom from "../utils/ConvertDateToCustom";
-import SelectNebulositeImg from "../utils/SelectNebulositeImg";
+import SelectNebulositeImg from "../utils/SelectNebulositeImg/SelectNebulositeImg";
 import "./weather.css";
 function ModalWeather() {
   const {
@@ -21,14 +20,13 @@ function ModalWeather() {
   const { latitude, longitude } = useLocation();
   const [meteoData, setMeteoData] = useState(null);
   const [meteoDataKeys, setMeteoDataKeys] = useState(null);
+  // const [nebulositeImg, setNebulositeImg] = useState();
   const lat = latitude || "52.52";
   const long = longitude || "13.41";
   useMemo(() => {
     const fetchData = async () => {
       try {
         await FetchApiStatic(lat, long, meteoData, setMeteoData, meteoDataKeys, setMeteoDataKeys);
-        console.log("################");
-        
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }
@@ -56,9 +54,8 @@ function ModalWeather() {
   };
   return (
     <div className="weather-container">
-      <p className="weather-text">Couvert, éclaircies éparses</p>
+      <p className="weather-text">nuage:{cloud_cover_low} pluie:{precipitation}</p>
       <span className="weather-box">
-        <img src={weatherImg} alt="Weather icon" />
         <SelectNebulositeImg cloud_cover_low={cloud_cover_low} precipitation={precipitation} />
         <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
       </span>
