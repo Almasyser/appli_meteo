@@ -23,8 +23,8 @@ const getDayName = (dateString, setNames) => {
     }
     const day = new Intl.DateTimeFormat('fr-FR', { weekday: 'long' }).format(date);
     const month = new Intl.DateTimeFormat('fr-Fr', {month: 'long'}).format(date);
-    const temp = [{day: day, month: month}]
-    setNames(temp)
+    const composite = [{day: day, month: month}]
+    setNames(composite)
 }
     
 export default ConvertFormatDate;

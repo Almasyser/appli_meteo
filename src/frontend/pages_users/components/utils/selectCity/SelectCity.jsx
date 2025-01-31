@@ -3,15 +3,13 @@ import { PropTypes } from 'prop-types';
 import axios from 'axios';
 import { useLocation } from "../../../hooks/useLocation";
 import "./selectCity.css";
+import cross from "../../../assets/Cross-cancel.png";
 function SelectCity (props){
   // eslint-disable-next-line react/prop-types
   const { setVisible } = props;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocation();
   const [cityName, setCityName] = useState("");
   const [cityList, setCityList] = useState("");
-  const handleChangeCity = (el)=>{
-    setCityName(el.target.value);          
-  };
   const handleChoiceCity = async ()=>{
     try {
       const response = await axios.get(`http://localhost:5050/datasByCity/${cityName}`);
@@ -21,10 +19,10 @@ function SelectCity (props){
       console.error(error);
     }
   }
-  const handleChoiceCancel = ()=>{
-    setCityList("");
-    setCityName("");
-  }
+  const handleChangeCity = (el)=>{
+    setCityName(()=>el.target.value);
+    cityName && cityName.length>3? handleChoiceCity(cityName):null;
+  };
   const handleSelectCity = (el)=>{
     updateLatitude(el.latitude);
     updateLongitude(el.longitude);
@@ -34,32 +32,38 @@ function SelectCity (props){
     updateRegion_name(el.region_name);
     setVisible(false);
   }
+  const handleChoiceCancel = ()=>{
+    setCityList("");
+    setCityName("");
+  }
   return(
-    <>
-      <div className="city-search">
+    <div className="city-search">
+      <img src={cross} className="city-close" />
+      <p className="city-comment">Ville, village &#40;min 4 premières lettres&#41; ou Code Postal</p>
+      <div className="input-box">
         <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
         {(cityName !== "")?
           <>
-            <button className="city-btn-choice" type="button" onClick={handleChoiceCity}>valid</button>
             <button className="city-btn-cancel" type="button" onClick={handleChoiceCancel}>X</button>
-          </> :null }
-        <div className="city-list">
-          {cityList && cityList.filter((el,index, self) =>
-            index === self.findIndex((t) => t.city_code === el.city_code)
-          )
-          .map((el, index)=>{
-            return(
-              <span className="city-item" key={index} onClick={()=>handleSelectCity(el)}>
-                <p>{el.city_code}</p>
-              </span>
-            );
-          })}
-        </div>
+          </> :null
+        }
       </div>
-    </>
+      <div className="city-list">
+        {cityList && cityList.filter((el,index, self) =>
+          index === self.findIndex((t) => t.city_code === el.city_code)
+        )
+        .map((el, index)=>{
+          return(
+            <span className="city-item" key={index} onClick={()=>handleSelectCity(el)}>
+              <p>{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
+            </span>
+          );
+        })}
+      </div>
+    </div>
   )
 }
 SelectCity.propType = {
-  setVisible: PropTypes.any,
+  setVisible: PropTypes.any
 }
 export default SelectCity;

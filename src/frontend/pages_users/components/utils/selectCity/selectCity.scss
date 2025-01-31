@@ -2,37 +2,53 @@
 @use "../../../styles/mixins" as *;
 .city-search{
   position: absolute;
-  top: 12vh;
+  top: 11vh;
   left: 2%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  // justify-content: center;
   width: 92%;
   height: 15vh;
   border: 1px solid red;
-  background-color: $BodyBackground;
-  opacity: 0.8;
-  input{
-    width: 10rem;
-    height: 1.8rem;
-    margin-left: 1.4rem;
-    padding-left: 0.4rem;
-    background-color: $ButtonBackground;
-    color: $ButtonText;
-    @include textMedium("ubuntu",1.2rem,0.1rem,0.4rem,0.3rem)
-  }
+  background-color: $SelectCityBackground;
+  opacity: 0.9;
+ 
 }
-.city-btn-choice{
-
+.city-comment{
+  @include textMedium($ubuntu, 0.6rem, 0, 1rem, 0 );
+  margin-top: 2vh;
+}
+.input-box{
+  width: 80%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+}  
+input{
+  width: 18rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+  padding-left: 0.4rem;
+  background-color: $ButtonBackgroundHover;
+  color: $ButtonText;
+  @include textMedium("ubuntu",1.2rem,0.1rem,0.4rem,0.3rem)
 }
 .city-btn-cancel{
-
+  
 }
 .city-list{
-
+  padding: 0.4rem 1rem 0.4rem 1rem;
 }
 .city-item{
-
   p{
+    color: chartreuse;
+    padding: 0.4rem 0 0.4rem 0;
+    border-bottom: 1px solid rgb(214, 225, 227);
+    &:hover{
+      cursor: pointer;
+      opacity: 0.6;
+    }
     
   }
   

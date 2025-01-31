@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 import forecastdays from "../assets/forecastdays.json";
 import pastdays from "../assets/pastdays.json";
 import forecasthours from "../assets/forecasthours.json";
-import "./selectitem.css";
+import "./selectitems.css";
 import { useEffect, useState } from 'react';
 export default function SelectItems({idItem, setDuration}){
   const [list, setList]=useState([]);
