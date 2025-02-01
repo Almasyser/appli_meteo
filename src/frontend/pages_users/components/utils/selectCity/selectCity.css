@@ -16,17 +16,36 @@
   font-weight: 400;
   font-style: normal;
 }
+.city-container {
+  position: absolute;
+  width: 98%;
+  height: 23vh;
+  top: 4.8rem;
+}
+
+.city-close {
+  position: relative;
+  z-index: 1;
+  scale: 0.3;
+  top: -32px;
+  left: 19rem;
+}
+.city-close:hover {
+  opacity: 0.6;
+}
+
 .city-search {
   position: absolute;
-  top: 11vh;
-  left: 2%;
+  width: 100%;
+  height: 100%;
+  top: 0.1vh;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 92%;
-  height: 15vh;
-  border: 1px solid red;
+  justify-content: center;
   background-color: rgb(38, 103, 149);
+  border-radius: 0 16px 16px 0;
   opacity: 0.9;
 }
 
@@ -58,6 +77,10 @@ input {
   letter-spacing: 0.1rem;
   padding-left: 0.4rem;
   margin-top: 0.3rem;
+}
+
+.city-btn-cancel {
+  color: blueviolet;
 }
 
 .city-list {

@@ -24,7 +24,7 @@ function ModalLocation (){
           </button>
         </span>
       </div>
-      {visible? <SelectCity setVisible={setVisible} />: null}
+      {visible? <SelectCity setVisible={setVisible} visible={visible} />: null}
     </>
   )
 }

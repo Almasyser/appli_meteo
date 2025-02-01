@@ -6,7 +6,7 @@ import "./selectCity.css";
 import cross from "../../../assets/Cross-cancel.png";
 function SelectCity (props){
   // eslint-disable-next-line react/prop-types
-  const { setVisible } = props;
+  const { visible, setVisible } = props;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocation();
   const [cityName, setCityName] = useState("");
   const [cityList, setCityList] = useState("");
@@ -36,9 +36,14 @@ function SelectCity (props){
     setCityList("");
     setCityName("");
   }
+  const handleVisible = ()=>{
+    handleChoiceCancel();
+    setVisible(!visible);
+  }
   return(
-    <div className="city-search">
-      <img src={cross} className="city-close" />
+    <div className="city-container">
+      <img src={cross} className="city-close" onClick={handleVisible}/>
+      <div className="city-search">
       <p className="city-comment">Ville, village &#40;min 4 premières lettres&#41; ou Code Postal</p>
       <div className="input-box">
         <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
@@ -61,6 +66,7 @@ function SelectCity (props){
         })}
       </div>
     </div>
+  </div>
   )
 }
 SelectCity.propType = {
