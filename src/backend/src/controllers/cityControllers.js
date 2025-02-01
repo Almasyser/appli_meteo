@@ -235,7 +235,7 @@ const getCitiesByDep = (req, res) => {
     });
 };
 const getCitiesByCode = (req, res) => {
-  const codeId = req.params.code_id;
+  const codeId = parseInt(req.params.code_id);
   console.log("###codeId",codeId, typeof(codeId));
   if (!codeId) {
     return res.status(400).send("code_id is required");

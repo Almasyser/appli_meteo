@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useLocation } from "../../../hooks/useLocation";
 import "./selectCity.css";
 import cross from "../../../assets/Cross-cancel.png";
+import clear from "../../../assets/Clear_green-128.png";
 function SelectCity (props){
   // eslint-disable-next-line react/prop-types
   const { visible, setVisible } = props;
@@ -49,7 +50,7 @@ function SelectCity (props){
         <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
         {(cityName !== "")?
           <>
-            <button className="city-btn-cancel" type="button" onClick={handleChoiceCancel}>X</button>
+            <img src={clear} className="city-btn-cancel" type="button" onClick={handleChoiceCancel} />
           </> :null
         }
       </div>
