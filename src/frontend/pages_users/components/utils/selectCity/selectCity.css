@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: rgb(38, 103, 149);
   border-radius: 0 16px 16px 0;
   opacity: 0.9;
@@ -100,23 +100,26 @@ input {
 
 .city-list {
   position: absolute;
-  top: 8.5rem;
+  max-height: 64vh;
   padding: 0.4rem 1rem 0.4rem 1rem;
   background: rgb(38, 103, 149);
   border-radius: 8px;
+  overflow-y: scroll;
+  border: 1px dashed greenyellow;
 }
 
-.city-item p {
+.city-item {
+  width: 12rem;
   color: #F2F995;
   padding: 0.4rem 0 0.4rem 0;
-  border-bottom: 1px solid rgb(214, 225, 227);
+  border-bottom: 1px solid #87E9BB;
   font-family: "ubuntu", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.03rem;
   padding-left: 0.3rem;
   margin-top: 0.3rem;
 }
-.city-item p:hover {
+.city-item:hover {
   cursor: pointer;
   opacity: 0.6;
 }/*# sourceMappingURL=selectCity.css.map */

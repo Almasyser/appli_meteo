@@ -23,7 +23,7 @@ function SelectCity (props){
 
   const handleChangeCity = (e)=>{
     setCityName(()=>e.target.value);
-    cityName && cityName.length > 3? handleChoiceCity(cityName):null;
+    cityName && cityName.length > 2? handleChoiceCity(cityName):null;
   };
   
   const handleSelectCity = (el)=>{
@@ -55,19 +55,17 @@ function SelectCity (props){
               <img src={clear} className="city-btn-cancel" type="button" onClick={handleChoiceCancel} />
             </> :null
           }
-        <div className="city-list">
+        </div>
+        <div className="city-list" >
           {cityList && cityList.filter((el,index, self) =>
             index === self.findIndex((t) => t.city_code === el.city_code)
           )
           .map((el, index)=>{
             return(
-              <span className="city-item" key={index} onClick={()=>handleSelectCity(el)}>
-                <p>{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
-              </span>
-            );
+            <p className="city-item" key={index} onClick={()=>handleSelectCity(el)}>{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
+          );
           })}
         </div>
-      </div>
     </div>
   </div>
   )
