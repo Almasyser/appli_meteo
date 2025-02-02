@@ -71,11 +71,11 @@
   border: none;
   border-radius: 32px;
   background: rgba(65, 233, 239, 0.2);
-  opacity: 0.6;
-  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
 }
 .btn-box:hover {
-  opacity: 1;
+  opacity: 0.6;
   scale: 0.97;
   cursor: pointer;
 }

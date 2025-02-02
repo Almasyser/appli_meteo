@@ -13,17 +13,19 @@ function SelectCity (props){
   const [cityList, setCityList] = useState("");
   const handleChoiceCity = async ()=>{
     try {
-      const response = await axios.get(`http://localhost:5050/datasByCity/${cityName}`);
-      setCityList(response.data);
-    } 
-    catch (error) {
+        const response = await axios.get(`http://localhost:5050/datasByCity/${cityName}`);
+        setCityList(response.data);
+      } 
+      catch (error) {
       console.error(error);
-    }
+      }
   }
-  const handleChangeCity = (el)=>{
-    setCityName(()=>el.target.value);
-    cityName && cityName.length>3? handleChoiceCity(cityName):null;
+
+  const handleChangeCity = (e)=>{
+    setCityName(()=>e.target.value);
+    cityName && cityName.length > 3? handleChoiceCity(cityName):null;
   };
+  
   const handleSelectCity = (el)=>{
     updateLatitude(el.latitude);
     updateLongitude(el.longitude);
@@ -45,32 +47,33 @@ function SelectCity (props){
     <div className="city-container">
       <img src={cross} className="city-close" onClick={handleVisible}/>
       <div className="city-search">
-      <p className="city-comment">Ville, village &#40;min 4 premières lettres&#41; ou Code Postal</p>
-      <div className="input-box">
-        <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
-        {(cityName !== "")?
-          <>
-            <img src={clear} className="city-btn-cancel" type="button" onClick={handleChoiceCancel} />
-          </> :null
-        }
-      </div>
-      <div className="city-list">
-        {cityList && cityList.filter((el,index, self) =>
-          index === self.findIndex((t) => t.city_code === el.city_code)
-        )
-        .map((el, index)=>{
-          return(
-            <span className="city-item" key={index} onClick={()=>handleSelectCity(el)}>
-              <p>{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
-            </span>
-          );
-        })}
+        <p className="city-comment">Ville, village &#40;min 4 premières lettres&#41; ou Code Postal</p>
+        <div className="input-box">
+          <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
+          {(cityName !== "")?
+            <>
+              <img src={clear} className="city-btn-cancel" type="button" onClick={handleChoiceCancel} />
+            </> :null
+          }
+        <div className="city-list">
+          {cityList && cityList.filter((el,index, self) =>
+            index === self.findIndex((t) => t.city_code === el.city_code)
+          )
+          .map((el, index)=>{
+            return(
+              <span className="city-item" key={index} onClick={()=>handleSelectCity(el)}>
+                <p>{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
   </div>
   )
 }
 SelectCity.propType = {
-  setVisible: PropTypes.any
+  setVisible: PropTypes.any,
+  visible: PropTypes.any
 }
 export default SelectCity;
