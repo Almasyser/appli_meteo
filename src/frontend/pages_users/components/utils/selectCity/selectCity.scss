@@ -2,10 +2,10 @@
 @use "../../../styles/mixins" as *;
 .city-container{
   position: absolute;
-  top: 14rem;
+  top: 13rem;
   width: 100%;
   height: 128px;
-  background-color: #006400;
+  background-color:$SelectCityBackground;
   .entete{
     width: 100%;
     height: 40px;
@@ -43,7 +43,7 @@ input{
 .city-btn-cancel{
   scale:0.6;
   position: relative;
-  background-color: $ColTitleBackground;
+  background-color: transparent; //$ColTitleBackground;
   border: none;
   border-radius: 0 4px 4px 0;
   left: -50px;
@@ -62,7 +62,9 @@ input{
   background: $ListBackground;
   z-index: 1000;
   overflow-y: scroll;
-
+  scrollbar-color: $TextDark $ListBackground ;
+  scrollbar-width: thin;
+  scroll-padding-left: 0.5rem;
 }
 .city-item{
   width: 14rem;

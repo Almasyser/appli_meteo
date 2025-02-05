@@ -31,7 +31,7 @@
   width: -moz-max-content;
   width: max-content;
   margin-top: 0.5rem;
-  color: rgba(190, 240, 119, 0.8);
+  color: rgb(190, 240, 119);
   text-align: center;
   opacity: 0.2;
   transition: opacity 0.2s ease-in-out;
