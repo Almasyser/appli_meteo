@@ -2,36 +2,20 @@
 @use "../../../styles/mixins" as *;
 .city-container{
   position: absolute;
-  // border: 1px solid red;
+  top: 14rem;
   width: 100%;
-  height: 23vh;
-  top: 4.8rem;
-}
-.city-close{
-  position: relative;
-  z-index: 1;
-  scale: 0.3;
-  top: -32px;
-  left: 19rem;
-  transition: all 0.2s ease-in-out;
-  &:hover{
-    opacity: 0.6; 
+  height: 128px;
+  background-color: #006400;
+  .entete{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    .city-close{
+      width: 36px;
+      height: 36px;
+    }
   }
-}
-.city-search{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0.1vh;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content:space-evenly;
-  background-color: $SelectCityBackground;
-  border-radius: 0 16px 16px 0;
-  opacity: 0.9;
- 
 }
 .city-comment{
   @include textMedium($roboto, 0.7rem, 0.01rem, 0.5rem, 0 );
@@ -40,18 +24,20 @@
 }
 .input-box{
   width: 80%;
-  height: 4rem;
+  height: 3.3rem;
   display: flex;
   margin: 0 0 0 1rem;
 }  
 input{
-  width: max-content;
-  height: 3rem;
-  margin-left: 0.5rem;
-  padding-left: 0.4rem;
+  // width: 100%;
+  height: 2.8rem;
   background-color: $ButtonBackgroundHover;
   border-radius: 8px;
   color: $ButtonText;
+  outline: none;
+  &:focus-visible {
+    background: lighten($color: $ButtonBackgroundHover, $amount: 40%);
+  }
   @include textMedium($ubuntu,1.2rem,0.1rem,0.4rem,0.3rem)
 }
 .city-btn-cancel{
@@ -60,8 +46,8 @@ input{
   background-color: $ColTitleBackground;
   border: none;
   border-radius: 0 4px 4px 0;
-  left: -56px;
-  top: -3px;
+  left: -50px;
+  top: 2px;
   transition: all 0.2s ease-in-out;
   &:hover{
     opacity: 0.4;
@@ -70,15 +56,16 @@ input{
 }
 .city-list{
   position: absolute;
+  left: 1.4rem;
   max-height: 64vh;
-  padding: 0.4rem 1rem 0.4rem 1rem;
-  background: $SelectCityBackground;
-  border-radius: 8px;
+  padding: 0.4rem 1rem 0.4rem 0.1rem;
+  background: $ListBackground;
+  
   overflow-y: scroll;
-  border: 1px dashed greenyellow;
+
 }
 .city-item{
-  width: 12rem;
+  width: 14rem;
   color: $CeilValues;
   padding: 0.4rem 0 0.4rem 0;
   border-bottom: 1px solid $Line;
@@ -86,7 +73,5 @@ input{
   &:hover{
     cursor: pointer;
     opacity: 0.6;
-
   }
-  
 }

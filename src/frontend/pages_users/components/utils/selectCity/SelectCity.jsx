@@ -45,19 +45,21 @@ function SelectCity (props){
   }
   return(
     <div className="city-container">
-      <img src={cross} className="city-close" onClick={handleVisible}/>
-      <div className="city-search">
+      <div className="entete">
         <p className="city-comment">Ville, village &#40;min 4 premières lettres&#41; ou Code Postal</p>
-        <div className="input-box">
-          <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
-          {(cityName !== "")?
-            <>
-              <img src={clear} className="city-btn-cancel" type="button" onClick={handleChoiceCancel} />
-            </> :null
-          }
-        </div>
+        <img src={cross} className="city-close" onClick={handleVisible}/>
+      </div>
+      <div className="input-box">
+        <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
+        {(cityName !== "")?
+          <>
+            <img src={clear} className="city-btn-cancel" type="button" onClick={handleChoiceCancel} />
+          </> :null
+        }
+      </div>
+      {cityList &&
         <div className="city-list" >
-          {cityList && cityList.filter((el,index, self) =>
+          {cityList.filter((el,index, self) =>
             index === self.findIndex((t) => t.city_code === el.city_code)
           )
           .map((el, index)=>{
@@ -66,7 +68,7 @@ function SelectCity (props){
           );
           })}
         </div>
-    </div>
+      }
   </div>
   )
 }
