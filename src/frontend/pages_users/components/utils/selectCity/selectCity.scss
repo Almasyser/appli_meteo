@@ -60,7 +60,7 @@ input{
   max-height: 64vh;
   padding: 0.4rem 1rem 0.4rem 0.1rem;
   background: $ListBackground;
-  
+  z-index: 1000;
   overflow-y: scroll;
 
 }

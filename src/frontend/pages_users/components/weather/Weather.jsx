@@ -59,7 +59,7 @@ function ModalWeather() {
       <span className="weather-box">
         <SelectNebulositeImg cloud_cover_low={cloud_cover_low} precipitation={precipitation} setNebulositeText={setNebulositeText} setNebulositeImg={setNebulositeImg} />
         <img src={nebulositeImg} alt="¤¤¤" />
-        <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
+        <p>{Math.round(meteoData.hourly.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
       </span>
     </div>
   );
