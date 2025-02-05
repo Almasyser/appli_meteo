@@ -55,6 +55,21 @@
   width: 34px;
   height: 34px;
   margin-right: 0.3rem;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+@keyframes rotate {
+  0%{
+    transform: rotateZ(180deg);
+  }
+  50%{
+    transform: rotateZ(-180deg);
+  }
+  100%{
+    transform: rotateZ(180deg);
+  }
+  
 }
 
     

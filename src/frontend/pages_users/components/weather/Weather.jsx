@@ -17,7 +17,8 @@ function ModalWeather() {
     updateWind_speed_10m,
     updateWind_direction_10m,
     cloud_cover_low,
-    precipitation
+    precipitation,
+    is_day
   } = useWeatherDatas();
   const { latitude, longitude } = useLocation();
   const [meteoData, setMeteoData] = useState(null);
@@ -53,6 +54,8 @@ function ModalWeather() {
       updateWind_direction_10m(meteoData.hourly.wind_direction_10m[el] || 0 );
     }
   };
+  console.log("DAY ",is_day);
+  
   return (
     <div className="weather-container">
       <p className="weather-text">{nebulositeText}</p>
