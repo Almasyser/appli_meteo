@@ -15,5 +15,5 @@ export const useWeatherDatas = create((set) =>({
     updateCloud_cover_low: (value)=>set({cloud_cover_low: value}),
     updateWind_speed_10m: (value)=>set({wind_speed_10m: value}),
     updateWind_direction_10m: (value)=>set({wind_direction_10m: value}),
-    updateIs_Day: (value)=>set({is_day: value})
+    updateIs_day: (value)=>set({is_day: value})
   }))

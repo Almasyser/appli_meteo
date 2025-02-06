@@ -16,6 +16,7 @@ function ModalWeather() {
     updateCloud_cover_low,
     updateWind_speed_10m,
     updateWind_direction_10m,
+    updateIs_day,
     cloud_cover_low,
     precipitation,
     is_day
@@ -52,15 +53,20 @@ function ModalWeather() {
       updateCloud_cover_low(meteoData.hourly.cloud_cover_low[el] || 0 );
       updateWind_speed_10m(meteoData.hourly.wind_speed_10m[el] || 0 );
       updateWind_direction_10m(meteoData.hourly.wind_direction_10m[el] || 0 );
+      updateIs_day(meteoData.hourly.is_day[el] || 1);
     }
   };
-  console.log("DAY ",is_day);
-  
   return (
     <div className="weather-container">
       <p className="weather-text">{nebulositeText}</p>
       <span className="weather-box">
-        <SelectNebulositeImg cloud_cover_low={cloud_cover_low} precipitation={precipitation} setNebulositeText={setNebulositeText} setNebulositeImg={setNebulositeImg} />
+        <SelectNebulositeImg 
+          cloud_cover_low={cloud_cover_low} 
+          precipitation={precipitation} 
+          setNebulositeText={setNebulositeText} 
+          setNebulositeImg={setNebulositeImg} 
+          is_day={is_day}
+        />
         <img src={nebulositeImg} alt="¤¤¤" />
         <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
       </span>

@@ -10,10 +10,12 @@ function Page14 () {
     <>
     <div className="body">
       <Header />
-      <ModalLocation />
-      <ModalWeather />
-      <ModalWind />
-      <ModalComments />
+
+        <ModalLocation />
+        <ModalWeather />
+        <ModalWind />
+        <ModalComments />
+
       <ModalFooter />
       
     </div>

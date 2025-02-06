@@ -26,11 +26,7 @@ function ModalWind () {
           <p className="wind-value">{precipitation_probability}%</p>
         </span>
       </div>
-
-
-
     </div>
-
   )
 }
 export default ModalWind;
