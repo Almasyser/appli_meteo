@@ -1,4 +1,4 @@
-@mixin textMedium($fm, $fs, $ls, $pl, $mt){
+@mixin textMedium($fm, $fc, $fw, $fs, $ls, $pl, $mt){
   @if $fm == "barlow"{
     font-family: "barlow", sans-serif;
   } 
@@ -9,7 +9,9 @@
     font-family: "ubuntu",sans-serif;
   }
   font-size: $fs;
+  font-weight: $fw;
   letter-spacing: $ls;
   padding-left: $pl;
   margin-top: $mt;
+  color: $fc;
 }

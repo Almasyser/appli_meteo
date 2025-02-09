@@ -18,7 +18,7 @@
   }
 }
 .city-comment{
-  @include textMedium($roboto, 0.7rem, 0.01rem, 0.5rem, 0 );
+  @include textMedium($roboto, $TextLight, normal, 0.7rem, 0.01rem, 0.5rem, 0 );
   margin-top: 2vh;
   margin-left: 1rem;
 }
@@ -29,6 +29,7 @@
   margin: 0 0 0 1rem;
 }  
 input{
+  z-index: 1000;
   // width: 100%;
   height: 2.8rem;
   background-color: $ButtonBackgroundHover;
@@ -38,7 +39,7 @@ input{
   &:focus-visible {
     background: lighten($color: $ButtonBackgroundHover, $amount: 40%);
   }
-  @include textMedium($ubuntu,1.2rem,0.1rem,0.4rem,0.3rem)
+  @include textMedium($ubuntu, $TextLight, normal, 1.2rem,0.1rem,0.4rem,0.3rem)
 }
 .city-btn-cancel{
   scale:0.6;
@@ -71,7 +72,7 @@ input{
   color: $CeilValues;
   padding: 0.4rem 0 0.4rem 0;
   border-bottom: 1px solid $Line;
-  @include textMedium($ubuntu,1rem,0.03rem,0.3rem,0.3rem);
+  @include textMedium($ubuntu, $TextLight, normal, 1rem, 0.03rem, 0.3rem, 0.3rem);
   &:hover{
     cursor: pointer;
     opacity: 0.6;

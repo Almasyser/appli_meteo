@@ -33,9 +33,17 @@
   width: 100%;
   display: flex;
 }
-.weather-box img {
-  scale: 0.4;
+.weather-box .nebulosite-box {
+  position: relative;
   z-index: 0;
+}
+.weather-box .is-day {
+  scale: 0.5;
+}
+.weather-box .nebulosite {
+  position: relative;
+  top: -256px;
+  scale: 0.4;
 }
 .weather-box p {
   width: 50%;

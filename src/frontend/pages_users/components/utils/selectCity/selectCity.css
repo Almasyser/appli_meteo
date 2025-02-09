@@ -37,9 +37,11 @@
 .city-comment {
   font-family: "ubuntu", sans-serif;
   font-size: 0.7rem;
+  font-weight: normal;
   letter-spacing: 0.01rem;
   padding-left: 0.5rem;
   margin-top: 0;
+  color: #f3fdd0;
   margin-top: 2vh;
   margin-left: 1rem;
 }
@@ -52,6 +54,7 @@
 }
 
 input {
+  z-index: 1000;
   height: 2.8rem;
   background-color: rgba(65, 233, 239, 0.4);
   border-radius: 8px;
@@ -59,9 +62,11 @@ input {
   outline: none;
   font-family: "ubuntu", sans-serif;
   font-size: 1.2rem;
+  font-weight: normal;
   letter-spacing: 0.1rem;
   padding-left: 0.4rem;
   margin-top: 0.3rem;
+  color: #f3fdd0;
 }
 input:focus-visible {
   background: rgba(253, 255, 255, 0.4);
@@ -102,9 +107,11 @@ input:focus-visible {
   border-bottom: 1px solid #87E9BB;
   font-family: "ubuntu", sans-serif;
   font-size: 1rem;
+  font-weight: normal;
   letter-spacing: 0.03rem;
   padding-left: 0.3rem;
   margin-top: 0.3rem;
+  color: #f3fdd0;
 }
 .city-item:hover {
   cursor: pointer;

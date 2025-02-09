@@ -14,13 +14,13 @@
   flex-direction: column;
 }
 .location-town{
-  @include textMedium($ubuntu, 1.4rem, 0.1rem, 0.6rem, 1.5rem);
+  @include textMedium($ubuntu, $TextLight, bolder, 1.4rem, 0.1rem, 0.6rem, 1.5rem);
 }
 .location-department{
-  @include textMedium($ubuntu, 0.8rem, 0.02rem, 0.8rem, 0.6rem);
+  @include textMedium($ubuntu, $TextLight, normal, 0.8rem, 0.02rem, 0.8rem, 0.6rem);
 }
 .location-region{
-  @include textMedium($barlow, 1rem, 0.05rem, 0.8rem, 1rem);
+  @include textMedium($barlow, $TextLight, normal, 1rem, 0.05rem, 0.8rem, 1rem);
 }
 .location-button{
   width: 20%;
@@ -35,7 +35,6 @@
   align-items: center;
   justify-content: space-between;
   border: none;
-  // border: 1px solid $ButtonBackgroundHover;
   border-radius: 32px;
   background: $ButtonBackground;
   opacity: 1;
