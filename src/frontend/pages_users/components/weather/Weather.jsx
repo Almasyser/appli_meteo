@@ -7,10 +7,9 @@ import SelectNebulositeImg from "../utils/SelectNebulositeImg/SelectNebulositeIm
 import weatherCodeJson from "../../json/omm_codes.json";
 import "./weather.css";
 function ModalWeather() {
-
-  const [nebulositeText, setNebulositeText] = useState(null);
   const [nebulositeImg, setNebulositeImg] = useState(null); // incorporer aux zustand
   const [is_dayBackground, setIs_dayBackground ] = useState(null);
+  const [prevision, setPrevision ] = useState(null);
   const {
     updateTemperature_2m,
     updateApparent_temperature,
@@ -50,7 +49,6 @@ function ModalWeather() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [meteoData, heure]);
   const handleAffectDatas = (el) => {
-    // console.log("EL :",el);
     const el1 = Math.trunc(el/24)
     if (meteoData?.hourly) {
       updateTemperature_2m(meteoData.hourly.temperature_2m[el] || 0 );
@@ -62,23 +60,26 @@ function ModalWeather() {
       updateWind_direction_10m(meteoData.hourly.wind_direction_10m[el] || 0 );
       updateIs_day(meteoData.hourly.is_day[el] || 1);
       updateWeather_code(meteoData.daily.weather_code[el1] || 3);
-      console.log(nebulositeText, "  ",el1," ****** ",weather_code);
     }
   };
-  
-  return (
+  useEffect(()=>{
+    weatherCodeJson && weatherCodeJson.map((el) =>{
+      if (el.code === weather_code){
+        setPrevision(el.text);
+      }
+    })
+  },[weather_code]);
+
+    return (
     <div className="weather-container">
-      {/* <p className="weather-text">{nebulositeText} valeur:{cloud_cover}%</p> */}
-      <p className="weather-text">{weatherCodeJson && weatherCodeJson.filter((el)=> {el === weather_code})}</p>
+      <p className="weather-text">{prevision}</p>
       <span className="weather-box">
         <SelectNebulositeImg 
           cloud_cover={cloud_cover} 
           precipitation={precipitation} 
-          setNebulositeText={setNebulositeText} 
           setNebulositeImg={setNebulositeImg} 
           is_day={is_day}
           setIs_dayBackground={setIs_dayBackground}
-          
         />
         <div className="nebulosite-box">
           <img className="is-day" src= {is_dayBackground} alt={is_day} />

@@ -18,7 +18,7 @@ import deluge from "./assets/14_Deluge.png";
 import is_dayImg from "./assets/Is_day.png";
 import is_nightImg from "./assets/Is_night.png";
 function SelectNebulositeImg(props){
-  const {cloud_cover, precipitation, setNebulositeText, setNebulositeImg, is_day, setIs_dayBackground} = props;
+  const {cloud_cover, precipitation, setNebulositeImg, is_day, setIs_dayBackground} = props;
   console.log("is day ",is_day," -- ",cloud_cover);
   useEffect(() =>{
     const is_dayArray=[ is_nightImg, is_dayImg ];
@@ -56,18 +56,18 @@ function SelectNebulositeImg(props){
     ]
     if (cloud_cover === 0 && precipitation === 0){
       setNebulositeImg((is_day === 1)? nebulositeArray[0].jour : nebulositeArray[0].nuit);
-      setNebulositeText(nebulositeArray[0].text);
+
     } else if(cloud_cover && precipitation === 0){
     const index = seuilsArray.findIndex(
       (el) => cloud_cover > el && cloud_cover <= el + 16
     );
     if(index !== -1){
       setNebulositeImg((is_day === 1)? nebulositeArray[index].jour : nebulositeArray[index].nuit)
-      setNebulositeText(nebulositeArray[index].text);
+
     }
     else {
       setNebulositeImg(nebulositeArray[null]);
-      setNebulositeText(nebulositeArray[null]);
+
     }
   }  
   if(precipitation > 0){
@@ -76,7 +76,7 @@ function SelectNebulositeImg(props){
     );
     if(index !== -1){
       setNebulositeImg(pluieArray[index]);
-      setNebulositeText(hauteurArray[index].text)
+
       // console.log("--------", index,"- ",hauteurArray[index].bas,"   ",hauteurArray[index].haut);
     }
     else {
@@ -86,7 +86,7 @@ function SelectNebulositeImg(props){
   setIs_dayBackground(is_dayArray[is_day]);
   // console.log("SET ",is_day, "----",is_dayArray[is_day]);
   
-  },[cloud_cover, precipitation, setNebulositeText, setNebulositeImg, is_day, setIs_dayBackground]); // ajouter 'useHour' pour MaJ auto
+  },[cloud_cover, precipitation, setNebulositeImg, is_day, setIs_dayBackground]); // ajouter 'useHour' pour MaJ auto
 }
 SelectNebulositeImg.propTypes = {
   cloud_cover: PropTypes.any,

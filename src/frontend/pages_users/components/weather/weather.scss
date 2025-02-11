@@ -13,9 +13,12 @@
 }
 .weather-box{
   width: 100%;
+  height: 212px;
   display: flex;
+  border: 2px solid red inset;
   .nebulosite-box{
     position: relative;
+    width: 60%;
     z-index: 0;
   }
   .is-day{
@@ -23,7 +26,7 @@
   }
   .nebulosite{
     position: relative;
-    top: -256px;
+    top: -272px;
     scale: 0.4;
     // z-index: 0;
   }
