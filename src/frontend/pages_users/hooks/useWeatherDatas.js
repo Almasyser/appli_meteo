@@ -7,7 +7,7 @@ export const useWeatherDatas = create((set) =>({
     cloud_cover:"___",
     wind_speed_10m:"___km/h",
     wind_direction_10m:"_____",
-    is_day: 1,
+    is_day: null,
     is_dayBackground: "",
     weather_code: 3,
     updateTemperature_2m: (value)=>set({temperature_2m: value}),

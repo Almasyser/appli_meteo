@@ -14,13 +14,14 @@
   flex-direction: column;
 }
 .location-town{
-  @include textMedium($ubuntu, $TextLight, bolder, 1.4rem, 0.1rem, 0.6rem, 1.5rem);
+  @include textMedium($ubuntu, $TextLight, bolder, 1.4rem, 0.1rem, 0.6rem, 1rem);
 }
 .location-department{
   @include textMedium($ubuntu, $TextLight, normal, 0.8rem, 0.02rem, 0.8rem, 0.6rem);
 }
 .location-region{
   @include textMedium($barlow, $TextLight, normal, 1rem, 0.05rem, 0.8rem, 1rem);
+  margin-bottom: 1rem;
 }
 .location-button{
   width: 20%;

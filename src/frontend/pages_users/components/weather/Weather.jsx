@@ -51,15 +51,15 @@ function ModalWeather() {
   const handleAffectDatas = (el) => {
     const el1 = Math.trunc(el/24)
     if (meteoData?.hourly) {
-      updateTemperature_2m(meteoData.hourly.temperature_2m[el] || 0 );
-      updateApparent_temperature(meteoData.hourly.apparent_temperature[el] || 0 );
-      updatePrecipitation_probability(meteoData.hourly.precipitation_probability[el] || 0 );
-      updatePrecipitation(meteoData.hourly.precipitation[el] || 0 );
-      updateCloud_cover(meteoData.hourly.cloud_cover[el] || 0 );
-      updateWind_speed_10m(meteoData.hourly.wind_speed_10m[el] || 0 );
-      updateWind_direction_10m(meteoData.hourly.wind_direction_10m[el] || 0 );
-      updateIs_day(meteoData.hourly.is_day[el] || 1);
-      updateWeather_code(meteoData.daily.weather_code[el1] || 3);
+      updateTemperature_2m(meteoData.hourly.temperature_2m[el] );
+      updateApparent_temperature(meteoData.hourly.apparent_temperature[el] );
+      updatePrecipitation_probability(meteoData.hourly.precipitation_probability[el] );
+      updatePrecipitation(meteoData.hourly.precipitation[el] );
+      updateCloud_cover(meteoData.hourly.cloud_cover[el] );
+      updateWind_speed_10m(meteoData.hourly.wind_speed_10m[el] );
+      updateWind_direction_10m(meteoData.hourly.wind_direction_10m[el]  );
+      updateIs_day(meteoData.hourly.is_day[el] );
+      updateWeather_code(meteoData.daily.weather_code[el1] );
     }
   };
   useEffect(()=>{

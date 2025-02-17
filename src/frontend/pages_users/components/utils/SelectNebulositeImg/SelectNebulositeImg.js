@@ -9,7 +9,7 @@ import couvert from "./assets/05_Couvert.png";
 import orageux from "./assets/06_nuages_lourds.png";
 import lune from "./assets/Lune.png";
 import lune_legers from "./assets/01_Partiel_degage.png";
-import lune_nuageux from "./assets/02Nuit_Partiel_couvert.png";
+import lune_nuageux from "./assets/02_Nuit_Partiel_couvert.png";
 import brume from "./assets/10_Brume.png";
 import pluie_fine from "./assets/11_Pluie_fine.png";
 import pluie from "./assets/12_Pluie.png";
@@ -19,9 +19,9 @@ import is_dayImg from "./assets/Is_day.png";
 import is_nightImg from "./assets/Is_night.png";
 function SelectNebulositeImg(props){
   const {cloud_cover, precipitation, setNebulositeImg, is_day, setIs_dayBackground} = props;
-  console.log("is day ",is_day," -- ",cloud_cover);
+  console.log("is day ",is_day," -- ",cloud_cover," pluie ",precipitation);
   useEffect(() =>{
-    const is_dayArray=[ is_nightImg, is_dayImg ];
+    // const is_dayArray=[ is_nightImg, is_dayImg ];
     const nebulositeArray = [
       {nuit: lune, jour: degage, text:"Ciel dégagé"},
       {nuit: lune_legers, jour: partiel_degage, text:"Nuages rares"},
@@ -55,19 +55,17 @@ function SelectNebulositeImg(props){
       {bas: 60, haut: 100, text:"Déluge"}
     ]
     if (cloud_cover === 0 && precipitation === 0){
-      setNebulositeImg((is_day === 1)? nebulositeArray[0].jour : nebulositeArray[0].nuit);
+      setNebulositeImg(is_day===1? nebulositeArray[0].jour : nebulositeArray[0].nuit);
 
-    } else if(cloud_cover && precipitation === 0){
+    } else if(cloud_cover !== 0 && precipitation !== 0){
     const index = seuilsArray.findIndex(
       (el) => cloud_cover > el && cloud_cover <= el + 16
     );
     if(index !== -1){
-      setNebulositeImg((is_day === 1)? nebulositeArray[index].jour : nebulositeArray[index].nuit)
-
+      setNebulositeImg(is_day===1? nebulositeArray[index].jour : nebulositeArray[index].nuit)
     }
     else {
       setNebulositeImg(nebulositeArray[null]);
-
     }
   }  
   if(precipitation > 0){
@@ -76,16 +74,12 @@ function SelectNebulositeImg(props){
     );
     if(index !== -1){
       setNebulositeImg(pluieArray[index]);
-
-      // console.log("--------", index,"- ",hauteurArray[index].bas,"   ",hauteurArray[index].haut);
     }
     else {
       setNebulositeImg(pluieArray[null]);
     }
   }
-  setIs_dayBackground(is_dayArray[is_day]);
-  // console.log("SET ",is_day, "----",is_dayArray[is_day]);
-  
+  setIs_dayBackground(()=> is_day===0? is_nightImg:is_dayImg);
   },[cloud_cover, precipitation, setNebulositeImg, is_day, setIs_dayBackground]); // ajouter 'useHour' pour MaJ auto
 }
 SelectNebulositeImg.propTypes = {
