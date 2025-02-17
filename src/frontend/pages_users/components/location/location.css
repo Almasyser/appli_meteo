@@ -17,8 +17,6 @@
   font-style: normal;
 }
 .location-container {
-  width: 96%;
-  height: 144px;
   margin: 16px auto;
   display: flex;
   border-top: 1px solid #87E9BB;

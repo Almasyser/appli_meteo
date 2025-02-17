@@ -1,7 +1,9 @@
 @use "../../styles/variables" as *;
 .weather-container{
-  width: 100%;
-  height: 280px;
+  // width: 100%;
+  // height: 280px;
+  display: flex;
+  flex-direction: column;
 
 }
 .weather-text{
