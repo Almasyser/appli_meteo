@@ -7,7 +7,8 @@ import SelectNebulositeImg from "../utils/SelectNebulositeImg/SelectNebulositeIm
 import weatherCodeJson from "../../json/omm_codes.json";
 import "./weather.css";
 function ModalWeather() {
-  const [nebulositeImg, setNebulositeImg] = useState(null); // incorporer aux zustand
+  const [nebulositeImg, setNebulositeImg] = useState(null); 
+  const [nebulositeText, setNebulositeText] = useState(null);// incorporer aux zustand
   const [is_dayBackground, setIs_dayBackground ] = useState(null);
   const [prevision, setPrevision ] = useState(null);
   const {
@@ -72,12 +73,14 @@ function ModalWeather() {
 
     return (
     <div className="weather-container">
-      <p className="weather-text">{prevision}</p>
+      <p className="weather-text">Prevision pour la journée: {prevision}</p>
+      {nebulositeText && <p className="weather-text">Météo actuelle: {nebulositeText}</p>}
       <span className="weather-box">
         <SelectNebulositeImg 
           cloud_cover={cloud_cover} 
           precipitation={precipitation} 
           setNebulositeImg={setNebulositeImg} 
+          setNebulositeText={setNebulositeText}
           is_day={is_day}
           setIs_dayBackground={setIs_dayBackground}
         />

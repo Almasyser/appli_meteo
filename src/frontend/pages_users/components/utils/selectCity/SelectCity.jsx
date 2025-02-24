@@ -20,7 +20,6 @@ function SelectCity (props){
       console.error(error);
       }
   }
-
   const handleChangeCity = (e)=>{
     setCityName(()=>e.target.value);
     cityName && cityName.length > 2? handleChoiceCity(cityName):null;
@@ -74,6 +73,6 @@ function SelectCity (props){
 }
 SelectCity.propType = {
   setVisible: PropTypes.any,
-  visible: PropTypes.any
+  visible: PropTypes.boolean
 }
 export default SelectCity;

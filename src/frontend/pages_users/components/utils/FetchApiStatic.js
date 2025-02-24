@@ -15,7 +15,7 @@ function FetchApiStatic(lat, long, meteoData, setMeteoData, meteoData_keys, setM
       }
     }
     api(url);
-    console.log("meteo data", meteoData);
+    // console.log("meteo data", meteoData);
   }
   
   export default FetchApiStatic;
