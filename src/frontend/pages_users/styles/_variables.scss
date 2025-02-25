@@ -1,7 +1,7 @@
 // fonts
 @font-face {
   font-family: 'Ubuntu';
-  src: url('../../assets/Ubuntu-Regular.woff') format('ttf');
+  src: url('../../assets/Ubuntu/Ubuntu-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
@@ -20,6 +20,19 @@
 $ubuntu: 'Ubuntu';
 $barlow: 'Barlow';
 $roboto: 'Roboto';
+$primary_1: #87E9BB;
+$primary_2: #498e7a;
+$primary_3: #2a605a;
+$primary_4: #0A3239;
+$secondary_1: #f3fdd0;
+$secondary_2: #f3fbb3;
+$secondary_3: #f3faa4;
+$secondary_4: #F2F995;
+$third_1: #41E9EF;
+$third_2: #34a8c2;
+$third_3: #266795;
+$third_4: #13344b;
+
 
 // colors default
 $TextLight: #f3fdd0;
@@ -27,27 +40,20 @@ $TextDark: #0A3239;
 
 // colors
 $BodyBackground: #0A3239;
-
 $HeaderText: #F5CDC6;
 $HeaderHour: #F1F5AD;
-
 $Line: #87E9BB;
-
-
 $LocationText: #C1FFFA;
-$SelectCityBackground: rgba(38, 103, 149, 1);
+$SelectCityBackground: #266795;
 $ButtonBackground: rgba(65, 233, 239, 0.2);
 $ButtonBackgroundHover: rgba(65, 233, 239, 0.4);
 $ButtonText: rgb(190, 240, 119, 1);
 $ListBackground: rgb(65, 160, 122);
-
 $WeatherBackground: transparent;
 $WeatherText: #F2F995;
-
-$WindBackground: rgba(38, 103, 149, 0.6);
+$WindBackground: #26679599;
 $WindTextLabels: $TextLight;
 $WindValues: #F2F995;
-
 $FooterBackground: transparent;
 $FooterText: #41E9EF;
 // Grid details

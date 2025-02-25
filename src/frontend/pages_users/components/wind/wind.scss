@@ -5,7 +5,8 @@
   height: 128px;
   margin: 0 auto;
   border-radius: 16px;
-  background: $WindBackground;
+  background: $third_4;
+  opacity: 0.9;
   img{
     scale: 0.8;
     z-index: 0;
@@ -56,19 +57,20 @@
 .wind-label{
   font-family: $barlow;
   font-size: 0.9rem;
-  color: $WindTextLabels;
+  color: $secondary_2;
+  
   margin: 16px auto;
 }
 .wind-value{
   font-family: $ubuntu;
   font-size: 1.4rem;
-  color: $WindValues;
+  color: $secondary_4;
   text-align: center;
 }
 .wind-text{
   font-family: $barlow;
   font-size: 0.8rem;
-  color: $WindTextLabels;
+  color: $secondary_2;
   text-align: center;
   margin-top: 16px;
 }

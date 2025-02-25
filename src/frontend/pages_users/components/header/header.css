@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Ubuntu";
-  src: url("../../assets/Ubuntu-Regular.woff") format("ttf");
+  src: url("../../assets/Ubuntu/Ubuntu-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -27,7 +27,7 @@
 .header-container .header-date {
   font-family: "Ubuntu";
   font-size: 1.2rem;
-  color: #F5CDC6;
+  color: #f3fbb3;
   padding-left: 0.5rem;
 }
 .header-container .hour-box {
@@ -40,12 +40,12 @@
   font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
-  color: #F1F5AD;
+  color: #f3faa4;
 }
 .header-container .hour-box .hour-dots {
   font-family: "Barlow";
   font-size: 1.8rem;
-  color: #F1F5AD;
+  color: #f3faa4;
   animation: infinite ease-out;
   animation-name: clignote;
   animation-duration: 1s;
@@ -73,5 +73,5 @@
   font-family: "Barlow";
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
-  color: #F1F5AD;
+  color: #f3faa4;
 }/*# sourceMappingURL=header.css.map */
