@@ -9,7 +9,7 @@ import "./weather.css";
 function ModalWeather() {
   const [nebulositeImg, setNebulositeImg] = useState(null); 
   const [nebulositeText, setNebulositeText] = useState(null);// incorporer aux zustand
-  const [is_dayBackground, setIs_dayBackground ] = useState(null);
+  // const [is_dayBackground, setIs_dayBackground ] = useState(null);
   const [prevision, setPrevision ] = useState(null);
   const {
     updateTemperature_2m,
@@ -73,8 +73,8 @@ function ModalWeather() {
 
     return (
     <div className="weather-container">
-      <p className="weather-text">Prevision pour la journée: {prevision}</p>
       {nebulositeText && <p className="weather-text">Météo actuelle: {nebulositeText}</p>}
+      <p className="weather-text">Prevision pour la journée: {prevision}</p>
       <span className="weather-box">
         <SelectNebulositeImg 
           cloud_cover={cloud_cover} 
@@ -82,11 +82,11 @@ function ModalWeather() {
           setNebulositeImg={setNebulositeImg} 
           setNebulositeText={setNebulositeText}
           is_day={is_day}
-          setIs_dayBackground={setIs_dayBackground}
+          // setIs_dayBackground={setIs_dayBackground}
         />
         <div className="nebulosite-box">
-          <img className="is-day" src= {is_dayBackground} alt={is_day} />
           <img className="nebulosite" src={nebulositeImg} alt="¤¤¤" />
+          {/* <img className="is-day" src= {is_dayBackground} alt={is_day} /> */}
         </div>
         <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
       </span>
