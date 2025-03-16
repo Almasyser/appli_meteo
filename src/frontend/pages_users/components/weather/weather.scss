@@ -20,22 +20,28 @@
   display: flex;
   .nebulosite-box{
     position: relative;
-    // display: flex;
     width: 60%;
+    margin: 20px;
+    border-radius: 2rem;
+    box-shadow: inset 0 0 8px $primary_3;
     z-index: 0;
+    &.is-day{
+      background-color: #d8c99c;
+      
+    }
+    &.is-night{
+      background-color: #00093f;
+    }
     .nebulosite{
       position: absolute;
       top: 0;
       left: 0;
-      width: $BodyWith;
-      height:212px;
-      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+      scale: 1;
       z-index: 0;
     }
   
-    .is-day{
-      scale: 0.5;
-    }
   }
   p{
     width: 40%;

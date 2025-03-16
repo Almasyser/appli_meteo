@@ -33,6 +33,8 @@
 .wind-box {
   display: flex;
   width: 100%;
+  box-shadow: inset 0 0 8px #266795;
+  border-radius: 8px;
 }
 
 .rose-box {

@@ -63,6 +63,7 @@ function ModalWeather() {
       updateWeather_code(meteoData.daily.weather_code[el1] );
     }
   };
+
   useEffect(()=>{
     weatherCodeJson && weatherCodeJson.map((el) =>{
       if (el.code === weather_code){
@@ -82,11 +83,9 @@ function ModalWeather() {
           setNebulositeImg={setNebulositeImg} 
           setNebulositeText={setNebulositeText}
           is_day={is_day}
-          // setIs_dayBackground={setIs_dayBackground}
         />
-        <div className="nebulosite-box">
+        <div className={is_day? `nebulosite-box is-day`: `nebulosite-box is-night`}>
           <img className="nebulosite" src={nebulositeImg} alt="¤¤¤" />
-          {/* <img className="is-day" src= {is_dayBackground} alt={is_day} /> */}
         </div>
         <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
       </span>

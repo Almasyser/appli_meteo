@@ -20,14 +20,14 @@ function SelectNebulositeImg(props){
   console.log(" -- ",cloud_cover,typeof(cloud_cover)," pluie ",precipitation,typeof(precipitation));
   useEffect(() =>{
     const nebulositeArray = [
-      {nuit: azurImg, jour: azurImg, text:"Ciel dégagé"},
-      {nuit: voile_legerImg, jour: voile_legerImg, text:"Nuages rares"},
-      {nuit: voileImg, jour: voileImg, text:"ciel voilé"},
-      {nuit: nuageuxImg, jour: nuageuxImg, text:"ciel nuageux, éclaircies"},
-      {nuit: tres_nuageuxImg, jour: tres_nuageuxImg, text:"ciel couvert"},
-      {nuit: couvertImg, jour: couvertImg, text:"ciel couvert"},
-      {nuit: orageuxImg, jour: orageuxImg, text:"ciel bouché"},
-      {nuit: orageImg, jour: orageImg, text:"Nuages lourds"}
+      {jour: azurImg, text:"Ciel dégagé"},
+      {jour: voile_legerImg, text:"Nuages rares"},
+      {jour: voileImg, text:"ciel voilé"},
+      {jour: nuageuxImg, text:"ciel nuageux, éclaircies"},
+      {jour: tres_nuageuxImg, text:"ciel couvert"},
+      {jour: couvertImg, text:"ciel couvert"},
+      {jour: orageuxImg, text:"ciel bouché"},
+      {jour: orageImg, text:"Nuages lourds"}
     ];
     const seuilsArray = [
       0,
@@ -37,7 +37,8 @@ function SelectNebulositeImg(props){
       64,
       80,
       96,
-      100
+      100,
+      110
     ];
     const hauteurPluieArray = [
       {bas: 0, haut: 1, text:"temps brumeux", pluieImg: brume},
@@ -60,7 +61,7 @@ function SelectNebulositeImg(props){
     } 
      else if(cloud_cover !== 0 && precipitation === 0){
       const index = seuilsArray.findIndex(
-        (el) => cloud_cover > el && cloud_cover <= el + 16
+        (el,index) => cloud_cover > el && cloud_cover <= el + seuilsArray[index+1]
       );
       console.log("2eme seuil",index);
     if(index !== -1){
