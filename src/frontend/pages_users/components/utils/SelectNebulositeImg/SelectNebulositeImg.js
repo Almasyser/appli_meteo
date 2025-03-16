@@ -6,15 +6,15 @@ import pluie_fine from "./Img/11_pluie_fine.png";
 import pluie from "./Img/12_forte_pluie.png";
 import averse from "./Img/14_averse.png";
 import deluge from "./Img/15_orage.png";
-//
-import azurImg from "./Img/00_azur.png";
-import voile_legerImg from "./Img/01_voile_leger.png";
-import voileImg from "./Img/02_voile.png";
-import nuageuxImg from "./Img/03_nuageux.png";
-import tres_nuageuxImg from "./Img/04_tres_nuageux.png";
-import couvertImg from "./Img/05_couvert.png";
-import orageuxImg from "./Img/06_orageux.png";
 import orageImg from "./Img/07_orage.png";
+//
+import azurImg from "./assets/Soleil.png";
+import voile_legerImg from "./assets/01_Partiel_degage.png";
+import voileImg from "./assets/02_voile.png";
+import nuageuxImg from ".//assets/03_Nuageux.png";
+import tres_nuageuxImg from "./assets/05_Tres_nuageux.png";
+import couvertImg from "./assets/07_Couvert.png";
+import orageuxImg from "./assets/11_Orageux.png";
 function SelectNebulositeImg(props){
   const {cloud_cover, precipitation, setNebulositeImg, setNebulositeText} = props;
   console.log(" -- ",cloud_cover,typeof(cloud_cover)," pluie ",precipitation,typeof(precipitation));
