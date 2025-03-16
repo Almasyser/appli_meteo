@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 //
-import brume from "./Img/10_brume.png";
-import pluie_fine from "./Img/11_pluie_fine.png";
-import pluie from "./Img/12_forte_pluie.png";
-import averse from "./Img/14_averse.png";
-import deluge from "./Img/15_orage.png";
-import orageImg from "./Img/07_orage.png";
+import brume from "./assets/10_Brume.png";
+import pluie_fine from "./assets/21_Pluie_fine.png";
+import pluie from "./assets/23_Pluie.png";
+import averse from "./assets/25_Averse.png";
+import deluge from "./assets/27_Deluge.png";
+import orageImg from "./assets/29_Grele.png";
 //
 import azurImg from "./assets/Soleil.png";
 import voile_legerImg from "./assets/01_Partiel_degage.png";
