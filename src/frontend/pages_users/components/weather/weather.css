@@ -33,20 +33,22 @@
   width: 100%;
   height: 212px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .weather-box .nebulosite-box {
   position: relative;
-  width: 60%;
-  margin: 20px;
+  width: 200px;
+  height: 200px;
+  margin: 8px;
   border-radius: 2rem;
-  box-shadow: inset 0 0 8px #2a605a;
   z-index: 0;
 }
 .weather-box .nebulosite-box.is-day {
-  background-color: #d8c99c;
+  background-color: rgba(255, 255, 0, 0.01);
 }
 .weather-box .nebulosite-box.is-night {
-  background-color: #00093f;
+  background-color: rgba(0, 9, 63, 0.1);
 }
 .weather-box .nebulosite-box .nebulosite {
   position: absolute;
@@ -62,8 +64,6 @@
   font-family: "Ubuntu";
   font-size: 3rem;
   line-height: 252px;
-  text-align: right;
-  padding-right: 1rem;
   color: #f3fbb3;
   z-index: 1;
 }/*# sourceMappingURL=weather.css.map */

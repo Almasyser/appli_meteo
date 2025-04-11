@@ -19,7 +19,7 @@ function ModalLocation (){
         </span>
         <span className="location-button">
           <button className="btn-box" onClick={handleClick}>
-            <p className="btn-text">changer</p>
+            <p className="btn-text">changer la position</p>
             <img className="btn-img" src={changeImg} />
           </button>
         </span>

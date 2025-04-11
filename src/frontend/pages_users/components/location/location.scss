@@ -1,8 +1,6 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 .location-container{
-  // width: 96%;
-  // height: 144px;
   margin: 16px auto;
   display: flex;
   border-top: 1px solid $primary_1;
@@ -24,20 +22,20 @@
   margin-bottom: 1rem;
 }
 .location-button{
-  width: 20%;
+  width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .btn-box{
-  width: 112px;
+  width: 100%;
   height: 48px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border: none;
   border-radius: 32px;
-  background: $primary_3;
+  background: transparent;
   opacity: 1;
   transition: all 0.2s ease-in-out;
   &:hover{
@@ -50,12 +48,10 @@
   font-family: $ubuntu;
   letter-spacing: 0.02rem;
   color: $secondary_3;
-  margin-left: 1.2rem;
 }
 .btn-img{
   width: 34px;
   height: 34px;
-  margin-right: 0.3rem;
   animation-name: rotate;
   animation-iteration-count: infinite;
   animation-duration: 6s;
