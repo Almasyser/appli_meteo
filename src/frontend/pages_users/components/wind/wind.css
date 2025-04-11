@@ -27,13 +27,13 @@
 }
 .wind-container img {
   scale: 0.8;
-  z-index: 0;
 }
 
 .wind-box {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  padding-right: 1rem;
   box-shadow: inset 0 0 8px #266795;
   border-radius: 8px;
 }
@@ -48,14 +48,14 @@
 }
 
 .rose-ciel {
+  z-index: 0;
   width: 128px;
   height: 128px;
   transform: translateX(-160px);
-  opacity: 0.6;
 }
 
 .rose-fleche {
-  z-index: 1;
+  z-index: 2;
   width: 128px;
   height: 128px;
   transition: transform 0.6s ease;
