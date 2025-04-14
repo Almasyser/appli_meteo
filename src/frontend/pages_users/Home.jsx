@@ -1,12 +1,14 @@
+import { useState } from "react";
 import "./home.css";
-// import Header from "./components/header/Header";
-// import ModalLocation from "./components/location/Location";
-// import ModalWeather from "./components/weather/Weather";
-// import ModalWind from "./components/wind/Wind";
-// import ModalComments from "./components/comments/Comments";
-// import ModalFooter from "./components/footer/Footer";
-import { Header, ModalLocation, ModalWeather, ModalWind, ModalComments, ModalFooter } from "./components";
+import Header from "./components/header/Header";
+import ModalLocation from "./components/location/Location";
+import ModalWeather from "./components/weather/Weather";
+import ModalWind from "./components/wind/Wind";
+import ModalComments from "./components/comments/Comments";
+import ModalFooter from "./components/footer/Footer";
+import ModalFiveDays from "./components/fiveDays/FiveDays";
 function Page14 () {
+  const [ toggleFiveDays, setToggleFiveDays ] = useState(false);
   return (
     <>
     <div className="body">
@@ -14,11 +16,18 @@ function Page14 () {
       <div className="location-section">
         <ModalLocation />
       </div>
-      <div className="weather-section">
-        <ModalWeather />
-        <ModalWind />
-      </div>
-      <ModalComments />
+      {!toggleFiveDays? 
+      <>
+        <div className="weather-section">
+          <ModalWeather />
+          <ModalWind />
+        </div>
+        <ModalComments />
+      </>:
+      <>
+        <ModalFiveDays setToggleFiveDays={setToggleFiveDays} toggleFiveDays={toggleFiveDays}/>
+      </>
+    }
       <ModalFooter />
     </div>
     </>

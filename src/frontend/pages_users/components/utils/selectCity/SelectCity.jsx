@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { PropTypes } from 'prop-types';
 import axios from 'axios';
-import { useLocation } from "../../../hooks/useLocation";
-import "./selectCity.css";
+import useLocations from "../../../hooks/useLocations";
 import cross from "../../../assets/Cross-cancel.png";
 import clear from "../../../assets/Clear_green-128.png";
+import "./selectCity.css";
 function SelectCity (props){
   // eslint-disable-next-line react/prop-types
   const { visible, setVisible } = props;
-  const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocation();
+  const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
   const [cityName, setCityName] = useState("");
   const [cityList, setCityList] = useState("");
   const handleChoiceCity = async ()=>{

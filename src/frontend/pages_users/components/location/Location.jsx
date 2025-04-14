@@ -1,11 +1,11 @@
-import "./location.css";
-import { useLocation }  from "../../hooks/useLocation";
-import changeImg from "../../assets/Change_green-128.png";
-import SelectCity from "../utils/selectCity/SelectCity";
 import { useState } from "react";
+import useLocations from "../../hooks/useLocations";
+import SelectCity from "../utils/selectCity/SelectCity";
+import changeImg from "../../assets/Change_green-128.png";
+import "./location.css";
 function ModalLocation (){
   const [visible, setVisible] = useState(false);
-  const {city_code, department_code, department_name, region_name } = useLocation();
+  const {city_code, department_code, department_name, region_name } = useLocations();
   const handleClick = ()=>{
     setVisible(!visible);
   }

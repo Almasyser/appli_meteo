@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-export const useLocation = create((set) =>({
+export const useLocations = create((set) =>({
     city_code: "Toulouse",
     department_code: "31",
     department_name: "Haute-Garonne",

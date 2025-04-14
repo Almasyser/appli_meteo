@@ -1,13 +1,13 @@
 import { useEffect, useState, useMemo } from "react";
-// import { useWeatherDatas } from "../../hooks/useWeatherDatas";
-// import { useLocation } from "../../hooks/useLocation";
-import { useWeatherDatas, useLocation } from "../../hooks";
-// import FetchApiStatic from "../utils/FetchApiStatic";
-// import ConvertDateToCustom from "../utils/ConvertDateToCustom";
-// import SelectNebulositeImg from "../utils/SelectNebulositeImg/SelectNebulositeImg";
-import { FetchApiStatic, ConvertDateToCustom, SelectNebulositeImg } from "../utils";
-// import weatherCodeJson from "../../json/omm_codes.json";
-import { weatherCodeJson } from "../../json";
+import  useWeatherDatas  from "../../hooks/useWeatherDatas";
+import  useLocations  from "../../hooks/useLocations";
+
+import FetchApiStatic from "../utils/FetchApiStatic";
+import ConvertDateToCustom from "../utils/ConvertDateToCustom";
+import SelectNebulositeImg from "../utils/SelectNebulositeImg/SelectNebulositeImg";
+
+import weatherCodeJson from "../../json/omm_codes.json";
+
 import "./weather.css";
 function ModalWeather() {
   const [nebulositeImg, setNebulositeImg] = useState(null); 
@@ -29,7 +29,7 @@ function ModalWeather() {
     is_day,
     weather_code
     } = useWeatherDatas();
-  const {latitude, longitude} = useLocation();
+  const {latitude, longitude} = useLocations();
   const [meteoData, setMeteoData] = useState(null);
   const [meteoDataKeys, setMeteoDataKeys] = useState(null);
   const lat = latitude || "52.52";

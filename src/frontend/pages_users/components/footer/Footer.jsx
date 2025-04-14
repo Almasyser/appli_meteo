@@ -1,11 +1,17 @@
-import "./footer.css";
+import PropTypes from "prop-types";
 import flecheBasImg from "../../assets/Fleche bas_128.png";
-function ModalFooter(){
+import "./footer.css";
+function ModalFooter(props){
+  const {setToggleFiveDays, toggleFiveDays} = props;
   return(
-    <div className="footer-container" >
-      <img src={flecheBasImg} id="img"/>
+    <div className="footer-container" onClick={()=> setToggleFiveDays(!toggleFiveDays)}>
+      <img src={flecheBasImg} id="img" />
       <p className="footer-text" htmlFor="img">prochains jours</p>
     </div>
   )
+}
+ModalFooter.propTypes = {
+  setToggleFiveDays: PropTypes.func,
+  toggleFiveDays: PropTypes.bool
 }
 export default ModalFooter;
