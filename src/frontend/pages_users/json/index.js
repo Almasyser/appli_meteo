@@ -1,0 +1,1 @@
+export {default as weatherCodeJson } from "./omm_codes.json";
