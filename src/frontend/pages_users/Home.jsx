@@ -28,7 +28,7 @@ function Page14 () {
         <ModalFiveDays setToggleFiveDays={setToggleFiveDays} toggleFiveDays={toggleFiveDays}/>
       </>
     }
-      <ModalFooter />
+      <ModalFooter setToggleFiveDays={setToggleFiveDays}/>
     </div>
     </>
   )

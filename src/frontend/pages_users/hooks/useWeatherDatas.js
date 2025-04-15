@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-export const useWeatherDatas = create((set) =>({
+const useWeatherDatas = create((set) =>({
     temperature_2m:"__°C",
     apparent_temperature:"__°C",
     precipitation_probability:"___%",
@@ -19,4 +19,5 @@ export const useWeatherDatas = create((set) =>({
     updateWind_direction_10m: (value)=>set({wind_direction_10m: value}),
     updateIs_day: (value)=>set({is_day: value}),
     updateWeather_code: (value)=>set({weather_code: value})
-  }))
+  }));
+  export default useWeatherDatas;

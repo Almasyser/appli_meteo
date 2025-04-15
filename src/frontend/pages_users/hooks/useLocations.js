@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-export const useLocations = create((set) =>({
+const useLocations = create((set) =>({
     city_code: "Toulouse",
     department_code: "31",
     department_name: "Haute-Garonne",
@@ -15,4 +15,5 @@ export const useLocations = create((set) =>({
     updateLongitude: (state)=>set({longitude: state}),
     setVisible: (state) => ({visible: state})
   }));
+  export default useLocations;
   
