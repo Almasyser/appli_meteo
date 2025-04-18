@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 import "./fivedays.css";
+
 import data from "./data.json";
 function ModalFiveDays(props){
   const { toggleFiveDays, setToggleFiveDays} = props;
-  console.log(data[4]);
+
+
   
   return(
     <>
@@ -12,14 +14,14 @@ function ModalFiveDays(props){
 
           <tbody>
             {data.map((row, i) => (
-            <div key={i} className={(i==0)? "entete noHover":"entete"} htmlFor="head" >
+            <tr key={i} className={(i==0)? "entete noHover":"entete"} htmlFor="head" >
               {Object.values(row).map((cell, j) => (
                 <td key={j}>
                   {cell.img && <img src={cell.img} alt="" id="head"/>}
                   <span htmlFor="head" >{`${cell.text}${cell.unit}`}</span>
                 </td>
               ))}
-            </div>
+            </tr>
             ))}
           </tbody>
         </table>
