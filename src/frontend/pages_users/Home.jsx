@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./home.css";
 import Header from "./components/header/Header";
 import ModalLocation from "./components/location/Location";
 import ModalWeather from "./components/weather/Weather";
@@ -7,6 +6,7 @@ import ModalWind from "./components/wind/Wind";
 import ModalComments from "./components/comments/Comments";
 import ModalFooter from "./components/footer/Footer";
 import ModalFiveDays from "./components/fiveDays/FiveDays";
+import "./home.css";
 function Page14 () {
   const [ toggleFiveDays, setToggleFiveDays ] = useState(false);
 
