@@ -6,6 +6,9 @@ function ModalFiveDays(props){
   const { toggleFiveDays, setToggleFiveDays} = props;
   const myArray = useArray();
   console.log("========= ",myArray);
+  const hoursPart = [6,10,12,16,19,24];
+  console.log("___",hoursPart?.myArray?.hourly);
+  
   
 
   

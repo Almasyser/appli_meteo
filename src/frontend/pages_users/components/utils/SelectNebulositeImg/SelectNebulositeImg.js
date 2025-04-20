@@ -17,8 +17,8 @@ import couvertImg from "./assets/07_Couvert.png";
 import orageuxImg from "./assets/11_Orageux.png";
 function SelectNebulositeImg(props){
   const {cloud_cover, precipitation, setNebulositeImg, setNebulositeText} = props;
-  console.log("=> ",cloud_cover,typeof(cloud_cover));
-  console.log("=> ",precipitation,typeof(precipitation));
+  // console.log("=> ",cloud_cover,typeof(cloud_cover));
+  // console.log("=> ",precipitation,typeof(precipitation));
   
   // console.log(" -- ",cloud_cover,typeof(cloud_cover)," pluie ",precipitation,typeof(precipitation));
   useEffect(() =>{

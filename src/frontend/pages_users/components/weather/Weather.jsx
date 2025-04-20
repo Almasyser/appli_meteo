@@ -53,7 +53,10 @@ function ModalWeather() {
   // myArray && console.log("myarray ",myArray);
   
   // recupere l'heure. new Date est dans ConvertDateToCustom
-  const heure = parseInt(ConvertDateToCustom(), 10);
+  const temp = ConvertDateToCustom();
+  const heure = parseInt(temp.hours, 10);
+
+  
   useEffect(() => {
     if (meteoData && heure != null) {
       handleAffectDatas(heure);
