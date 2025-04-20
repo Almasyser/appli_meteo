@@ -30,7 +30,8 @@ function ModalWeather() {
     is_day,
     weather_code
     } = useWeatherDatas();
-  
+  // useWeatherDatas() est le hook 'local' Il pourra etre utilisé dans l'etat. 
+  // recupere le hook useArray. useArray est exploité dans fiveDays et autres composants.
   const {myArray, updateMyArray} = useArray();
     // init props destinées a fetch
   const {latitude, longitude} = useLocations();
@@ -49,7 +50,7 @@ function ModalWeather() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lat, long]);
 
-  myArray && console.log("myarray ",myArray);
+  // myArray && console.log("myarray ",myArray);
   
   // recupere l'heure. new Date est dans ConvertDateToCustom
   const heure = parseInt(ConvertDateToCustom(), 10);

@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 import "./fivedays.css";
-
+import useArray from "../../hooks/useArray";
 import data from "./data.json";
 function ModalFiveDays(props){
   const { toggleFiveDays, setToggleFiveDays} = props;
-
+  const myArray = useArray();
+  console.log("========= ",myArray);
+  
 
   
   return(

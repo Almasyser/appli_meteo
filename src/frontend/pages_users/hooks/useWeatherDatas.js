@@ -1,11 +1,11 @@
 import {create} from 'zustand';
 const useWeatherDatas = create((set) =>({
-    temperature_2m:"__°C",
-    apparent_temperature:"__°C",
-    precipitation_probability:"___%",
-    precipitation:"===mm",
-    cloud_cover:"___",
-    wind_speed_10m:"___km/h",
+    temperature_2m: 0,
+    apparent_temperature: 0,
+    precipitation_probability: 0,
+    precipitation: 0,
+    cloud_cover: 0,
+    wind_speed_10m: 0,
     wind_direction_10m:"_____",
     is_day: null,
     is_dayBackground: "",
