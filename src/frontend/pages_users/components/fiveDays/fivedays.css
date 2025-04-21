@@ -54,10 +54,15 @@
   border-radius: 8px;
   background: transparent;
 }
-.fiveDays-grid-container img {
+.fiveDays-grid-container span {
+  font-size: smaller;
+}
+
+img {
   width: 24px;
   height: 24px;
 }
-.fiveDays-grid-container span {
-  font-size: smaller;
+
+.maquette {
+  display: flex;
 }/*# sourceMappingURL=fivedays.css.map */

@@ -1,26 +1,54 @@
 import PropTypes from "prop-types";
 import "./fivedays.css";
 import useArray from "../../hooks/useArray";
-import data from "./data.json";
+import SelectNebusiteImg from "../utils/SelectNebulositeImg/SelectNebulositeImg";
+import { useState } from "react";
+// import data from "./data.json";
 function ModalFiveDays(props){
   const { toggleFiveDays, setToggleFiveDays} = props;
+  const [ nebulositeImg, setNebulositeImg]=useState();
+  const [ nebulositeText, setNebulositeText ]=useState();
+  console.log(nebulositeText);
+  
   const myArray = useArray();
-  console.log("========= ",myArray);
   const hoursPart = [6,10,12,16,19,24];
-  console.log("___",hoursPart?.myArray?.hourly);
-  
-  
 
+  const temperatureArray = myArray.myArray.hourly.temperature_2m;
+  const cloud_coverArray = myArray.myArray.hourly.cloud_cover;
+  const precipitationArray = myArray.myArray.hourly.precipitation;
   
+  console.log("___",temperatureArray);
+  console.log("___",cloud_coverArray);
+  console.log("___",precipitationArray);
+
   return(
     <>
-      <div className="fiveDays-grid-container">
+    {hoursPart && hoursPart.map((el)=>{
+      return(
+        <ul key={el} className="maquette">
+            <li>{
+              <>
+                <SelectNebusiteImg 
+                  cloud_cover={myArray.myArray.hourly.cloud_cover[el]}
+                  precipitation={myArray.myArray.hourly.precipitation[el]}
+                  setNebulositeImg={setNebulositeImg}
+                  setNebulositeText={setNebulositeText}
+                  /> 
+                <img src={nebulositeImg} alt="#" />
+
+              </>
+              }  
+            </li>
+        </ul>
+      )
+    })}
+      {/* <div className="fiveDays-grid-container">
         <table>
 
           <tbody>
-            {data.map((row, i) => (
+            {hoursPart && hoursPart.map((rowDay, i) => (
             <tr key={i} className={(i==0)? "entete noHover":"entete"} htmlFor="head" >
-              {Object.values(row).map((cell, j) => (
+              {Object.values(rowDay).map((cell, j) => (
                 <td key={j}>
                   {cell.img && <img src={cell.img} alt="" id="head"/>}
                   <span htmlFor="head" >{`${cell.text}${cell.unit}`}</span>
@@ -30,7 +58,7 @@ function ModalFiveDays(props){
             ))}
           </tbody>
         </table>
-      </div>
+      </div> */}
       <h3>FiveDays</h3>
       <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)}>Five Days</button>
     </>
