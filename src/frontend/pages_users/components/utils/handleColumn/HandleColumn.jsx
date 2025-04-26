@@ -1,17 +1,19 @@
 import { useState } from "react";
 import SelectNebulositeImg from "../SelectNebulositeImg/SelectNebulositeImg";
 import useArray from "../../../hooks/useArray";
+import "./handlecolumn.css";
 function HandleColumn({item}){
-  const myArray = useArray();
+  const { myArray }= useArray();
   const hoursPart = [6,10,12,16,19,24];
-  const temperatureArray = myArray.myArray.hourly.temperature_2m;
-  const cloud_coverArray = myArray.myArray.hourly.cloud_cover;
-  const precipitationArray = myArray.myArray.hourly.precipitation;
+  const temperatureArray = myArray.hourly.temperature_2m;
+  const cloud_coverArray = myArray.hourly.cloud_cover;
+  const precipitationArray = myArray.hourly.precipitation;
   const [ nebulositeImg, setNebulositeImg ]=useState();
-  // const [ nebulositeText, setNebulositeText ]=useState();
-    hoursPart && hoursPart.map((el)=>{
-      return(
-        <ul key={el} className="maquette">
+
+    return(
+      hoursPart && hoursPart.map((el)=>{
+        return(
+          <ul key={el} className="maquette">
           <li>{
             <>
               <SelectNebulositeImg 
@@ -19,7 +21,7 @@ function HandleColumn({item}){
                 precipitation={precipitationArray[el*item]}
                 setNebulositeImg={setNebulositeImg}
                 /> 
-              <img src={nebulositeImg} alt="#" />
+              <img className="maquette-img" src={nebulositeImg} alt="#" />
               <p>{temperatureArray[el*item]}</p>
             </>
             }  
@@ -27,5 +29,6 @@ function HandleColumn({item}){
         </ul>
       )  
     })
+  )
   }    
   export default HandleColumn;

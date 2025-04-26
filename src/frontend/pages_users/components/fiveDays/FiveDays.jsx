@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
 import HandleColumn from "../utils/handleColumn/HandleColumn";
 import "./fivedays.css";
-
-
-
 // import data from "./data.json";
 function ModalFiveDays(props){
   const { toggleFiveDays, setToggleFiveDays} = props;
@@ -27,20 +24,4 @@ ModalFiveDays.propTypes = {
   toggleFiveDays: PropTypes.bool
 }
 export default ModalFiveDays;
-  {/* <div className="fiveDays-grid-container">
-    <table>
-
-      <tbody>
-        {hoursPart && hoursPart.map((rowDay, i) => (
-        <tr key={i} className={(i==0)? "entete noHover":"entete"} htmlFor="head" >
-          {Object.values(rowDay).map((cell, j) => (
-            <td key={j}>
-              {cell.img && <img src={cell.img} alt="" id="head"/>}
-              <span htmlFor="head" >{`${cell.text}${cell.unit}`}</span>
-            </td>
-          ))}
-        </tr>
-        ))}
-      </tbody>
-    </table>
-  </div> */}
+  
