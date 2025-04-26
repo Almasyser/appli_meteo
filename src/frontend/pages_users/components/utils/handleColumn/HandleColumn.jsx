@@ -9,20 +9,21 @@ function HandleColumn({item}){
   const cloud_coverArray = myArray.hourly.cloud_cover;
   const precipitationArray = myArray.hourly.precipitation;
   const [ nebulositeImg, setNebulositeImg ]=useState();
-
+  console.log(cloud_coverArray);
+  
     return(
       hoursPart && hoursPart.map((el)=>{
         return(
-          <ul key={el} className="maquette">
+          <ul key={el} className="maquette">{el}
           <li>{
-            <>
+            <>{el*item}
               <SelectNebulositeImg 
                 cloud_cover={cloud_coverArray[el*item]}
                 precipitation={precipitationArray[el*item]}
                 setNebulositeImg={setNebulositeImg}
                 /> 
               <img className="maquette-img" src={nebulositeImg} alt="#" />
-              <p>{temperatureArray[el*item]}</p>
+              <p className="maquette-text">{temperatureArray[el*item]}°C</p>
             </>
             }  
           </li>

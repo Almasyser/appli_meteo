@@ -17,7 +17,7 @@ import averse from "./assets/25_Averse.png";
 import deluge from "./assets/27_Deluge.png";
 import grele from "./assets/29_Grele.png";
 function SelectNebulositeImg(props){
-  const {cloud_cover, precipitation, setNebulositeImg, setNebulositeText} = props;
+  const {cloud_cover, precipitation, setNebulositeImg} = props;
   const nebulositeArray = [
     {id: 0, img: azur, text:"Ciel dégagé"},
     {id: 1, img: voile_leger, text:"Nuages rares"},
@@ -55,7 +55,7 @@ function SelectNebulositeImg(props){
     {min: 60,max: 100, id: 13}
   ]
   useEffect(()=>{
-    if (precipitation != 0){
+    if (precipitation !== 0){
       const matched = hauteurPluie.find(({min,max}) => precipitation>=min && precipitation<max);
       if (matched) {
         setIdCiel(matched.id);

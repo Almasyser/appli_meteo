@@ -25,4 +25,10 @@
 .maquette-img {
   width: 64px;
   height: 64px;
+}
+
+.maquette-text {
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
 }/*# sourceMappingURL=handlecolumn.css.map */
