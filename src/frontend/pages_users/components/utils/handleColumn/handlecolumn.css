@@ -19,16 +19,21 @@
 .maquette {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  list-style: none;
+  margin: 0 0.25rem 0.1rem 0.25rem;
 }
 
 .maquette-img {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 }
 
 .maquette-text {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.maquette-temp {
   text-decoration: none;
-  list-style: none;
   text-align: center;
 }/*# sourceMappingURL=handlecolumn.css.map */
