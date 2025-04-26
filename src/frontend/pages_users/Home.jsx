@@ -12,25 +12,25 @@ function Page14 () {
 
   return (
     <>
-    <div className="body">
-      <Header />
-      <div className="location-section">
-        <ModalLocation />
-      </div>
-      {!toggleFiveDays? 
-      <>
-        <div className="weather-section">
-          <ModalWeather />
-          <ModalWind />
+      <div className="body">
+        <Header />
+        <div className="location-section">
+          <ModalLocation />
         </div>
-        <ModalComments />
-      </>:
-      <>
-        <ModalFiveDays setToggleFiveDays={setToggleFiveDays} toggleFiveDays={toggleFiveDays}/>
-      </>
-    }
+        {!toggleFiveDays? 
+        <>
+          <div className="weather-section">
+            <ModalWeather />
+            <ModalWind />
+          </div>
+          <ModalComments />
+        </>:
+        <>
+          <ModalFiveDays setToggleFiveDays={setToggleFiveDays} toggleFiveDays={toggleFiveDays}/>
+        </>
+      }
       <ModalFooter setToggleFiveDays={setToggleFiveDays}/>
-    </div>
+      </div>
     </>
   )
 } 

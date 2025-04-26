@@ -8,6 +8,7 @@ import SelectNebulositeImg from "../utils/SelectNebulositeImg/SelectNebulositeIm
 import weatherCodeJson from "../../json/omm_codes.json";
 import "./weather.css";
 function ModalWeather() {
+  const { myArray, updateMyArray } = useArray()
   const [meteoData, setMeteoData] = useState([]);
   const [meteoDataKeys, setMeteoDataKeys] = useState([]);
   const [nebulositeImg, setNebulositeImg] = useState(null); 
@@ -32,8 +33,7 @@ function ModalWeather() {
     } = useWeatherDatas();
   // useWeatherDatas() est le hook 'local' Il pourra etre utilisé dans l'etat. 
   // recupere le hook useArray. useArray est exploité dans fiveDays et autres composants.
-  const {myArray, updateMyArray} = useArray();
-    // init props destinées a fetch
+  // init props destinées a fetch
   const {latitude, longitude} = useLocations();
   const lat = latitude || "52.52";
   const long = longitude || "13.41";
@@ -41,7 +41,7 @@ function ModalWeather() {
   useMemo(() => {
     const fetchData = async () => {
       try {
-        await FetchApiStatic(lat, long, meteoData, setMeteoData, meteoDataKeys, setMeteoDataKeys, myArray, updateMyArray);
+        await FetchApiStatic(lat, long, meteoData, setMeteoData, meteoDataKeys, setMeteoDataKeys, updateMyArray);
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }
@@ -49,14 +49,10 @@ function ModalWeather() {
     fetchData();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lat, long]);
-
   // myArray && console.log("myarray ",myArray);
-  
   // recupere l'heure. new Date est dans ConvertDateToCustom
   const temp = ConvertDateToCustom();
   const heure = parseInt(temp.hours, 10);
-
-  
   useEffect(() => {
     if (meteoData && heure != null) {
       handleAffectDatas(heure);
@@ -84,30 +80,30 @@ function ModalWeather() {
       if (el.code === weather_code){
         setPrevision(el.text);
       }
-    })
-  },[weather_code]);
-    return (
-    <div className="weather-container">
-      {/* meteo actuelle  */}
-      {nebulositeText && <p className="weather-text">Météo actuelle: {nebulositeText}</p>}
-      <p className="weather-text">Prevision pour la journée: {prevision}</p>
-      {/* select img selon hook. text no used is_day no used */}
-      <span className="weather-box">
-        <SelectNebulositeImg 
-          cloud_cover={cloud_cover} 
-          precipitation={precipitation} 
-          setNebulositeImg={setNebulositeImg} 
-          setNebulositeText={setNebulositeText}
-          is_day={is_day}
-        />
-        <div className={is_day? `nebulosite-box is-day`: `nebulosite-box is-night`}>
-          <img className="nebulosite" src={nebulositeImg} alt="¤¤¤" />
-        </div>
-        {/* affiche temp actuelle */}
-        <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
-      </span>
-    </div>
-  );
+      })
+    },[weather_code]);
+      return (
+      <div className="weather-container">
+        {/* meteo actuelle  */}
+        {nebulositeText && <p className="weather-text">Météo actuelle: {nebulositeText}</p>}
+        <p className="weather-text">Prevision pour la journée: {prevision}</p>
+        {/* select img selon hook. text no used is_day no used */}
+        <span className="weather-box">
+          <SelectNebulositeImg 
+            cloud_cover={cloud_cover} 
+            precipitation={precipitation} 
+            setNebulositeImg={setNebulositeImg} 
+            setNebulositeText={setNebulositeText}
+            is_day={is_day}
+          />
+          <div className={is_day? `nebulosite-box is-day`: `nebulosite-box is-night`}>
+            <img className="nebulosite" src={nebulositeImg} alt="¤¤¤" />
+          </div>
+          {/* affiche temp actuelle */}
+          <p>{Math.round(meteoData?.hourly?.temperature_2m?.[heure]) || "##"}&nbsp;°C</p>
+        </span>
+      </div>
+    );
 }
 
 export default ModalWeather;
