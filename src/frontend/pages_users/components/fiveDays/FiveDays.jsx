@@ -14,7 +14,6 @@ function ModalFiveDays(props){
           </div>
         )
     })}
-      <h3>FiveDays</h3>
       <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)}>Five Days</button>
     </div>
   )
