@@ -17,22 +17,20 @@ function Page14 () {
         <div className="location-section">
           <ModalLocation />
         </div>
-        {!toggleFiveDays? 
+        {/* {!toggleFiveDays?  */}
         <>
           <div className="weather-section">
             <ModalWeather />
-            <ModalWind />
+            {/* <ModalWind /> */}
           </div>
           <ModalComments />
-        </>:
-        <>
-          <ModalFiveDays setToggleFiveDays={setToggleFiveDays} toggleFiveDays={toggleFiveDays}/>
-        </>
-      }
+        </>      
+        
       <ModalFooter setToggleFiveDays={setToggleFiveDays}/>
       </div>
     </>
   )
 } 
 export default Page14;
+{/* <ModalFiveDays setToggleFiveDays={setToggleFiveDays} toggleFiveDays={toggleFiveDays}/> */}
 //  

@@ -1,12 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-//
-
-function SelectNebulositeImg(props){
-  const {cloud_cover, precipitation, setNebulositeId} = props;
-
-
+function SelectNebulositeId(cloud_cover, precipitation, setNebulositeId){
+  // const {cloud_cover, precipitation, setNebulositeId} = props;
   const [idCiel, setIdCiel] = useState(0);
   const intervals =[
     { min: 0, max: 16, id: 0},
@@ -42,14 +37,14 @@ function SelectNebulositeImg(props){
       }
     }
     // setNebulositeText(nebulositeArray[idCiel].text);
-  },[cloud_cover, precipitation]);
+  },[]);
 idCiel && setNebulositeId(idCiel);
      
-SelectNebulositeImg.propTypes = {
+SelectNebulositeId.propTypes = {
   cloud_cover: PropTypes.number,
   precipitation: PropTypes.number,
   setPluieImg: PropTypes.any,
   setNebulositeText: PropTypes.any,
 }
 }
-export default SelectNebulositeImg;
+export default SelectNebulositeId;

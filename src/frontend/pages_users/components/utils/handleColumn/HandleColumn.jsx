@@ -1,5 +1,4 @@
 import { useState } from "react";
-import SelectNebulositeImg from "../SelectNebulositeImg/SelectNebulositeImg";
 import useArray from "../../../hooks/useArray";
 import azur from "../assets/Soleil.png";
 import voile_leger from "../assets/01_Partiel_degage.png";
