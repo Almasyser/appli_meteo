@@ -5,7 +5,7 @@ import changeImg from "../../assets/Change_green-128.png";
 import "./location.css";
 function ModalLocation (){
   const [visible, setVisible] = useState(false);
-  const {city_code, department_code, department_name, region_name } = useLocations();
+  const { city_code, department_code, department_name, region_name } = useLocations();
   const handleClick = ()=>{
     setVisible(!visible);
   }
