@@ -29,6 +29,6 @@ const nebulositeArray = [
   { id: 12, img: deluge, text: "déluge" },
   { id: 13, img: grele, text: "grêle" }
 ];
-export default function SelectNebulositeImg(nebulositeId) {
-  return nebulositeArray.find(entry => entry.id === nebulositeId) || { img: null, text: "inconnu" };
+export default function SelectNebulositeImg(id) {
+  return nebulositeArray.find(entry => entry.id === id) || { img: null, text: "inconnu" };
 }

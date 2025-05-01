@@ -8,7 +8,7 @@ const useArray = create((set, get) =>({
 			return;
 		}
 		const copiedArray = {...state};
-		console.log("Objet copié");
+		console.log("Array mis à jour.");
 		set({ myArray: copiedArray});
 	},
 	addToMyArray: (key, item) => {
