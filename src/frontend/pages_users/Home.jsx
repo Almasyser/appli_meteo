@@ -20,6 +20,7 @@ function Page14 () {
         <>
           <div className="weather-section">
             <ModalWeather />
+            {toggleFiveDays? <ModalFiveDays setToggleFiveDays={setToggleFiveDays} toggleFiveDays={toggleFiveDays}/>:null}
           </div>
           <ModalComments />
         </>      
@@ -30,5 +31,4 @@ function Page14 () {
   )
 } 
 export default Page14;
-{/* <ModalFiveDays setToggleFiveDays={setToggleFiveDays} toggleFiveDays={toggleFiveDays}/> */}
 //  

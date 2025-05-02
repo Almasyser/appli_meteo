@@ -35,6 +35,7 @@
 }
 
 .weather-section {
+  position: relative;
   width: 100%;
   height: 280px;
 }/*# sourceMappingURL=home.css.map */

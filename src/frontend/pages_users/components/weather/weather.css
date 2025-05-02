@@ -17,6 +17,8 @@
   font-style: normal;
 }
 .weather-container {
+  height: -moz-max-content;
+  height: max-content;
   display: flex;
   flex-direction: column;
 }
@@ -59,7 +61,7 @@
   scale: 0.8;
   z-index: 0;
 }
-.weather-box p {
+.weather-box .temperature {
   width: 40%;
   font-family: "Ubuntu";
   font-size: 3rem;
