@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import useArray from "../../hooks/useArray";
 import SelectNebulositeImg from "../utils/SelectNebulositeImg";
+import arrow_back from "../../assets/Arrow_back.png";
 import "./fivedays.css";
 import { useEffect } from "react";
 // import data from "./data.json";
@@ -13,11 +14,9 @@ function ModalFiveDays(props){
   const dayPart=[1,2,3,4,5,6,7];
   const hoursPart = [6,10,12,16,19,23];
   const partName = ["aube", "matinée", "midi", "aprés-midi", "soirée", "nuit"];
-  console.log(myArray?.hourly?.temperature_2m);
-  
   return(
     <>
-    <div className="fiveDays-container">
+    <div className={toggleFiveDays? "fiveDays-container show": "fiveDays-container hide"}>
       <ul className="side-ul">
         {partName.map((el)=>{
         return(
@@ -28,14 +27,14 @@ function ModalFiveDays(props){
       </ul>
       {myArray && dayPart.map((item)=>{
         return(
-          <ul key={item}>{item}
+          <ul className="dayPart-ul" key={item}>{item}
             {hoursPart.map((el) => {
               if(myArray?.hourly?.cloud_cover[el*item]!=null && myArray?.hourly?.precipitation!=null){
                 const {img} = SelectNebulositeImg(myArray?.hourly?.cloud_cover[el*item] && myArray?.hourly?.precipitation[el*item]);
                 return(
-                <div className="fiveDays-stamp">
-                  <img src={img} alt="&&" />
-                  <li key={el}>{myArray?.hourly?.temperature_2m[el*item]}°C</li> 
+                <div className="dayPart-stamp">
+                  <img className="dayPart-img" src={img} alt="&&" />
+                  <li className="dayPart-li" key={el}>{myArray?.hourly?.temperature_2m[el*item]}°C</li> 
                 </div>
                 )
               }
@@ -44,7 +43,11 @@ function ModalFiveDays(props){
           </ul>
         )
       })}
-    <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)}></button>
+    <div className="button-box">
+      <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)}>
+        <img src={arrow_back} alt="@@" />
+      </button>
+    </div>
     </div>
     </>
   )

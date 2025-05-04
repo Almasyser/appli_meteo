@@ -5,7 +5,7 @@
   left: 0;
   z-index: 10;
   width: max-content;
-  height: max-content;
+  height: 414px;
   display: flex;
   background-color: darkgreen;
   padding: 0 0.2rem 0.2rem 0.2rem;
@@ -22,7 +22,7 @@
     padding-right: 0.2rem;
     color: $TextLight;
   }
-  ul{
+  .dayPart-ul{
     list-style: none;
     color: chartreuse;
     display: flex;
@@ -31,23 +31,58 @@
     text-align: center;
     padding: 0.2rem;
   }
+  .show{
+    animation: forwards;
+    animation-name: showIt;
+    animation-duration: 2s;
+    @keyframes showIt {
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+  }
+  .hide{
+    transform: translateX(-150px);
+  }
+
 }
-.fiveDays-stamp{
+.dayPart-stamp{
   background-color: rgb(11, 41, 97);
   padding: 0.2rem;
   margin-top: 0.2rem;
-  li{
-    font-size: 0.6rem;
-    color: $TextLight;
-    text-align: center;
-  }
-  img{
+}
+  .dayPart-img{
     margin-top: 0.4rem;
     width: 32px;
     height: 32px;
   }
+  .dayPart-li{
+    font-size: 0.6rem;
+    color: $TextLight;
+    text-align: center;
+  }
+.button-box{
+  width: 64px;
+  height: 414px;
+  border: none;
+  background-color: darkgreen;
+  display: flex;
+  align-items: center;
+  button{
+    width: 64px;
+    height: 180px;
+    border: none;
+    border-radius: 0 2rem 2rem 0;
+
+    img{
+      rotate: 180deg;
+      width: 64px;
+      height: 64px;
+      cursor: pointer;
+    }
+  }
 }
-.fiveDays-text{
-  font-size: medium;
-  color: aqua;
-}
+
