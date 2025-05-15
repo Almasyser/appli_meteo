@@ -6,7 +6,7 @@ import ModalComments from "./components/comments/Comments";
 import ModalFooter from "./components/footer/Footer";
 import ModalFiveDays from "./components/fiveDays/FiveDays";
 import "./home.css";
-function Page14 () {
+function Home () {
   const [ toggleFiveDays, setToggleFiveDays ] = useState(false);
 
   return (
@@ -30,5 +30,5 @@ function Page14 () {
     </>
   )
 } 
-export default Page14;
+export default Home;
 //  

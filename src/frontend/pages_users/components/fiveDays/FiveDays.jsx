@@ -20,7 +20,6 @@ function ModalFiveDays(props){
       <ul className="side-ul">
         {partName.map((el)=>{
         return(
-
           <li className="side-li">{el}</li>
         )
         })}

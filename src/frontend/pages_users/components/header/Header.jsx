@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react";
 import ConvertDateJMA from "../utils/ConvertDateJMA";
+import jours from "../../json/jours.json";
 import "./header.css";
 function Header() {
   const [ today, setToday ] = useState(new Date());
-  const jours = [
-    "Dimanche",
-    "Lundi",
-    "Mardi",
-    "Mercredi",
-    "Jeudi",
-    "Vendredi",
-    "Samedi"
-  ];
   useEffect(() => {
     const interval = setInterval(() =>{
       setToday(new Date());
