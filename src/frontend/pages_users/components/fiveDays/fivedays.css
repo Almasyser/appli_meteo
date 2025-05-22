@@ -23,7 +23,7 @@
   z-index: 10;
   width: -moz-max-content;
   width: max-content;
-  height: 414px;
+  height: 432px;
   display: flex;
   background-color: darkgreen;
   padding: 0 0.2rem 0.2rem 0.2rem;
@@ -35,6 +35,8 @@
   height: -moz-max-content;
   height: max-content;
   background-color: transparent;
+  list-style: none;
+  padding-left: 0;
 }
 .fiveDays-container .side-li {
   line-height: 62px;
@@ -86,7 +88,7 @@
 }
 
 .button-box {
-  width: 64px;
+  width: 48px;
   height: 414px;
   border: none;
   background-color: darkgreen;
@@ -94,14 +96,16 @@
   align-items: center;
 }
 .button-box button {
-  width: 64px;
-  height: 180px;
+  width: 48px;
+  height: 380px;
+  margin-top: 44px;
   border: none;
   border-radius: 0 2rem 2rem 0;
+  background: transparent;
+  cursor: pointer;
 }
 .button-box button img {
   rotate: 180deg;
-  width: 64px;
-  height: 64px;
-  cursor: pointer;
+  width: 24px;
+  height: 48px;
 }/*# sourceMappingURL=fivedays.css.map */

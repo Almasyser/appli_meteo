@@ -5,7 +5,7 @@
   left: 0;
   z-index: 10;
   width: max-content;
-  height: 414px;
+  height: 432px;
   display: flex;
   background-color: darkgreen;
   padding: 0 0.2rem 0.2rem 0.2rem;
@@ -15,6 +15,8 @@
     width: 96px;
     height: max-content;
     background-color: transparent;
+    list-style: none;
+    padding-left: 0;
   }
   .side-li{
     line-height: 62px;
@@ -65,23 +67,24 @@
     text-align: center;
   }
 .button-box{
-  width: 64px;
+  width: 48px;
   height: 414px;
   border: none;
   background-color: darkgreen;
   display: flex;
   align-items: center;
   button{
-    width: 64px;
-    height: 180px;
+    width: 48px;
+    height: 380px;
+    margin-top: 44px;
     border: none;
     border-radius: 0 2rem 2rem 0;
-
+    background: transparent;
+      cursor: pointer;
     img{
       rotate: 180deg;
-      width: 64px;
-      height: 64px;
-      cursor: pointer;
+      width: 24px;
+      height: 48px;
     }
   }
 }
