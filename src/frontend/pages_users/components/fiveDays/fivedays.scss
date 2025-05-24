@@ -12,24 +12,26 @@
   .side-ul{
     position: relative;
     top: 26px;
-    width: 96px;
+    width: 48px;
     height: max-content;
     background-color: transparent;
     list-style: none;
     padding-left: 0;
   }
   .side-li{
-    line-height: 62px;
+    line-height: 64px;
     text-align: right;
     padding-right: 0.2rem;
     color: $TextLight;
+    font-size: 0.6rem;
   }
   .dayPart-ul{
     list-style: none;
     color: chartreuse;
     display: flex;
     flex-direction: column;
-    // border: 1px solid greenyellow;
+    height: max-content;
+    margin-bottom: 0;
     text-align: center;
     padding: 0.2rem;
   }
@@ -57,9 +59,8 @@
   margin-top: 0.2rem;
 }
   .dayPart-img{
-    margin-top: 0.4rem;
-    width: 32px;
-    height: 32px;
+    width: 16px;
+    height: 16px;
   }
   .dayPart-li{
     font-size: 0.6rem;
@@ -72,19 +73,24 @@
   border: none;
   background-color: darkgreen;
   display: flex;
-  align-items: center;
+  justify-content: center;
   button{
-    width: 48px;
-    height: 380px;
-    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-top: 12px;
     border: none;
-    border-radius: 0 2rem 2rem 0;
+    border-radius: 0.2rem;
     background: transparent;
-      cursor: pointer;
+    cursor: pointer;
+    &:hover{
+      background: rgb(0,140,0);
+    }
     img{
-      rotate: 180deg;
       width: 24px;
-      height: 48px;
+      height: 24px;
     }
   }
 }
