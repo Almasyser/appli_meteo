@@ -6,6 +6,7 @@ import cross from "../../../assets/Cross-cancel.png";
 import clear from "../../../assets/Clear_green-128.png";
 import "./selectCity.css";
 function SelectCity (props){
+  const api_url = import.meta.env.VITE_API_URL;
   // eslint-disable-next-line react/prop-types
   const { visible, setVisible } = props;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
@@ -13,7 +14,7 @@ function SelectCity (props){
   const [cityList, setCityList] = useState("");
   const handleChoiceCity = async ()=>{
     try {
-        const response = await axios.get(`http://localhost:5050/datasByCity/${cityName}`);
+        const response = await axios.get(`${api_url}/datasByCity/${cityName}`);
         setCityList(response.data);
       } 
       catch (error) {
