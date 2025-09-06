@@ -1,13 +1,5 @@
 @mixin textMedium($fm, $fc, $fw, $fs, $ls, $pl, $mt){
-  @if $fm == "barlow"{
-    font-family: "barlow", sans-serif;
-  } 
-  @else if $fm == "roboto"{
-    font-family: "roboto",sans-serif;
-  }
-  @else{
-    font-family: "ubuntu",sans-serif;
-  }
+  font-family: $fm;
   font-size: $fs;
   font-weight: $fw;
   letter-spacing: $ls;

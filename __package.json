@@ -1,0 +1,14 @@
+{
+  "name": "appli_meteo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n FRONT,BACK -c green,cyan \"npm run dev-front\" \"npm run dev-back\"",
+    "dev-front": "cd frontend && npm run dev",
+    "dev-back": "cd backend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -37,7 +37,7 @@ input{
   color: $secondary_1;
   outline: none;
   &:focus-visible {
-    background: lighten($color: $third_4, $amount: 20%);
+    background: $third_4;
   }
   @include textMedium($ubuntu, $TextLight, normal, 1.2rem,0.1rem,0.4rem,0.3rem)
 }
@@ -68,13 +68,23 @@ input{
   scroll-padding-left: 0.5rem;
 }
 .city-item{
-  width: 14rem;
-  color: $CeilValues;
-  padding: 0.4rem 0 0.4rem 0;
-  border-bottom: 1px solid $Line;
-  @include textMedium($ubuntu, $TextLight, normal, 1rem, 0.03rem, 0.3rem, 0.3rem);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   &:hover{
     cursor: pointer;
     opacity: 0.6;
   }
 }
+  .city{
+    width: 12rem;
+    color: $CeilValues;
+    margin: 0;
+    padding: 0.2rem 0 0.4rem 0;
+    border-bottom: 1px solid $Line;
+    @include textMedium($roboto, $TextLight, normal, 1rem, 0.03rem, 0.3rem, 0.3rem);
+    &.departement{
+      text-align: right;
+    }
+  }

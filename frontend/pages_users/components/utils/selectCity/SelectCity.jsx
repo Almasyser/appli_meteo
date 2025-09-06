@@ -6,7 +6,10 @@ import cross from "../../../assets/Cross-cancel.png";
 import clear from "../../../assets/Clear_green-128.png";
 import "./selectCity.css";
 function SelectCity (props){
-  const api_url = import.meta.env.VITE_API_URL;
+  // const api_url = import.meta.env.VITE_API_URL;
+  const api_url = "http://localhost:5050/api";
+  console.log("url ",api_url);
+  
   // eslint-disable-next-line react/prop-types
   const { visible, setVisible } = props;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
@@ -64,7 +67,10 @@ function SelectCity (props){
           )
           .map((el, index)=>{
             return(
-            <p className="city-item" key={index} onClick={()=>handleSelectCity(el)}>{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
+              <div key={index} className="city-item" onClick={()=>handleSelectCity(el)}>
+                <p className="city">{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
+                <p className="city departement">{`${el.department_name} ${el.department_number}`}</p>
+              </div>
           );
           })}
         </div>

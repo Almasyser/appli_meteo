@@ -1,21 +1,4 @@
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../../assets/Ubuntu/Ubuntu-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Barlow";
-  src: url("../../assets/Barlow/Barlow-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../../assets/Roboto/static/Roboto-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 .city-container {
   position: absolute;
   top: 13rem;
@@ -36,7 +19,7 @@
 }
 
 .city-comment {
-  font-family: "ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.7rem;
   font-weight: normal;
   letter-spacing: 0.01rem;
@@ -61,7 +44,7 @@ input {
   border-radius: 8px;
   color: #f3fdd0;
   outline: none;
-  font-family: "ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
   font-weight: normal;
   letter-spacing: 0.1rem;
@@ -70,7 +53,7 @@ input {
   color: #f3fdd0;
 }
 input:focus-visible {
-  background: #286c9c;
+  background: #13344b;
 }
 
 .city-btn-cancel {
@@ -102,11 +85,23 @@ input:focus-visible {
 }
 
 .city-item {
-  width: 14rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.city-item:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.city {
+  width: 12rem;
   color: #F2F995;
-  padding: 0.4rem 0 0.4rem 0;
+  margin: 0;
+  padding: 0.2rem 0 0.4rem 0;
   border-bottom: 1px solid #87E9BB;
-  font-family: "ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: 0.03rem;
@@ -114,7 +109,6 @@ input:focus-visible {
   margin-top: 0.3rem;
   color: #f3fdd0;
 }
-.city-item:hover {
-  cursor: pointer;
-  opacity: 0.6;
+.city.departement {
+  text-align: right;
 }/*# sourceMappingURL=selectCity.css.map */

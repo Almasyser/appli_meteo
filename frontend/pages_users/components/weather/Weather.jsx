@@ -20,6 +20,8 @@ function ModalWeather() {
   useEffect(() => {
     FetchApiStatic(lat, long, setMeteoData);
   }, [lat, long]);
+  console.log("#",meteoData);
+  
   useEffect(() => {
     meteoData && updateMyArray(meteoData);
     if (meteoData) {
