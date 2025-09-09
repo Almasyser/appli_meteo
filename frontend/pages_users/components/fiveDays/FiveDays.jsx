@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
 import omm_codes from "../../json/omm_codes.json";
+import tags from "../utils/tags";
 import "./fiveDays.css";
   function FiveDays(props){
     const [dayIndex, setIndex] = useState([0,1,2,3,4,5,6])
     const {meteoData} = props;
+    const [codesKey, setCodesKey] = useState();
+    useEffect(()=>{
+      const cles = Object.keys(tags);
+      setCodesKey(cles);
+    },[]);
+    
+    console.log(codesKey);
     return (
       <>
         <div className="uwd-header">
@@ -25,6 +33,9 @@ import "./fiveDays.css";
               <p>levé soleil</p><DateToHour today={meteoData.daily.sunrise[id_day]}/>
               <p>coucher soleil</p> <DateToHour today={meteoData.daily.sunset[id_day]}/>
               <p>tendance {tendance[0].text}</p>
+              <p>tendance {tendance[0].id}</p>
+
+              <img src={tags[0]} alt="#"/>
             </div>
           )
         }
