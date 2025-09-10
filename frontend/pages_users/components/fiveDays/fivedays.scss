@@ -1,6 +1,6 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
-.fiveDays-container{
+.fiveDays{
   position: absolute;
   top: 0;
   left: 0;
@@ -10,19 +10,26 @@
     transform: translateX(-150px);
   }
 }
-.uwd-header{
+.fiveDays-header{
   font-weight: 600;
 }
-.uwd-container{
+.fiveDays-container{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.2rem;
+  gap: 1rem;
 
 }
-.uwd-card{
+.fiveDays-card{
   width: 14%;
-  background-color: gray;
+  background-color: $third_4;
+  .todayDate{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+
+  }
   p{
     font-size: smaller;
   }
