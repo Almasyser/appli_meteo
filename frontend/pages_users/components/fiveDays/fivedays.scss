@@ -1,39 +1,93 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 .fiveDays{
-  position: absolute;
-  top: 0;
-  left: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
   z-index: 10;
-
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  font-family: $roboto;
   .hide{
     transform: translateX(-150px);
   }
 }
 .fiveDays-header{
-  font-weight: 600;
+  font-weight: 400;
 }
 .fiveDays-container{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-
+}
+.fiveDays-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  button{
+    width: 8rem;
+    height: 2rem;
+    background-color: $primary_3;
+    color: $secondary_3;
+    font-size:larger;
+    font-weight: 0;
+    letter-spacing: 4%;
+    &:hover{
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
 }
 .fiveDays-card{
-  width: 14%;
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: $third_4;
-  .todayDate{
+  .fiveDays-date{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    
-
+    align-items: center;
+    background-color: $third_3;
+    .dayOfWeek{
+      font-size: larger;
+      font-weight: 500;
+      color: $secondary_1
+    }
+    .dateJMA{
+      font-size: smaller;
+      padding-bottom: 0;
+    }
   }
-  p{
-    font-size: smaller;
+}
+  .ephemeride{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      margin: 0 0.5rem;
+      width: 32px;
+      height: 32px;
+    }
+    p{
+      font-size:medium;
+      font-weight: 500;
+      margin-left: 0.5rem;
+      color: $secondary_4;
+      
+    }
+  }
+  .tendance{
+    font-size: large;
+    color: $secondary_3;
   }
   img{
     width: 4rem;
+
   }
-}

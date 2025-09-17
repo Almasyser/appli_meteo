@@ -6,38 +6,77 @@ import omm_codes from "../../json/omm_codes.json";
 import tags from "../utils/tags";
 import "./fiveDays.css";
   function FiveDays(props){
-    const [dayIndex] = useState([0,1,2,3,4])
+    const [dayIndex] = useState([1,2,3,4,5]);
+    const [id_day, setId_day] = useState();
+    const [today, setToday] = useState();
+    const [tendance, setTendance] = useState();
     const {meteoData} = props;
+    const handleClick = (e)=>{
+      const e_day = parseInt(e.target.value, 10);
+      setToday(meteoData.daily.sunset[e_day]);
+      setTendance(omm_codes.filter(el => el.code === meteoData.daily.weather_code[e_day]));
+      setId_day(e_day);
+    }
     return (
-      <>
-        <div className="fiveDays-header">
-          <p>altitude {meteoData.elevation} m</p>
-          <p>latitude {meteoData.latitude}</p>
-          <p>longitude {meteoData.longitude}</p>
+      <section className="fiveDays">
+        <div className="fiveDays-box">
+          {dayIndex && dayIndex.map((btn,index)=>{
+            return(
+              <button 
+                type="radio" 
+                key={index} 
+                value={btn} 
+                name="btnDay" 
+                onClick={handleClick}>
+                <DayOfWeek today={meteoData.daily.time[btn]}/>
+              </button>
+            )
+          })}
         </div>
         <div className="fiveDays-container">
-        {dayIndex && dayIndex.map((id_day, index)=>{
-          let today = meteoData.daily.sunset[id_day];
-          const tendance = omm_codes.filter(el => el.code === meteoData.daily.weather_code[id_day]);
-          return(
-            <div key={index} className="fiveDays-card">
-              <div className="todayDate">
-                {today && 
-                <>
-                  <p><DayOfWeek today={today}/></p>
-                  <p><ConvertDataJMA dateISO={today} /></p>
-                </>
-                }
+          {id_day &&
+            <>
+              <div className="fiveDays-card">
+                <div className="fiveDays-date">
+                  {today && 
+                    <>
+                      <p className="dayOfWeek"><DayOfWeek today={today}/></p>
+                      <p className="dateJMA"><ConvertDataJMA dateISO={today} /></p>
+                    </>
+                  }
+                </div>
+                <span className="ephemeride"><img src={tags["Soleil"]} alt="--@--"/><p><DateToHour today={meteoData.daily.sunrise[id_day]}/></p></span>
+                <span className="ephemeride"><img src={tags["Lune"]} alt="--@--"/><p><DateToHour today={meteoData.daily.sunset[id_day]}/></p></span>
+                <p className="tendance">{tendance[0].text}</p>
+                <img src={tags[tendance[0].file]} alt="==="/>
               </div>
-              <br/>
-              <p>levé soleil</p><DateToHour today={meteoData.daily.sunrise[id_day]}/>
-              <p>coucher soleil</p> <DateToHour today={meteoData.daily.sunset[id_day]}/>
-              <p>tendance {tendance[0].text}</p>
-              <img src={tags[tendance[0].file]} alt="==="/>
-            </div>
-          )})}
+            </>}
         </div>
-      </>
+      </section>
     )   
   }
   export default FiveDays;
+
+          // {dayIndex && dayIndex.map((id_day, index)=>{
+          // let today = meteoData.daily.sunset[id_day];
+          // const tendance = omm_codes.filter(el => el.code === meteoData.daily.weather_code[id_day]);
+          // return(
+          //   <div key={index} className="fiveDays-card">
+          //     <div className="todayDate">
+          //       {today && 
+          //       <>
+          //         <p><DayOfWeek today={today}/></p>
+          //         <p><ConvertDataJMA dateISO={today} /></p>
+          //       </>
+          //       }
+          //     </div>
+          //     <br/>
+          //     <p>levé du soleil: <DateToHour today={meteoData.daily.sunrise[id_day]}/></p>
+          //     <p>coucher de soleil: <DateToHour today={meteoData.daily.sunset[id_day]}/></p>
+          //     <p>tendance {tendance[0].text}</p>
+          //     <img src={tags[tendance[0].file]} alt="==="/>
+          //   </div>
+          // )
+          // }
+          // )
+          // }
