@@ -3,7 +3,7 @@
   position: relative;
   top: 0;
   left: 0;
-  background: #0A3239;
+  background-image: url("./assets/Fond_001.jpg");
   border-radius: 16px;
   display: flex;
   flex-direction: column;
