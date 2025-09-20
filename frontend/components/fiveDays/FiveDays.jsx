@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ConvertDataJMA from "../utils/ConvertDateJMA";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
 import omm_codes from "../../json/omm_codes.json";
-import tags from "../utils/tags";
+import tags from "../../assets/tags";
 import "./fiveDays.css";
   function FiveDays(props){
     const [dayIndex] = useState([1,2,3,4,5]);
