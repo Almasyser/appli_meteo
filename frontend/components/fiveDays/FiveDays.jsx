@@ -56,27 +56,3 @@ import "./fiveDays.css";
     )   
   }
   export default FiveDays;
-
-          // {dayIndex && dayIndex.map((id_day, index)=>{
-          // let today = meteoData.daily.sunset[id_day];
-          // const tendance = omm_codes.filter(el => el.code === meteoData.daily.weather_code[id_day]);
-          // return(
-          //   <div key={index} className="fiveDays-card">
-          //     <div className="todayDate">
-          //       {today && 
-          //       <>
-          //         <p><DayOfWeek today={today}/></p>
-          //         <p><ConvertDataJMA dateISO={today} /></p>
-          //       </>
-          //       }
-          //     </div>
-          //     <br/>
-          //     <p>levé du soleil: <DateToHour today={meteoData.daily.sunrise[id_day]}/></p>
-          //     <p>coucher de soleil: <DateToHour today={meteoData.daily.sunset[id_day]}/></p>
-          //     <p>tendance {tendance[0].text}</p>
-          //     <img src={tags[tendance[0].file]} alt="==="/>
-          //   </div>
-          // )
-          // }
-          // )
-          // }

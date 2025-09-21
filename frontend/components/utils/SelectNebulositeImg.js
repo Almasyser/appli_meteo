@@ -7,7 +7,7 @@ export default function SelectNebulositeImg(cloud_cover, precipitation) {
     const matched = hauteurPluie.find(({ min, max }) => precipitation >= min && precipitation < max);
     return omm_codes.find(entry => entry.id === (matched ? matched.id : 0)) || { img: null, text: "inconnu" };
   } else {
-    const matched = intervals.find(({ min, max }) => cloud_cover >= min && cloud_cover < max);
+    const matched = intervals.find(({ min, max }) => cloud_cover >= min && cloud_cover <= max);
     return omm_codes.find(entry => entry.id === (matched ? matched.id : 0)) || { img: null, text: "inconnu" };
   }
 }

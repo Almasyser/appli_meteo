@@ -7,6 +7,7 @@ import ModalWind from "../wind/Wind";
 import FiveDays from "../fiveDays/FiveDays";
 import ConvertDateToCustom from "../utils/ConvertDateToCustom";
 import SelectNebulositeImg from "../utils/SelectNebulositeImg";
+import tags from "../../assets/tags";
 import "./weather.css";
 
 function ModalWeather() {
@@ -15,7 +16,7 @@ function ModalWeather() {
   const [nebulositeText, setNebulositeText] = useState("");
   const [heure, setHeure] = useState();
   const {myArray, updateMyArray} = useArray();
-  const { city_code, latitude, longitude } = useLocations();
+  const {latitude, longitude} = useLocations();
   const lat = latitude ;
   const long = longitude;
   //
@@ -23,7 +24,6 @@ function ModalWeather() {
   useEffect(() => {
     FetchApiStatic(lat, long, setMeteoData);
   }, [lat, long]);
-  // console.log("#",meteoData);
   
   useEffect(() => {
     meteoData && updateMyArray(meteoData);
@@ -33,12 +33,13 @@ function ModalWeather() {
       const cloud_cover = myArray.hourly?.cloud_cover[heure];
       const precipitation = myArray.hourly?.precipitation[heure];
       if (cloud_cover != null && precipitation != null) {
-        const { img, text } = SelectNebulositeImg(cloud_cover, precipitation);
-        setNebulositeImg(img);
-        setNebulositeText(text);
+        const result = SelectNebulositeImg(cloud_cover, precipitation);
+        setNebulositeImg(tags[result.file]);
+        setNebulositeText(result.text);
       }
     }
   }, [meteoData]);
+    
   return (
     <>
       <div className="weather-container">

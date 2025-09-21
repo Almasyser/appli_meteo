@@ -22,7 +22,7 @@ class cityManagers extends AbstractManager{
     return this.pool.query(`select distinct region_name from  ${this.table}`);
   }
   findCity(item){
-    return this.pool.query(`select distinct city_code from ${this.table} where city_code like '%${item}%' order by city_code;`)
+    return this.pool.query(`select city_code, department_number, region_name from ${this.table} where city_code like '%${item}%' order by city_code;`)
   }
   findZipCode(item){
     return this.pool.query(`select distinct zip_code from ${this.table} where zip_code like '${item}%';`)

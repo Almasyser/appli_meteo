@@ -35,7 +35,7 @@ router.get("/api/citiesbydep/:dep_id", citiesControllers.getCitiesByDep);
 // affiche les villes selon zip code
 router.get("/api/citiesbycode/:code_id", citiesControllers.getCitiesByCode);
 // affiche infos from city
-router.get("/api/datasByCity/:city_name", citiesControllers.getDatasByCity);
+router.get("/api/datasbycity/:city_name", citiesControllers.getDatasByCity);
 // affiche les urls
 router.get("/api/urls", urlControllers.getUrls);
 // affiche url selon Id
