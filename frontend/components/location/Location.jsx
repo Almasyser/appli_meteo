@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useLocations from "../../hooks/useLocations";
-import SelectCity from "../utils/selectCity/SelectCity";
+import SelectCity from "../selectCity/SelectCity";
 import changeImg from "../../assets/Change_green-128.png";
 import "./location.css";
 function ModalLocation (){

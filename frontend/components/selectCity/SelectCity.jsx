@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { PropTypes } from 'prop-types';
 import axios from 'axios';
-import useLocations from "../../../hooks/useLocations";
-import cross from "../../../assets/Cross-cancel.png";
-import clear from "../../../assets/Clear_green-128.png";
+import useLocations from "../../hooks/useLocations";
+import cross from "../../assets/Cross-cancel.png";
+import clear from "../../assets/Clear_green-128.png";
 import "./selectCity.css";
 function SelectCity (props){
   const api_url = import.meta.env.VITE_API_URL;
