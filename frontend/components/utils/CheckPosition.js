@@ -1,17 +1,15 @@
 
 import { useEffect, useState } from "react";
-function CheckPosition({userLocation, setUserLocation}){
-  
+function CheckPosition({setUserLocation}){
   useEffect(()=>{
     GetPosition();
   },[]);
   const GetPosition=()=>{
     if (navigator.geolocation){
-      console.log("YES");
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          console.log("### ",{latitude, longitude})
+          setUserLocation({latitude, longitude})
         },
         (error) =>{console.error("erreur:", error.message);
         },
@@ -21,10 +19,8 @@ function CheckPosition({userLocation, setUserLocation}){
         }
       )} else{
         console.error("Geo localisation non supportée");
-      };
-    }
-  userLocation && console.log("==>",userLocation);
-  return userLocation;
+    };
+  }
 }
 export default CheckPosition;
     

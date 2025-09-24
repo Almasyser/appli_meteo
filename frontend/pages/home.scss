@@ -1,4 +1,4 @@
-@use "./styles/variables" as *;
+@use "../styles/variables" as *;
 
 .body{
   position: relative;
@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: flex-start;
   text-transform: none;
+  font-family: $roboto;
   font-variant: normal;
 }
 .location-section{

@@ -9,17 +9,20 @@
   flex-direction: column;
   justify-content: flex-start;
   text-transform: none;
+  font-family: "Roboto", sans-serif;
   font-variant: normal;
 }
 
 .location-section {
   width: 100%;
-  height: 144px;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .weather-section {
   position: relative;
   top: 2.5rem;
   width: 100%;
-  height: 280px;
+  height: -moz-max-content;
+  height: max-content;
 }/*# sourceMappingURL=home.css.map */
