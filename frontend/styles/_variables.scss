@@ -1,10 +1,28 @@
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 //    font-family: 
 
-$ubuntu: "Ubuntu", sans-serif;
-$barlow: "Barlow", sans-serif;
-$roboto: "Roboto", sans-serif;
+
+$Roboto: "Roboto", sans-serif;
+$Merriweather: "Merriweather", serif;
+
+$Montserrat: "Montserrat", sans-serif;
+$Playfair: "Playfair Display", serif;
+
+$Oswald: "Oswald", sans-serif;
+$Quicksand: "Quicksand", sans-serif;
+
+$Bebas: "Bebas Neue", sans-serif;
+$Nunito: "Nunito", sans-serif;
+
+$Cabin: "Cabin", sans-serif;
+$Alegreya: "Alegreya", serif;
+
+// paire de fontes utilisées::after
+$paragraphe: $Cabin;
+$titre: $Alegreya;
+
 
 $primary_1: #87E9BB;
 $primary_2: #498e7a;

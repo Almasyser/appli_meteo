@@ -4,6 +4,7 @@ import SelectCity from "../selectCity/SelectCity";
 import "./location.css";
 function ModalLocation (){
   const [visible, setVisible] = useState(false);
+  const [showCoords, setShowCoords] = useState(false);
   const { city_code, department_code, department_name, region_name, latitude, longitude } = useLocations();
   const handleClick = ()=>{
     setVisible(!visible);
@@ -15,7 +16,9 @@ function ModalLocation (){
           <p className="location-town">{city_code.charAt(0).toUpperCase() + city_code.slice(1).toLowerCase()}</p>
           <p className="location-department">{department_code}&nbsp;{department_name}</p>
           <p className="location-region">{region_name}</p>
-          <p className="location-department">latitude: {latitude} - longitude: {longitude}</p>
+          <button onClick={()=>{}}>Coordonnées GPS</button>
+          <p className="location-department">latitude: {latitude}</p>
+          <p className="location-department">longitude: {longitude}</p>
         </span>
         <span className="location-button">
           <button className="btn-box" onClick={handleClick}>

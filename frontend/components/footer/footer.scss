@@ -12,56 +12,9 @@
   .footer-text{
     width: max-content;
     margin-top: 0.5rem;
-    color: $ButtonText;
+    color: $dreamy;
     text-align: center;
-    opacity: 0.2;
-    transition: opacity 0.2s ease-in-out;
-    animation-name: textLighting;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes textLighting {
-    0%{
-      opacity: 0.2;
-    }
-    60%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0.2;
-    }
-  }
-  img{
-    width: 64px;
-    height: 64px;
-    margin-top: 0.5rem;
-    // transition: all 0.14s ease-in-out;
-    animation-name: shake;
-    animation-duration: 1s;
-    animation-iteration-count: infinite ;
-    &:hover{
-      cursor: grab;
-      animation: none;
-      
-    }
-    &:hover ~ .footer-text{
-      opacity: 1;
-    }
-    &:active{
-      cursor: grabbing;
-      transform: translateY(3px);
-      transition: 0.3s ease-in-out;
-    }
-  }
-  @keyframes shake {
-    0%{
-      transform: translateY(-3px);
-    }
-    50%{
-      transform: translateY(3px);
-    }
-    100%{
-      transform: translateY(-3px);
-    }
+    opacity: 1;
+    font-size: 2rem;
   }
 }

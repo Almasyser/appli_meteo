@@ -40,14 +40,14 @@ import "./fiveDays.css";
                 <div className="fiveDays-date">
                   {today && 
                     <>
-                      <p className="dayOfWeek"><DayOfWeek today={today}/></p>
-                      <p className="dateJMA"><ConvertDataJMA dateISO={today} /></p>
+                      <p className="fiveDays-dayOfWeek"><DayOfWeek today={today}/></p>
+                      <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={today} /></p>
                     </>
                   }
                 </div>
-                <span className="ephemeride"><img src={tags["Soleil"]} alt="--@--"/><p><DateToHour today={meteoData.daily.sunrise[id_day]}/></p></span>
-                <span className="ephemeride"><img src={tags["Lune"]} alt="--@--"/><p><DateToHour today={meteoData.daily.sunset[id_day]}/></p></span>
-                <p className="tendance">{tendance[0].text}</p>
+                <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="--@--"/><p><DateToHour today={meteoData.daily.sunrise[id_day]}/></p></span>
+                <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="--@--"/><p><DateToHour today={meteoData.daily.sunset[id_day]}/></p></span>
+                <p className="fiveDays-tendance">{tendance[0].text}</p>
                 <img src={tags[tendance[0].file]} alt="==="/>
               </div>
             </>}

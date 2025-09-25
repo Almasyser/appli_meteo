@@ -7,23 +7,21 @@
   justify-content: space-between;
   align-items: center;
   .header-date{
-    font-family: $ubuntu;
     font-size: 1.2rem;
     color: $secondary_2;
     padding-left: 0.5rem;
   }
-  .hour-box{
+  .header-hour-box{
     width: 26%;
     display: flex;
+    font-family: $titre;
     .header-hour{
       width: max-content;
-      font-family: "Barlow", sans-serif;
       font-size: 1.8rem;
       letter-spacing: 0.2rem;
       color: $secondary_3;
     }
-    .hour-dots{
-      font-family: $barlow;
+    .header-hour-dots{
       font-size: 1.8rem;
       color: $secondary_3;
       animation: infinite ease-out;
@@ -34,8 +32,12 @@
           opacity: 0.2;
           scale: 0.1;
         }
-        40%{opacity: 0.4;}
-        70%{opacity: 1;}
+        40%{
+          opacity: 0.4;
+        }
+        70%{
+          opacity: 1;
+        }
         100%{
           opacity: 1;
           scale: 1;
@@ -45,7 +47,6 @@
     .header-second{
       width: max-content;
       padding-top: 1.3rem;
-      font-family: $barlow;
       font-size: 0.8rem;
       letter-spacing: 0.05rem;
       color: $secondary_3;

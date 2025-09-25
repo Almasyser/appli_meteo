@@ -18,9 +18,9 @@ function Header() {
   return (
     <div className="header-container">
       <p className="header-date">{jour}&nbsp;{<ConvertDateJMA dateISO={today}/>}</p>
-      <div className="hour-box">
+      <div className="header-hour-box">
         <p className="header-hour">{heure}</p>
-        <p className="hour-dots">:</p>
+        <p className="header-hour-dots">:</p>
         <p className="header-hour">{minute}</p>
         <p className="header-second">{seconde}</p>
       </div>

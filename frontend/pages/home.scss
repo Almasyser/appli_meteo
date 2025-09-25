@@ -4,16 +4,13 @@
   position: relative;
   top: 0;
   left: 0;
-  // width: $BodyWith;
-  // height: $BodyHeight;
-  // background: $primary_4;
   background-image: url("./assets/Fond_001.jpg");
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-transform: none;
-  font-family: $roboto;
+  font-family: $paragraphe;
   font-variant: normal;
 }
 .location-section{

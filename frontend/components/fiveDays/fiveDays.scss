@@ -1,13 +1,9 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 .fiveDays{
-  // position: absolute;
-  // top: 0;
-  // left: 0;
   z-index: 10;
   margin-top: 1rem;
   margin-bottom: 4rem;
-  font-family: $roboto;
   .hide{
     transform: translateX(-150px);
   }
@@ -53,12 +49,12 @@
     justify-content: space-around;
     align-items: center;
     background-color: $third_3;
-    .dayOfWeek{
+    .fiveDays-dayOfWeek{
       font-size: larger;
       font-weight: 500;
       color: $secondary_1
     }
-    .dateJMA{
+    .fiveDays-dateJMA{
       font-size: smaller;
       padding-bottom: 0;
     }
@@ -80,14 +76,12 @@
       font-weight: 500;
       margin-left: 0.5rem;
       color: $secondary_4;
-      
     }
   }
-  .tendance{
+  .fiveDays-tendance{
     font-size: large;
     color: $secondary_3;
   }
   img{
     width: 4rem;
-
   }

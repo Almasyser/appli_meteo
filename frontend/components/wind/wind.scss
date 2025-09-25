@@ -7,10 +7,9 @@
   border-radius: 16px;
   background: $third_4;
   opacity: 0.96;
+  font-family: $titre;
   img{
     scale: 0.8;
-
-    // z-index: 0;
   }
 }
 .wind-box{
@@ -61,20 +60,19 @@
   height: 128px;
 }
 .wind-label{
-  font-family: $barlow;
+  font-family: $paragraphe;
   font-size: 0.9rem;
   color: $secondary_2;
   margin: 16px auto;
 }
 .wind-value{
-  font-family: $ubuntu;
+ 
   font-size: 1.4rem;
   color: $secondary_4;
   text-align: center;
   margin: 0;
 }
 .wind-text{
-  font-family: $barlow;
   font-size: 0.8rem;
   color: $secondary_2;
   text-align: center;
