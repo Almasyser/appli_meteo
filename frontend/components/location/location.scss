@@ -22,19 +22,14 @@
   @include textMedium($paragraphe, $secondary_1, normal, 1rem, 0.05rem, 0.8rem, 1rem);
   margin-bottom: 1rem;
 }
-.location-coordonnees{
+.location-carte{
   position: absolute;
+  width: 220px;
+  height: 220px;
   bottom: 0;
   right: 0;
-  width: 12rem;
-  height: 3rem;
   margin: 0;
   padding: 0;
-  p{
-    margin: 0;
-    padding: 0;
-    color: $TextLight;
-  }
 }
 .location-button{
   width: 40%;

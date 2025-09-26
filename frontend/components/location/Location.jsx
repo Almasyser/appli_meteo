@@ -19,9 +19,10 @@ function ModalLocation (){
           <p className="location-region">{region_name}</p>
           <button onClick={()=>{setShowCoords(!showCoords)}}>Coordonnées GPS</button>
           {showCoords && 
-            <span className="location-coordonnees">
-              <p>latitude: {latitude}</p>
-              <p>longitude: {longitude}</p>
+            <span className="location-carte">
+              <MapComponent lat={latitude} long={longitude}/>
+              {/* <p>latitude: {latitude}</p>
+              <p>longitude: {longitude}</p> */}
             </span>
           }
         </span>
@@ -31,7 +32,7 @@ function ModalLocation (){
           </button>
         </span>
       </div>
-      <MapComponent lat={latitude} long={longitude}/>
+      
       {visible? <SelectCity setVisible={setVisible} visible={visible} />: null}
     </>
   )

@@ -44,19 +44,14 @@
   margin-bottom: 1rem;
 }
 
-.location-coordonnees {
+.location-carte {
   position: absolute;
+  width: 220px;
+  height: 220px;
   bottom: 0;
   right: 0;
-  width: 12rem;
-  height: 3rem;
   margin: 0;
   padding: 0;
-}
-.location-coordonnees p {
-  margin: 0;
-  padding: 0;
-  color: #f3fdd0;
 }
 
 .location-button {
