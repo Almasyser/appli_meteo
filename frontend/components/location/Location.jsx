@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useLocations from "../../hooks/useLocations";
 import SelectCity from "../selectCity/SelectCity";
+import MapComponent from "../map/MapComponent";
 import "./location.css";
 function ModalLocation (){
   const [visible, setVisible] = useState(false);
@@ -30,6 +31,7 @@ function ModalLocation (){
           </button>
         </span>
       </div>
+      <MapComponent lat={latitude} long={longitude}/>
       {visible? <SelectCity setVisible={setVisible} visible={visible} />: null}
     </>
   )
