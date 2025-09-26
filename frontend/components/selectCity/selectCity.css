@@ -6,14 +6,12 @@
   height: 128px;
   background-color: #2a605a;
   z-index: 1;
-}
-.city-container .entete {
   width: 100%;
   height: 40px;
   display: flex;
   justify-content: space-between;
 }
-.city-container .entete .city-close {
+.city-container .city-close {
   width: 36px;
   height: 36px;
 }
@@ -36,8 +34,7 @@
   display: flex;
   margin: 0 0 0 1rem;
 }
-
-input {
+.input-box input {
   z-index: 1000;
   height: 2.8rem;
   background-color: #13344b;
@@ -52,11 +49,10 @@ input {
   margin-top: 0.3rem;
   color: #f3fdd0;
 }
-input:focus-visible {
+.input-box input:focus-visible {
   background: #13344b;
 }
-
-.city-btn-cancel {
+.input-box .city-btn-cancel {
   scale: 0.6;
   position: relative;
   background-color: transparent;
@@ -66,7 +62,7 @@ input:focus-visible {
   top: 2px;
   transition: all 0.2s ease-in-out;
 }
-.city-btn-cancel:hover {
+.input-box .city-btn-cancel:hover {
   opacity: 0.4;
   cursor: pointer;
 }

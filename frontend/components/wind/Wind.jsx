@@ -1,4 +1,3 @@
-import  useWeatherDatas  from "../../hooks/useWeatherDatas";
 import  ConvertWindDirection  from "../utils/ConvertWindDirection";
 import rose_ciel from "../../assets/Rose ciel.png";
 import rose_fleche from "../../assets/Rose_fleche.png";

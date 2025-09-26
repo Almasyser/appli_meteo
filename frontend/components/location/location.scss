@@ -1,6 +1,7 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 .location-container{
+  position: relative;
   margin: 16px auto;
   display: flex;
   border-top: 1px solid $primary_1;
@@ -20,6 +21,20 @@
 .location-region{
   @include textMedium($paragraphe, $secondary_1, normal, 1rem, 0.05rem, 0.8rem, 1rem);
   margin-bottom: 1rem;
+}
+.location-coordonnees{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12rem;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  p{
+    margin: 0;
+    padding: 0;
+    color: $TextLight;
+  }
 }
 .location-button{
   width: 40%;

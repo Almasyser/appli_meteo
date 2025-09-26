@@ -54,12 +54,12 @@
   align-items: center;
   background-color: #266795;
 }
-.fiveDays-card .fiveDays-date .dayOfWeek {
+.fiveDays-card .fiveDays-date .fiveDays-dayOfWeek {
   font-size: larger;
   font-weight: 500;
   color: #f3fdd0;
 }
-.fiveDays-card .fiveDays-date .dateJMA {
+.fiveDays-card .fiveDays-date .fiveDays-dateJMA {
   font-size: smaller;
   padding-bottom: 0;
 }
@@ -83,7 +83,7 @@
   color: #F2F995;
 }
 
-.tendance {
+.fiveDays-tendance {
   font-size: large;
   color: #f3faa4;
 }

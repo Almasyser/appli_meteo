@@ -12,19 +12,19 @@
   color: #f3fbb3;
   padding-left: 0.5rem;
 }
-.header-container .hour-box {
+.header-container .header-hour-box {
   width: 26%;
   display: flex;
   font-family: "Alegreya", serif;
 }
-.header-container .hour-box .header-hour {
+.header-container .header-hour-box .header-hour {
   width: -moz-max-content;
   width: max-content;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
   color: #f3faa4;
 }
-.header-container .hour-box .hour-dots {
+.header-container .header-hour-box .header-hour-dots {
   font-size: 1.8rem;
   color: #f3faa4;
   animation: infinite ease-out;
@@ -47,7 +47,7 @@
     scale: 1;
   }
 }
-.header-container .hour-box .header-second {
+.header-container .header-hour-box .header-second {
   width: -moz-max-content;
   width: max-content;
   padding-top: 1.3rem;

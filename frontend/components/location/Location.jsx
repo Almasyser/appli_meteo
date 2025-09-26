@@ -16,9 +16,13 @@ function ModalLocation (){
           <p className="location-town">{city_code.charAt(0).toUpperCase() + city_code.slice(1).toLowerCase()}</p>
           <p className="location-department">{department_code}&nbsp;{department_name}</p>
           <p className="location-region">{region_name}</p>
-          <button onClick={()=>{}}>Coordonnées GPS</button>
-          <p className="location-department">latitude: {latitude}</p>
-          <p className="location-department">longitude: {longitude}</p>
+          <button onClick={()=>{setShowCoords(!showCoords)}}>Coordonnées GPS</button>
+          {showCoords && 
+            <span className="location-coordonnees">
+              <p>latitude: {latitude}</p>
+              <p>longitude: {longitude}</p>
+            </span>
+          }
         </span>
         <span className="location-button">
           <button className="btn-box" onClick={handleClick}>

@@ -26,12 +26,14 @@ function ModalWeather() {
   }, [lat, long]);
   
   useEffect(() => {
+    
     meteoData && updateMyArray(meteoData);
+    const { hours, day } = ConvertDateToCustom();
+    setHeure(parseInt(hours, 10));
     if (meteoData) {
-      const { hours, day } = ConvertDateToCustom();
-      setHeure(parseInt(hours, 10));
       const cloud_cover = myArray.hourly?.cloud_cover[heure];
       const precipitation = myArray.hourly?.precipitation[heure];
+      console.log("YES",cloud_cover, precipitation);
       if (cloud_cover != null && precipitation != null) {
         const result = SelectNebulositeImg(cloud_cover, precipitation);
         setNebulositeImg(tags[result.file]);
