@@ -7,7 +7,7 @@ import clear from "../../assets/Clear_green-128.png";
 import "./selectCity.css";
 function SelectCity (props){
   const api_url = import.meta.env.VITE_API_URL;
-  const { visible, setVisible } = props;
+  const {visible, setVisible} = props;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
   const [cityName, setCityName] = useState("");
   const [cityList, setCityList] = useState("");

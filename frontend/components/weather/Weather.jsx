@@ -43,26 +43,26 @@ function ModalWeather() {
   }, [meteoData]);
     
   return (
-    <>
-      <div className="weather-container">
-        {<p className="weather-text">Météo actuelle: {nebulositeText}</p>}
-        {nebulositeImg && 
-          <div className="weather-box">
-            <div className="nebulosite-box">
-              <img className="nebulosite" src={nebulositeImg} alt={nebulositeText} />
-            </div>
-            <p className="temperature">{Math.round(myArray.hourly?.temperature_2m[heure]) || "##"}&nbsp;°C</p>
-          </div>
-        }
+    <div className="weather-container">
+      <div className="weather-title">
+        <p className="weather-text">Météo actuelle: {nebulositeText}</p>
+        <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)}>Tendance pour les prochains jours</button>
       </div>
+      {nebulositeImg && 
+        <div className="weather-box">
+          <div className="nebulosite-box">
+            <img className="nebulosite" src={nebulositeImg} alt={nebulositeText} />
+          </div>
+          <p className="temperature">{Math.round(myArray.hourly?.temperature_2m[heure]) || "##"}&nbsp;°C</p>
+        </div>
+      }
       <ModalWind
         wind_speed={myArray.hourly?.wind_speed_10m[heure]}
         wind_direction={myArray.hourly?.wind_direction_10m[heure]}
         probability={myArray.hourly?.precipitation_probability[heure]}
       />
-      <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)}>Tendance pour les prochains jours</button>
       {toggleFiveDays? <FiveDays setToggleFiveDays={setToggleFiveDays} meteoData={myArray}/>:null}
-    </>
+    </div>
   );
 }
 export default ModalWeather;

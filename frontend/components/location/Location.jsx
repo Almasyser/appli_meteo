@@ -21,8 +21,6 @@ function ModalLocation (){
           {showCoords && 
             <span className="location-carte">
               <MapComponent lat={latitude} long={longitude}/>
-              {/* <p>latitude: {latitude}</p>
-              <p>longitude: {longitude}</p> */}
             </span>
           }
         </span>
@@ -32,7 +30,6 @@ function ModalLocation (){
           </button>
         </span>
       </div>
-      
       {visible? <SelectCity setVisible={setVisible} visible={visible} />: null}
     </>
   )

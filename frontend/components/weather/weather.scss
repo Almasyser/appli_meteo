@@ -1,26 +1,27 @@
 @use "../../styles/variables" as *;
 .weather-container{
-  // width: 100%;
   height: max-content;
   display: flex;
   flex-direction: column;
 }
-.weather-text{
-  width: 92%;
-  margin: 0 auto;
-  color: $secondary_1;
-  font-size: 1rem;
+.weather-title{
+  display: flex;
+  justify-content: space-evenly;
+  button{
+    width: 10rem;
+  }
+
 }
 .weather-box{
   width: 100%;
-  height: 212px;
+  height: max-content;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   .nebulosite-box{
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     margin: 8px;
     border-radius: 2rem;
     z-index: 0;
@@ -31,9 +32,6 @@
       background-color: rgba(0, 9, 63,0.1);
     }
     .nebulosite{
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       scale: 0.8;
@@ -43,7 +41,7 @@
   .temperature{
     width: 40%;
     font-size: 3rem;
-    line-height: 252px;
+    text-align: center;
     color: $secondary_2;
     z-index: 1;
   }
