@@ -46,7 +46,7 @@ function ModalWeather() {
     <div className="weather-container">
       <div className="weather-title">
         <p className="weather-text">Météo actuelle: {nebulositeText}</p>
-        <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)}>Tendance pour les prochains jours</button>
+        <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)} className="btn-tendances">Tendance pour les prochains jours</button>
       </div>
       {nebulositeImg && 
         <div className="weather-box">

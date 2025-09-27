@@ -9,6 +9,7 @@
 }
 
 .location-section {
+  position: relative;
   width: 100%;
   height: -moz-max-content;
   height: max-content;

@@ -17,19 +17,15 @@ function ModalLocation (){
           <p className="location-town">{city_code.charAt(0).toUpperCase() + city_code.slice(1).toLowerCase()}</p>
           <p className="location-department">{department_code}&nbsp;{department_name}</p>
           <p className="location-region">{region_name}</p>
-          <button onClick={()=>{setShowCoords(!showCoords)}}>Coordonnées GPS</button>
+          <button onClick={()=>{setShowCoords(!showCoords)}} className="btn-coordonnees">Coordonnées GPS</button>
           {showCoords && 
             <span className="location-carte">
               <MapComponent lat={latitude} long={longitude}/>
             </span>
           }
         </span>
-        <span className="location-button">
-          <button className="btn-box" onClick={handleClick}>
-            <p className="btn-text">changer la position</p>
-          </button>
-        </span>
       </div>
+      <button className="btn-change-pos" onClick={handleClick}>changer la position</button>
       {visible? <SelectCity setVisible={setVisible} visible={visible} />: null}
     </>
   )
