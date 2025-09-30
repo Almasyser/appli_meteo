@@ -61,7 +61,7 @@ function SelectCity (props){
           return(
             <div key={index} className="city-item" onClick={()=>handleSelectCity(el)}>
               <p className="city">{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
-              <p className="city departement">{`${el.department_name} ${el.department_number}`}</p>
+              <p className="city department">{`${el.department_name} ${el.department_number}`}</p>
             </div>
           );
         })
