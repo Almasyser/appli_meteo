@@ -54,7 +54,8 @@
 
 .btn-change-pos {
   position: absolute;
-  bottom: 0;
+  top: 16px;
+  right: 16px;
   width: 40%;
   height: 32px;
   display: flex;

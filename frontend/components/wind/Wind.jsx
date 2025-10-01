@@ -1,6 +1,6 @@
 import  ConvertWindDirection  from "../utils/ConvertWindDirection";
 import rose_ciel from "../../assets/Rose ciel.png";
-import rose_fleche from "../../assets/Rose_fleche1.png";
+import rose_fleche from "../../assets/Rose_fleche.png";
 import "./wind.css";
 function ModalWind (props) {
   let { wind_speed, wind_direction, probability }=props;

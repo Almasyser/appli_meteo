@@ -1,20 +1,22 @@
 import { useState } from "react";
+import useArray from "../../hooks/useArray";
 import ConvertDataJMA from "../utils/ConvertDateJMA";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import "./fiveDays.css";
-  function FiveDays(props){
+  function FiveDays(){
     const [dayIndex] = useState([1,2,3,4,5]);
     const [id_day, setId_day] = useState();
     const [today, setToday] = useState();
     const [tendance, setTendance] = useState();
-    const {meteoData} = props;
+    const { myArray}= useArray();
+    
     const handleClick = (e)=>{
       const e_day = parseInt(e.target.value, 10);
-      setToday(meteoData.daily.sunset[e_day]);
-      setTendance(omm_codes.filter(el => el.code === meteoData.daily.weather_code[e_day]));
+      setToday(myArray.daily.sunset[e_day]);
+      setTendance(omm_codes.filter(el => el.code === myArray.daily.weather_code[e_day]));
       setId_day(e_day);
     }
     return (
@@ -28,7 +30,7 @@ import "./fiveDays.css";
                 value={btn} 
                 name="btnDay" 
                 onClick={handleClick}>
-                <DayOfWeek today={meteoData.daily.time[btn]}/>
+                <DayOfWeek today={myArray.daily.time[btn]}/>
               </button>
             )
           })}
@@ -45,8 +47,8 @@ import "./fiveDays.css";
                     </>
                   }
                 </div>
-                <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="--@--"/><p><DateToHour today={meteoData.daily.sunrise[id_day]}/></p></span>
-                <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="--@--"/><p><DateToHour today={meteoData.daily.sunset[id_day]}/></p></span>
+                <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="--@--"/><p><DateToHour today={myArray.daily.sunrise[id_day]}/></p></span>
+                <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="--@--"/><p><DateToHour today={myArray.daily.sunset[id_day]}/></p></span>
                 <p className="fiveDays-tendance">{tendance[0].text}</p>
                 <img src={tags[tendance[0].file]} alt="==="/>
               </div>

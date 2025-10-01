@@ -4,7 +4,7 @@ import useArray from "../../hooks/useArray";
 import useLocations from "../../hooks/useLocations";
 import FetchApiStatic from "../utils/FetchApiStatic";
 import ModalWind from "../wind/Wind";
-import FiveDays from "../fiveDays/FiveDays";
+// import FiveDays from "../fiveDays/FiveDays";
 import ConvertDateToCustom from "../utils/ConvertDateToCustom";
 import SelectNebulositeImg from "../utils/SelectNebulositeImg";
 import tags from "../../assets/tags";
@@ -46,7 +46,7 @@ function ModalWeather() {
     <div className="weather-container">
       <div className="weather-title">
         <p className="weather-text">Météo actuelle: {nebulositeText}</p>
-        <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)} className="btn-tendances">Tendance pour les prochains jours</button>
+        {/* <button type="button" onClick={()=> setToggleFiveDays(!toggleFiveDays)} className="btn-tendances">Tendance pour les prochains jours</button> */}
       </div>
       {nebulositeImg && 
         <div className="weather-box">
@@ -61,7 +61,7 @@ function ModalWeather() {
         wind_direction={myArray.hourly?.wind_direction_10m[heure]}
         probability={myArray.hourly?.precipitation_probability[heure]}
       />
-      {toggleFiveDays? <FiveDays setToggleFiveDays={setToggleFiveDays} meteoData={myArray}/>:null}
+      {/* {toggleFiveDays? <FiveDays setToggleFiveDays={setToggleFiveDays} meteoData={myArray}/>:null} */}
     </div>
   );
 }

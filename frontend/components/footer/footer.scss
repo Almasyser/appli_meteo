@@ -3,16 +3,16 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  border: 1px dashed cyan;
+  border: none;
   width: 100%;
-  height: 96px;
+  height: 64px;
   border-radius: 0 0 16px 16px;
   // border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: burlywood;
+  background: $third_3;
   .footer-text{
     width: max-content;
     margin-top: 0.5rem;

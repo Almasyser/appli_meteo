@@ -1,24 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-.footer-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  border: none;
+.navbar {
   width: 100%;
-  height: 64px;
-  border-radius: 0 0 16px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background: #266795;
-}
-.footer-container .footer-text {
-  width: -moz-max-content;
-  width: max-content;
-  margin-top: 0.5rem;
-  color: #eaebed;
-  text-align: center;
-  opacity: 1;
-  font-size: 2rem;
-}/*# sourceMappingURL=footer.css.map */
+  height: 4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}/*# sourceMappingURL=navbar.css.map */
