@@ -16,7 +16,7 @@ function Home () {
         <Location />
       </div>
       <div className="weather-section">
-          <Weather />
+        <Weather />
       </div>
       <Comments />
       <Footer />

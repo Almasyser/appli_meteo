@@ -12,7 +12,6 @@ import "./fiveDays.css";
     const [today, setToday] = useState();
     const [tendance, setTendance] = useState();
     const { myArray}= useArray();
-    
     const handleClick = (e)=>{
       const e_day = parseInt(e.target.value, 10);
       setToday(myArray.daily.sunset[e_day]);
