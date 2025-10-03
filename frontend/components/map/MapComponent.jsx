@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap  } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-function MapComponent({ lat, long }) {
+function MapComponent({ lat, long, setShowMap }) {
   function RecenterMap({ lat, long }) {
     const map = useMap();
     useEffect(() => {

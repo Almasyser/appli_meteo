@@ -5,9 +5,8 @@ import useLocations from "../../hooks/useLocations";
 import cross from "../../assets/Cross-cancel.png";
 import clear from "../../assets/Clear_green-128.png";
 import "./selectCity.css";
-function SelectCity (props){
+function SelectCity ({setShowSelect}){
   const api_url = import.meta.env.VITE_API_URL;
-  const {visible, setVisible} = props;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
   const [cityName, setCityName] = useState("");
   const [cityList, setCityList] = useState("");
@@ -32,7 +31,7 @@ function SelectCity (props){
     updateDepartment_code(el.department_number);
     updateDepartment_name(el.department_name);
     updateRegion_name(el.region_name);
-    setVisible(false);
+    setShowSelect(false);
   }
   const handleChoiceCancel = ()=>{
     setCityList("");
@@ -40,7 +39,7 @@ function SelectCity (props){
   }
   const handleVisible = ()=>{
     handleChoiceCancel();
-    setVisible(!visible);
+    setShowSelect(false);
   }
   return(
     <div className="city-container">

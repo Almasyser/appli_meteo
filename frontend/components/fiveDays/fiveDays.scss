@@ -1,15 +1,12 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
-.fiveDays{
-  z-index: 10;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-  .hide{
-    transform: translateX(-150px);
-  }
-}
-.fiveDays-header{
-  font-weight: 400;
+
+.fiveDays-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  
 }
 .fiveDays-container{
   width: 100%;
@@ -17,70 +14,56 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
-.fiveDays-box{
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 2rem;
-  button{
-    width: 8rem;
-    height: 2rem;
-    background-color: $primary_3;
-    color: $secondary_3;
-    font-size:larger;
-    font-weight: 0;
-    letter-spacing: 4%;
-    &:hover{
-      opacity: 0.6;
-      cursor: pointer;
-    }
-  }
-}
 .fiveDays-card{
-  width: 34%;
+  width: 80%;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: $third_4;
   .fiveDays-date{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin-bottom: 0.4rem;
     background-color: $third_3;
     .fiveDays-dayOfWeek{
-      font-size: larger;
-      font-weight: 500;
-      color: $secondary_1
+      font-size: 16px;
+      font-weight: 200;
+      color: $secondary_1;
+      margin: 0;
+      padding: 0.5rem;
+      text-align: center;
+      
     }
     .fiveDays-dateJMA{
       font-size: smaller;
-      padding-bottom: 0;
+      margin: 0;
+      padding-bottom: 0.5rem;
+      text-align: center;
     }
   }
 }
-  .ephemeride{
+  .fiveDays-ephemeride{
     width: 100%;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     img{
-      margin: 0 0.5rem;
-      width: 32px;
-      height: 32px;
+      width: 24px;
+      height: 24px;
     }
     p{
-      font-size:medium;
+      margin: 0;
+      font-size:12px;
       font-weight: 500;
-      margin-left: 0.5rem;
       color: $secondary_4;
     }
   }
   .fiveDays-tendance{
-    font-size: large;
+    font-size: 16px;
     color: $secondary_3;
+    text-align: center;
   }
   img{
     width: 4rem;

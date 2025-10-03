@@ -6,54 +6,31 @@ import DayOfWeek from "../utils/DayOfWeek";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import "./fiveDays.css";
-  function FiveDays(){
+  function FiveDays({setShowFive}){
     const [dayIndex] = useState([1,2,3,4,5]);
-    const [id_day, setId_day] = useState();
-    const [today, setToday] = useState();
-    const [tendance, setTendance] = useState();
     const { myArray}= useArray();
-    const handleClick = (e)=>{
-      const e_day = parseInt(e.target.value, 10);
-      setToday(myArray.daily.sunset[e_day]);
-      setTendance(omm_codes.filter(el => el.code === myArray.daily.weather_code[e_day]));
-      setId_day(e_day);
-    }
+  
     return (
-      <section className="fiveDays">
-        <div className="fiveDays-box">
-          {dayIndex && dayIndex.map((btn,index)=>{
-            return(
-              <button 
-                type="radio" 
-                key={index} 
-                value={btn} 
-                name="btnDay" 
-                onClick={handleClick}>
-                <DayOfWeek today={myArray.daily.time[btn]}/>
-              </button>
-            )
-          })}
-        </div>
-        <div className="fiveDays-container">
-          {id_day &&
-            <>
-              <div className="fiveDays-card">
-                <div className="fiveDays-date">
-                  {today && 
-                    <>
-                      <p className="fiveDays-dayOfWeek"><DayOfWeek today={today}/></p>
-                      <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={today} /></p>
-                    </>
-                  }
+      <div className="fiveDays-box">
+        {dayIndex && dayIndex.map((btn,index)=>{
+          return(
+            <div key={btn} className="fiveDays-container">
+              {btn &&
+                <div className="fiveDays-card" onClick={()=>setShowFive(false)}>
+                  <div className="fiveDays-date">
+                    <p className="fiveDays-dayOfWeek"><DayOfWeek today={myArray.daily.sunset[btn]}/></p>
+                    <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={myArray.daily.sunset[btn]} /></p>
+                  </div>
+                  <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="--@--"/><p><DateToHour today={myArray.daily.sunrise[btn]}/></p></span>
+                  <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="--@--"/><p><DateToHour today={myArray.daily.sunset[btn]}/></p></span>
+                  <p className="fiveDays-tendance">{omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].text}</p>
+                  <img src={tags[omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].file]} alt="==="/>
                 </div>
-                <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="--@--"/><p><DateToHour today={myArray.daily.sunrise[id_day]}/></p></span>
-                <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="--@--"/><p><DateToHour today={myArray.daily.sunset[id_day]}/></p></span>
-                <p className="fiveDays-tendance">{tendance[0].text}</p>
-                <img src={tags[tendance[0].file]} alt="==="/>
-              </div>
-            </>}
-        </div>
-      </section>
+              }
+            </div>
+          )})}
+      </div>
     )   
   }
+
   export default FiveDays;

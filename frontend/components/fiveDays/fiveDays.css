@@ -1,15 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-.fiveDays {
-  z-index: 10;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-}
-.fiveDays .hide {
-  transform: translateX(-150px);
-}
-
-.fiveDays-header {
-  font-weight: 400;
+.fiveDays-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
 }
 
 .fiveDays-container {
@@ -19,73 +13,57 @@
   gap: 1rem;
 }
 
-.fiveDays-box {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 2rem;
-}
-.fiveDays-box button {
-  width: 8rem;
-  height: 2rem;
-  background-color: #2a605a;
-  color: #f3faa4;
-  font-size: larger;
-  font-weight: 0;
-  letter-spacing: 4%;
-}
-.fiveDays-box button:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
 .fiveDays-card {
-  width: 34%;
+  width: 80%;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #13344b;
 }
 .fiveDays-card .fiveDays-date {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  margin-bottom: 0.4rem;
   background-color: #266795;
 }
 .fiveDays-card .fiveDays-date .fiveDays-dayOfWeek {
-  font-size: larger;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 200;
   color: #f3fdd0;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
 }
 .fiveDays-card .fiveDays-date .fiveDays-dateJMA {
   font-size: smaller;
-  padding-bottom: 0;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  text-align: center;
 }
 
-.ephemeride {
+.fiveDays-ephemeride {
   width: 100%;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
-.ephemeride img {
-  margin: 0 0.5rem;
-  width: 32px;
-  height: 32px;
+.fiveDays-ephemeride img {
+  width: 24px;
+  height: 24px;
 }
-.ephemeride p {
-  font-size: medium;
+.fiveDays-ephemeride p {
+  margin: 0;
+  font-size: 12px;
   font-weight: 500;
-  margin-left: 0.5rem;
   color: #F2F995;
 }
 
 .fiveDays-tendance {
-  font-size: large;
+  font-size: 16px;
   color: #f3faa4;
+  text-align: center;
 }
 
 img {
