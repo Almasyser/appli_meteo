@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 .header-container {
   width: 100%;
-  height: 48px;
-  margin-top: 16px;
+  height: 4rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  background: transparent;
 }
 .header-container .header-date {
   font-size: 1.2rem;
-  color: #032f30;
+  color: #6ba3be;
   padding-left: 0.5rem;
 }
 .header-container .header-hour-box {
-  width: 26%;
+  width: 14%;
   display: flex;
   font-family: "Oswald", sans-serif;
 }
@@ -22,11 +22,11 @@
   width: max-content;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
-  color: #032f30;
+  color: #6ba3be;
 }
 .header-container .header-hour-box .header-hour-dots {
   font-size: 1.8rem;
-  color: #032f30;
+  color: #6ba3be;
   animation: infinite ease-out;
   animation-name: clignote;
   animation-duration: 1s;
@@ -53,5 +53,5 @@
   padding-top: 1.3rem;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
-  color: #032f30;
+  color: #6ba3be;
 }/*# sourceMappingURL=header.css.map */

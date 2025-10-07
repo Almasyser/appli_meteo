@@ -11,19 +11,19 @@ function NavBar() {
   const [showFive, setShowFive] = useState(false);
   const [showMap, setShowMap] = useState(false);
   const handleSelect=()=>{
-    setShowSelect(true);
+    setShowSelect(!showSelect);
     setShowFive(false);
     setShowMap(false);
   }
   const handleFive=()=>{
     setShowSelect(false);
-    setShowFive(true);
+    setShowFive(!showFive);
     setShowMap(false);
   }
   const handleMap=()=>{
     setShowSelect(false);
     setShowFive(false);
-    setShowMap(true);
+    setShowMap(!showMap);
   }
   return(
     <>

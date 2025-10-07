@@ -1,29 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-.navbar {
-  z-index: 10;
-  width: 100%;
-  height: 4rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #274d60;
-  box-shadow: 0px 0px 16px 2px #6ba3be;
+.location {
+  width: 218px;
+  height: 218px;
+  position: relative;
 }
-.navbar button {
-  transition: all 0.3s ease-in-out;
-  width: 80px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
+.location button {
+  position: absolute;
+  z-index: 1000;
+  top: 5px;
+  right: 5px;
+  font-size: 2rem;
+  color: red;
   background: transparent;
-  color: #6ba3be;
+  border: none;
 }
-.navbar button:hover {
+.location button:hover {
+  cursor: pointer;
+  opacity: 0.4;
   scale: 1.1;
-  color: #274d60;
-}/*# sourceMappingURL=navbar.css.map */
+}/*# sourceMappingURL=mapcomponent.css.map */

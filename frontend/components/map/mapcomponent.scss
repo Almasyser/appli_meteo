@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+.location{
+  width: 218px;
+  height: 218px;
+  position: relative;
+  button{
+    position: absolute;
+    z-index: 1000;
+    top:5px;
+    right: 5px;
+    font-size: 2rem;
+    color: red;
+    background: transparent;
+    border: none;
+    &:hover{
+      cursor: pointer;
+      opacity: 0.4;
+      scale: 1.1;
+    }
+  }
+}

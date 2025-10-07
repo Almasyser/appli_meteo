@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 .location-town{
-  @include textMedium($titre, $texte, bolder, 1.4rem, 0.1rem, 0.6rem, 1rem);
+  @include textMedium($titre, $texte, bolder, 1.8rem, 0.2rem, 0.6rem, 1rem);
 }
 .location-department{
   @include textMedium($paragraphe, $texte, normal, 0.8rem, 0.02rem, 0.8rem, 0.6rem);
