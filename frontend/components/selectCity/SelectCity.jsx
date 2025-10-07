@@ -5,6 +5,7 @@ import useLocations from "../../hooks/useLocations";
 import cross from "../../assets/Cross-cancel.png";
 import clear from "../../assets/Clear_green-128.png";
 import "./selectCity.css";
+
 function SelectCity ({setShowSelect}){
   const api_url = import.meta.env.VITE_API_URL;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
@@ -48,7 +49,7 @@ function SelectCity ({setShowSelect}){
         <img src={cross} className="city-close" onClick={handleVisible}/>
       </div>
       <div className="input-box">
-        <input type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
+        <input autoFocus type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
         {(cityName !== "")?
           <>
             <img src={clear} className="city-btn-cancel" type="button" onClick={handleChoiceCancel} />

@@ -2,8 +2,8 @@
 .location-container {
   margin: 16px auto;
   display: flex;
-  border-top: 1px solid #87E9BB;
-  border-bottom: 1px solid #87E9BB;
+  border-top: 1px solid #6ba3be;
+  border-bottom: 1px solid #6ba3be;
 }
 
 .location-text {
@@ -13,33 +13,33 @@
 }
 
 .location-town {
-  font-family: "Alegreya", serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.4rem;
   font-weight: bolder;
   letter-spacing: 0.1rem;
   padding-left: 0.6rem;
   margin-top: 1rem;
-  color: #f3fdd0;
+  color: #032f30;
 }
 
 .location-department {
-  font-family: "Cabin", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 0.8rem;
   font-weight: normal;
   letter-spacing: 0.02rem;
   padding-left: 0.8rem;
   margin-top: 0.6rem;
-  color: #f3fdd0;
+  color: #032f30;
 }
 
 .location-region {
-  font-family: "Cabin", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: 0.05rem;
   padding-left: 0.8rem;
   margin-top: 1rem;
-  color: #f3fdd0;
+  color: #032f30;
   margin-bottom: 1rem;
 }
 
@@ -67,6 +67,6 @@
 }
 .btn-change-pos:hover {
   opacity: 9;
-  border: 1px solid #f3fdd0;
+  border: 1px solid #032f30;
   cursor: pointer;
 }/*# sourceMappingURL=location.css.map */

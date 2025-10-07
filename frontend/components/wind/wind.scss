@@ -2,6 +2,7 @@
 .wind-container{
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   height: 160px;
   border-radius: 16px;
   opacity: 0.96;
@@ -36,7 +37,7 @@
 
 .wind-speed{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 30%;
   height: 128px;
 }
@@ -46,22 +47,20 @@
   width: auto;
   height: 128px;
 }
-.wind-label{
-  font-family: $paragraphe;
-  font-size: 0.9rem;
-  color: $secondary_2;
-  margin: 16px auto;
+.wind-icone{
+  width: 64px;
+  height: 64px;
 }
+
 .wind-value{
- 
-  font-size: 1.4rem;
-  color: $secondary_4;
+  font-size: 1rem;
+  color: $texte;
   text-align: center;
-  margin: 0;
+  margin-top: 16px;
 }
 .wind-text{
-  font-size: 0.8rem;
-  color: $secondary_2;
+  font-size: 1rem;
+  color: $texte;
   text-align: center;
   margin-top: 16px;
 }

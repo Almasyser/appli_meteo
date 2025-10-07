@@ -21,15 +21,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: $third_4;
+  background-color: $fond;
   .fiveDays-date{
     width: 100%;
     margin-bottom: 0.4rem;
-    background-color: $third_3;
+    background-color: $fond;
     .fiveDays-dayOfWeek{
       font-size: 16px;
       font-weight: 200;
-      color: $secondary_1;
+      color: $texte;
       margin: 0;
       padding: 0.5rem;
       text-align: center;
@@ -57,12 +57,12 @@
       margin: 0;
       font-size:12px;
       font-weight: 500;
-      color: $secondary_4;
+      color: $texte;
     }
   }
   .fiveDays-tendance{
     font-size: 16px;
-    color: $secondary_3;
+    color: $texte;
     text-align: center;
   }
   img{

@@ -8,7 +8,7 @@
   align-items: center;
   .header-date{
     font-size: 1.2rem;
-    color: $secondary_2;
+    color: $texte;
     padding-left: 0.5rem;
   }
   .header-hour-box{
@@ -19,11 +19,11 @@
       width: max-content;
       font-size: 1.8rem;
       letter-spacing: 0.2rem;
-      color: $secondary_3;
+      color: $texte;
     }
     .header-hour-dots{
       font-size: 1.8rem;
-      color: $secondary_3;
+      color: $texte;
       animation: infinite ease-out;
       animation-name: clignote;
       animation-duration: 1s;
@@ -49,7 +49,7 @@
       padding-top: 1.3rem;
       font-size: 0.8rem;
       letter-spacing: 0.05rem;
-      color: $secondary_3;
+      color: $texte;
     }
   }
 }

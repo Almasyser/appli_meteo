@@ -2,10 +2,11 @@
 .wind-container {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   height: 160px;
   border-radius: 16px;
   opacity: 0.96;
-  font-family: "Alegreya", serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .rose-box {
@@ -1115,7 +1116,7 @@
 
 .wind-speed {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 30%;
   height: 128px;
 }
@@ -1127,23 +1128,21 @@
   height: 128px;
 }
 
-.wind-label {
-  font-family: "Cabin", sans-serif;
-  font-size: 0.9rem;
-  color: #f3fbb3;
-  margin: 16px auto;
+.wind-icone {
+  width: 64px;
+  height: 64px;
 }
 
 .wind-value {
-  font-size: 1.4rem;
-  color: #F2F995;
+  font-size: 1rem;
+  color: #032f30;
   text-align: center;
-  margin: 0;
+  margin-top: 16px;
 }
 
 .wind-text {
-  font-size: 0.8rem;
-  color: #f3fbb3;
+  font-size: 1rem;
+  color: #032f30;
   text-align: center;
   margin-top: 16px;
 }/*# sourceMappingURL=wind.css.map */

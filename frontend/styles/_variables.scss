@@ -19,61 +19,21 @@ $Nunito: "Nunito", sans-serif;
 $Cabin: "Cabin", sans-serif;
 $Alegreya: "Alegreya", serif;
 
-// paire de fontes utilisées::after
-$paragraphe: $Cabin;
-$titre: $Alegreya;
+$noir: #031716;
+$noirMedium: #032f30;
+$vert: #0a7075;
+$vertClair: #0c969c;
+$bleuClair:#6ba3be;
+$bleuMedium: #274d60;
+
+$titre: $Oswald;
+$paragraphe: $Quicksand;
+
+$fond: $bleuClair;
+$texte: $noirMedium;
 
 
-$primary_1: #87E9BB;
-$primary_2: #498e7a;
-$primary_3: #2a605a;
-$primary_4: #0A3239;
-$secondary_1: #f3fdd0;
-$secondary_2: #f3fbb3;
-$secondary_3: #f3faa4;
-$secondary_4: #F2F995;
-$third_1: #41E9EF;
-$third_2: #34a8c2;
-$third_3: #266795;
-$third_4: #13344b;
 
-// colors default
-$TextLight: #f3fdd0;
-$TextDark: #0A3239;
-
-// colors
-$BodyBackground: #0A3239;
-$HeaderText: #F5CDC6;
-$HeaderHour: #F1F5AD;
-$Line: #87E9BB;
-$LocationText: #C1FFFA;
-$SelectCityBackground: #266795;
-$ButtonBackground: rgba(65, 233, 239, 0.2);
-$ButtonBackgroundHover: rgba(65, 233, 239, 0.4);
-$ButtonText: rgb(190, 240, 119, 1);
-$ListBackground: rgb(65, 160, 122);
-$WeatherBackground: transparent;
-$WeatherText: #F2F995;
-$WindBackground: #26679599;
-$WindTextLabels: $TextLight;
-$WindValues: #F2F995;
-$FooterBackground: transparent;
-$FooterText: #41E9EF;
-// Grid details
-$ColTitleBackground: #588C95;
-$ColTitleText: $TextLight;
-$CeilBackground: #24464D;
-$CeilValues: #F2F995;
-$CeilLabels: $TextLight;
-// 
-$lavendar: #f49210;
-$magic: #5e429c;
-$lemonade: #b8fb3c;
-$electric: #03045e;
-$dreamy: #eaebed;
-$ocean: #006989;
-$crimson: #d7253d;
-$nights: #02182b;
 
 
 

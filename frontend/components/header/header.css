@@ -9,24 +9,24 @@
 }
 .header-container .header-date {
   font-size: 1.2rem;
-  color: #f3fbb3;
+  color: #032f30;
   padding-left: 0.5rem;
 }
 .header-container .header-hour-box {
   width: 26%;
   display: flex;
-  font-family: "Alegreya", serif;
+  font-family: "Oswald", sans-serif;
 }
 .header-container .header-hour-box .header-hour {
   width: -moz-max-content;
   width: max-content;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
-  color: #f3faa4;
+  color: #032f30;
 }
 .header-container .header-hour-box .header-hour-dots {
   font-size: 1.8rem;
-  color: #f3faa4;
+  color: #032f30;
   animation: infinite ease-out;
   animation-name: clignote;
   animation-duration: 1s;
@@ -53,5 +53,5 @@
   padding-top: 1.3rem;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
-  color: #f3faa4;
+  color: #032f30;
 }/*# sourceMappingURL=header.css.map */
