@@ -10,22 +10,21 @@
 }
 .rose-box{
   position: relative;
-  scale: 0.8;
-  width: 128px;
-  height: 128px;
+  width: 96px;
+  height: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
   .rose-des-vents{
     position: absolute;
     z-index: 0;
-    width: 128px;
-    height: 128px;
+    width: 96px;
+    height: 96px;
   }
   .rose-fleche{
     z-index: 2;
-    width: 100px; 
-    height: 100px;
+    width: 64px; 
+    height: 64px;
     transition: transform 0.6s ease;
     @for $i from 0 through 360{
       &.rotate-#{$i}{
@@ -37,30 +36,29 @@
 
 .wind-speed{
   display: flex;
-  flex-direction: row;
-  width: 30%;
+  flex-wrap: wrap;
+  align-items:center;
+  width: 20%;
   height: 128px;
+  gap: 0.5rem;
 }
 .wind-rain{
   display: flex;
-  flex-direction: column;
+  align-items: center;
   width: auto;
   height: 128px;
-}
-.wind-icone{
-  width: 64px;
-  height: 64px;
-}
-
-.wind-value{
-  font-size: 1rem;
-  color: $texte;
-  text-align: center;
-  margin-top: 16px;
+  p{
+    padding-left: 0.5rem;
+  }
 }
 .wind-text{
   font-size: 1rem;
   color: $texte;
   text-align: center;
-  margin-top: 16px;
+  margin: 0;
+  padding: 0;
+}
+.wind-icone{
+  width: 64px;
+  height: 64px;
 }

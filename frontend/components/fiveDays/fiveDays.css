@@ -20,17 +20,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #274d60;
+  background-color: #032f30;
 }
 .fiveDays-card .fiveDays-date {
   width: 100%;
   margin-bottom: 0.4rem;
-  background-color: #274d60;
+  background-color: #032f30;
 }
 .fiveDays-card .fiveDays-date .fiveDays-dayOfWeek {
   font-size: 16px;
   font-weight: 200;
-  color: #6ba3be;
+  color: #be866b;
   margin: 0;
   padding: 0.5rem;
   text-align: center;
@@ -57,12 +57,12 @@
   margin: 0;
   font-size: 12px;
   font-weight: 500;
-  color: #6ba3be;
+  color: #be866b;
 }
 
 .fiveDays-tendance {
   font-size: 16px;
-  color: #6ba3be;
+  color: #be866b;
   text-align: center;
 }
 

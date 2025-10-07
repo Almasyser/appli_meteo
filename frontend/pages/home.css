@@ -6,8 +6,8 @@
   left: 0;
   text-transform: none;
   font-family: "Quicksand", sans-serif;
-  background-color: #274d60;
-  color: #6ba3be;
+  background-color: #032f30;
+  color: #be866b;
   font-variant: normal;
 }
 
@@ -16,7 +16,7 @@
   width: 100%;
   height: -moz-max-content;
   height: max-content;
-  background-color: #032f30;
+  background-color: #274d60;
 }
 
 .weather-section {

@@ -9,7 +9,7 @@
 }
 .header-container .header-date {
   font-size: 1.2rem;
-  color: #6ba3be;
+  color: #be866b;
   padding-left: 0.5rem;
 }
 .header-container .header-hour-box {
@@ -22,11 +22,11 @@
   width: max-content;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
-  color: #6ba3be;
+  color: #be866b;
 }
 .header-container .header-hour-box .header-hour-dots {
   font-size: 1.8rem;
-  color: #6ba3be;
+  color: #be866b;
   animation: infinite ease-out;
   animation-name: clignote;
   animation-duration: 1s;
@@ -53,5 +53,5 @@
   padding-top: 1.3rem;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
-  color: #6ba3be;
+  color: #be866b;
 }/*# sourceMappingURL=header.css.map */

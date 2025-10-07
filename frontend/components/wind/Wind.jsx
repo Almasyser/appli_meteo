@@ -8,13 +8,13 @@ function ModalWind (props) {
   let { wind_speed, wind_direction, probability }=props;
   return(
     <div className="wind-container">
+      <img src={manche} className="wind-icone" alt="air"/>
       <span className="rose-box">
         <img src={rose_fleche} className={`rose-fleche rotate-${wind_direction}`} alt="fleche" />
         <img src={rose_ciel} className="rose-des-vents" alt="rose" />
       </span>
       <span className="wind-speed">
-        <img src={manche} className="wind-icone" alt="air"/>
-        <p className="wind-value">{Math.round(wind_speed)} km/h</p>
+        <p className="wind-text">{Math.round(wind_speed)} km/h</p>
         <div className="wind-text">
           {wind_direction &&
             <ConvertWindDirection angle={wind_direction} />
@@ -23,7 +23,7 @@ function ModalWind (props) {
       </span>
       <span className="wind-rain">
         <img src={parapluie} className="wind-icone" alt="air"/>
-        <p className="wind-value">{probability}%</p>
+        <p className="wind-text">{probability}%</p>
       </span>
     </div>
   )
