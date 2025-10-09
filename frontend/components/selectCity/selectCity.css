@@ -19,13 +19,13 @@
 }
 
 .city-comment {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Alegreya", serif;
   font-size: 0.7rem;
   font-weight: normal;
   letter-spacing: 0.01rem;
   padding-left: 0.5rem;
   margin-top: 0;
-  color: #be866b;
+  color: #ffffdd;
   margin-top: 2vh;
   margin-left: 1rem;
 }
@@ -42,15 +42,15 @@
   height: 2.8rem;
   background-color: #032f30;
   border-radius: 8px;
-  color: #be866b;
+  color: #ffffdd;
   outline: none;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Alegreya", serif;
   font-size: 1.2rem;
   font-weight: normal;
   letter-spacing: 0.1rem;
   padding-left: 0.4rem;
   margin-top: 0.3rem;
-  color: #be866b;
+  color: #ffffdd;
 }
 .input-box input:focus-visible {
   opacity: 0.6;
@@ -80,7 +80,7 @@
   background: #032f30;
   z-index: 1000;
   overflow-y: scroll;
-  scrollbar-color: #be866b;
+  scrollbar-color: #ffffdd;
   scrollbar-width: thin;
   scroll-padding-left: 0.5rem;
 }
@@ -98,17 +98,17 @@
 
 .city {
   width: 12rem;
-  color: #be866b;
+  color: #ffffdd;
   margin: 0;
   padding: 0.2rem 0 0.4rem 0;
-  border-bottom: 1px solid #be866b;
-  font-family: "Quicksand", sans-serif;
+  border-bottom: 1px solid #ffffdd;
+  font-family: "Alegreya", serif;
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: 0.03rem;
   padding-left: 0.3rem;
   margin-top: 0.3rem;
-  color: #be866b;
+  color: #ffffdd;
 }
 .city.department {
   text-align: right;

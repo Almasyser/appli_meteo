@@ -30,7 +30,7 @@
 .fiveDays-card .fiveDays-date .fiveDays-dayOfWeek {
   font-size: 16px;
   font-weight: 200;
-  color: #be866b;
+  color: #ffffdd;
   margin: 0;
   padding: 0.5rem;
   text-align: center;
@@ -57,12 +57,12 @@
   margin: 0;
   font-size: 12px;
   font-weight: 500;
-  color: #be866b;
+  color: #ffffdd;
 }
 
 .fiveDays-tendance {
   font-size: 16px;
-  color: #be866b;
+  color: #ffffdd;
   text-align: center;
 }
 

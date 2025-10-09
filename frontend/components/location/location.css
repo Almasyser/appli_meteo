@@ -13,33 +13,33 @@
 }
 
 .location-town {
-  font-family: "Oswald", sans-serif;
+  font-family: "Cabin", sans-serif;
   font-size: 1.8rem;
   font-weight: bolder;
   letter-spacing: 0.2rem;
   padding-left: 0.6rem;
   margin-top: 1rem;
-  color: #be866b;
+  color: #ffffdd;
 }
 
 .location-department {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Alegreya", serif;
   font-size: 0.8rem;
   font-weight: normal;
   letter-spacing: 0.02rem;
   padding-left: 0.8rem;
   margin-top: 0.6rem;
-  color: #be866b;
+  color: #ffffdd;
 }
 
 .location-region {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Alegreya", serif;
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: 0.05rem;
   padding-left: 0.8rem;
   margin-top: 1rem;
-  color: #be866b;
+  color: #ffffdd;
   margin-bottom: 1rem;
 }
 
@@ -67,6 +67,6 @@
 }
 .btn-change-pos:hover {
   opacity: 9;
-  border: 1px solid #be866b;
+  border: 1px solid #ffffdd;
   cursor: pointer;
 }/*# sourceMappingURL=location.css.map */

@@ -6,7 +6,7 @@
   height: 160px;
   border-radius: 16px;
   opacity: 0.96;
-  font-family: "Oswald", sans-serif;
+  font-family: "Cabin", sans-serif;
 }
 
 .rose-box {
@@ -1134,7 +1134,7 @@
 
 .wind-text {
   font-size: 1rem;
-  color: #be866b;
+  color: #ffffdd;
   text-align: center;
   margin: 0;
   padding: 0;
