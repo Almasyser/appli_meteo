@@ -1,18 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Imperial+Script&family=Kavivanar&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Noto+Sans+JP:wght@100..900&family=Rozha+One&family=Viaoda+Libre&display=swap");
 .location-container {
   margin: 16px auto;
   display: flex;
   border-top: 1px solid #032f30;
   border-bottom: 1px solid #032f30;
 }
-
-.location-text {
+.location-container .location-text {
   width: 70%;
   display: flex;
   flex-direction: column;
 }
-
-.location-town {
+.location-container .location-town {
   font-family: "Cabin", sans-serif;
   font-size: 1.8rem;
   font-weight: bolder;
@@ -21,8 +20,7 @@
   margin-top: 1rem;
   color: #ffffdd;
 }
-
-.location-department {
+.location-container .location-department {
   font-family: "Alegreya", serif;
   font-size: 0.8rem;
   font-weight: normal;
@@ -31,8 +29,7 @@
   margin-top: 0.6rem;
   color: #ffffdd;
 }
-
-.location-region {
+.location-container .location-region {
   font-family: "Alegreya", serif;
   font-size: 1rem;
   font-weight: normal;
@@ -41,32 +38,4 @@
   margin-top: 1rem;
   color: #ffffdd;
   margin-bottom: 1rem;
-}
-
-.location-carte {
-  width: 220px;
-  height: 220px;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.btn-change-pos {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 40%;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid transparent;
-  border-radius: 2rem;
-}
-.btn-change-pos:hover {
-  opacity: 9;
-  border: 1px solid #ffffdd;
-  cursor: pointer;
 }/*# sourceMappingURL=location.css.map */

@@ -2,26 +2,31 @@
 @use "../../styles/mixins" as *;
 
 .fiveDays-box{
-  width: 100%;
+  z-index: 210;
+  position: absolute;
+  top: 38%;
+  left: 0;
+  width: max-content;
+  transform: translateX(-100%);
+  transition: all $transition ease-in-out;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 0.2rem;
   margin-bottom: 2rem;
-  
+  &.active{
+    transform: translateX(0);
+    margin-left: 1rem;
+  }
 }
-.fiveDays-container{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+
 .fiveDays-card{
-  width: 80%;
+  width: 6rem;
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: $fond;
+  background-color: $sectionFond;
   .fiveDays-date{
     width: 100%;
     margin-bottom: 0.4rem;

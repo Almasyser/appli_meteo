@@ -5,8 +5,7 @@ import useLocations from "../../hooks/useLocations";
 import cross from "../../assets/Cross-cancel.png";
 import clear from "../../assets/Clear_green-128.png";
 import "./selectCity.css";
-
-function SelectCity ({setShowSelect}){
+function SelectCity ({setShowSelect, showSelect}){
   const api_url = import.meta.env.VITE_API_URL;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
   const [cityName, setCityName] = useState("");
@@ -43,7 +42,7 @@ function SelectCity ({setShowSelect}){
     setShowSelect(false);
   }
   return(
-    <div className="city-container">
+    <div className={showSelect? "city-container active":"city-container"}>
       <div className="entete">
         <p className="city-comment">Ville, village &#40;min 4 premières lettres&#41; ou Code Postal</p>
         <img src={cross} className="city-close" onClick={handleVisible}/>

@@ -5,48 +5,23 @@
   display: flex;
   border-top: 1px solid $fond;
   border-bottom: 1px solid $fond;
-}
-.location-text{
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-}
-.location-town{
-  @include textMedium($titre, $texte, bolder, 1.8rem, 0.2rem, 0.6rem, 1rem);
-}
-.location-department{
-  @include textMedium($paragraphe, $texte, normal, 0.8rem, 0.02rem, 0.8rem, 0.6rem);
-}
-.location-region{
-  @include textMedium($paragraphe, $texte, normal, 1rem, 0.05rem, 0.8rem, 1rem);
-  margin-bottom: 1rem;
-}
-.location-carte{
-  width: 220px;
-  height: 220px;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-}
-.btn-change-pos{
-  position: absolute;
-  top:16px;
-  right: 16px;
-  width: 40%;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid transparent;
-  border-radius: 2rem;
-  &:hover{
-    opacity: 9;
-    border: 1px solid $texte;
-    cursor: pointer;
+  .location-text{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .location-town{
+    @include textMedium($titre, $texte, bolder, 1.8rem, 0.2rem, 0.6rem, 1rem);
+  }
+  .location-department{
+    @include textMedium($paragraphe, $texte, normal, 0.8rem, 0.02rem, 0.8rem, 0.6rem);
+  }
+  .location-region{
+    @include textMedium($paragraphe, $texte, normal, 1rem, 0.05rem, 0.8rem, 1rem);
+    margin-bottom: 1rem;
   }
 }
+
 
 
 

@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap  } from 'react-leaflet';
+import useLocations from '../../hooks/useLocations';
 import 'leaflet/dist/leaflet.css';
 import "./mapcomponent.css";
 
-function MapComponent({ lat, long, setShowMap }) {
+function MapComponent({ lat, long, setShowMap, showMap}) {
+  const { city_code, department_code, department_name, region_name, latitude, longitude } = useLocations();
   function RecenterMap({ lat, long }) {
     const map = useMap();
     useEffect(() => {
@@ -16,15 +18,20 @@ function MapComponent({ lat, long, setShowMap }) {
     return null;
   }
   return (
-    <section className='location'>
+    <section className={showMap? 'location active':'location'}>
       <button type="button" onClick={()=>{setShowMap(false)}}>X</button>
-      <MapContainer center={[lat, long]} zoom={8} style={{ height: '216px', width: '216px' }}>
+      <MapContainer center={[lat, long]} zoom={8} style={{ height: '380px', width: '380px' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
         <Marker position={[lat, long]}>
-          <Popup>Position : {lat}, {long}</Popup>
+          <Popup>
+            <p className="carte-town">{city_code.charAt(0).toUpperCase() + city_code.slice(1).toLowerCase()}</p>
+            <p className="carte-department">{department_code}&nbsp;{department_name}</p>
+            <p className="carte-region">{region_name}</p>
+          </Popup>
+         
         </Marker>
         <RecenterMap lat={lat} long={long} />
       </MapContainer>

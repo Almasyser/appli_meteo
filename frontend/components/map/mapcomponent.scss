@@ -1,9 +1,16 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 .location{
-  width: 218px;
-  height: 218px;
-  position: relative;
+  z-index: 20;
+  position: absolute;
+  top: 38%;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all $transition ease-in-out;
+  &.active{
+    transform: translateX(0);
+    margin-left: 1rem;
+  }
   button{
     position: absolute;
     z-index: 1000;
@@ -18,5 +25,16 @@
       opacity: 0.4;
       scale: 1.1;
     }
+  }
+  .carte-town{
+    font-weight: 800;
+    font-size: 0.8rem;
+  }
+  .carte-department{
+    font-weight: 600;
+  }
+  .carte-region{
+    font-weight: 200;
+    font-size: 0.8rem;
   }
 }

@@ -1,20 +1,19 @@
 // src/components/ModalWeather.js
 import { useEffect, useState } from "react";
-import useArray from "../../hooks/useArray";
-import useLocations from "../../hooks/useLocations";
 import FetchApiStatic from "../utils/FetchApiStatic";
+import useLocations from "../../hooks/useLocations";
+import useArray from "../../hooks/useArray";
 import ModalWind from "../wind/Wind";
 import ConvertDateToCustom from "../utils/ConvertDateToCustom";
 import SelectNebulositeImg from "../utils/SelectNebulositeImg";
 import tags from "../../assets/tags";
 import "./weather.css";
 
-function ModalWeather() {
-  const [meteoData, setMeteoData] = useState(null);
+function ModalWeather({meteoData, setMeteoData}) {
+  const {myArray, updateMyArray} = useArray();
   const [nebulositeImg, setNebulositeImg] = useState(null);
   const [nebulositeText, setNebulositeText] = useState("");
   const [heure, setHeure] = useState();
-  const {myArray, updateMyArray} = useArray();
   const {latitude, longitude} = useLocations();
   const lat = latitude ;
   const long = longitude;
@@ -22,9 +21,7 @@ function ModalWeather() {
   useEffect(() => {
     FetchApiStatic(lat, long, setMeteoData);
   }, [lat, long]);
-  
   useEffect(() => {
-    
     meteoData && updateMyArray(meteoData);
     const { hours, day } = ConvertDateToCustom();
     setHeure(parseInt(hours, 10));
@@ -39,6 +36,7 @@ function ModalWeather() {
       }
     }
   }, [meteoData]);
+   
     
   return (
     <div className="weather-container">
@@ -53,11 +51,11 @@ function ModalWeather() {
           <p className="temperature">{Math.round(myArray.hourly?.temperature_2m[heure]) || "##"}&nbsp;°C</p>
         </div>
       }
-      <ModalWind
+      {myArray && <ModalWind
         wind_speed={myArray.hourly?.wind_speed_10m[heure]}
         wind_direction={myArray.hourly?.wind_direction_10m[heure]}
         probability={myArray.hourly?.precipitation_probability[heure]}
-      />
+      />}
     </div>
   );
 }

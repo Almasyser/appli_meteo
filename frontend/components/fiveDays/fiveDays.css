@@ -1,26 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Imperial+Script&family=Kavivanar&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Noto+Sans+JP:wght@100..900&family=Rozha+One&family=Viaoda+Libre&display=swap");
 .fiveDays-box {
-  width: 100%;
+  z-index: 210;
+  position: absolute;
+  top: 38%;
+  left: 0;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateX(-100%);
+  transition: all 1s ease-in-out;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 0.2rem;
   margin-bottom: 2rem;
 }
-
-.fiveDays-container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.fiveDays-box.active {
+  transform: translateX(0);
+  margin-left: 1rem;
 }
 
 .fiveDays-card {
-  width: 80%;
+  width: 6rem;
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #032f30;
+  background-color: #031716;
 }
 .fiveDays-card .fiveDays-date {
   width: 100%;

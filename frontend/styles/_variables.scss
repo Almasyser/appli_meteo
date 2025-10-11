@@ -1,49 +1,64 @@
-// fonts
+// font-family a:
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-//    font-family: 
+// font family b
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Imperial+Script&family=Kavivanar&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Noto+Sans+JP:wght@100..900&family=Rozha+One&family=Viaoda+Libre&display=swap');
 
-
+// font-family a: 
 $Roboto: "Roboto", sans-serif;
 $Merriweather: "Merriweather", serif;
-
 $Montserrat: "Montserrat", sans-serif;
 $Playfair: "Playfair Display", serif;
-
 $Oswald: "Oswald", sans-serif;
 $Quicksand: "Quicksand", sans-serif;
-
 $Bebas: "Bebas Neue", sans-serif;
 $Nunito: "Nunito", sans-serif;
-
 $Cabin: "Cabin", sans-serif;
 $Alegreya: "Alegreya", serif;
 
-$noir: #031716; 
-$noirMedium: #032f30;
-$vert: #0a7075;
-$vertClair: #0c969c;
-$bleuClair:#6ba3be;
-$bleuMedium: #274d60;
+// font family b
+$imperial: "Imperial Script", cursive;
+$kavivanar: "Kavivanar", cursive;
+$rozha: "Rozha One", serif;
+$marienda: "Merienda", cursive;
+$noto: "Noto Sans JP", sans-serif;
+$lora: "Lora", serif;
+$faculty: "Faculty Glyphic", sans-serif;
+$viaoda: "Viaoda Libre", serif;
 
+// palette
+$one: #031716; 
+$two: #032f30;
+$three: #0a7075;
+$four: #0c969c;
+$five:#6ba3be;
+$six: rgb(39, 77, 96);
+
+// palette base
 $clear: #ffffdd;
 
-$_noir:  #031716;
-$_noirMedium: #300403;
-$_vert: #750f0a;
-$_vertClair: #9c120c;
-$_bleuClair:#be866b;
-$_bleuMedium: #603a27;
+// palette complementaire
+$Cone:  #031716;
+$Ctwo: #300403;
+$Cthree: #750f0a;
+$Cfour: #9c120c;
+$Cfive:#be866b;
+$Csix: #603a27;
+// opacity
+$Ctwo-t: rgba(39, 77, 96, 0.3);
+// DEFINITION DES VARIALBLES
 
-//
+// fontes
 $titre: $Cabin;
 $paragraphe: $Alegreya;
-//
-$fond: $noirMedium;
-$sectionFond: $_noir;
+
+// couleirs
+$fond: $two;
+$sectionFond: $Cone;
 $texte: $clear;
 
-
+// Effets
+$transition: 1s;
 
 
 

@@ -1,20 +1,18 @@
-import { useState } from "react";
-import useArray from "../../hooks/useArray";
+import { useEffect, useState } from "react";
 import ConvertDataJMA from "../utils/ConvertDateJMA";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import "./fiveDays.css";
-  function FiveDays({setShowFive}){
+  function FiveDays({myArray, setShowFive, showFive}){
     const [dayIndex] = useState([1,2,3,4,5]);
-    const { myArray}= useArray();
   
     return (
-      <div className="fiveDays-box">
-        {dayIndex && dayIndex.map((btn,index)=>{
+      <div className={showFive? "fiveDays-box active":"fiveDays-box"}>
+        {myArray.daily && dayIndex.map((btn,index)=>{
           return(
-            <div key={btn} className="fiveDays-container">
+            <div key={btn}>
               {btn &&
                 <div className="fiveDays-card" onClick={()=>setShowFive(false)}>
                   <div className="fiveDays-date">

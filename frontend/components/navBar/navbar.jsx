@@ -5,7 +5,9 @@ import SelectCity from "../selectCity/SelectCity";
 import FiveDays from "../fiveDays/FiveDays";
 import MapComponent from "../map/MapComponent";
 import "./navbar.css";
+import { shallow } from "zustand/shallow";
 function NavBar() {
+  const { myArray } = useArray();
   const {latitude, longitude} = useLocations();
   const [showSelect, setShowSelect] = useState(false);
   const [showFive, setShowFive] = useState(false);
@@ -32,11 +34,10 @@ function NavBar() {
       <button onClick={handleFive}>Details</button>
       <button onClick={handleMap}>Carte</button>
     </section>
-    {showSelect && <SelectCity setShowSelect={setShowSelect} />}
-    {showFive && useArray &&<FiveDays setShowFive={setShowFive} />}
-    {showMap && <MapComponent lat={latitude} long={longitude} setShowMap={setShowMap} />}
+    {<SelectCity setShowSelect={setShowSelect} showSelect={showSelect}/>}
+    {myArray && <FiveDays myArray={myArray} setShowFive={setShowFive} showFive={showFive}/>}
+    {<MapComponent lat={latitude} long={longitude} setShowMap={setShowMap} showMap={showMap}/>}
     </>
   )
-  
 }
 export default NavBar;

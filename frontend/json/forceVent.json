@@ -1,0 +1,15 @@
+[	
+	{ "id": 0,  "beaufort": 0, "label": "calme", "min": 0, "max": 1 },
+	{ "id": 1,  "beaufort": 1, "label": "brise trés légère", "min": 1, "max": 5 },
+	{ "id": 2,  "beaufort": 2, "label": "brise légère", "min": 6, "max": 11 },
+	{ "id": 3,  "beaufort": 3, "label": "petite brise", "min": 12, "max": 19 },
+	{ "id": 4,  "beaufort": 4, "label": "jolie brise", "min": 20, "max": 28 },
+	{ "id": 5,  "beaufort": 5, "label": "bonne brise", "min": 29, "max": 38 },
+	{ "id": 6,  "beaufort": 6, "label": "vent frais", "min": 39, "max": 50 },
+	{ "id": 7,  "beaufort": 7, "label": "grand vent", "min": 51, "max": 61 },
+	{ "id": 8,  "beaufort": 8, "label": "coup de vent", "min": 62, "max": 74 },
+	{ "id": 9,  "beaufort": 9, "label": "fort coup de vent", "min": 75, "max":88 },
+	{ "id": 10, "beaufort": 10,"label": "tempête", "min": 89, "max": 102 },
+	{ "id": 11, "beaufort": 11,"label": "violent tempête", "min": 103, "max": 117 },
+	{ "id": 12, "beaufort": 12,"label": "ouragan", "min": 118, "max": 200 }
+]
