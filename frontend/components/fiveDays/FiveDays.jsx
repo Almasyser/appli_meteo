@@ -7,16 +7,20 @@ import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
 import "./fiveDays.css";
-import OneDay from "../oneDay/OneDay";
+
   function FiveDays({myArray, setShowFive, showFive}){
     const [dayIndex] = useState([1,2,3,4,5,6]);
+    const handleClick=(btn)=>{
+      setShowFive(false);
+      return <OneDay btn={btn} myArray={myArray} />
+    }
     return (
       <div className={showFive? "fiveDays-box active":"fiveDays-box"}>
         {myArray.daily && dayIndex.map((btn)=>{
           return(
             <div key={btn}>
               {btn &&
-                <div className="fiveDays-card" onClick={()=>setShowFive(false)}>
+                <div className="fiveDays-card" onClick={()=>handleClick(btn)}>
                   <div className="fiveDays-date">
                     <p className="fiveDays-dayOfWeek"><DayOfWeek today={myArray.daily.sunset[btn]}/></p>
                     <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={myArray.daily.sunset[btn]} /></p>

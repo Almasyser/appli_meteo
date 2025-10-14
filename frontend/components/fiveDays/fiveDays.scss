@@ -8,6 +8,7 @@
   left: 0;
   width: 100vw;
   overflow-x: scroll;
+  overflow-y: hidden;
   transform: translateX(-100%);
   transition: all $transition ease-in-out;
   display: flex;
