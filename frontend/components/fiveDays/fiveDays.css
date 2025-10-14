@@ -5,8 +5,8 @@
   position: absolute;
   top: 38%;
   left: 0;
-  width: -moz-max-content;
-  width: max-content;
+  width: 100vw;
+  overflow-x: scroll;
   transform: translateX(-100%);
   transition: all 1s ease-in-out;
   display: flex;
@@ -17,6 +17,9 @@
 .fiveDays-box.active {
   transform: translateX(0);
   margin-left: 1rem;
+}
+.fiveDays-box img {
+  width: 4rem;
 }
 
 .fiveDays-card {
@@ -67,15 +70,22 @@
 }
 
 .fiveDays-tendance {
-  font-size: 16px;
+  min-height: 44px;
+  font-size: 12px;
   color: #ffffdd;
   text-align: center;
 }
 
-.fiveDays-rain-box img {
-  width: 16px;
-  height: 16px;
+.fiveDays-rain-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.fiveDays-rain-box h3 {
-  font-size: 8px;
+.fiveDays-rain-box img {
+  width: 24px;
+  height: 24px;
+}
+.fiveDays-rain-box h4 {
+  font-size: 14px;
 }/*# sourceMappingURL=fiveDays.css.map */

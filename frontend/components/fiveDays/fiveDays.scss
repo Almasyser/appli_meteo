@@ -6,7 +6,8 @@
   position: absolute;
   top: 38%;
   left: 0;
-  width: max-content;
+  width: 100vw;
+  overflow-x: scroll;
   transform: translateX(-100%);
   transition: all $transition ease-in-out;
   display: flex;
@@ -16,6 +17,9 @@
   &.active{
     transform: translateX(0);
     margin-left: 1rem;
+  }
+  img{
+  width: 4rem;
   }
 }
 
@@ -48,34 +52,39 @@
     }
   }
 }
-  .fiveDays-ephemeride{
-    width: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    img{
-      width: 24px;
-      height: 24px;
-    }
-    p{
-      margin: 0;
-      font-size:12px;
-      font-weight: 500;
-      color: $texte;
-    }
+.fiveDays-ephemeride{
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  img{
+    width: 24px;
+    height: 24px;
   }
-  .fiveDays-tendance{
-    font-size: 16px;
+  p{
+    margin: 0;
+    font-size:12px;
+    font-weight: 500;
     color: $texte;
-    text-align: center;
   }
-  .fiveDays-rain-box{
-    img{
-      width: 16px;
-      height: 16px;
-    }
-    h3{
-      font-size: 8px;
-    }
+}
+.fiveDays-tendance{
+  min-height: 44px;
+  font-size: 12px;
+  color: $texte;
+  text-align: center;
+}
+.fiveDays-rain-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  img{
+    width: 24px;
+    height: 24px;
   }
+  h4{
+    font-size: 14px;
+  }
+}
