@@ -10,6 +10,7 @@
   background-color: #032f30;
   color: #f1cd68;
   font-variant: normal;
+  overflow: hidden;
 }
 
 .location-section {
