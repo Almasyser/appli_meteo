@@ -1,9 +1,10 @@
-@mixin textMedium($fm, $fc, $fw, $fs, $ls, $pl, $mt){
+@mixin textMedium($fm, $fc, $fw, $fs, $ls, $pl, $mt, $mb){
   font-family: $fm;
   font-size: $fs;
   font-weight: $fw;
   letter-spacing: $ls;
   padding-left: $pl;
   margin-top: $mt;
+  margin-bottom: $mb;
   color: $fc;
 }

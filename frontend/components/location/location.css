@@ -17,8 +17,9 @@
   font-weight: bolder;
   letter-spacing: 0.2rem;
   padding-left: 0.6rem;
-  margin-top: 1rem;
-  color: #ffffdd;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+  color: #f1cd68;
 }
 .location-container .location-department {
   font-family: "Alegreya", serif;
@@ -26,8 +27,9 @@
   font-weight: normal;
   letter-spacing: 0.02rem;
   padding-left: 0.8rem;
-  margin-top: 0.6rem;
-  color: #ffffdd;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  color: #f1cd68;
 }
 .location-container .location-region {
   font-family: "Alegreya", serif;
@@ -35,7 +37,7 @@
   font-weight: normal;
   letter-spacing: 0.05rem;
   padding-left: 0.8rem;
-  margin-top: 1rem;
-  color: #ffffdd;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #f1cd68;
 }/*# sourceMappingURL=location.css.map */
