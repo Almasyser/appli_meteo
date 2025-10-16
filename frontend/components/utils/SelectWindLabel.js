@@ -1,9 +1,6 @@
 import forceVent from "../../json/forceVent.json";
-export default function SelectWindLabel({windSpeed}) {
-    const matched = forceVent.find(({ min, max }) => windSpeed >= min && windSpeed < max);
-    console.log(matched.label);
-    
-    
+ function SelectWindLabel({windSpeed}) {
+    const matched = forceVent?.find(({ min, max }) => windSpeed >= min && windSpeed < max);
     return matched? matched.label : "vent nul";
-    
   } 
+  export default SelectWindLabel;

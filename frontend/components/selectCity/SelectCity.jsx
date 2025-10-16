@@ -31,15 +31,15 @@ function SelectCity ({setShowSelect, showSelect}){
     updateDepartment_code(el.department_number);
     updateDepartment_name(el.department_name);
     updateRegion_name(el.region_name);
+    handleVisible();
+  }
+  const handleVisible = ()=>{
+    handleChoiceCancel();
     setShowSelect(false);
   }
   const handleChoiceCancel = ()=>{
     setCityList("");
     setCityName("");
-  }
-  const handleVisible = ()=>{
-    handleChoiceCancel();
-    setShowSelect(false);
   }
   return(
     <div className={showSelect? "city-container active":"city-container"}>
