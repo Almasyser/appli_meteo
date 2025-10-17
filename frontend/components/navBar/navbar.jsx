@@ -35,7 +35,7 @@ function NavBar() {
       <button onClick={handleMap}>Carte</button>
     </section>
     {<SelectCity setShowSelect={setShowSelect} showSelect={showSelect}/>}
-    {myArray && <FiveDays myArray={myArray} setShowFive={setShowFive} showFive={showFive}/>}
+    {myArray && <FiveDays setShowFive={setShowFive} showFive={showFive}/>}
     {<MapComponent lat={latitude} long={longitude} setShowMap={setShowMap} showMap={showMap}/>}
     </>
   )

@@ -1,0 +1,21 @@
+[
+  {"id": 1, "label": "Heure", "name": "time", "unit":""},
+  {"id": 2, "label": "Température", "name": "temperature_2m" , "unit":"°C"},
+  {"id": 3, "label": "Ressentie", "name": "apparent_temperature", "unit":"°C"},
+  {"id": 4, "label": "Probabilité de pluie", "name": "precipitation_probability" , "unit":"%"},
+  {"id": 5, "label": "hauteur de pluie", "name": "rain" , "unit":"mm"},
+  {"id": 6, "label": "averses", "name": "showers" , "unit":"mm"},
+  {"id": 7, "label": "chute de neige", "name": "snowfall" , "unit":"cm"},
+  {"id": 8, "label": "hauteur cumulée", "name": "snow_depth", "unit":"m"},
+  {"id": 9, "label": "tendance", "name": "weather_code" , "unit":""},
+  {"id":10, "label": "pression", "name": "surface_pressure" , "unit":"hPa"},
+  {"id":11, "label": "nebulosité", "name": "cloud_cover" , "unit":"%"},
+  {"id":12, "label": "basse", "name": "cloud_cover_low" , "unit":"%"},
+  {"id":13, "label": "moyenne", "name": "cloud_cover_mid" , "unit":"%"},
+  {"id":14, "label": "haute", "name": "cloud_cover_high" , "unit":"%"},
+  {"id":15, "label": "visibilité", "name": "visibility" , "unit":"m"},
+  {"id":16, "label": "vitesse du vent", "name": "wind_speed_10m" , "unit":"km/h"},
+  {"id":17, "label": "direction", "name": "wind_direction_10m" , "unit":"degrés"},
+  {"id":18, "label": "indice UV", "name": "uv_index", "unit":""},
+  {"id":19, "label": "durée du jour", "name": "sunshine_duration" , "unit":"s"}
+]
