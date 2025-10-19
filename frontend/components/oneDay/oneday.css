@@ -10,7 +10,7 @@
   overflow: scroll;
   transform: translateX(-105%);
   display: flex;
-  gap: 1.8rem;
+  gap: 1.2rem;
   margin-bottom: 2rem;
   padding-left: 1rem;
   background: #032f30;
@@ -23,40 +23,39 @@
   margin-left: 1rem;
 }
 .oneDay-container h4 {
-  width: 5%;
+  line-height: 24px;
   margin: 0;
   padding: 0;
   font-weight: 100;
-  font-size: 1.05rem;
+  font-size: 0.8rem;
 }
-.oneDay-container .oneDay-label {
+
+.oneDay-label {
   display: flex;
   flex-direction: column;
-  width: 24%;
+  width: 140px;
   margin-right: 1rem;
-  border-bottom: 1px dashed cyan;
 }
-.oneDay-container .oneDay-label span {
+.oneDay-label span {
   display: flex;
   justify-content: space-between;
 }
-.oneDay-container .oneDay-label span h5 {
-  margin: 0;
-  padding: 0;
-}
-.oneDay-container .oneDay-line {
+
+.oneDay-line {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: 0.8rem;
 }
-.oneDay-container .oneDay-line h4 {
-  border-bottom: 1px dashed cyan;
+.oneDay-line h4 {
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 0.8rem;
 }
-.oneDay-container .oneDay-line h5 {
-  width: 8%;
-}
-.oneDay-container button {
+
+button {
   position: absolute;
   top: 1rem;
   right: 2rem;

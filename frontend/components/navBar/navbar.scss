@@ -12,6 +12,7 @@
   background-color: $fond;
   box-shadow: 0px 0px 16px 2px $texte;
   button{
+    position: relative;
     transition: all 0.3s ease-in-out;
     width: 80px;
     height: 48px;
@@ -23,7 +24,7 @@
     color: $texte;
     &:hover{
       scale: 1.1;
-      color: $fond;
+      opacity: 0.8;
     }
   }
 }

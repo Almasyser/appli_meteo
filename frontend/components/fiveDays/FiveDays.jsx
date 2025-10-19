@@ -7,6 +7,7 @@ import OneDay from "../oneDay/OneDay";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
+import fleche_bas_128 from "../../assets/Fleche bas_128.png"
 import "./fiveDays.css";
 
   function FiveDays({setShowFive, showFive}){
@@ -14,10 +15,13 @@ import "./fiveDays.css";
     const [dayId, setDayId] = useState(0);
     const [dayIndex] = useState([1,2,3,4,5,6]);
     const { myArray } = useArray();
+    const ref = useRef()
     const handleClick=(e)=>{
         // setShowFive(false);
-        setDayId(e.target.value);
+        // setDayId(e.target.value);
         setShowOneDay(true);
+        console.log("///",e.target.title);
+        setDayId(e.target.title);
         
     }
     return (
@@ -28,7 +32,7 @@ import "./fiveDays.css";
             <div key={btn}>
               {btn &&
               <>
-                <section className="fiveDays-card">
+                <section className="fiveDays-card" >
                   <div className="fiveDays-date">
                     <p className="fiveDays-dayOfWeek"><DayOfWeek today={myArray.daily.sunset[btn]}/></p>
                     <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={myArray.daily.sunset[btn]} /></p>
@@ -41,7 +45,7 @@ import "./fiveDays.css";
                     <img src={parapluie} alt="#" />
                     <h4>{myArray.hourly.precipitation_probability[(btn*24)-24, btn*24]}%</h4>
                   </span>
-                  <button type="button" value={btn} onClick={(e)=>handleClick(e)}>details</button>
+                  <img ref={ref} className="btn-details" src={fleche_bas_128} alt="@@" title={btn} onClick={(title)=>handleClick(title)} />
                 </section>
                 </>
               }

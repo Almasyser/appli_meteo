@@ -5,7 +5,8 @@
   position: absolute;
   top: 28%;
   left: 0;
-  width: 100vw;
+  width: -moz-max-content;
+  width: max-content;
   overflow-x: scroll;
   overflow-y: hidden;
   transform: translateX(-105%);
@@ -13,7 +14,7 @@
   display: flex;
   justify-content: flex-start;
   gap: 0.2rem;
-  margin-bottom: 2rem;
+  padding: 0 1rem 1rem 1rem;
   background: #032f30;
   box-shadow: 0px -1px 8px 3px #0a7075;
   border-radius: 0.5rem;
@@ -28,7 +29,8 @@
 
 .fiveDays-card {
   width: 6rem;
-  height: 332px;
+  height: 360px;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,6 +77,10 @@
   font-size: 12px;
   font-weight: 500;
   color: #f1cd68;
+}
+
+.btn-details {
+  scale: 0.6;
 }
 
 .fiveDays-tendance {
