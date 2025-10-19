@@ -13,8 +13,8 @@ function OneDay({btn, showOneDay, setShowOneDay}){
       <div className="oneDay-label">
       {hourlyLabels && hourlyLabels.map((el)=>{
         return(
-          <span>
-            <h4 key={el.id} >{el.label}</h4>
+          <span key={el.id}>
+            <h4>{el.label}</h4>
             <h4>{el.unit}</h4>
           </span>
         )

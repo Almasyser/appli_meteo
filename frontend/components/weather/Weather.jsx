@@ -19,15 +19,12 @@ function ModalWeather({meteoData, setMeteoData}) {
   const long = longitude;
   //
   useEffect(() => {
-    FetchApiStatic(lat, long, setMeteoData);
-  }, [lat, long]);
-  useEffect(() => {
-    meteoData && updateMyArray(meteoData);
-    const { hours, day } = ConvertDateToCustom();
-    setHeure(parseInt(hours, 10));
-    if (meteoData) {
-      const cloud_cover = myArray?.hourly?.cloud_cover[heure];
-      const precipitation = myArray?.hourly?.precipitation[heure];
+    FetchApiStatic(lat, long, updateMyArray);
+    const { hours } = ConvertDateToCustom();
+    setHeure(hours);
+    if (myArray) {
+      const cloud_cover = myArray.hourly.cloud_cover[heure];
+      const precipitation = myArray.hourly.rain[heure];
       console.log("YES",cloud_cover, precipitation);
       if (cloud_cover != null && precipitation != null) {
         const result = SelectNebulositeImg(cloud_cover, precipitation);
@@ -35,8 +32,9 @@ function ModalWeather({meteoData, setMeteoData}) {
         setNebulositeText(result.text);
       }
     }
-  }, [meteoData]);
-   
+  }, [lat, long]);
+
+  
     
   return (
     <div className="weather-container">
@@ -51,7 +49,7 @@ function ModalWeather({meteoData, setMeteoData}) {
           <p className="temperature">{Math.round(myArray.hourly?.temperature_2m[heure]) || "##"}&nbsp;°C</p>
         </div>
       }
-      {myArray && <ModalWind
+      {myArray && heure && <ModalWind
         wind_speed={myArray.hourly?.wind_speed_10m[heure]}
         wind_direction={myArray.hourly?.wind_direction_10m[heure]}
         probability={myArray.hourly?.precipitation_probability[heure]}
