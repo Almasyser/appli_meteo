@@ -22,9 +22,13 @@ function ModalWeather({myArray}) {
         const result = SelectNebulositeImg(cloud_cover, precipitation);
         setNebulositeImg(tags[result.file]);
         setNebulositeText(result.text);
+      } else {
+         const result = SelectNebulositeImg(0, 0);
+        setNebulositeImg(tags[result.file]);
+        setNebulositeText(result.text);
       }
     }
-  }, []);
+  }, [myArray]);
 
   
     
