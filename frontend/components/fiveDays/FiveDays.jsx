@@ -4,6 +4,7 @@ import ConvertDataJMA from "../utils/ConvertDateJMA";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
 import OneDay from "../oneDay/OneDay";
+import DetailsDay from "../DetailsDay/DetailsDay";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
@@ -12,13 +13,13 @@ import "./fiveDays.css";
 
   function FiveDays({setShowFive, showFive}){
     const [showOneDay, setShowOneDay] = useState(false);
+    const [showDetailsDay, setShowDetailsDay] = useState(false);
     const [dayId, setDayId] = useState(0);
     const [dayIndex] = useState([1,2,3,4,5,6]);
     const { myArray } = useArray();
     const ref = useRef()
     const handleClick=(e)=>{
         // setShowFive(false);
-        // setDayId(e.target.value);
         setShowOneDay(true);
         console.log("///",e.target.title);
         setDayId(e.target.title);
@@ -45,7 +46,8 @@ import "./fiveDays.css";
                     <img src={parapluie} alt="#" />
                     <h4>{myArray.hourly.precipitation_probability[(btn*24)-24, btn*24]}%</h4>
                   </span>
-                  <img ref={ref} className="btn-details" src={fleche_bas_128} alt="@@" title={btn} onClick={(title)=>handleClick(title)} />
+                  <img ref={ref} className="img-details" src={fleche_bas_128} alt="@@" title={btn} onClick={(title)=>handleClick(title)} />
+                  <h4 className="btn-details" title={btn} onClick={()=> setShowDetailsDay(true)}>plus de détails</h4>
                 </section>
                 </>
               }
@@ -53,6 +55,7 @@ import "./fiveDays.css";
           )})}
       </div>
       <OneDay btn={dayId} showOneDay={showOneDay} setShowOneDay={setShowOneDay} />
+      <DetailsDay btn={dayId} showDetailsDay={showDetailsDay} setShowDetailsDay={setShowDetailsDay} />
     </>
     )   
   }

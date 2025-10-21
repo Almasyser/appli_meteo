@@ -1,55 +1,37 @@
-import { useEffect } from "react";
+
 import hourlyLabels from "../../json/hourlyLabels.json";
 import useArray from "../../hooks/useArray";
 import DateToHour from "../utils/DateToHour";
 import "./oneday.css";
-import { useState } from "react";
-import { parse } from "dotenv";
+
 function OneDay({btn, showOneDay, setShowOneDay}){
   const { myArray } = useArray();
-  const [myArrayKeys, setMyArrayKeys] = useState();
-  const intervals =[0,4,8,12,16,20,24]
+  const intervals =[0,4,8,12,16,20,24];
   const handleClick=()=>{
     setShowOneDay(false);
+
   }
-   useEffect(()=>{
-    const cles = Object.keys(myArray.hourly);
-    setMyArrayKeys(cles);
-  },[]);
-  console.log("btn",btn);
   return(
     <section className={showOneDay? "oneDay-container active":"oneDay-container"}>
-      <div className="oneDay-label">
-      {hourlyLabels && hourlyLabels.map((el)=>{
-        return(
-          <span key={el.id}>
-            <h4>{el.label}</h4>
-            <h4>{el.unit}</h4>
-          </span>
-        )
-      })}
-      </div>
       {intervals && intervals.map((el)=>{
-          const localId=(btn*24)-24+el; 
-          
-          return(
-            <div key={el} className="oneDay-line">
-              {myArrayKeys && myArrayKeys.map((key)=>{
-                return(
-                  <h4 key={key}>{myArray?.hourly?.[key]?.[localId] ?? "n/a"}</h4> // 
-                )
-              })}
-            </div>
-          )
-        })}
+            const localId=(btn*24)-24+el; 
+            return(
+              <span key={el} className="">
+                <h4><DateToHour today={myArray?.hourly?.time[localId] ?? "n/a"}/></h4>
+                
+              </span>
+            )
+          })}
 
-      <button onClick={()=>handleClick()}>X</button>
+
+      <button type="button" onClick={handleClick}>X</button>
     </section>
   )
 }
 export default OneDay;
 
-{/* <h4><DateToHour today={myArray?.hourly?.time[localId]}/></h4> */}
+
+
 {/* <h4>{myArray?.hourly?.temperature_2m[localId]}</h4>
 <h4>{myArray?.hourly?.apparent_temperature[localId]}</h4>
 <h4>{myArray?.hourly?.precipitation_probability[localId]}</h4>

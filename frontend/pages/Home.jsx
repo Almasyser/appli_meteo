@@ -12,7 +12,7 @@ function Home () {
   const {latitude, longitude} = useLocations();
   const {isLoading}= FetchApiStatic(latitude, longitude, updateMyArray);
   const weatherMemo = useMemo(()=>{
-    return myArray? <Weather myArray={myArray}/>:null;
+    return myArray? <Weather />:null;
   }, [myArray])
   return (
     <div className="body-container">

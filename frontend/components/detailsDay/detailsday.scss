@@ -1,6 +1,6 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
-.oneDay-container{
+.details-container{
   z-index: 2220;
   position: absolute;
   top: 28%;
@@ -22,8 +22,41 @@
     transform: translateX(0);
     margin-left: 1rem;
   }
-}
   
+  .details-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .label-span{
+      width: 12rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .label-h4{
+      line-height: 24px;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+  }
+  .details-values{
+    display: flex;
+    margin-left: 1rem;
+    .values-span{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start
+    }
+    .values-h4{
+      line-height: 24px;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+  }
+
+
+
+
 
 button{
   position: absolute;
@@ -32,5 +65,4 @@ button{
   border: none;
   color: red;
   font-size: 2rem;
-  cursor: pointer;
 }
