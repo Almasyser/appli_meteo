@@ -1,5 +1,10 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
+h4{
+  line-height: 3rem;
+  margin: 0;
+
+}
 .oneDay-container{
   z-index: 2220;
   position: absolute;
@@ -11,7 +16,7 @@
   transform: translateX(-105%);
   display: flex;
   justify-content: flex-start;
-  gap: 0;
+  gap: 1.5rem;
   margin-bottom: 2rem;
   padding: 3rem 0 0 1rem;
   background: $two;
@@ -23,7 +28,29 @@
     margin-left: 1rem;
   }
 }
-  
+.oneDay-labels{
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  color: $soft;
+}
+.oneDay-card{
+  width: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  div{
+    display: flex;
+    justify-content: space-evenly;
+    :nth-child(2){
+      font-weight: 100;
+      color: $soft;
+    }
+  }
+  :nth-child(9){
+    font-size: 0.8rem;
+    
+  }
+} 
 
 button{
   position: absolute;

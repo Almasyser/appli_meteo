@@ -6,11 +6,12 @@ import Header from "../components/header/Header";
 import Location from "../components/location/Location";
 import Weather from "../components/weather/Weather";
 import "./home.css";
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 function Home () {
   const {myArray, updateMyArray} = useArray();
   const {latitude, longitude} = useLocations();
   const {isLoading}= FetchApiStatic(latitude, longitude, updateMyArray);
+  
   const weatherMemo = useMemo(()=>{
     return myArray? <Weather />:null;
   }, [myArray])
