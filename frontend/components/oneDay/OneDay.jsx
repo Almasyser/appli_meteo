@@ -3,6 +3,7 @@ import hourlyLabels from "../../json/hourlyLabels.json";
 import omm_codes from "../../json/omm_codes.json";
 import useArray from "../../hooks/useArray";
 import DateToHour from "../utils/DateToHour";
+import Camenbert from "../camenbert/Camenbert";
 import "./oneday.css";
 
 function OneDay({btn, showOneDay, setShowOneDay}){
@@ -41,7 +42,7 @@ function OneDay({btn, showOneDay, setShowOneDay}){
                 <div><h4><DateToHour today={myArray?.hourly?.time[localId] ?? "n/a"}/></h4><h4>{hourlyLabels[0].unit}</h4></div>
                 <div><h4>{myArray?.hourly?.temperature_2m[localId]}</h4><h4>{hourlyLabels[1].unit} </h4></div>                   
                 <div><h4>{myArray?.hourly?.apparent_temperature[localId]}   </h4><h4>{hourlyLabels[2].unit} </h4></div>           
-                <div><h4>{myArray?.hourly?.precipitation_probability[localId]}  </h4><h4>{hourlyLabels[3].unit} </h4></div>      
+                <div><h4>{myArray?.hourly?.precipitation_probability[localId]}</h4><h4>{hourlyLabels[3].unit}</h4></div>      
                 <div><h4>{myArray?.hourly?.rain[localId]}</h4><h4>{hourlyLabels[4].unit}</h4></div>               
                 <div><h4>{myArray?.hourly?.showers[localId]}</h4><h4>{hourlyLabels[5].unit}</h4></div>               
                 <div><h4>{myArray?.hourly?.snowfall[localId]}</h4><h4>{hourlyLabels[6].unit}</h4></div>               
@@ -53,6 +54,7 @@ function OneDay({btn, showOneDay, setShowOneDay}){
                 <div><h4>{myArray?.hourly?.wind_speed_10m[localId]}</h4><h4>{hourlyLabels[15].unit}</h4></div>               
                 <div><h4>{myArray?.hourly?.wind_direction_10m[localId]}</h4><h4>{hourlyLabels[16].unit}</h4></div>               
                 <div><h4>{myArray?.hourly?.uv_index[localId]}</h4><h4>{hourlyLabels[17].unit}</h4></div>
+                
               </span>
             )
           })}
@@ -64,5 +66,5 @@ function OneDay({btn, showOneDay, setShowOneDay}){
 }
 export default OneDay;
 
-
+{/* <h4>{myArray?.hourly?.precipitation_probability[localId]}  </h4><h4>{hourlyLabels[3].unit} </h4> */}
 

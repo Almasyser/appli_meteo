@@ -29,10 +29,16 @@ h4{
   }
 }
 .oneDay-labels{
-  width: 12rem;
+  width: 10rem;
   display: flex;
   flex-direction: column;
   color: $soft;
+  h4{
+    width: 8.5rem;
+    font-family: $noto;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
 }
 .oneDay-card{
   width: 4.5rem;
@@ -40,6 +46,7 @@ h4{
   flex-direction: column;
   div{
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     :nth-child(2){
       font-weight: 100;
