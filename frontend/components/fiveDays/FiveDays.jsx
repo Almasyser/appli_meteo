@@ -55,7 +55,7 @@ import "./fiveDays.css";
           )})}
       </div>
       <OneDay btn={dayId} showOneDay={showOneDay} setShowOneDay={setShowOneDay} />
-      <DetailsDay btn={dayId} showDetailsDay={showDetailsDay} setShowDetailsDay={setShowDetailsDay} />
+      {showDetailsDay && <DetailsDay btn={dayId} showDetailsDay={showDetailsDay} setShowDetailsDay={setShowDetailsDay} />}
     </>
     )   
   }

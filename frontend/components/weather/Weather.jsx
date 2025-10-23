@@ -15,23 +15,23 @@ function ModalWeather() {
   //
   useEffect(() => {
     const { hours } = ConvertDateToCustom();
-    setHeure(hours);
+    setHeure(parseInt(hours, 10));
    
-      const cloud_cover = myArray.myArray.hourly.cloud_cover[heure];
-      const precipitation = myArray.myArray.hourly.rain[heure];
-      console.log("YES",cloud_cover, precipitation);
-      if (cloud_cover != null && precipitation === 0) {
+      const cloud_cover = myArray?.myArray?.hourly?.cloud_cover[heure];
+      const precipitation = myArray?.myArray?.hourly?.rain[heure];
+      console.log("YES",heure,typeof(heure), cloud_cover, precipitation);
+      if (cloud_cover != null && precipitation != null) {
         const result = SelectNebulositeImg(cloud_cover, precipitation);
         setNebulositeImg(tags[result.file]);
         setNebulositeText(result.text);
       } else {
-         const result = SelectNebulositeImg(0, 0);
+         const result = SelectNebulositeImg(cloud_cover, 0);
         setNebulositeImg(tags[result.file]);
         setNebulositeText(result.text);
       }
     
   }, []);
-  console.log(myArray);
+  console.log("===", myArray);
   
   return (
     <div className="weather-container">

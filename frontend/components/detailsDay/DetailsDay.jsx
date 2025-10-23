@@ -1,6 +1,6 @@
+import useArray from "../../hooks/useArray";
 import { useEffect } from "react";
 import hourlyLabels from "../../json/hourlyLabels.json";
-import useArray from "../../hooks/useArray";
 import "./detailsday.css";
 import { useState } from "react";
 function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
@@ -10,11 +10,11 @@ function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
   const handleClick=()=>{
     setShowDetailsDay(false);
   }
-   useEffect(()=>{
-    const cles = Object.keys(myArray?.hourly);
-    setMyArrayKeys(cles);
-  },[]);
-  console.log("btn",btn);
+  //  useEffect(()=>{
+  //   const cles = Object.keys(myArray.hourly);
+  //   setMyArrayKeys(cles);
+  // },[]);
+  // console.log("detailday",myArray);
   return(
     <section className={showDetailsDay? "details-container active":"details-container"}>
       <div className="details-label">
@@ -32,11 +32,11 @@ function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
             const localId=(btn*24)-24+el; 
             return(
               <span key={el} className="values-span">
-                {myArrayKeys && myArrayKeys.map((key)=>{
+                {/* {myArrayKeys && myArrayKeys.map((key)=>{
                   return(
                     <h4 className="values-h4" key={key}>{myArray?.hourly?.[key]?.[localId] ?? "n/a"}</h4> // 
                   )
-                })}
+                })} */}
               </span>
             )
           })}

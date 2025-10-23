@@ -9,3 +9,13 @@ body{
   color-scheme: light dark;
   
 }
+.global-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  background: #f8f8f8;
+}
