@@ -1,7 +1,8 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 h4{
-  line-height: 3rem;
+  line-height: 2.2rem;
+
   margin: 0;
 
 }
@@ -11,12 +12,13 @@ h4{
   top: 28%;
   left: 0;
   width: 90vw;
+  max-width: 880px;
   height: 66%;
   overflow: scroll;
   transform: translateX(-105%);
   display: flex;
   justify-content: flex-start;
-  gap: 1.5rem;
+  gap: 1.4rem;
   margin-bottom: 2rem;
   padding: 3rem 0 0 1rem;
   background: $two;
@@ -38,6 +40,7 @@ h4{
     font-family: $noto;
     font-size: 0.9rem;
     font-weight: 400;
+    text-align: right;
   }
 }
 .oneDay-card{
@@ -47,11 +50,17 @@ h4{
   div{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+
     :nth-child(2){
       font-weight: 100;
       color: $soft;
     }
+  }
+  :nth-child(1) h4{
+    margin: auto;
+    color: $soft;
+    font-family: $clock;
   }
   :nth-child(9){
     font-size: 0.8rem;

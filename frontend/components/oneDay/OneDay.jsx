@@ -33,7 +33,6 @@ function OneDay({btn, showOneDay, setShowOneDay}){
         <h4>{hourlyLabels[15].label}</h4>
         <h4>{hourlyLabels[16].label}</h4>
         <h4>{hourlyLabels[17].label}</h4>
-   
       </span>
       {intervals && intervals.map((el)=>{
             const localId=(btn*24)-24+el; 
@@ -67,4 +66,3 @@ function OneDay({btn, showOneDay, setShowOneDay}){
 export default OneDay;
 
 {/* <h4>{myArray?.hourly?.precipitation_probability[localId]}  </h4><h4>{hourlyLabels[3].unit} </h4> */}
-

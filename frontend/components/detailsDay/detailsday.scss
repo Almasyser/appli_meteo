@@ -5,13 +5,14 @@
   position: absolute;
   top: 28%;
   left: 0;
-  width: 90vw;
+  width: 96vw;
+  max-width: 96vw;
   height: 66%;
   overflow: scroll;
   transform: translateX(-105%);
   display: flex;
   justify-content: flex-start;
-  gap: 0;
+  gap: 0.5rem;
   margin-bottom: 2rem;
   padding: 3rem 0 0 1rem;
   background: $two;
@@ -41,6 +42,8 @@
   }
   .details-values{
     display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
     margin-left: 1rem;
     .values-span{
       display: flex;

@@ -5,7 +5,7 @@ import SelectCity from "../selectCity/SelectCity";
 import FiveDays from "../fiveDays/FiveDays";
 import MapComponent from "../map/MapComponent";
 import "./navbar.css";
-import { shallow } from "zustand/shallow";
+
 function NavBar() {
   const { myArray } = useArray();
   const {latitude, longitude} = useLocations();

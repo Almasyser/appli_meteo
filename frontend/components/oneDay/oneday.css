@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Imperial+Script&family=Kavivanar&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Noto+Sans+JP:wght@100..900&family=Rozha+One&family=Viaoda+Libre&display=swap");
+@font-face {
+  font-family: "digital";
+  src: url("./count/COUNT.otf") format("opentype");
+}
 h4 {
-  line-height: 3rem;
+  line-height: 2.2rem;
   margin: 0;
 }
 
@@ -11,12 +15,13 @@ h4 {
   top: 28%;
   left: 0;
   width: 90vw;
+  max-width: 880px;
   height: 66%;
   overflow: scroll;
   transform: translateX(-105%);
   display: flex;
   justify-content: flex-start;
-  gap: 1.5rem;
+  gap: 1.4rem;
   margin-bottom: 2rem;
   padding: 3rem 0 0 1rem;
   background: #032f30;
@@ -40,6 +45,7 @@ h4 {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
+  text-align: right;
 }
 
 .oneDay-card {
@@ -50,11 +56,16 @@ h4 {
 .oneDay-card div {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .oneDay-card div :nth-child(2) {
   font-weight: 100;
   color: #f5dd9a;
+}
+.oneDay-card :nth-child(1) h4 {
+  margin: auto;
+  color: #f5dd9a;
+  font-family: "digital", sans-serif;
 }
 .oneDay-card :nth-child(9) {
   font-size: 0.8rem;

@@ -26,6 +26,12 @@ $lora: "Lora", serif;
 $faculty: "Faculty Glyphic", sans-serif;
 $viaoda: "Viaoda Libre", serif;
 
+// font digital
+@font-face {
+  font-family: 'digital';
+  src: url("./count/COUNT.otf") format('opentype');
+}
+$digital: "digital", sans-serif;
 // palette
 $one: #031716; 
 $two: #032f30;
@@ -52,6 +58,7 @@ $Ctwo-t: rgba(39, 77, 96, 0.3);
 // fontes
 $titre: $Cabin;
 $paragraphe: $Alegreya;
+$clock: $digital;
 
 // couleirs
 $fond: $two;
