@@ -71,12 +71,16 @@ h4 {
   font-size: 0.8rem;
 }
 
-button {
+.btn-close {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
   border: none;
-  color: red;
+  color: #6ba3be;
   font-size: 2rem;
+  background: transparent;
+}
+.btn-close:hover {
+  color: #0a7075;
   cursor: pointer;
 }/*# sourceMappingURL=oneday.css.map */

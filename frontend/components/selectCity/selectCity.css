@@ -12,7 +12,7 @@
   height: 180px;
   transform: translateX(-105%);
   transition: all 1s ease-in-out;
-  background-color: #031716;
+  background-color: #032f30;
   z-index: 1;
 }
 .city-container.active {
@@ -42,7 +42,7 @@
   padding-left: 0.5rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
-  color: #f1cd68;
+  color: #f5dd9a;
   margin-top: 2vh;
   margin-left: 1rem;
 }
@@ -59,9 +59,9 @@
   z-index: 1000;
   width: 100%;
   height: 2.8rem;
-  background-color: #032f30;
+  background-color: #031716;
   border-radius: 8px;
-  color: #f1cd68;
+  color: #f5dd9a;
   outline: none;
   font-family: "Alegreya", serif;
   font-size: 1.2rem;
@@ -70,7 +70,7 @@
   padding-left: 0.4rem;
   margin-top: 0.3rem;
   margin-bottom: 0rem;
-  color: #f1cd68;
+  color: #f5dd9a;
 }
 .input-box input:focus-visible {
   opacity: 0.6;
@@ -98,10 +98,10 @@
   left: 1.4rem;
   max-height: 64vh;
   padding: 0.4rem 1rem 0.4rem 0.1rem;
-  background: #032f30;
+  background: #031716;
   z-index: 1000;
   overflow-y: scroll;
-  scrollbar-color: #f1cd68;
+  scrollbar-color: #f5dd9a;
   scrollbar-width: thin;
   scroll-padding-left: 0.5rem;
   cursor: pointer;
@@ -120,10 +120,10 @@
 
 .city {
   width: 12rem;
-  color: #f1cd68;
+  color: #f5dd9a;
   margin: 0;
   padding: 0.2rem 0 0.4rem 0;
-  border-bottom: 1px solid #f1cd68;
+  border-bottom: 1px solid #f5dd9a;
   font-family: "Alegreya", serif;
   font-size: 1rem;
   font-weight: normal;
@@ -131,7 +131,7 @@
   padding-left: 0.3rem;
   margin-top: 0.3rem;
   margin-bottom: 0.2rem;
-  color: #f1cd68;
+  color: #f5dd9a;
 }
 .city.department {
   text-align: right;

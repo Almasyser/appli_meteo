@@ -7,8 +7,8 @@
 .location-container {
   margin: 16px auto;
   display: flex;
-  border-top: 1px solid #032f30;
-  border-bottom: 1px solid #032f30;
+  border-top: 1px solid #031716;
+  border-bottom: 1px solid #031716;
 }
 .location-container .location-text {
   width: 70%;
@@ -23,7 +23,7 @@
   padding-left: 0.6rem;
   margin-top: 0.5rem;
   margin-bottom: 0.4rem;
-  color: #f1cd68;
+  color: #f5dd9a;
 }
 .location-container .location-department {
   font-family: "Alegreya", serif;
@@ -33,7 +33,7 @@
   padding-left: 0.8rem;
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
-  color: #f1cd68;
+  color: #f5dd9a;
 }
 .location-container .location-region {
   font-family: "Alegreya", serif;
@@ -43,5 +43,5 @@
   padding-left: 0.8rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  color: #f1cd68;
+  color: #f5dd9a;
 }/*# sourceMappingURL=location.css.map */

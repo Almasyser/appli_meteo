@@ -59,7 +59,7 @@ function OneDay({btn, showOneDay, setShowOneDay}){
           })}
 
 
-      <button type="button" onClick={handleClick}>X</button>
+      <button className="btn-close" onClick={handleClick}>X</button>
     </section>
   )
 }

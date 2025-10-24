@@ -42,7 +42,7 @@ function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
           })}
       </div>
 
-      <button onClick={()=>handleClick()}>X</button>
+      <button className="btn-close" onClick={()=>handleClick()}>X</button>
     </section>
   )
 }

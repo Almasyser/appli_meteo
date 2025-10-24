@@ -8,3 +8,16 @@
   margin-bottom: $mb;
   color: $fc;
 }
+@mixin btnClose($color, $hover){
+    position: absolute;
+  top:0.5rem;
+  right: 1rem;
+  border: none;
+  color: $color;
+  font-size: 2rem;
+  background: transparent;
+  &:hover{
+    color: $hover;
+    cursor: pointer;
+  }
+}

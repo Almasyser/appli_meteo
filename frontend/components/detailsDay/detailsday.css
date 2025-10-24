@@ -61,11 +61,16 @@
   margin: 0;
 }
 
-button {
+.btn-close {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
   border: none;
-  color: red;
+  color: #0c969c;
   font-size: 2rem;
+  background: transparent;
+}
+.btn-close:hover {
+  color: #0a7075;
+  cursor: pointer;
 }/*# sourceMappingURL=detailsday.css.map */

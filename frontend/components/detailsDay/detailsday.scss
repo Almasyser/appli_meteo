@@ -56,16 +56,6 @@
       margin: 0;
     }
   }
-
-
-
-
-
-button{
-  position: absolute;
-  top:0.5rem;
-  right: 1rem;
-  border: none;
-  color: red;
-  font-size: 2rem;
+.btn-close{
+  @include btnClose($four, $three);
 }
