@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 function FetchApiStatic(lat, long, updateMyArray, setIsLoading){
   
   useEffect(() => {
@@ -10,7 +10,6 @@ function FetchApiStatic(lat, long, updateMyArray, setIsLoading){
       try {
         const res = await axios.get(url);
         await updateMyArray(res.data);
-
       } catch (error) {
         console.error(error);
       } finally {

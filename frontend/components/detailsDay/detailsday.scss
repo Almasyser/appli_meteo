@@ -23,39 +23,68 @@
     transform: translateX(0);
     margin-left: 1rem;
   }
+  .details-entete{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  h3{
+    top: 0;
+    left: 2rem;
+    color: $greenCard;
+  }
+  button{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: $greenAccent;
+    border-color: $btnOther;
+    font-size: 1.5rem;
+    font-weight: 500;
+    &:hover{
+      opacity: 0.6;
+      cursor: pointer;
+    }
   
-  .details-label{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
   }
-  .label-span{
-      width: 12rem;
-      display: flex;
-      justify-content: space-between;
-    }
-    .label-h4{
-      line-height: 24px;
-      font-size: 0.8rem;
-      margin: 0;
-    }
-  }
-  .details-values{
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0.5rem;
-    margin-left: 1rem;
-    .values-span{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start
-    }
-    .values-h4{
-      line-height: 24px;
-      font-size: 0.8rem;
-      margin: 0;
-    }
-  }
+}
 .btn-close{
   @include btnClose($four, $three);
 }
+.details-label{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.label-span{
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .label-h4{
+    line-height: 24px;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+.details-values{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  .values-span{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
+  }
+  .values-h4{
+    line-height: 24px;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+

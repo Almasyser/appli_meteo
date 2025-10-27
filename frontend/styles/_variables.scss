@@ -53,6 +53,22 @@ $Cfive:#be866b;
 $Csix: #603a27;
 // opacity
 $Ctwo-t: rgba(39, 77, 96, 0.3);
+
+// palette claire
+$greenAccent: #0A5D53;
+$greenCard: #117971;
+$greenModal: #65ADA0;
+$greenWarn: #13D2BD;
+$cardText: #e4e4ae;
+$blanc: #F2E9CD;
+$btnDisClear: #F2D08C;
+$btnDisBlue: #BAEDE9;
+$btnOther: #C5B99E;
+$btnCancel: #E46265;
+$btnOk: #51B5AE;
+$noir: #404040;
+
+
 // DEFINITION DES VARIALBLES
 
 // fontes
@@ -61,9 +77,9 @@ $paragraphe: $Alegreya;
 $clock: $digital;
 
 // couleirs
-$fond: $one;
-$sectionFond: $two;
-$texte: $soft;
+$fond: $blanc;
+$sectionFond: $cardText;
+$texte: $noir;
 
 // Effets
 $transition: 1s;

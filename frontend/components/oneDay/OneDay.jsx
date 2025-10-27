@@ -13,11 +13,16 @@ function OneDay({btn, showOneDay, setShowOneDay}){
     setShowOneDay(false);
 
   }
-  console.log(omm_codes[0].abrege);
+
   
   return(
     <section className={showOneDay? "oneDay-container active":"oneDay-container"}>
-      <span className="oneDay-labels">
+      <span className="oneDay-entete">
+        <h3>Prévisions du jour.</h3>
+        <button className="btn-close" onClick={handleClick}>X</button>
+      </span>
+      <div className="oneDay-box">
+        <span className="oneDay-labels">
         <h4>{hourlyLabels[0].label} </h4>
         <h4>{hourlyLabels[1].label} </h4>
         <h4>{hourlyLabels[2].label} </h4>
@@ -33,8 +38,8 @@ function OneDay({btn, showOneDay, setShowOneDay}){
         <h4>{hourlyLabels[15].label}</h4>
         <h4>{hourlyLabels[16].label}</h4>
         <h4>{hourlyLabels[17].label}</h4>
-      </span>
-      {intervals && intervals.map((el)=>{
+        </span>
+        {intervals && intervals.map((el)=>{
             const localId=(btn*24)-24+el; 
             return(
               <span key={el} className="oneDay-card">
@@ -56,10 +61,8 @@ function OneDay({btn, showOneDay, setShowOneDay}){
                 
               </span>
             )
-          })}
-
-
-      <button className="btn-close" onClick={handleClick}>X</button>
+        })}
+      </div>
     </section>
   )
 }

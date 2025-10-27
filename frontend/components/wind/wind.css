@@ -12,7 +12,7 @@
   border-radius: 16px;
   opacity: 0.96;
   font-family: "Cabin", sans-serif;
-  border: 1px solid rgb(39, 77, 96);
+  background: #e4e4ae;
 }
 
 .rose-box {
@@ -1140,7 +1140,7 @@
 
 .wind-text {
   font-size: 0.8rem;
-  color: #f5dd9a;
+  color: #404040;
   text-align: center;
   margin: 0;
   padding: 0;

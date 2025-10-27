@@ -28,6 +28,47 @@
   transform: translateX(0);
   margin-left: 1rem;
 }
+.details-container .details-entete {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.details-container .details-entete h3 {
+  top: 0;
+  left: 2rem;
+  color: #117971;
+}
+.details-container .details-entete button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #0A5D53;
+  border-color: #C5B99E;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.details-container .details-entete button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.details-container .btn-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  border: none;
+  color: #0c969c;
+  font-size: 2rem;
+  background: transparent;
+}
+.details-container .btn-close:hover {
+  color: #0a7075;
+  cursor: pointer;
+}
 .details-container .details-label {
   display: flex;
   flex-direction: column;
@@ -59,18 +100,4 @@
   line-height: 24px;
   font-size: 0.8rem;
   margin: 0;
-}
-
-.btn-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  border: none;
-  color: #0c969c;
-  font-size: 2rem;
-  background: transparent;
-}
-.btn-close:hover {
-  color: #0a7075;
-  cursor: pointer;
 }/*# sourceMappingURL=detailsday.css.map */

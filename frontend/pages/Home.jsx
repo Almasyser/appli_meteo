@@ -1,4 +1,4 @@
-import { lazy, useEffect, useMemo, useState } from 'react';
+import { lazy, useState } from 'react';
 import FetchApiStatic from '../components/utils/FetchApiStatic';
 import useLocations from '../hooks/useLocations';
 import useArray from '../hooks/useArray';
@@ -12,17 +12,13 @@ function Home () {
   const {latitude, longitude} = useLocations();
   const [isLoading, setIsLoading] = useState(false);
   FetchApiStatic(latitude, longitude, updateMyArray, setIsLoading);
-console.log("isLoading",isLoading);
- 
   return (
       <div className="body-container">
           <NavBar />
           <Header />
-
           <div className="location-section">
             <Location />
           </div>
-
           <div className="weather-section">
             {!isLoading && myArray && <Weather />}
           </div>
@@ -31,4 +27,3 @@ console.log("isLoading",isLoading);
 } 
 export default Home;
 
-// {!isLoading? myArray && myArray.length > 0? (<Weather />) : (<h4>Données indisponnibles</h4>) : (<h4>chargement...</h4>)}

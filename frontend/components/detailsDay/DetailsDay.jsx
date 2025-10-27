@@ -6,7 +6,9 @@ import { useState } from "react";
 function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
   const { myArray } = useArray();
   const [myArrayKeys, setMyArrayKeys] = useState();
-  const intervals =[0,2,4,6,8,10,12,14,16,18,20,22,24]
+  const [interval, setInterval] = useState(4);
+  const intervals =[0,4,8,12,16,20,24];
+
   const handleClick=()=>{
     setShowDetailsDay(false);
   }
@@ -14,9 +16,15 @@ function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
     const cles = Object.keys(myArray.hourly);
     setMyArrayKeys(cles);
   },[]);
-  console.log("detailday",myArrayKeys);
+  console.log("detailday",interval);
   return(
     <section className={showDetailsDay? "details-container active":"details-container"}>
+      <span className="details-entete">
+        <h3>Prévisions du jour. Intervale:</h3>
+        <button type="button" onClick={()=> setInterval(2)}>2 heures</button>
+        <button type="button" onClick={()=> setInterval(4)}>4 heures</button>
+        <button className="btn-close" onClick={handleClick}>X</button>
+      </span>
       <div className="details-label">
       {hourlyLabels && hourlyLabels.map((el)=>{
         return(
@@ -39,10 +47,11 @@ function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
                 })}
               </span>
             )
-          })}
+          })
+        }
       </div>
 
-      <button className="btn-close" onClick={()=>handleClick()}>X</button>
+
     </section>
   )
 }
