@@ -16,13 +16,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: #344D59;
+  background: #3a2e61;
 }
 .footer-container .footer-text {
   width: -moz-max-content;
   width: max-content;
   margin-top: 0.5rem;
-  color: #B8CBD0;
+  color: #a3cfdb;
   text-align: center;
   opacity: 1;
   font-size: 2rem;

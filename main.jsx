@@ -5,7 +5,7 @@ import App from './frontend/App'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <Suspense fallback={<div className='global-loader'>Chargement appli...</div>}>
+    <Suspense fallback={<div className='global-loader'>Chargement<span></span></div>}>
       <App />
     </Suspense>
   </BrowserRouter>,

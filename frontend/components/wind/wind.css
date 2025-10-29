@@ -11,7 +11,7 @@
   height: 160px;
   opacity: 0.96;
   font-family: "Cabin", sans-serif;
-  background: #137C8B;
+  background: #1a86b5;
 }
 
 .rose-box {
@@ -21,9 +21,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0A5D53;
+  background: #6391bb;
   border-radius: 1rem;
-  box-shadow: -1px 2px 10px -1px #cde0f3 inset;
+  box-shadow: -1px 2px 10px -1px #a3cfdb inset;
 }
 .rose-box .rose-des-vents {
   position: absolute;
@@ -1143,7 +1143,7 @@
 .wind-text {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #344D59;
+  color: #3a2e61;
   text-align: center;
   margin: 0;
   padding: 0;
