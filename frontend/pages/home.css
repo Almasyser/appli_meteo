@@ -11,8 +11,8 @@
   left: 0;
   text-transform: none;
   font-family: "Alegreya", serif;
-  background-color: #F2E9CD;
-  color: #404040;
+  background-color: #344D59;
+  color: #B8CBD0;
   font-variant: normal;
   overflow: hidden;
 }
@@ -22,7 +22,7 @@
   width: 100%;
   height: -moz-max-content;
   height: max-content;
-  background-color: #e4e4ae;
+  background-color: #709CA7;
 }
 
 .weather-section {

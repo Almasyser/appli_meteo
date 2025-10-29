@@ -4,7 +4,7 @@ import ConvertDataJMA from "../utils/ConvertDateJMA";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
 import OneDay from "../oneDay/OneDay";
-import DetailsDay from "../DetailsDay/DetailsDay";
+import DetailsDay from "../detailsDay/DetailsDay";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
@@ -19,11 +19,10 @@ import "./fiveDays.css";
     const { myArray } = useArray();
     const ref = useRef()
     const handleClick=(e)=>{
-        // setShowFive(false);
-        setShowOneDay(true);
-        console.log("///",e.target.title);
-        setDayId(e.target.title);
-        
+      // setShowFive(false);
+      setShowOneDay(true);
+      console.log("///",e.target.title);
+      setDayId(e.target.title);
     }
     return (
       <>
@@ -61,9 +60,3 @@ import "./fiveDays.css";
   }
 
   export default FiveDays;
-
-  // <RainDaily myArray={myArray} btn={btn} setMaxValue={setMaxValue} setMaxIndex={setMaxIndex}/>
-  //                 <span className="fiveDays-rain-box">
-  //                   <img src={parapluie} alt="^^"/>
-  //                   <h3>{maxValue}% vers {maxIndex} heure</h3>
-  //                 </span>

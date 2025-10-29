@@ -6,17 +6,16 @@
   position: absolute;
   top: 28%;
   left: 0;
-  width: max-content;
   overflow-x: scroll;
+  scrollbar-color: $blanc $btnOther;
   overflow-y: hidden;
   transform: translateX(-105%);
   transition: all $transition ease-in-out;
   display: flex;
   justify-content: flex-start;
   gap: 0.2rem;
-  
-  padding: 0 1rem 1rem 1rem;
-  background: $two;
+  padding: 1rem 1rem 1rem 1rem;
+  background: $blanc;
   box-shadow: 0px -1px 8px 3px $three;
   border-radius: 0.5rem;
   &.active{
@@ -29,17 +28,16 @@
 }
 
 .fiveDays-card{
-  width: 6rem;
+  width: 7rem;
   height: 450px;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: $sectionFond;
-
+  background-color: $fond2;
   .img-details{
-  scale: 0.6;
+    scale: 0.6;
     &:hover{
     opacity: 0.8;
     cursor: pointer;
@@ -77,7 +75,7 @@
 }
 .fiveDays-ephemeride{
   width: 100%;
-  padding: 0;
+  padding-top: 0.6rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -89,13 +87,14 @@
     margin: 0;
     font-size:12px;
     font-weight: 500;
-    color: $texte;
+    color: $texteClear;
   }
 }
 .fiveDays-tendance{
   min-height: 44px;
   font-size: 12px;
-  color: $texte;
+  color: $texteClear;
+  padding: 0 0.3rem 0 0.3rem;
   text-align: center;
 }
 .fiveDays-rain-box{

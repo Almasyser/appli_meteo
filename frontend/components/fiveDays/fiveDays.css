@@ -9,17 +9,16 @@
   position: absolute;
   top: 28%;
   left: 0;
-  width: -moz-max-content;
-  width: max-content;
   overflow-x: scroll;
+  scrollbar-color: #cde0f3 #C5B99E;
   overflow-y: hidden;
   transform: translateX(-105%);
   transition: all 1s ease-in-out;
   display: flex;
   justify-content: flex-start;
   gap: 0.2rem;
-  padding: 0 1rem 1rem 1rem;
-  background: #032f30;
+  padding: 1rem 1rem 1rem 1rem;
+  background: #cde0f3;
   box-shadow: 0px -1px 8px 3px #0a7075;
   border-radius: 0.5rem;
 }
@@ -32,14 +31,14 @@
 }
 
 .fiveDays-card {
-  width: 6rem;
+  width: 7rem;
   height: 450px;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #e4e4ae;
+  background-color: #7A90A4;
 }
 .fiveDays-card .img-details {
   scale: 0.6;
@@ -60,12 +59,12 @@
 .fiveDays-card .fiveDays-date {
   width: 100%;
   margin-bottom: 0.4rem;
-  background-color: #F2E9CD;
+  background-color: #344D59;
 }
 .fiveDays-card .fiveDays-date .fiveDays-dayOfWeek {
   font-size: 16px;
   font-weight: 200;
-  color: #404040;
+  color: #B8CBD0;
   margin: 0;
   padding: 0.5rem;
   text-align: center;
@@ -79,7 +78,7 @@
 
 .fiveDays-ephemeride {
   width: 100%;
-  padding: 0;
+  padding-top: 0.6rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -92,13 +91,14 @@
   margin: 0;
   font-size: 12px;
   font-weight: 500;
-  color: #404040;
+  color: #344D59;
 }
 
 .fiveDays-tendance {
   min-height: 44px;
   font-size: 12px;
-  color: #404040;
+  color: #344D59;
+  padding: 0 0.3rem 0 0.3rem;
   text-align: center;
 }
 

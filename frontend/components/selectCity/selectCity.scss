@@ -8,7 +8,7 @@
   height: 180px;
   transform: translateX(-105%);
   transition: all $transition ease-in-out;
-  background-color:$sectionFond;
+  background-color:$windFond;
   z-index: 1;
   &.active{
     transform: translateX(0);

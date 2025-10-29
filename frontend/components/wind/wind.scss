@@ -4,10 +4,9 @@
   justify-content: space-evenly;
   align-items: center;
   height: 160px;
-  border-radius: 16px;
   opacity: 0.96;
   font-family: $titre;
-  background: $sectionFond;
+  background: $windFond;
 }
 .rose-box{
   position: relative;
@@ -16,6 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $greenAccent;
+  border-radius: 1rem;
+  box-shadow: -1px 2px 10px -1px $blanc inset;
   .rose-des-vents{
     position: absolute;
     z-index: 0;
@@ -53,8 +55,9 @@
   }
 }
 .wind-text{
-  font-size: 0.8rem;
-  color: $texte;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $texteClear;
   text-align: center;
   margin: 0;
   padding: 0;

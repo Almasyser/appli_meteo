@@ -60,13 +60,19 @@ $greenCard: #117971;
 $greenModal: #65ADA0;
 $greenWarn: #13D2BD;
 $cardText: #e4e4ae;
-$blanc: #F2E9CD;
+$blanc: #cde0f3;
 $btnDisClear: #F2D08C;
 $btnDisBlue: #BAEDE9;
 $btnOther: #C5B99E;
 $btnCancel: #E46265;
 $btnOk: #51B5AE;
 $noir: #404040;
+
+$prim: #137C8B;
+$seco:#709CA7;
+$center:#B8CBD0;
+$foor: #7A90A4;
+$fiiv:#344D59;
 
 
 // DEFINITION DES VARIALBLES
@@ -77,9 +83,12 @@ $paragraphe: $Alegreya;
 $clock: $digital;
 
 // couleirs
-$fond: $blanc;
-$sectionFond: $cardText;
-$texte: $noir;
+$fond: $fiiv;
+$fond2: $foor;
+$sectionFond: $seco;
+$windFond: $prim;
+$texte: $center;
+$texteClear: $fiiv;
 
 // Effets
 $transition: 1s;
