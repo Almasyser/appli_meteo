@@ -286,6 +286,6 @@
   width: 40%;
   font-size: 3rem;
   text-align: center;
-  color: var(-blue-200);
+  color: var(--blue-50);
   z-index: 0;
 }/*# sourceMappingURL=weather.css.map */

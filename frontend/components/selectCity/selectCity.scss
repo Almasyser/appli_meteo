@@ -32,7 +32,7 @@
 }
 .city-comment{
   //   @mixin textMedium($fm,       $fc,     $fw,    $fs,    $ls,     $pl,   $mt, $mb)
-  @include textMedium($paragraphe, $texteDark, normal, 0.7rem, 0.01rem, 0.5rem, 0rem, 0rem);
+  @include textMedium($paragraphe, $texte, normal, 0.7rem, 0.01rem, 0.5rem, 0rem, 0rem);
   margin-top: 2vh;
   margin-left: 1rem;
 }
@@ -103,7 +103,7 @@
   margin: 0;
   padding: 0.2rem 0 0.4rem 0;
   border-bottom: 1px solid $texte;
-  @include textMedium($paragraphe, $texteDark, normal, 1rem, 0.03rem, 0.3rem, 0.3rem, 0.2rem);
+  @include textMedium($paragraphe, $texteClear, normal, 1rem, 0.03rem, 0.3rem, 0.3rem, 0.2rem);
   &.department{
     text-align: right;
   }

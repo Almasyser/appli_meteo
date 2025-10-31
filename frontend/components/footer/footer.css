@@ -257,7 +257,7 @@
   width: -moz-max-content;
   width: max-content;
   margin-top: 0.5rem;
-  color: var(-blue-200);
+  color: var(--blue-50);
   text-align: center;
   opacity: 1;
   font-size: 2rem;

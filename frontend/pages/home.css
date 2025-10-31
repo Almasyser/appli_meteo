@@ -245,9 +245,9 @@
   top: 0;
   left: 0;
   text-transform: none;
-  font-family: "Alegreya", serif;
+  font-family: "Noto Sans JP", sans-serif;
   background-color: var(--blue-950);
-  color: var(-blue-200);
+  color: var(--blue-50);
   font-variant: normal;
   overflow: hidden;
 }
@@ -257,7 +257,7 @@
   width: 100%;
   height: -moz-max-content;
   height: max-content;
-  background-color: var(--blue-600);
+  background-color: var(--blue-800);
 }
 
 .weather-section {

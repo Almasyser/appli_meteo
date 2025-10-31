@@ -2,71 +2,61 @@
 @use "../../styles/mixins" as *;
 h4{
   line-height: 2.2rem;
+  text-align: right;
   margin: 0;
+  font-family: $paragraphe;
+  font-size: 0.9rem;
+  font-weight: 100;
 }
 .oneDay-container{
   z-index: 2220;
   position: absolute;
   top: 28%;
   left: 0;
-  width: 90vw;
-  max-width: 880px;
-  height: 66%;
-  overflow: scroll;
+  max-width: max-content;
+  // max-width: 880px;
+  height: 58%;
+  overflow-x: scroll;
+  overflow-y: hidden;
   transform: translateX(-105%);
   margin-bottom: 2rem;
   padding: 3rem 3rem 0 1rem;
   background: $windFond;
   box-shadow: 0px -1px 8px 3px $sectionFond;
-  border-radius: 0.5rem;
   transition: all $transition ease-in-out;
   &.active{
     transform: translateX(0);
-    margin-left: 1rem;
   }
 }
 .oneDay-entete{
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 20%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 2rem;
   h3{
     top: 0;
     left: 2rem;
     color: $texte;
   }
-  button{
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background-color: transparent;
-    color: $texte;
-    border-color: $fond;
-    font-size: 1.5rem;
-    font-weight: 500;
-    &:hover{
-      opacity: 0.6;
-      cursor: pointer;
-    }
-  
+  .btn-close{
+    @include btnClose($texteClear, $texte);
   }
 }
-.btn-close{
-  @include btnClose($fond, $fond2);
-}
 .oneDay-box{
+  // width: max-content;
   display: flex;
   justify-content: flex-start;
-  gap: 1.4rem;  
+  gap: 1rem;  
 }
 .oneDay-labels{
   width: 10rem;
   display: flex;
   flex-direction: column;
-  color: $texte;
+  color: $texteClear;
+  margin-top: 1rem;
   h4{
     width: 8.5rem;
     font-family: $paragraphe;
@@ -76,9 +66,21 @@ h4{
   }
 }
 .oneDay-card{
-  width: 4.5rem;
+  width: 6rem;
   display: flex;
   flex-direction: column;
+  background: $fond2;
+  padding:  0 0.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 0px 30px -9px $fond; //rgba(0,0,0,0.75);
+  img{
+    width: 24px;
+    height: 28px;
+    margin: 0 auto;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
   div{
     display: flex;
     flex-wrap: nowrap;
@@ -86,7 +88,7 @@ h4{
 
     :nth-child(2){
       font-weight: 100;
-      color: $texte;
+      color: $texteClear;
     }
   }
   :nth-child(1) h4{
