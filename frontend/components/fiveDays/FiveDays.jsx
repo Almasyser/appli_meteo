@@ -13,7 +13,7 @@ import "./fiveDays.css";
 
   function FiveDays({setShowFive, showFive}){
     const [showOneDay, setShowOneDay] = useState(false);
-    const [showDetailsDay, setShowDetailsDay] = useState(false);
+    
     const [dayId, setDayId] = useState(0);
     const [dayIndex] = useState([1,2,3,4,5,6]);
     const { myArray } = useArray();
