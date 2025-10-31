@@ -4,11 +4,12 @@
   position: absolute;
   top: 10%;
   left: 0;
-  width: 100%;
+  max-width: 100%;
+  width: 40rem;
   height: 180px;
   transform: translateX(-105%);
   transition: all $transition ease-in-out;
-  background-color:$windFond;
+  background-color:$fond2;
   z-index: 1;
   &.active{
     transform: translateX(0);
@@ -31,7 +32,7 @@
 }
 .city-comment{
   //   @mixin textMedium($fm,       $fc,     $fw,    $fs,    $ls,     $pl,   $mt, $mb)
-  @include textMedium($paragraphe, $texte, normal, 0.7rem, 0.01rem, 0.5rem, 0rem, 0rem);
+  @include textMedium($paragraphe, $texteDark, normal, 0.7rem, 0.01rem, 0.5rem, 0rem, 0rem);
   margin-top: 2vh;
   margin-left: 1rem;
 }
@@ -78,16 +79,15 @@
   left: 1.4rem;
   max-height: 64vh;
   padding: 0.4rem 1rem 0.4rem 0.1rem;
-  background: $fond;
+  background: $fond2;
   z-index: 1000;
   overflow-y: scroll;
-  scrollbar-color: $texte ;
+  scrollbar-color: $fond $fond2 ;
   scrollbar-width: thin;
   scroll-padding-left: 0.5rem;
   cursor: pointer;
 }
 .city-item{
-  
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -103,7 +103,7 @@
   margin: 0;
   padding: 0.2rem 0 0.4rem 0;
   border-bottom: 1px solid $texte;
-  @include textMedium($paragraphe, $texte, normal, 1rem, 0.03rem, 0.3rem, 0.3rem, 0.2rem);
+  @include textMedium($paragraphe, $texteDark, normal, 1rem, 0.03rem, 0.3rem, 0.3rem, 0.2rem);
   &.department{
     text-align: right;
   }

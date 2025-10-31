@@ -1,3 +1,4 @@
+@use "./_colors" as *;
 // font-family a:
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -32,31 +33,25 @@ $viaoda: "Viaoda Libre", serif;
   src: url("./count/COUNT.otf") format('opentype');
 }
 $digital: "digital", sans-serif;
-// palette
-$prim: #1a86b5;
-$seco:#87cfe2;
-$center:#a3cfdb;
-$foor: #6391bb;
-$fiiv:#3a2e61;
 
-
-// DEFINITION DES VARIALBLES
+// DEFINITION DES VARIABLES
 
 // fontes
 $titre: $Cabin;
 $paragraphe: $Alegreya;
 $clock: $digital;
 
-// couleirs
-$fond: $fiiv;
-$fond2: $foor;
-$sectionFond: $seco;
-$windFond: $prim;
-$texte: $center;
-$texteClear: $fiiv;
+// couleurs
+$fond: var(--blue-950);
+$fond2: var(--blue-800);
+$sectionFond: var(--blue-600);
+$windFond: var(--blue-500);
+$texte: var(-blue-200);
+$texteClear: var(--blue-50);
+$texteDark: var(--blue-900);
 
 // Effets
-$transition: 1s;
+$transition: 0.5s;
 
 
 

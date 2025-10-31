@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PropTypes } from 'prop-types';
 import axios from 'axios';
 import useLocations from "../../hooks/useLocations";
+import useFocus from "../../hooks/useFocus";
 import cross from "../../assets/Cross-cancel.png";
 import clear from "../../assets/Clear_green-128.png";
 import "./selectCity.css";
@@ -10,6 +11,7 @@ function SelectCity ({setShowSelect, showSelect}){
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
   const [cityName, setCityName] = useState("");
   const [cityList, setCityList] = useState("");
+  const  inputRef=useFocus();
   const handleChoiceCity = async ()=>{
     try {
         const response = await axios.get(`${api_url}/datasbycity/${cityName}`);
@@ -48,7 +50,7 @@ function SelectCity ({setShowSelect, showSelect}){
         <img src={cross} className="city-close" onClick={handleVisible}/>
       </div>
       <div className="input-box">
-        <input autoFocus type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
+        <input ref={inputRef} type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
         {(cityName !== "")?
           <>
             <img src={clear} className="city-btn-cancel" type="button" onClick={handleChoiceCancel} />

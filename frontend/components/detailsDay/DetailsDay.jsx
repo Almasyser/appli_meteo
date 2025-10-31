@@ -8,7 +8,6 @@ function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
   const [myArrayKeys, setMyArrayKeys] = useState();
   const [interval, setInterval] = useState(4);
   const intervals =[0,4,8,12,16,20,24];
-
   const handleClick=()=>{
     setShowDetailsDay(false);
   }
@@ -21,8 +20,9 @@ function DetailsDay({btn, showDetailsDay, setShowDetailsDay}){
     <section className={showDetailsDay? "details-container active":"details-container"}>
       <span className="details-entete">
         <h3>Prévisions du jour. Intervale:</h3>
-        <button type="button" onClick={()=> setInterval(2)}>2 heures</button>
-        <button type="button" onClick={()=> setInterval(4)}>4 heures</button>
+        <button type="button" onClick={()=> setInterval(2)}>2</button>
+        <button type="button" onClick={()=> setInterval(4)}>4</button>
+        <h3>heures</h3>
         <button className="btn-close" onClick={handleClick}>X</button>
       </span>
       <div className="details-label">
