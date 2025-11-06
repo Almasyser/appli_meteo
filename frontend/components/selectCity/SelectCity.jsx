@@ -34,6 +34,7 @@ function SelectCity ({setShowSelect, showSelect}){
     updateDepartment_name(el.department_name);
     updateRegion_name(el.region_name);
     handleVisible();
+    setStorage("city_code", el.city_code);
   }
   const handleVisible = ()=>{
     handleChoiceCancel();
@@ -42,6 +43,9 @@ function SelectCity ({setShowSelect, showSelect}){
   const handleChoiceCancel = ()=>{
     setCityList("");
     setCityName("");
+  }
+  const setStorage= (key, value) =>{
+    localStorage.setItem(key, value);
   }
   return(
     <div className={showSelect? "city-container active":"city-container"}>

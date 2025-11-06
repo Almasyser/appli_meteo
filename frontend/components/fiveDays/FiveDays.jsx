@@ -46,7 +46,7 @@ import "./fiveDays.css";
                     <h4>{myArray.hourly.precipitation_probability[(btn*24)-24, btn*24]}%</h4>
                   </span>
                   <img ref={ref} className="img-details" src={fleche_bas_128} alt="@@" title={btn} onClick={(title)=>handleClick(title)} />
-                  <h4 className="btn-details" title={btn} onClick={()=> setShowDetailsDay(true)}>plus de détails</h4>
+                  {/* <h4 className="btn-details" title={btn} onClick={()=> setShowDetailsDay(true)}>plus de détails</h4> */}
                 </section>
                 </>
               }
@@ -54,7 +54,7 @@ import "./fiveDays.css";
           )})}
       </div>
       <OneDay btn={dayId} showOneDay={showOneDay} setShowOneDay={setShowOneDay} />
-      {showDetailsDay && <DetailsDay btn={dayId} showDetailsDay={showDetailsDay} setShowDetailsDay={setShowDetailsDay} />}
+      {/* {showDetailsDay && <DetailsDay btn={dayId} showDetailsDay={showDetailsDay} setShowDetailsDay={setShowDetailsDay} />} */}
     </>
     )   
   }
