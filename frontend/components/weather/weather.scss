@@ -1,15 +1,14 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 .weather-container{
   height: max-content;
   display: flex;
   flex-direction: column;
 }
-.weather-title{
-  display: flex;
-  justify-content: space-evenly;
-  button{
-    width: 10rem;
-  }
+.weather-text{
+  // textMedium($fm, $fs, $fc, $fw, $ls, $pl, $mt, $mb)
+  @include textMedium($titre, 1.5rem, $texteClear, 500, 0.05rem, 0, 0, 0);
+  text-align: center;
 }
 .weather-box{
   width: 100%;
@@ -19,10 +18,10 @@
   justify-content: space-evenly;
   .nebulosite-box{
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     margin: 8px;
-    border-radius: 2rem;
+    border-radius: 0.2rem;
     z-index: 0;
     &.is-day{
       background-color: rgba(255,255,0,0.01);
@@ -39,7 +38,7 @@
   }
   .temperature{
     width: 40%;
-    font-size: 3rem;
+    font-size: 2.4rem;
     text-align: center;
     color: $texte;
     z-index: 0;

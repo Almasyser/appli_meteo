@@ -242,8 +242,8 @@
 .location {
   z-index: 20;
   position: absolute;
-  top: 38%;
-  left: 0;
+  top: 28%;
+  left: -5%;
   transform: translateX(-105%);
   transition: all 0.5s ease-in-out;
 }

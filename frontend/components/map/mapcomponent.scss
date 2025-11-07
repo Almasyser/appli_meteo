@@ -3,8 +3,8 @@
 .location{
   z-index: 20;
   position: absolute;
-  top: 38%;
-  left: 0;
+  top: 28%;
+  left: -5%;
   transform: translateX(-105%);
   transition: all $transition ease-in-out;
   &.active{

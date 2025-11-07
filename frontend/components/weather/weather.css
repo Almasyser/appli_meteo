@@ -246,12 +246,16 @@
   flex-direction: column;
 }
 
-.weather-title {
-  display: flex;
-  justify-content: space-evenly;
-}
-.weather-title button {
-  width: 10rem;
+.weather-text {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--blue-300);
+  text-align: center;
 }
 
 .weather-box {
@@ -264,10 +268,10 @@
 }
 .weather-box .nebulosite-box {
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   margin: 8px;
-  border-radius: 2rem;
+  border-radius: 0.2rem;
   z-index: 0;
 }
 .weather-box .nebulosite-box.is-day {
@@ -284,7 +288,7 @@
 }
 .weather-box .temperature {
   width: 40%;
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-align: center;
   color: var(--blue-50);
   z-index: 0;

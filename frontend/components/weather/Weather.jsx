@@ -35,9 +35,7 @@ function ModalWeather() {
   
   return (
     <div className="weather-container">
-      <div className="weather-title">
-        <p className="weather-text">Météo actuelle: {nebulositeText}</p>
-      </div>
+      <p className="weather-text">Météo actuelle: {nebulositeText}</p>
       {nebulositeImg && 
         <div className="weather-box">
           <div className="nebulosite-box">

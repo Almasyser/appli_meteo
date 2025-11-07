@@ -3,15 +3,15 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 160px;
+  height: 140px;
   opacity: 0.96;
   font-family: $titre;
   background: $windFond;
 }
 .rose-box{
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,13 +21,13 @@
   .rose-des-vents{
     position: absolute;
     z-index: 0;
-    width: 96px;
-    height: 96px;
+    width: 80px;
+    height: 80px;
   }
   .rose-fleche{
     z-index: 2;
-    width: 64px; 
-    height: 64px;
+    width: 48px; 
+    height: 48px;
     transition: transform 0.6s ease;
     @for $i from 0 through 360{
       &.rotate-#{$i}{

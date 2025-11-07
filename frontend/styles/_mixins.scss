@@ -1,4 +1,4 @@
-@mixin textMedium($fm, $fc, $fw, $fs, $ls, $pl, $mt, $mb){
+@mixin textMedium($fm, $fs, $fc, $fw, $ls, $pl, $mt, $mb){
   font-family: $fm;
   font-size: $fs;
   font-weight: $fw;

@@ -240,12 +240,14 @@
   src: url("./count/COUNT.otf") format("opentype");
 }
 .fiveDays-box {
+  width: 100%;
+  height: 60%;
   z-index: 210;
   position: absolute;
-  top: 28%;
-  left: 0;
-  overflow-x: scroll;
-  scrollbar-color: var(--blue-900) var(--blue-900);
+  top: 24%;
+  left: -5%;
+  overflow-x: auto;
+  scrollbar-color: var(--blue-300) var(--blue-900);
   overflow-y: hidden;
   transform: translateX(-105%);
   transition: all 0.5s ease-in-out;
@@ -266,7 +268,8 @@
 
 .fiveDays-card {
   width: 7rem;
-  height: 450px;
+  height: -moz-max-content;
+  height: max-content;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
