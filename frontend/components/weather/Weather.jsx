@@ -1,6 +1,9 @@
 // src/components/ModalWeather.js
 import { useEffect, useState } from "react";
-import ModalWind from "../wind/Wind";
+import ConvertWindDirection  from "../utils/ConvertWindDirection";
+import rose_ciel from "../../assets/Rose Bleue.png";
+import rose_fleche from "../../assets/Rose_fleche.png";
+import SelectWindLabel from "../utils/SelectWindLabel";
 import ConvertDateToCustom from "../utils/ConvertDateToCustom";
 import SelectNebulositeImg from "../utils/SelectNebulositeImg";
 import tags from "../../assets/tags";
@@ -35,22 +38,35 @@ function ModalWeather() {
   
   return (
     <div className="weather-container">
-      <p className="weather-text">Météo actuelle: {nebulositeText}</p>
-      {nebulositeImg && 
-        <div className="weather-box">
-          <div className="nebulosite-box">
-            <img className="nebulosite" src={nebulositeImg} alt={nebulositeText} />
-          </div>
-          <p className="temperature">{Math.round(myArray.myArray.hourly?.temperature_2m[heure]) || "##"}&nbsp;°C</p>
+      <section className="wind-container">
+        <p className="wind-state"><SelectWindLabel windSpeed={Math.round(myArray.myArray.hourly?.wind_speed_10m[heure])}/>
+        <ConvertWindDirection angle={myArray.myArray.hourly?.wind_direction_10m[heure]} /></p>
+        <p className="wind-text">{Math.round(myArray.myArray.hourly?.wind_speed_10m[heure])} km/h</p>
+        <span className="rose-box">
+          <img src={rose_fleche} className={`rose-fleche rotate-${myArray.myArray.hourly?.wind_direction_10m[heure]}`} alt="fleche" />
+          <img src={rose_ciel} className="rose-des-vents" alt="rose" />
+        </span>
+      </section>
+      <section className="nebulosite-container">
+        <p className="nebulosite-text">{nebulositeText}</p>
+        <p className="temperature">{Math.round(myArray.myArray.hourly?.temperature_2m[heure]) || "##"}&nbsp;°C</p>
+        <div className="nebulosite-box">
+          <img className="nebulosite" src={nebulositeImg} alt={nebulositeText} />
         </div>
-      }
-      {myArray && heure && <ModalWind
-        wind_speed={myArray.myArray.hourly?.wind_speed_10m[heure]}
-        wind_direction={myArray.myArray.hourly?.wind_direction_10m[heure]}
-        probability={myArray.myArray.hourly?.precipitation_probability[heure]}
-      />}
+      </section>
+      <section className="proba-container">
+        <p className="proba-title">Probabilité de pluie</p>
+        <p className="proba-text">{myArray.myArray.hourly?.precipitation_probability[heure]}%</p>
+      </section>
     </div>
+
+
   );
 }
 export default ModalWeather;
 
+      // {myArray && heure && <ModalWind
+      //   wind_speed={myArray.myArray.hourly?.wind_speed_10m[heure]}
+      //   wind_direction={myArray.myArray.hourly?.wind_direction_10m[heure]}
+      //   probability={myArray.myArray.hourly?.precipitation_probability[heure]}
+      // />}

@@ -4,8 +4,6 @@ import omm_codes from "../../json/omm_codes.json";
 import useArray from "../../hooks/useArray";
 import DateToHour from "../utils/DateToHour";
 import tags from "../../assets/tags";
-
-import Camenbert from "../camenbert/Camenbert";
 import "./oneday.css";
 
 function OneDay({btn, showOneDay, setShowOneDay}){

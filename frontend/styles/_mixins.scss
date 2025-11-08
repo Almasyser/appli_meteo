@@ -1,3 +1,4 @@
+// textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
 @mixin textMedium($fm, $fs, $fc, $fw, $ls, $pl, $mt, $mb){
   font-family: $fm;
   font-size: $fs;

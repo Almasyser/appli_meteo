@@ -1,29 +1,29 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 .header-container{
   width: 100%;
   height: 4rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background: transparent;
   .header-date{
-    font-size: 1.2rem;
-    color: $texte;
-    padding-left: 0.5rem;
+    // textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
+    @include textMedium($paragraphe, 1rem, $texte, 500, 0.02, 0, 0, 0);
   }
   .header-hour-box{
     width: 14%;
     display: flex;
-    font-family: $titre;
+
     .header-hour{
+      // textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
+      @include textMedium($titre, 1.4rem, $texte, 500, 0.2, 0, 0, 0);
       width: max-content;
-      font-size: 1.8rem;
-      letter-spacing: 0.2rem;
-      color: $texte;
+   
     }
     .header-hour-dots{
-      font-size: 1.8rem;
-      color: $texte;
+      // textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
+      @include textMedium($titre, 1.4rem, $texte, 500, 0.02, 0, 0, 0);
       animation: infinite ease-out;
       animation-name: clignote;
       animation-duration: 1s;
@@ -46,10 +46,10 @@
     }
     .header-second{
       width: max-content;
-      padding-top: 1.3rem;
-      font-size: 0.8rem;
-      letter-spacing: 0.05rem;
-      color: $texte;
+      padding-top: 0.3rem;
+      // textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
+      @include textMedium($titre, 0.6rem, $texte, 500, 0.05, 0, 0, 0);
+
     }
   }
 }

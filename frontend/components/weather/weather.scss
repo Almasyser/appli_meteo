@@ -3,44 +3,101 @@
 .weather-container{
   height: max-content;
   display: flex;
-  flex-direction: column;
-}
-.weather-text{
-  // textMedium($fm, $fs, $fc, $fw, $ls, $pl, $mt, $mb)
-  @include textMedium($titre, 1.5rem, $texteClear, 500, 0.05rem, 0, 0, 0);
-  text-align: center;
-}
-.weather-box{
-  width: 100%;
-  height: max-content;
-  display: flex;
-  align-items: center;
   justify-content: space-evenly;
-  .nebulosite-box{
+}
+.wind-container{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  .wind-state{
+    @include textMedium($titre, 0.8rem, $texte, 200, 0.02rem, 0, 0, 0);
+    margin-bottom: 0.2rem;
+    text-align: center;
+  }
+  .wind-text{
+    @include textMedium($titre, 0.8rem, $texte, 300, 0.05rem, 0, 0, 0);
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+  .rose-box{
     position: relative;
-    width: 120px;
-    height: 120px;
-    margin: 8px;
-    border-radius: 0.2rem;
-    z-index: 0;
-    &.is-day{
-      background-color: rgba(255,255,0,0.01);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    .rose-des-vents{
+      position: absolute;
+      z-index: 0;
+      width: 80px;
+      height: 80px;
     }
-    &.is-night{
-      background-color: rgba(0, 9, 63,0.1);
+    .rose-fleche{
+      z-index: 2;
+      width: 48px; 
+      height: 48px;
+      transition: transform 0.6s ease;
+      @for $i from 0 through 360{
+        &.rotate-#{$i}{
+          transform: rotate(#{$i}deg);
+        }
+      }
     }
+  }
+}
+.nebulosite-container{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: center;
+  .nebulosite-text{
+    // textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
+    @include textMedium($titre, 0.8rem, $texte, 300, 0.05rem, 0, 0, 0);
+    text-align: center;
+  }
+  .nebulosite-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0;
     .nebulosite{
-      width: 100%;
-      height: 100%;
-      scale: 0.8;
+      width: 80px;
+      height: 80px;
+      scale: 1;
       z-index: 0;
     }
   }
   .temperature{
-    width: 40%;
-    font-size: 2.4rem;
-    text-align: center;
-    color: $texte;
+// textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
+  @include textMedium($titre, 1rem, $texte, 400, 0.05rem, 0, 1.4rem, 0);
     z-index: 0;
   }
 }
+.proba-container{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .proba-title{
+    // textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
+    @include textMedium($titre, 0.8rem, $texte, 200, 0.05rem, 0, 0, 0);
+    text-align: center;
+  }
+  .proba-text{
+    // textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
+    @include textMedium($titre, 1.2rem, $texte, 400, 0.05rem, 0, 0, 0);
+    text-align: center;
+    margin-top: 25%;
+  }
+
+}
+
+
+
+

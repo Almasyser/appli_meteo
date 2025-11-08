@@ -36,11 +36,13 @@ function NavBar() {
       <button onClick={handleSelect}>Changer</button>
       <button onClick={handleFive}>Details</button>
       <button onClick={handleMap}>Carte</button>
-      <button onClick={()=> setShowDetailsDay(!showDetailsDay)}>Données</button>
+      <button onClick={()=> setShowCamenbert(!showCamenbert)}>fontes</button>
+      {/* <button onClick={()=> setShowDetailsDay(!showDetailsDay)}>Données</button> */}
     </section>
     {<SelectCity setShowSelect={setShowSelect} showSelect={showSelect}/>}
     {myArray && <FiveDays setShowFive={setShowFive} showFive={showFive}/>}
     {<MapComponent lat={latitude} long={longitude} setShowMap={setShowMap} showMap={showMap}/>}
+
     </>
   )
 }

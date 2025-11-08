@@ -1,31 +1,15 @@
 @use "./_colors" as *;
 // font-family a:
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-// font family b
-@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Imperial+Script&family=Kavivanar&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Noto+Sans+JP:wght@100..900&family=Rozha+One&family=Viaoda+Libre&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 // font-family a: 
-$Roboto: "Roboto", sans-serif;
-$Merriweather: "Merriweather", serif;
-$Montserrat: "Montserrat", sans-serif;
-$Playfair: "Playfair Display", serif;
-$Oswald: "Oswald", sans-serif;
-$Quicksand: "Quicksand", sans-serif;
-$Bebas: "Bebas Neue", sans-serif;
-$Nunito: "Nunito", sans-serif;
-$Cabin: "Cabin", sans-serif;
-$Alegreya: "Alegreya", serif;
+$Roboto: "Roboto", sans-serif; //titre
+$Montserrat: "Montserrat", sans-serif; // sous titres
+$Quicksand: "Quicksand", sans-serif; // texte
+$Bebas: "Bebas Neue", sans-serif; // titre gras
+$Noto: "Noto Sans JP", sans-serif; // texte en valeur
 
-// font family b
-$imperial: "Imperial Script", cursive;
-$kavivanar: "Kavivanar", cursive;
-$rozha: "Rozha One", serif;
-$marienda: "Merienda", cursive;
-$noto: "Noto Sans JP", sans-serif;
-$lora: "Lora", serif;
-$faculty: "Faculty Glyphic", sans-serif;
-$viaoda: "Viaoda Libre", serif;
+
+
 
 // font digital
 @font-face {
@@ -37,8 +21,8 @@ $digital: "digital", sans-serif;
 // DEFINITION DES VARIABLES
 
 // fontes
-$titre: $Cabin;
-$paragraphe: $noto;
+$titre: $Roboto;
+$paragraphe: $Quicksand;
 $clock: $digital;
 
 // couleurs

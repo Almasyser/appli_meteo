@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Imperial+Script&family=Kavivanar&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Noto+Sans+JP:wght@100..900&family=Rozha+One&family=Viaoda+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --white: #fff;
   --grey-50: #f9fafb;
@@ -243,7 +242,7 @@ h4 {
   line-height: 2.2rem;
   text-align: right;
   margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 0.9rem;
   font-weight: 100;
 }
@@ -311,7 +310,7 @@ h4 {
 }
 .oneDay-labels h4 {
   width: 8.5rem;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   text-align: right;
@@ -346,7 +345,7 @@ h4 {
 .oneDay-card :nth-child(1) h4 {
   margin: auto;
   color: var(--blue-50);
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 .oneDay-card :nth-child(9) {
   font-size: 0.8rem;

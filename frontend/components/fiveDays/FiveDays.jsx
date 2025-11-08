@@ -13,7 +13,7 @@ import "./fiveDays.css";
 
   function FiveDays({setShowFive, showFive}){
     const [showOneDay, setShowOneDay] = useState(false);
-    
+    const [noYear, setNoYear] = useState(false);
     const [dayId, setDayId] = useState(0);
     const [dayIndex] = useState([1,2,3,4,5,6]);
     const { myArray } = useArray();
@@ -35,7 +35,7 @@ import "./fiveDays.css";
                 <section className="fiveDays-card" >
                   <div className="fiveDays-date">
                     <p className="fiveDays-dayOfWeek"><DayOfWeek today={myArray.daily.sunset[btn]}/></p>
-                    <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={myArray.daily.sunset[btn]} /></p>
+                    {/* <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={myArray.daily.sunset[btn]} /></p> */}
                   </div>
                   <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="@"/><p><DateToHour today={myArray.daily.sunrise[btn]}/></p></span>
                   <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="@"/><p><DateToHour today={myArray.daily.sunset[btn]}/></p></span>
