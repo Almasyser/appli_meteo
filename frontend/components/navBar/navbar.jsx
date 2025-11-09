@@ -11,7 +11,7 @@ function NavBar() {
   const { myArray } = useArray();
   const {latitude, longitude} = useLocations();
   const [showSelect, setShowSelect] = useState(false);
-  const [showFive, setShowFive] = useState(false);
+  const [showFive, setShowFive] = useState(true);
   const [showMap, setShowMap] = useState(false);
   const [showDetailsDay, setShowDetailsDay] = useState(false);
 
@@ -39,7 +39,7 @@ function NavBar() {
       <button onClick={()=> setShowCamenbert(!showCamenbert)}>fontes</button>
       {/* <button onClick={()=> setShowDetailsDay(!showDetailsDay)}>Données</button> */}
     </section>
-    {<SelectCity setShowSelect={setShowSelect} showSelect={showSelect}/>}
+    {<SelectCity setShowSelect={setShowSelect} showSelect={showSelect} setShowFive={setShowFive}/>}
     {myArray && <FiveDays setShowFive={setShowFive} showFive={showFive}/>}
     {<MapComponent lat={latitude} long={longitude} setShowMap={setShowMap} showMap={showMap}/>}
 

@@ -6,7 +6,7 @@ import useFocus from "../../hooks/useFocus";
 import cross from "../../assets/Cross-cancel.png";
 import clear from "../../assets/Clear_green-128.png";
 import "./selectCity.css";
-function SelectCity ({setShowSelect, showSelect}){
+function SelectCity ({setShowSelect, showSelect, setShowFive}){
   const api_url = import.meta.env.VITE_API_URL;
   const {updateLatitude, updateLongitude, updateCity_code, updateDepartment_code, updateDepartment_name, updateRegion_name } = useLocations();
   const [cityName, setCityName] = useState("");
@@ -34,6 +34,7 @@ function SelectCity ({setShowSelect, showSelect}){
     updateDepartment_name(el.department_name);
     updateRegion_name(el.region_name);
     handleVisible();
+    setShowFive(true);
     setStorage("city_code", el.city_code);
   }
   const handleVisible = ()=>{

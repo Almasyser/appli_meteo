@@ -4,8 +4,9 @@ h4{
   line-height: 2.2rem;
   text-align: right;
   margin: 0;
+  padding: 0 0.2rem;
   font-family: $paragraphe;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 100;
 }
 .oneDay-container{
@@ -13,9 +14,9 @@ h4{
   position: absolute;
   top: 24%;
   left: 0;
-  width: 100%;
-  height: 60%;
-  overflow: scroll;
+  width: 90vw;
+  height: 62%;
+  overflow-y: scroll;
   scrollbar-color: $texteClear $windFond ;
   transform: translateX(-105%);
   margin-bottom: 2rem;
@@ -30,47 +31,52 @@ h4{
 .oneDay-entete{
   position: absolute;
   top: 0;
-  width: 20%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   padding: 0 2rem;
   h3{
     top: 0;
     left: 2rem;
     color: $texte;
   }
-  .btn-close{
-    @include btnClose($texteClear, $texte);
+  .btn-retour{
+    @include btnSimple(1.2rem, 2rem, 0.3rem, 1rem);
   }
 }
-.oneDay-box{
-  // width: max-content;
+.oneDays-datas{
   display: flex;
   justify-content: flex-start;
-  gap: 1rem;  
+  gap: 1rem;
+
 }
 .oneDay-labels{
-  width: 10rem;
+  position:sticky;
+  min-width: 8rem;
   display: flex;
   flex-direction: column;
   color: $texteClear;
   margin-top: 1rem;
   h4{
-    width: 8.5rem;
+    width: 100%;
     font-family: $paragraphe;
     font-size: 0.9rem;
     font-weight: 400;
     text-align: right;
   }
 }
+.oneDay-box{
+  display: flex;  
+}
 .oneDay-card{
-  width: 6rem;
+  min-width: 5rem;
   display: flex;
   flex-direction: column;
   background: $fond2;
   padding:  0 0.5rem;
   margin-top: 1rem;
+  margin-right: 0.5rem;
   border-radius: 4px;
   box-shadow: 0px 0px 30px -9px $fond; //rgba(0,0,0,0.75);
   img{

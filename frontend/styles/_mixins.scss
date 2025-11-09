@@ -1,3 +1,4 @@
+@use "./variables" as *;
 // textMedium(family, size, color, weight, letterSpcg, p left, m top, m bottom)
 @mixin textMedium($fm, $fs, $fc, $fw, $ls, $pl, $mt, $mb){
   font-family: $fm;
@@ -19,6 +20,21 @@
   background: transparent;
   &:hover{
     color: $hover;
+    cursor: pointer;
+  }
+}
+@mixin btnSimple($fs, $ml, $pw, $ph){
+  margin-left: $ml;
+  padding: $pw $ph;
+  border: 1px solid $texteClear;
+  border-radius: 16px;
+  background: transparent;
+  color: $texteClear;
+  font-size: $fs;
+  transition: 0.2s ease-in-out;
+  &:hover{
+    border-color: $texte;
+    color: $texte;
     cursor: pointer;
   }
 }

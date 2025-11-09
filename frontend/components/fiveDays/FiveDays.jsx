@@ -17,7 +17,6 @@ import "./fiveDays.css";
     const [dayId, setDayId] = useState(0);
     const [dayIndex] = useState([1,2,3,4,5,6]);
     const { myArray } = useArray();
-    const ref = useRef()
     const handleClick=(e)=>{
       // setShowFive(false);
       setShowOneDay(true);
@@ -45,7 +44,7 @@ import "./fiveDays.css";
                     <img src={parapluie} alt="#" />
                     <h4>{myArray.hourly.precipitation_probability[(btn*24)-24, btn*24]}%</h4>
                   </span>
-                  <img ref={ref} className="img-details" src={fleche_bas_128} alt="@@" title={btn} onClick={(title)=>handleClick(title)} />
+                  <button className="btn-details" onClick={(title)=>handleClick(title)}>Détails</button>
                   {/* <h4 className="btn-details" title={btn} onClick={()=> setShowDetailsDay(true)}>plus de détails</h4> */}
                 </section>
                 </>

@@ -37,20 +37,9 @@
   align-items: center;
   justify-content: flex-start;
   background-color: $fond;
-  .img-details{
-    scale: 0.6;
-    &:hover{
-    opacity: 0.8;
-    cursor: pointer;
-  }
-  }
+  
   .btn-details{
-    border: none;
-    font-size: 0.8rem;
-    color: $texte;
-    &:hover{
-    opacity: 0.8;
-    cursor: pointer;
+    @include btnSimple(0.8rem, 0, 0.3rem, 0.8rem);
   }
   }
   .fiveDays-date{
@@ -73,7 +62,7 @@
       text-align: center;
     }
   }
-}
+
 .fiveDays-ephemeride{
   width: 100%;
   padding-top: 0.6rem;

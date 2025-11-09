@@ -276,28 +276,28 @@
   justify-content: flex-start;
   background-color: var(--blue-950);
 }
-.fiveDays-card .img-details {
-  scale: 0.6;
-}
-.fiveDays-card .img-details:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
 .fiveDays-card .btn-details {
-  border: none;
+  margin-left: 0;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--blue-300);
+  border-radius: 16px;
+  background: transparent;
+  color: var(--blue-300);
   font-size: 0.8rem;
-  color: var(--blue-50);
+  transition: 0.2s ease-in-out;
 }
 .fiveDays-card .btn-details:hover {
-  opacity: 0.8;
+  border-color: var(--blue-50);
+  color: var(--blue-50);
   cursor: pointer;
 }
-.fiveDays-card .fiveDays-date {
+
+.fiveDays-date {
   width: 100%;
   margin-bottom: 0.4rem;
   background-color: var(--blue-950);
 }
-.fiveDays-card .fiveDays-date .fiveDays-dayOfWeek {
+.fiveDays-date .fiveDays-dayOfWeek {
   font-size: 16px;
   font-weight: 200;
   color: var(--blue-50);
@@ -305,7 +305,7 @@
   padding: 0.5rem;
   text-align: center;
 }
-.fiveDays-card .fiveDays-date .fiveDays-dateJMA {
+.fiveDays-date .fiveDays-dateJMA {
   font-size: smaller;
   margin: 0;
   padding-bottom: 0.5rem;

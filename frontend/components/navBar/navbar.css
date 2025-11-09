@@ -249,7 +249,7 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--blue-950);
-  box-shadow: 0px 0px 6px 2px var(--blue-50);
+  box-shadow: 0px 0px 6px 2px var(--blue-300);
 }
 .navbar button {
   position: relative;
