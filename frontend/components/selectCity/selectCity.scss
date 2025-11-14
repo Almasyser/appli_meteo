@@ -32,7 +32,7 @@
 }
 .city-comment{
   //   @mixin textMedium($fm,       $fc,     $fw,    $fs,    $ls,     $pl,   $mt, $mb)
-  @include textMedium($paragraphe, $texte, normal, 0.7rem, 0.01rem, 0.5rem, 0rem, 0rem);
+  @include textMedium($paragraphe, $texte, normal, 0.5rem, 0.01rem, 0.5rem, 0rem, 0rem);
   margin-top: 2vh;
   margin-left: 1rem;
 }

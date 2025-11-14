@@ -8,7 +8,6 @@ import DetailsDay from "../detailsDay/DetailsDay";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
-import fleche_bas_128 from "../../assets/Fleche bas_128.png"
 import "./fiveDays.css";
 
   function FiveDays({setShowFive, showFive}){
@@ -18,11 +17,12 @@ import "./fiveDays.css";
     const [dayIndex] = useState([1,2,3,4,5,6]);
     const { myArray } = useArray();
     const handleClick=(e)=>{
-      // setShowFive(false);
       setShowOneDay(true);
       console.log("///",e.target.title);
-      setDayId(e.target.title);
+      const temp = e.target.title;
+      temp && setDayId(temp);
     }
+     
     return (
       <>
       <div className={showFive? "fiveDays-box active":"fiveDays-box"}>
@@ -38,14 +38,14 @@ import "./fiveDays.css";
                   </div>
                   <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="@"/><p><DateToHour today={myArray.daily.sunrise[btn]}/></p></span>
                   <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="@"/><p><DateToHour today={myArray.daily.sunset[btn]}/></p></span>
+                  <p className="fiveDays-temp">{myArray.daily.apparent_temperature_max[btn]}°C</p>
                   <p className="fiveDays-tendance">{omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].text}</p>
-                  <img src={tags[omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].file]} alt="==="/>
+                  <img className="fiveDays-nuage" src={tags[omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].file]} alt="==="/>
                   <span className="fiveDays-rain-box">
                     <img src={parapluie} alt="#" />
                     <h4>{myArray.hourly.precipitation_probability[(btn*24)-24, btn*24]}%</h4>
                   </span>
-                  <button className="btn-details" onClick={(title)=>handleClick(title)}>Détails</button>
-                  {/* <h4 className="btn-details" title={btn} onClick={()=> setShowDetailsDay(true)}>plus de détails</h4> */}
+                  <button className="btn-details" title={btn} onClick={handleClick}>Détails</button>
                 </section>
                 </>
               }

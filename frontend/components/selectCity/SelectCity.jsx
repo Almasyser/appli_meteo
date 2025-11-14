@@ -51,8 +51,8 @@ function SelectCity ({setShowSelect, showSelect, setShowFive}){
   return(
     <div className={showSelect? "city-container active":"city-container"}>
       <div className="entete">
-        <p className="city-comment">Ville, village &#40;min 4 premières lettres&#41; ou Code Postal</p>
-        <img src={cross} className="city-close" onClick={handleVisible}/>
+        <p className="city-comment">Ville, village &#40;min 4 premières lettres.</p>
+        <img src={cross} className="city-close" alt="fermer" onClick={handleVisible}/>
       </div>
       <div className="input-box">
         <input ref={inputRef} type="text" onChange={handleChangeCity} placeholder="Ville" value={cityName}/>
