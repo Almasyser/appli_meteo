@@ -1,6 +1,5 @@
 import ConvertWindDirection  from "../utils/ConvertWindDirection";
-import rose_ciel from "../../assets/Rose Bleue.png";
-import rose_fleche from "../../assets/Rose_fleche.png";
+import picts from "../../assets";
 import SelectWindLabel from "../utils/SelectWindLabel";
 import "./wind.css";
 function ModalWind (props) {
@@ -8,8 +7,8 @@ function ModalWind (props) {
   return(
     <div className="wind-container">
       <span className="rose-box">
-        <img src={rose_fleche} className={`rose-fleche rotate-${wind_direction}`} alt="fleche" />
-        <img src={rose_ciel} className="rose-des-vents" alt="rose" />
+        <img src={picts.rose_fleche} className={`rose-fleche rotate-${wind_direction}`} alt="fleche" />
+        <img src={picts.rose_bleue} className="rose-des-vents" alt="rose" />
       </span>
       <span className="wind-details">
         <p className="wind-text">{Math.round(wind_speed)} km/h</p>

@@ -1,11 +1,10 @@
 // src/components/ModalWeather.js
 import { useEffect, useState } from "react";
 import ConvertWindDirection  from "../utils/ConvertWindDirection";
-import rose_ciel from "../../assets/Rose Bleue.png";
-import rose_fleche from "../../assets/Rose_fleche.png";
 import SelectWindLabel from "../utils/SelectWindLabel";
 import ConvertDateToCustom from "../utils/ConvertDateToCustom";
 import SelectNebulositeImg from "../utils/SelectNebulositeImg";
+import picts from "../../assets";
 import tags from "../../assets/tags";
 import useArray from "../../hooks/useArray";
 import "./weather.css";
@@ -34,6 +33,7 @@ function ModalWeather() {
       }
     
   }, []);
+  console.log("picts",picts);
   
   return (
     <div className="weather-container">
@@ -42,8 +42,8 @@ function ModalWeather() {
         <ConvertWindDirection angle={myArray.myArray.hourly?.wind_direction_10m[heure]} /></p>
         <p className="wind-text">{Math.round(myArray.myArray.hourly?.wind_speed_10m[heure])} km/h</p>
         <span className="rose-box">
-          <img src={rose_fleche} className={`rose-fleche rotate-${myArray.myArray.hourly?.wind_direction_10m[heure]}`} alt="fleche" />
-          <img src={rose_ciel} className="rose-des-vents" alt="rose" />
+          <img src={picts.rose_fleche} className={`rose-fleche rotate-${myArray.myArray.hourly?.wind_direction_10m[heure]}`} alt="fleche" />
+          <img src={picts.rose_bleue} className="rose-des-vents" alt="rose" />
         </span>
       </section>
       <section className="nebulosite-container">

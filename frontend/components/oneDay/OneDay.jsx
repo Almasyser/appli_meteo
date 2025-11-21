@@ -1,14 +1,8 @@
 
 import hourlyLabels from "../../json/hourlyLabels.json";
-import omm_codes from "../../json/omm_codes.json";
 import useArray from "../../hooks/useArray";
 import DateToHour from "../utils/DateToHour";
-import tags from "../../assets/tags";
-import parapluie from "../../assets/parapluie.png";
-import parapluie_ferme from "../../assets/parapluie_ferme.png";
-import flocon from "../../assets/flocon_blanc.png";
-import gouttes_pluie from "../../assets/gouttes_pluie.png";
-import skieur from "../../assets/skieur.png";
+import picts from "../../assets";
 import SelectWindLabel from "../utils/SelectWindLabel";
 import ConvertWindDirection from "../utils/ConvertWindDirection";
 import "./oneday.css";
@@ -40,20 +34,20 @@ function OneDay({btn, showOneDay, setShowOneDay}){
                 </div> 
 
                 {/* {tags && omm_codes && <img className="oneDay-nuage" src={tags[omm_codes.filter(el => el.code === myArray?.hourly?.weather_code[24])[0].file]} alt="==="/>} */}
+                <div><h4>{myArray?.hourly?.cloud_cover[localId]}</h4><h4>{hourlyLabels[10].unit}</h4></div> 
                 <div className="oneDay-proba">
                   <>
                   {(myArray?.hourly?.precipitation_probability[localId] >= 1)? 
-                    <img src={parapluie} alt="==="/>:<img src={parapluie_ferme} alt="=!="/>
+                    <img src={picts.parapluie} alt="==="/>:<img src={picts.parapluie_ferme} alt="=!="/>
                   }
                   </>
                   <h4>{myArray?.hourly?.precipitation_probability[localId]} {hourlyLabels[3].unit} </h4>
                 </div>
                 <div className="oneDay-levels">
-                  <div><img src={gouttes_pluie} alt="!==" /><h4>{myArray?.hourly?.showers[localId]} {hourlyLabels[5].unit}</h4></div>
-                  <div><img src={flocon} alt="==!" /><h4>{myArray?.hourly?.snowfall[localId]} {hourlyLabels[6].unit}</h4></div>         
-                  <div><img src={skieur} alt="==!" /><h4>{myArray?.hourly?.snow_depth[localId]} {hourlyLabels[7].unit}</h4></div> 
+                  <div><img src={picts.gouttes_pluie} alt="!==" /><h4>{myArray?.hourly?.showers[localId]} {hourlyLabels[5].unit}</h4></div>
+                  <div><img src={picts.flocon_blanc} alt="==!" /><h4>{myArray?.hourly?.snowfall[localId]} {hourlyLabels[6].unit}</h4></div>         
+                  <div><img src={picts.skieur} alt="==!" /><h4>{myArray?.hourly?.snow_depth[localId]} {hourlyLabels[7].unit}</h4></div> 
                 </div>  
-                <div><h4>{myArray?.hourly?.cloud_cover[localId]}</h4><h4>{hourlyLabels[10].unit}</h4></div> 
                 <div className="oneDay-wind">
                   <SelectWindLabel windSpeed={Math.round(myArray?.hourly?.wind_speed_10m[localId])}/>
                   {myArray && <ConvertWindDirection angle={myArray?.hourly?.wind_direction_10m[localId]} />}
