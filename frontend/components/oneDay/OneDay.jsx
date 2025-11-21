@@ -9,8 +9,9 @@ import parapluie_ferme from "../../assets/parapluie_ferme.png";
 import flocon from "../../assets/flocon_blanc.png";
 import gouttes_pluie from "../../assets/gouttes_pluie.png";
 import skieur from "../../assets/skieur.png";
+import SelectWindLabel from "../utils/SelectWindLabel";
+import ConvertWindDirection from "../utils/ConvertWindDirection";
 import "./oneday.css";
-
 function OneDay({btn, showOneDay, setShowOneDay}){
   const { myArray } = useArray();
   const hourIndex =[0,4,8,12,16,20,24];
@@ -38,7 +39,7 @@ function OneDay({btn, showOneDay, setShowOneDay}){
                   <h4>{myArray?.hourly?.apparent_temperature[localId]}{hourlyLabels[2].unit} </h4>
                 </div> 
 
-                {/* <img className="oneDay-nuage" src={tags[omm_codes.filter(el => el.code === myArray?.hourly?.weather_code[24])[0].file]} alt="==="/> */}
+                {/* {tags && omm_codes && <img className="oneDay-nuage" src={tags[omm_codes.filter(el => el.code === myArray?.hourly?.weather_code[24])[0].file]} alt="==="/>} */}
                 <div className="oneDay-proba">
                   <>
                   {(myArray?.hourly?.precipitation_probability[localId] >= 1)? 
@@ -53,9 +54,9 @@ function OneDay({btn, showOneDay, setShowOneDay}){
                   <div><img src={skieur} alt="==!" /><h4>{myArray?.hourly?.snow_depth[localId]} {hourlyLabels[7].unit}</h4></div> 
                 </div>  
                 <div><h4>{myArray?.hourly?.cloud_cover[localId]}</h4><h4>{hourlyLabels[10].unit}</h4></div> 
-                <div>
-                  <h4>{myArray?.hourly?.wind_speed_10m[localId]}</h4><h4>{hourlyLabels[15].unit}</h4>              
-                  <h4>{myArray?.hourly?.wind_direction_10m[localId]}</h4><h4>{hourlyLabels[16].unit}</h4>
+                <div className="oneDay-wind">
+                  <SelectWindLabel windSpeed={Math.round(myArray?.hourly?.wind_speed_10m[localId])}/>
+                  {myArray && <ConvertWindDirection angle={myArray?.hourly?.wind_direction_10m[localId]} />}
                 </div>               
               </span>
             )
