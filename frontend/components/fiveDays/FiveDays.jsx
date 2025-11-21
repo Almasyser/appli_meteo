@@ -1,10 +1,8 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import useArray from "../../hooks/useArray";
-import ConvertDataJMA from "../utils/ConvertDateJMA";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
 import OneDay from "../oneDay/OneDay";
-import DetailsDay from "../detailsDay/DetailsDay";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
@@ -18,11 +16,10 @@ import "./fiveDays.css";
     const { myArray } = useArray();
     const handleClick=(e)=>{
       setShowOneDay(true);
-      console.log("///",e.target.title);
+      // console.log("///",e.target.title);
       const temp = e.target.title;
       temp && setDayId(temp);
     }
-     
     return (
       <>
       <div className={showFive? "fiveDays-box active":"fiveDays-box"}>
@@ -34,12 +31,11 @@ import "./fiveDays.css";
                 <section className="fiveDays-card" >
                   <div className="fiveDays-date">
                     <p className="fiveDays-dayOfWeek"><DayOfWeek today={myArray.daily.sunset[btn]}/></p>
-                    {/* <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={myArray.daily.sunset[btn]} /></p> */}
                   </div>
                   <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="@"/><p><DateToHour today={myArray.daily.sunrise[btn]}/></p></span>
                   <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="@"/><p><DateToHour today={myArray.daily.sunset[btn]}/></p></span>
                   <p className="fiveDays-temp">{myArray.daily.apparent_temperature_max[btn]}°C</p>
-                  <p className="fiveDays-tendance">{omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].text}</p>
+                  <p className="fiveDays-tendance">{omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].abrege}</p>
                   <img className="fiveDays-nuage" src={tags[omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].file]} alt="==="/>
                   <span className="fiveDays-rain-box">
                     <img src={parapluie} alt="#" />

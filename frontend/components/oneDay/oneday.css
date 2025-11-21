@@ -260,7 +260,8 @@ h4 {
   transform: translateX(-105%);
   margin-bottom: 2rem;
   padding: 3rem 3rem 0 1rem;
-  background: var(--blue-900);
+  background: var(--blue-950);
+  filter: 10px;
   box-shadow: 0px -1px 8px 3px var(--blue-800);
   transition: all 0.5s ease-in-out;
 }
@@ -304,22 +305,6 @@ h4 {
   gap: 1rem;
 }
 
-.oneDay-labels {
-  position: sticky;
-  min-width: 8rem;
-  display: flex;
-  flex-direction: column;
-  color: var(--blue-300);
-  margin-top: 1rem;
-}
-.oneDay-labels h4 {
-  width: 100%;
-  font-family: "Quicksand", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
-  text-align: right;
-}
-
 .oneDay-box {
   display: flex;
 }
@@ -335,27 +320,68 @@ h4 {
   border-radius: 4px;
   box-shadow: 0px 0px 30px -9px var(--blue-950);
 }
-.oneDay-card img {
-  width: 24px;
-  height: 28px;
-  margin: 0 auto;
-  padding-top: 4px;
-  padding-bottom: 4px;
+.oneDay-card .oneDay-labels {
+  position: sticky;
+  min-width: 8rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--blue-300);
+  margin-top: 1rem;
+}
+.oneDay-card .oneDay-labels h4 {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: right;
 }
 .oneDay-card div {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
 }
-.oneDay-card div :nth-child(2) {
-  font-weight: 100;
-  color: var(--blue-300);
+
+.oneDay-temp {
+  padding: 0;
 }
-.oneDay-card :nth-child(1) h4 {
-  margin: auto;
+.oneDay-temp :nth-child(1) {
+  font-size: 1rem;
+}
+.oneDay-temp :nth-child(3) {
+  line-height: 2.5rem;
+}
+
+.oneDay-nuage {
+  width: 48px;
+  margin: 0 auto;
+}
+
+.oneDay-proba {
+  display: flex;
+  justify-content: center;
+}
+.oneDay-proba img {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.oneDay-levels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.oneDay-levels img {
+  width: 36px;
+  height: 36px;
+}
+.oneDay-levels h4 {
+  line-height: 20px;
+  font-size: 0.6rem;
+}
+.oneDay-levels div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--blue-50);
-  font-family: "Quicksand", sans-serif;
-}
-.oneDay-card :nth-child(9) {
-  font-size: 0.8rem;
 }/*# sourceMappingURL=oneday.css.map */

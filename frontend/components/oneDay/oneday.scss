@@ -21,7 +21,8 @@ h4{
   transform: translateX(-105%);
   margin-bottom: 2rem;
   padding: 3rem 3rem 0 1rem;
-  background: $windFond;
+  background: $fond;
+  filter: 10px;
   box-shadow: 0px -1px 8px 3px $sectionFond;
   transition: all $transition ease-in-out;
   &.active{
@@ -51,6 +52,20 @@ h4{
   gap: 1rem;
 
 }
+.oneDay-box{
+  display: flex;  
+}
+.oneDay-card{
+  min-width: 5rem;
+  display: flex;
+  flex-direction: column;
+  background: $fond2;
+  padding:  0 0.5rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0px 0px 30px -9px $fond; //rgba(0,0,0,0.75);
+
 .oneDay-labels{
   position:sticky;
   min-width: 8rem;
@@ -66,43 +81,54 @@ h4{
     text-align: right;
   }
 }
-.oneDay-box{
-  display: flex;  
-}
-.oneDay-card{
-  min-width: 5rem;
-  display: flex;
-  flex-direction: column;
-  background: $fond2;
-  padding:  0 0.5rem;
-  margin-top: 1rem;
-  margin-right: 0.5rem;
-  border-radius: 4px;
-  box-shadow: 0px 0px 30px -9px $fond; //rgba(0,0,0,0.75);
-  img{
-    width: 24px;
-    height: 28px;
-    margin: 0 auto;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
   div{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-
-    :nth-child(2){
-      font-weight: 100;
-      color: $texteClear;
-    }
-  }
-  :nth-child(1) h4{
-    margin: auto;
-    color: $texte;
-    font-family: $paragraphe;
-  }
-  :nth-child(9){
-    font-size: 0.8rem;
     
   }
+ 
 } 
+.oneDay-temp{
+  padding: 0;
+  :nth-child(1){
+    font-size: 1rem;
+  }
+  :nth-child(3){
+    line-height: 2.5rem;
+  }
+  
+}
+.oneDay-nuage{
+  width: 48px;
+  margin: 0 auto;
+}
+.oneDay-proba{
+  display: flex;
+  justify-content: center;
+  img{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+}
+.oneDay-levels{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    width: 36px;
+    height: 36px;
+  }
+  h4{
+    
+    line-height: 20px;
+    font-size: 0.6rem;
+  }
+  div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $texte;
+  }
+}

@@ -1,15 +1,11 @@
 @use "./_colors" as *;
 // font-family a:
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-// font-family a: 
 $Roboto: "Roboto", sans-serif; //titre
 $Montserrat: "Montserrat", sans-serif; // sous titres
 $Quicksand: "Quicksand", sans-serif; // texte
 $Bebas: "Bebas Neue", sans-serif; // titre gras
 $Noto: "Noto Sans JP", sans-serif; // texte en valeur
-
-
-
 
 // font digital
 @font-face {

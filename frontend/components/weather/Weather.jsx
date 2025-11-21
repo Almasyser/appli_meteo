@@ -34,7 +34,6 @@ function ModalWeather() {
       }
     
   }, []);
-  console.log("===", myArray);
   
   return (
     <div className="weather-container">
