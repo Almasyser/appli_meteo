@@ -262,7 +262,6 @@ h4 {
   padding: 3rem 3rem 0 1rem;
   background: var(--blue-950);
   filter: 10px;
-  box-shadow: 0px -1px 8px 3px var(--blue-800);
   transition: all 0.5s ease-in-out;
 }
 .oneDay-container.active {
@@ -318,7 +317,8 @@ h4 {
   margin-top: 1rem;
   margin-right: 0.5rem;
   border-radius: 4px;
-  box-shadow: 0px 0px 30px -9px var(--blue-950);
+  background-color: var(--blue-950);
+  box-shadow: 0px -1px 4px 3px var(--blue-900);
 }
 .oneDay-card .oneDay-labels {
   position: sticky;

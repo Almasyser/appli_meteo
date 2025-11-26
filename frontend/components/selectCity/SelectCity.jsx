@@ -36,10 +36,12 @@ function SelectCity ({setShowSelect, showSelect, setShowFive}){
     handleVisible();
     setShowFive(true);
     setStorage("city_code", el.city_code);
+    setShowFive(true);
   }
   const handleVisible = ()=>{
     handleChoiceCancel();
     setShowSelect(false);
+    setShowFive(true);
   }
   const handleChoiceCancel = ()=>{
     setCityList("");

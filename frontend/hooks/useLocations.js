@@ -1,4 +1,5 @@
 import {create} from 'zustand';
+
 const useLocations = create((set) =>({
     city_code: "Toulouse",
     department_code: "31",

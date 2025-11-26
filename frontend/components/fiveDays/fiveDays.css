@@ -239,11 +239,11 @@
   src: url("./count/COUNT.otf") format("opentype");
 }
 .fiveDays-box {
-  width: 100%;
+  width: 90%;
   height: 47%;
   z-index: 210;
   position: absolute;
-  top: 42%;
+  top: 26%;
   left: -5%;
   overflow-x: auto;
   scrollbar-color: var(--blue-300) var(--blue-900);

@@ -239,7 +239,7 @@
   src: url("./count/COUNT.otf") format("opentype");
 }
 .location-container {
-  margin: 16px auto;
+  margin: 0 auto 16px;
   display: flex;
   border-top: 1px solid var(--blue-950);
   border-bottom: 1px solid var(--blue-950);

@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 .location-container{
-  margin: 16px auto;
+  margin: 0 auto 16px;
   display: flex;
   border-top: 1px solid $fond;
   border-bottom: 1px solid $fond;

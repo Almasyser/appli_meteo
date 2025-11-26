@@ -6,7 +6,7 @@ import NavBar from '../components/navBar/navbar';
 import Header from "../components/header/Header";
 import Location from "../components/location/Location";
 import "./home.css";
-const Weather = lazy(()=> import("../components/weather/Weather"));
+const FiveDays = lazy(()=> import("../components/fiveDays/FiveDays"));
 function Home () {
   const {myArray, updateMyArray} = useArray();
   const {latitude, longitude} = useLocations();
@@ -19,9 +19,9 @@ function Home () {
           <div className="location-section">
             <Location />
           </div>
-          <div className="weather-section">
-            {!isLoading && myArray && <Weather />}
-          </div>
+          {/* <div className="weather-section"> */}
+            {!isLoading && myArray && <FiveDays />}
+          {/* </div> */}
     </div>
   )
 } 

@@ -6,14 +6,10 @@ function ModalLocation (){
     if(typeof window != "undefined"){
       const value= localStorage.getItem("city_code")
       console.log("city_code",value);
-      
     }
   },[])
-  const [visible, setVisible] = useState(false);
+    
   const { city_code, department_code, department_name, region_name, latitude, longitude } = useLocations();
-  const handleClick = ()=>{
-    setVisible(!visible);
-  }
   return(
     <>
       <div className="location-container">

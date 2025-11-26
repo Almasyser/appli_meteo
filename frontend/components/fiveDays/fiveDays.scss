@@ -2,11 +2,11 @@
 @use "../../styles/mixins" as *;
 
 .fiveDays-box{
-  width: 100%;
+  width: 90%;
   height: 47%;
   z-index: 210;
   position: absolute;
-  top: 42%;
+  top: 26%;
   left: -5%;
   overflow-x: auto;
   scrollbar-color: $texteClear $windFond ;
@@ -22,6 +22,7 @@
   &.active{
     transform: translateX(5%);
     margin-left: 1rem;
+    
   }
 }
 .fiveDays-nuage{

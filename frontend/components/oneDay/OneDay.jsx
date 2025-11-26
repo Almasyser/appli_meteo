@@ -9,6 +9,7 @@ import "./oneday.css";
 function OneDay({btn, showOneDay, setShowOneDay}){
   const { myArray } = useArray();
   const hourIndex =[0,4,8,12,16,20,24];
+  const idHour =parseInt(btn,10)+1;
   const handleClick=()=>{
     setShowOneDay(false);
   }
@@ -20,10 +21,9 @@ function OneDay({btn, showOneDay, setShowOneDay}){
         <button className="btn-retour" onClick={handleClick}>Retour</button>
       </span>
       <div className="oneDays-datas">
-
         <div className="oneDay-box">
           {myArray && hourIndex && hourIndex.map((el)=>{
-            const localId=(btn*24)-24+el; 
+            const localId =(idHour*24)-24+el;
             return(
               <span key={el} className="oneDay-card">
                 <h4><DateToHour today={myArray?.hourly?.time[localId] ?? "n/a"}/></h4><h4>{hourlyLabels[0].unit}</h4>
