@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+.options-container{
+  width: 80vw;
+  height: 20vh;
+  background-color: $fond;
+  position: absolute;
+  top: 26%;
+  left: -5%;
+  transform: translateX(-105%);
+  transition: all $transition ease-in-out;
+  &.active{
+    transform: translateX(5%);
+    margin-left: 1rem;
+  }
+  .options-ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    
+  }
+}
+.options-li{
+  width: 64px;
+  height: 32px;
+  font-size: 0.8rem;
+  line-height: 32px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  opacity: 0.7;
+  &:hover{
+    opacity: 1;
+  }
+  &:focus{
+    border: 1px solid rgb(185, 249, 235);
+  }
+  }

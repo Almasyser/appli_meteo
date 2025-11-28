@@ -238,45 +238,43 @@
   font-family: "digital";
   src: url("./count/COUNT.otf") format("opentype");
 }
-.location-container {
-  margin: 0 auto 16px;
+.options-container {
+  width: 80vw;
+  height: 20vh;
+  background-color: var(--indigo-950);
+  position: absolute;
+  top: 26%;
+  left: -5%;
+  transform: translateX(-105%);
+  transition: all 0.5s ease-in-out;
+}
+.options-container.active {
+  transform: translateX(5%);
+  margin-left: 1rem;
+}
+.options-container .options-ul {
+  width: 100%;
   display: flex;
-  border-top: 1px solid var(--indigo-950);
-  border-bottom: 1px solid var(--indigo-950);
-  background: var(--indigo-900);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
 }
-.location-container .location-text {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
+
+.options-li {
+  width: 64px;
+  height: 32px;
+  font-size: 0.8rem;
+  line-height: 32px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  opacity: 0.7;
 }
-.location-container .location-town {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--indigo-50);
-  font-weight: 1.8rem;
-  letter-spacing: 0.2rem;
-  padding-left: 0.6rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.4rem;
-  color: bolder;
+.options-li:hover {
+  opacity: 1;
 }
-.location-container .location-department {
-  font-family: "Quicksand", sans-serif;
-  font-size: var(--indigo-50);
-  font-weight: 0.8rem;
-  letter-spacing: 0.02rem;
-  padding-left: 0.8rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-  color: normal;
-}
-.location-container .location-region {
-  font-family: "Quicksand", sans-serif;
-  font-size: var(--indigo-50);
-  font-weight: 1rem;
-  letter-spacing: 0.05rem;
-  padding-left: 0.8rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: normal;
-}/*# sourceMappingURL=location.css.map */
+.options-li:focus {
+  border: 1px solid rgb(185, 249, 235);
+}/*# sourceMappingURL=options.css.map */

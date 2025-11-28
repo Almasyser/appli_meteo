@@ -245,8 +245,8 @@
   left: 0;
   text-transform: none;
   font-family: "Quicksand", sans-serif;
-  background-color: var(--blue-950);
-  color: var(--blue-50);
+  background-color: var(--indigo-950);
+  color: var(--indigo-50);
   font-variant: normal;
   overflow: hidden;
 }
@@ -256,7 +256,7 @@
   width: 100%;
   height: -moz-max-content;
   height: max-content;
-  background-color: var(--blue-800);
+  background-color: var(--indigo-800);
 }
 
 .weather-section {

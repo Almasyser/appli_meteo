@@ -250,13 +250,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: var(--blue-950);
+  background: var(--indigo-950);
 }
 .footer-container .footer-text {
   width: -moz-max-content;
   width: max-content;
   margin-top: 0.5rem;
-  color: var(--blue-50);
+  color: var(--indigo-50);
   text-align: center;
   opacity: 1;
   font-size: 2rem;

@@ -246,14 +246,14 @@
   top: 26%;
   left: -5%;
   overflow-x: auto;
-  scrollbar-color: var(--blue-300) var(--blue-900);
+  scrollbar-color: var(--indigo-300) var(--indigo-900);
   overflow-y: hidden;
   transform: translateX(-105%);
   transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: flex-start;
   gap: 0.2rem;
-  background: var(--blue-950);
+  background: var(--indigo-950);
   border-radius: 0.5rem;
 }
 .fiveDays-box.active {
@@ -274,34 +274,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: var(--blue-950);
-  box-shadow: 0px -1px 4px 3px var(--blue-900);
+  background-color: var(--indigo-950);
+  box-shadow: 0px -1px 4px 3px var(--indigo-900);
 }
 .fiveDays-card .btn-details {
   margin-left: 0;
   padding: 0.3rem 0.8rem;
-  border: 1px solid var(--blue-300);
+  border: 1px solid var(--indigo-300);
   border-radius: 16px;
   background: transparent;
-  color: var(--blue-300);
+  color: var(--indigo-300);
   font-size: 0.8rem;
   transition: 0.2s ease-in-out;
 }
 .fiveDays-card .btn-details:hover {
-  border-color: var(--blue-50);
-  color: var(--blue-50);
+  border-color: var(--indigo-50);
+  color: var(--indigo-50);
   cursor: pointer;
 }
 
 .fiveDays-date {
   width: 100%;
   margin-bottom: 0.4rem;
-  background-color: var(--blue-950);
+  background-color: var(--indigo-950);
 }
 .fiveDays-date .fiveDays-dayOfWeek {
   font-size: 16px;
   font-weight: 200;
-  color: var(--blue-50);
+  color: var(--indigo-50);
   margin: 0;
   padding: 0.5rem 0;
   text-align: center;
@@ -322,7 +322,7 @@
   margin: 0;
   font-size: 12px;
   font-weight: 500;
-  color: var(--blue-50);
+  color: var(--indigo-50);
 }
 .fiveDays-ephemeride img {
   width: 24px;
@@ -332,7 +332,7 @@
 .fiveDays-tendance {
   min-height: 44px;
   font-size: 12px;
-  color: var(--blue-50);
+  color: var(--indigo-50);
   padding: 0 0.3rem 0 0.3rem;
   text-align: center;
 }

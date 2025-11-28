@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useLocations from "../../hooks/useLocations";
+import Logos from "../../assets/Logos";
 import "./location.css";
 function ModalLocation (){
   useEffect(()=>{
@@ -18,6 +19,7 @@ function ModalLocation (){
           <p className="location-department">{department_code}&nbsp;{department_name}</p>
           <p className="location-region">{region_name}</p>
         </span>
+        {/* <img src={Logos.region_name} alt={region_name.toLowerCase()}/> */}
       </div>
     </>
   )

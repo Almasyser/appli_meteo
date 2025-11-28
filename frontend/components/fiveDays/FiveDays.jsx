@@ -7,7 +7,7 @@ import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
 import "./fiveDays.css";
-function FiveDays({setShowFive, showFive}){
+function FiveDays({showFive}){
   const [showOneDay, setShowOneDay] = useState(false);
   const [dayId, setDayId] = useState(0);
   const [dayIndex] = useState([0,1,2,3,4,5,6]);

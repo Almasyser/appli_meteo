@@ -254,7 +254,7 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--blue-50);
+  color: var(--indigo-50);
 }
 .header-container .header-hour-box {
   width: 14%;
@@ -268,7 +268,7 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--blue-50);
+  color: var(--indigo-50);
   width: -moz-max-content;
   width: max-content;
 }
@@ -280,7 +280,7 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--blue-50);
+  color: var(--indigo-50);
   animation: infinite ease-out;
   animation-name: clignote;
   animation-duration: 1s;
@@ -312,5 +312,5 @@
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--blue-50);
+  color: var(--indigo-50);
 }/*# sourceMappingURL=header.css.map */
