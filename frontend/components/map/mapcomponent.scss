@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 .location{
-  z-index: 20;
+  z-index: 2000;
   position: absolute;
   top: 28%;
   left: -5%;

@@ -3,6 +3,7 @@
 .location-container{
   margin: 0 auto 16px;
   display: flex;
+  align-items: center;
   border-top: 1px solid $fond;
   border-bottom: 1px solid $fond;
   background: $windFond;
@@ -20,6 +21,11 @@
   .location-region{
     @include textMedium($paragraphe, $texte, normal, 1rem, 0.05rem, 0.8rem, 0.5rem, 0.5rem);
   }
+
+}
+.location-logo{
+  width: 64px;
+  height: 64px;
 }
 
 

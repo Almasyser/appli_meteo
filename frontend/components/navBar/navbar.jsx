@@ -21,12 +21,12 @@ function NavBar() {
   }
   const handleMap=()=>{
     setShowSelect(false);
-    setShowFive(!showFive);
+    // setShowFive(!showFive);
     setShowMap(!showMap);
   }
   const handleOptions=()=>{
     setShowOptions(!showOptions);
-    setShowFive(false);
+    setShowFive(!showFive);
     setShowMap(false);
   }
   return(

@@ -4,7 +4,7 @@ const useLocations = create((set) =>({
     city_code: "Toulouse",
     department_code: "31",
     department_name: "Haute-Garonne",
-    region_name: "Occitanie",
+    region_name: "occitanie",
     latitude: 43.596037953,
     longitude: 1.432094901,
     visible: false,

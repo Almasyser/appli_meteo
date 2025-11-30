@@ -239,7 +239,7 @@
   src: url("./count/COUNT.otf") format("opentype");
 }
 .location {
-  z-index: 20;
+  z-index: 2000;
   position: absolute;
   top: 28%;
   left: -5%;

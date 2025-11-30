@@ -46,7 +46,6 @@ function FiveDays({showFive}){
         )})}
     </div>
     <OneDay btn={dayId} showOneDay={showOneDay} setShowOneDay={setShowOneDay} />
-    {/* {showDetailsDay && <DetailsDay btn={dayId} showDetailsDay={showDetailsDay} setShowDetailsDay={setShowDetailsDay} />} */}
     </>
   )   
   }

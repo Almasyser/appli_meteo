@@ -21,14 +21,17 @@ $titre: $Roboto;
 $paragraphe: $Quicksand;
 $clock: $digital;
 
+//base color
+$baseColor: "success";
+
 // couleurs
-$fond: var(--indigo-950);
-$fond2: var(--indigo-900);
-$sectionFond: var(--indigo-800);
-$windFond: var(--indigo-900);
-$texte: var(--indigo-50);
-$texteClear: var(--indigo-300);
-$texteDark: var(--indigo-900);
+$fond: var(--+ $baseColor+-950);
+$fond2: var(--+ $baseColor+-900);
+$sectionFond: var(--+ $baseColor+-800);
+$windFond: var(--+ $baseColor+-900);
+$texte: var(--+ $baseColor+-50);
+$texteClear: var(--+ $baseColor+-300);
+$texteDark: var(--+ $baseColor+-900);
 
 // Effets
 $transition: 0.5s;

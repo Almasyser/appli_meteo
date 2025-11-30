@@ -256,11 +256,11 @@ h4 {
   width: 90vw;
   height: 62%;
   overflow-y: scroll;
-  scrollbar-color: var(--indigo-300) var(--indigo-900);
+  scrollbar-color: var(--success-300) var(--success-900);
   transform: translateX(-105%);
   margin-bottom: 2rem;
   padding: 3rem 3rem 0 1rem;
-  background: var(--indigo-950);
+  background: var(--success-950);
   filter: 10px;
   transition: all 0.5s ease-in-out;
 }
@@ -280,21 +280,21 @@ h4 {
 .oneDay-entete h3 {
   top: 0;
   left: 2rem;
-  color: var(--indigo-50);
+  color: var(--success-50);
 }
 .oneDay-entete .btn-retour {
   margin-left: 2rem;
   padding: 0.3rem 1rem;
-  border: 1px solid var(--indigo-300);
+  border: 1px solid var(--success-300);
   border-radius: 16px;
   background: transparent;
-  color: var(--indigo-300);
+  color: var(--success-300);
   font-size: 1.2rem;
   transition: 0.2s ease-in-out;
 }
 .oneDay-entete .btn-retour:hover {
-  border-color: var(--indigo-50);
-  color: var(--indigo-50);
+  border-color: var(--success-50);
+  color: var(--success-50);
   cursor: pointer;
 }
 
@@ -312,20 +312,20 @@ h4 {
   min-width: 5rem;
   display: flex;
   flex-direction: column;
-  background: var(--indigo-900);
+  background: var(--success-900);
   padding: 0 0.5rem;
   margin-top: 1rem;
   margin-right: 0.5rem;
   border-radius: 4px;
-  background-color: var(--indigo-950);
-  box-shadow: 0px -1px 4px 3px var(--indigo-900);
+  background-color: var(--success-950);
+  box-shadow: 0px -1px 4px 3px var(--success-900);
 }
 .oneDay-card .oneDay-labels {
   position: sticky;
   min-width: 8rem;
   display: flex;
   flex-direction: column;
-  color: var(--indigo-300);
+  color: var(--success-300);
   margin-top: 1rem;
 }
 .oneDay-card .oneDay-labels h4 {
@@ -383,7 +383,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--indigo-50);
+  color: var(--success-50);
 }
 
 .oneDay-wind {

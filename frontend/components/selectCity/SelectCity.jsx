@@ -35,7 +35,13 @@ function SelectCity ({setShowSelect, showSelect, setShowFive}){
     updateRegion_name(el.region_name);
     handleVisible();
     setShowFive(true);
+    //
+    setStorage("longitude", el.longitude);
+    setStorage("latitude", el.latitude);
     setStorage("city_code", el.city_code);
+    setStorage("department_number", el.department_number);
+    setStorage("department_name", el.department_name);
+    setStorage("region_name", el.region_name);
     setShowFive(true);
   }
   const handleVisible = ()=>{

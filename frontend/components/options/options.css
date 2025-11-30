@@ -241,7 +241,7 @@
 .options-container {
   width: 80vw;
   height: 20vh;
-  background-color: var(--indigo-950);
+  background-color: var(--success-950);
   position: absolute;
   top: 26%;
   left: -5%;
@@ -258,6 +258,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .options-li {

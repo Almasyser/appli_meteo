@@ -241,9 +241,10 @@
 .location-container {
   margin: 0 auto 16px;
   display: flex;
-  border-top: 1px solid var(--indigo-950);
-  border-bottom: 1px solid var(--indigo-950);
-  background: var(--indigo-900);
+  align-items: center;
+  border-top: 1px solid var(--success-950);
+  border-bottom: 1px solid var(--success-950);
+  background: var(--success-900);
 }
 .location-container .location-text {
   width: 70%;
@@ -252,7 +253,7 @@
 }
 .location-container .location-town {
   font-family: "Roboto", sans-serif;
-  font-size: var(--indigo-50);
+  font-size: var(--success-50);
   font-weight: 1.8rem;
   letter-spacing: 0.2rem;
   padding-left: 0.6rem;
@@ -262,7 +263,7 @@
 }
 .location-container .location-department {
   font-family: "Quicksand", sans-serif;
-  font-size: var(--indigo-50);
+  font-size: var(--success-50);
   font-weight: 0.8rem;
   letter-spacing: 0.02rem;
   padding-left: 0.8rem;
@@ -272,11 +273,16 @@
 }
 .location-container .location-region {
   font-family: "Quicksand", sans-serif;
-  font-size: var(--indigo-50);
+  font-size: var(--success-50);
   font-weight: 1rem;
   letter-spacing: 0.05rem;
   padding-left: 0.8rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   color: normal;
+}
+
+.location-logo {
+  width: 64px;
+  height: 64px;
 }/*# sourceMappingURL=location.css.map */

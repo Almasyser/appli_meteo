@@ -3,14 +3,22 @@ import useLocations from "../../hooks/useLocations";
 import Logos from "../../assets/Logos";
 import "./location.css";
 function ModalLocation (){
-  useEffect(()=>{
-    if(typeof window != "undefined"){
-      const value= localStorage.getItem("city_code")
-      console.log("city_code",value);
-    }
-  },[])
-    
+  const [ logosKeys, setLogosKeys] = useState([]);
   const { city_code, department_code, department_name, region_name, latitude, longitude } = useLocations();
+  useEffect(()=>{
+    const cles = Object.keys(Logos);
+    setLogosKeys(cles);
+  },[]);
+  // if(typeof window != "undefined"){
+  //   city_code= localStorage.getItem("city_code");
+  //   department_code= localStorage.getItem("department_code");
+  //   department_name= localStorage.getItem("department_name");
+  //   region_name= localStorage.getItem("region_name");
+    
+  // } 
+  const logo = Logos[logosKeys.filter(el=> el === region_name)];
+  
+
   return(
     <>
       <div className="location-container">
@@ -19,7 +27,8 @@ function ModalLocation (){
           <p className="location-department">{department_code}&nbsp;{department_name}</p>
           <p className="location-region">{region_name}</p>
         </span>
-        {/* <img src={Logos.region_name} alt={region_name.toLowerCase()}/> */}
+  
+        <img className="location-logo" src={logo} alt={region_name}/>
       </div>
     </>
   )

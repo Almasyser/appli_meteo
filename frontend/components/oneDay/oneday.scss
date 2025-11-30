@@ -23,7 +23,6 @@ h4{
   padding: 3rem 3rem 0 1rem;
   background: $fond;
   filter: 10px;
-  // box-shadow: 0px -1px 8px 3px $sectionFond;
   transition: all $transition ease-in-out;
   &.active{
     transform: translateX(0);
