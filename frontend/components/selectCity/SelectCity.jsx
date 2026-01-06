@@ -13,8 +13,9 @@ function SelectCity ({setShowSelect, showSelect}){
   const [cityList, setCityList] = useState("");
   const  inputRef=useFocus();
   const handleChoiceCity = async ()=>{
+    // api_url n'est utile ici car le'url vers l'url (5050) est précisée dan vite.config.js (proxy)
     try {
-        const response = await axios.get(`${api_url}/datasbycity/${cityName}`);
+        const response = await axios.get(`/api/datasbycity/${cityName}`);
         setCityList(response.data);
       } 
       catch (error) {
