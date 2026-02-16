@@ -2,6 +2,7 @@
 logs
 env
 .env
+*.pub
 
 node_modules
 dist
