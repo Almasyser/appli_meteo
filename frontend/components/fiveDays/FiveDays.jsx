@@ -4,28 +4,26 @@ import ConvertDataJMA from "../utils/ConvertDateJMA";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
 import OneDay from "../oneDay/OneDay";
-import DetailsDay from "../detailsDay/DetailsDay";
 import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
 import fleche_bas_128 from "../../assets/Fleche bas_128.png"
 import "./fiveDays.css";
 
-function FiveDays({setShowFive, showFive}){
+function FiveDays(){
   const [showOneDay, setShowOneDay] = useState(false);
   const [dayId, setDayId] = useState(0);
-  const [dayIndex] = useState([0,1,2]);
+  const [dayIndex] = useState([0,1,2,3,4,5]);
   const { myArray } = useArray();
   const ref = useRef()
   const handleClick=(e)=>{
-    // setShowFive(false);
     setShowOneDay(true);
     console.log("///",e.target.title);
     setDayId(e.target.title);
   }
   return (
     <>
-    <div className={showFive? "fiveDays-box active":"fiveDays-box"}>
+    <div className="fiveDays-box">
       {myArray.daily && dayIndex.map((btn)=>{
         return(
           <section className="fiveDays-card" key={btn}>
@@ -35,19 +33,17 @@ function FiveDays({setShowFive, showFive}){
             </div>
             <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="@"/><p><DateToHour today={myArray.daily.sunrise[btn]}/></p></span>
             <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="@"/><p><DateToHour today={myArray.daily.sunset[btn]}/></p></span>
-            <p className="fiveDays-tendance">{omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].text}</p>
+            <p className="fiveDays-tendance">{omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].abrege}</p>
             <img src={tags[omm_codes.filter(el => el.code === myArray.daily.weather_code[btn])[0].file]} alt="==="/>
             <span className="fiveDays-rain-box">
               <img src={parapluie} alt="#" />
               <h4>{myArray.hourly.precipitation_probability[(btn*24)-24, btn*24]}%</h4>
             </span>
             <img ref={ref} className="img-details" src={fleche_bas_128} alt="@@" title={btn} onClick={(title)=>handleClick(title)} />
-            {/* <h4 className="btn-details" title={btn} onClick={()=> setShowDetailsDay(true)}>plus de détails</h4> */}
           </section>
         )})}
     </div>
     <OneDay btn={dayId} showOneDay={showOneDay} setShowOneDay={setShowOneDay} />
-    {/* {showDetailsDay && <DetailsDay btn={dayId} showDetailsDay={showDetailsDay} setShowDetailsDay={setShowDetailsDay} />} */}
   </>
   )   
 }

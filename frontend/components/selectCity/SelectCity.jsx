@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PropTypes } from 'prop-types';
 import axios from 'axios';
+import utf8 from "utf8";
 import useLocations from "../../hooks/useLocations";
 import useFocus from "../../hooks/useFocus";
 import cross from "../../assets/Cross-cancel.png";
@@ -67,7 +68,7 @@ function SelectCity ({setShowSelect, showSelect}){
           return(
             <div key={index} className="city-item" onClick={()=>handleSelectCity(el)}>
               <p className="city">{el.city_code.charAt(0).toUpperCase()+el.city_code.slice(1)}</p>
-              <p className="city department">{`${el.department_name} ${el.department_number}`}</p>
+              <p className="city department">{`${utf8.decode(el.department_name)} ${el.department_number}`}</p>
             </div>
           );
         })

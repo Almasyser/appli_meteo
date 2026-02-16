@@ -6,17 +6,15 @@ h4{
   margin: 0;
   font-family: $paragraphe;
   font-size: 0.9rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 .oneDay-container{
   z-index: 2220;
   position: absolute;
-  top: 24%;
+  top: 25%;
   left: 0;
   width: 100%;
   height: 60%;
-  overflow: scroll;
-  scrollbar-color: $texteClear $windFond ;
   transform: translateX(-105%);
   margin-bottom: 2rem;
   padding: 3rem 3rem 0 1rem;
@@ -29,23 +27,34 @@ h4{
 }
 .oneDay-entete{
   position: absolute;
+  width: 100%;
   top: 0;
-  width: 20%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
   padding: 0 2rem;
   h3{
+    width: 8rem;
     top: 0;
     left: 2rem;
     color: $texte;
   }
   .btn-close{
-    @include btnClose($texteClear, $texte);
+    color: $texte;
+    font-size: 1.4rem;
+    font-weight: 100;
+    background: transparent;
+    padding: 0.25rem 0.8rem;
+    border-radius: 2rem;
+    border: none;
+    &:hover{
+      color: $texteClear;
+      cursor: pointer;
+    }
   }
 }
 .oneDay-box{
-  // width: max-content;
   display: flex;
   justify-content: flex-start;
   gap: 1rem;  
@@ -64,8 +73,14 @@ h4{
     text-align: right;
   }
 }
+.oneDay-card-box{
+  overflow: scroll;
+  scrollbar-color: $texteClear $windFond ;
+  display: flex;
+  flex-wrap: nowrap;
+}
 .oneDay-card{
-  width: 6rem;
+  min-width: 7rem;
   display: flex;
   flex-direction: column;
   background: $fond2;
@@ -83,20 +98,26 @@ h4{
   div{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-
+    justify-content: center;
+    gap: 0.2rem;
     :nth-child(2){
       font-weight: 100;
       color: $texteClear;
     }
   }
   :nth-child(1) h4{
-    margin: auto;
     color: $texte;
     font-family: $paragraphe;
+    font-weight: 600;
   }
   :nth-child(9){
     font-size: 0.8rem;
     
   }
+  .tendance{
+    h4{
+      font-size: 0.7rem;
+    }
+  }
 } 
+

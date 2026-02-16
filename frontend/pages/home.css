@@ -258,12 +258,4 @@
   height: -moz-max-content;
   height: max-content;
   background-color: var(--blue-800);
-}
-
-.weather-section {
-  position: relative;
-  top: 2.5rem;
-  width: 100%;
-  height: -moz-max-content;
-  height: max-content;
 }/*# sourceMappingURL=home.css.map */
