@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import FetchApiStatic from '../components/utils/FetchApiStatic';
 import useLocations from '../hooks/useLocations';
 import useArray from '../hooks/useArray';

@@ -4,7 +4,7 @@ import rose_fleche from "../../assets/rose_fleche.png";
 import SelectWindLabel from "../utils/SelectWindLabel";
 import "./wind.css";
 function ModalWind (props) {
-  let { wind_speed, wind_direction, probability }=props;
+  let { wind_speed, wind_direction }=props;
   return(
     <div className="wind-container">
       <span className="rose-box">
@@ -12,16 +12,12 @@ function ModalWind (props) {
         <img src={rose_ciel} className="rose-des-vents" alt="rose" />
       </span>
       <span className="wind-details">
-        <p className="wind-text">{Math.round(wind_speed)} km/h</p>
         <p className="wind-text">
           <SelectWindLabel windSpeed={Math.round(wind_speed)}/>
           {wind_direction &&
             <ConvertWindDirection angle={wind_direction} />
           }
         </p>
-      </span>
-      <span className="wind-text">Probabilité de pluie
-        <p className="wind-text">{probability}%</p>
       </span>
     </div>
   )

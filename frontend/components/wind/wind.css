@@ -243,7 +243,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 140px;
+  height: 80px;
   opacity: 0.96;
   font-family: "Cabin", sans-serif;
   background: var(--blue-900);
@@ -251,25 +251,24 @@
 
 .rose-box {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(99, 145, 187, 0.2);
+  background: transparent;
   border-radius: 1rem;
-  box-shadow: -1px 2px 10px -2px var(--blue-50) inset;
 }
 .rose-box .rose-des-vents {
   position: absolute;
   z-index: 0;
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 48px;
 }
 .rose-box .rose-fleche {
   z-index: 2;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   transition: transform 0.6s ease;
 }
 .rose-box .rose-fleche.rotate-0 {
@@ -1376,8 +1375,8 @@
 }
 
 .wind-text {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.7rem;
+  font-weight: 400;
   color: var(--blue-300);
   text-align: center;
   margin: 0;

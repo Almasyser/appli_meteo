@@ -361,15 +361,15 @@
   color: var(--blue-50);
   margin: 0;
   padding: 0.2rem 0 0.4rem 0;
-  border-bottom: 1px solid var(--blue-50);
+  border-bottom: 1px solid var(--blue-300);
   font-family: "Noto Sans JP", sans-serif;
-  font-size: var(--blue-300);
-  font-weight: 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
   letter-spacing: 0.03rem;
   padding-left: 0.3rem;
   margin-top: 0.3rem;
   margin-bottom: 0.2rem;
-  color: normal;
+  color: var(--blue-50);
 }
 .city.department {
   text-align: right;

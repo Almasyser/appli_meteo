@@ -294,8 +294,8 @@
   background-color: var(--blue-950);
 }
 .fiveDays-card .fiveDays-date .fiveDays-dayOfWeek {
-  font-size: 16px;
-  font-weight: 200;
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--blue-50);
   margin: 0;
   padding: 0.5rem;

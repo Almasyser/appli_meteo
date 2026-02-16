@@ -4,9 +4,7 @@ import omm_codes from "../../json/omm_codes.json";
 import useArray from "../../hooks/useArray";
 import DateToHour from "../utils/DateToHour";
 import DayOfWeek from "../utils/DayOfWeek";
-import tags from "../../assets/tags";
-
-import Camenbert from "../camenbert/Camenbert";
+import ModalWind from "../wind/Wind";
 import "./oneday.css";
 
 function OneDay({btn, showOneDay, setShowOneDay}){
@@ -35,7 +33,9 @@ function OneDay({btn, showOneDay, setShowOneDay}){
           <h4>{hourlyLabels[14].label}</h4>
           <h4>{hourlyLabels[17].label}</h4>
           <h4>{hourlyLabels[15].label}</h4>
-          <h4>{hourlyLabels[16].label}</h4>
+          <h4></h4>
+          <h4></h4>
+          <h4></h4>
         </span>
         <div className="oneDay-card-box">
           {myArray && intervals && intervals.map((el)=>{
@@ -54,7 +54,11 @@ function OneDay({btn, showOneDay, setShowOneDay}){
                 <div><h4>{myArray?.hourly?.visibility[localId]}</h4><h4>{hourlyLabels[14].unit}</h4></div>               
                 <div><h4>{myArray?.hourly?.uv_index[localId]}</h4><h4>{hourlyLabels[17].unit}</h4></div>
                 <div><h4>{myArray?.hourly?.wind_speed_10m[localId]}</h4><h4>{hourlyLabels[15].unit}</h4></div>               
-                <div><h4>{myArray?.hourly?.wind_direction_10m[localId]}</h4><h4>{hourlyLabels[16].unit}</h4></div>               
+                {/* <div><h4>{myArray?.hourly?.wind_direction_10m[localId]}</h4><h4>{hourlyLabels[16].unit}</h4></div> */}
+                <ModalWind 
+                  wind_speed={myArray?.hourly?.wind_speed_10m[localId]} 
+                  wind_direction={myArray?.hourly?.wind_direction_10m[localId]}
+                />
               </span>
             )
           })}
