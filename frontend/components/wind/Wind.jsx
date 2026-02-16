@@ -1,6 +1,6 @@
 import ConvertWindDirection  from "../utils/ConvertWindDirection";
 import rose_ciel from "../../assets/Rose Bleue.png";
-import rose_fleche from "../../assets/Rose_fleche.png";
+import rose_fleche from "../../assets/rose_fleche.png";
 import SelectWindLabel from "../utils/SelectWindLabel";
 import "./wind.css";
 function ModalWind (props) {
