@@ -243,34 +243,29 @@
   width: 100%;
   height: 4rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  background-image: url("../../../public/Bandeau_ciel_blue.png");
-  background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
   opacity: 0.9;
+  color: var(--blue-50);
 }
 .header-container .header-date {
   font-size: 1.2rem;
-  color: var(--blue-900);
+  font-weight: 500;
   padding-left: 0.5rem;
 }
 .header-container .header-hour-box {
-  width: 14%;
   display: flex;
   font-family: "Cabin", sans-serif;
+  padding-right: 0.5rem;
 }
 .header-container .header-hour-box .header-hour {
   width: -moz-max-content;
   width: max-content;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
-  color: var(--blue-900);
 }
 .header-container .header-hour-box .header-hour-dots {
   font-size: 1.8rem;
-  color: var(--blue-300);
   animation: infinite ease-out;
   animation-name: clignote;
   animation-duration: 1s;
@@ -297,5 +292,4 @@
   padding-top: 1.3rem;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
-  color: var(--blue-900);
 }/*# sourceMappingURL=header.css.map */

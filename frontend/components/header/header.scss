@@ -3,31 +3,26 @@
   width: 100%;
   height: 4rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  background-image: url("../../../public/Bandeau_ciel_blue.png");
-  background-repeat: no-repeat;
-  object-fit: cover;
-  
   opacity: 0.9;
+  color: $texte;
   .header-date{
     font-size: 1.2rem;
-    color: $texteDark;
+    font-weight: 500;
     padding-left: 0.5rem;
   }
   .header-hour-box{
-    width: 14%;
     display: flex;
     font-family: $titre;
+    padding-right: 0.5rem;
     .header-hour{
       width: max-content;
       font-size: 1.8rem;
       letter-spacing: 0.2rem;
-      color: $texteDark;
     }
     .header-hour-dots{
       font-size: 1.8rem;
-      color: $texteClear;
       animation: infinite ease-out;
       animation-name: clignote;
       animation-duration: 1s;
@@ -53,7 +48,6 @@
       padding-top: 1.3rem;
       font-size: 0.8rem;
       letter-spacing: 0.05rem;
-      color: $texteDark;
     }
   }
 }
