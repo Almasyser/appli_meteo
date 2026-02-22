@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import FetchApiStatic from '../components/utils/FetchApiStatic';
-import useLocations from '../hooks/useLocations';
-import useArray from '../hooks/useArray';
-import NavBar from '../components/navBar/navbar';
-import Header from "../components/header/Header";
-import FiveDays from '../components/fiveDays/FiveDays';
-import Location from "../components/location/Location";
+import FetchApiStatic from '../../components/utils/FetchApiStatic';
+import useLocations from '../../hooks/useLocations';
+import useArray from '../../hooks/useArray';
+import NavBar from '../../components/navBar/navbar';
+import Header from "../../components/header/Header";
+import FiveDays from '../../components/fiveDays/FiveDays';
+import Location from "../../components/location/Location";
 import "./home.css";
 function Home () {
   const {myArray, updateMyArray} = useArray();

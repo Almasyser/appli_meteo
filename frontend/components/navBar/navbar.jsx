@@ -1,38 +1,44 @@
 import { useState } from "react";
 import useLocations from "../../hooks/useLocations";
+import { Navigate } from "react-router-dom";
 import useArray from "../../hooks/useArray";
 import SelectCity from "../selectCity/SelectCity";
 import MapComponent from "../map/MapComponent";
 import "./navbar.css";
+import { shape } from "prop-types";
 
 function NavBar() {
   const { myArray } = useArray();
   const {latitude, longitude} = useLocations();
   const [showSelect, setShowSelect] = useState(false);
   const [showMap, setShowMap] = useState(false);
-  const [showDetailsDay, setShowDetailsDay] = useState(false);
+  const [showStats, setShowStats] = useState(false);
 
   const handleSelect=()=>{
     setShowSelect(!showSelect);
     setShowMap(false);
-  }
-  const handleFive=()=>{
-    setShowSelect(false);
-    setShowMap(false);
+    setShowStats(false);
   }
   const handleMap=()=>{
     setShowSelect(false);
     setShowMap(!showMap);
+    setShowStats(false);
   }
-  return(
+  const handleStats=()=>{
+    setShowSelect(false);
+    setShowMap(false);
+    setShowStats(!showStats);
+  }
+    return(
     <>
     <section className="navbar">
       <button onClick={handleSelect}>Changer</button>
       <button onClick={handleMap}>Carte</button>
-      <button onClick={()=> setShowDetailsDay(!showDetailsDay)}>Données</button>
+      <button onClick={handleStats}>Stats</button>
     </section>
     {<SelectCity setShowSelect={setShowSelect} showSelect={showSelect}/>}
     {<MapComponent lat={latitude} long={longitude} setShowMap={setShowMap} showMap={showMap}/>}
+    {showStats? <Navigate to='/stats' />:null}
     </>
   )
 }

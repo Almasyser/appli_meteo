@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *;
+.select-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    span{
+        border: 1px solid gray;
+        width: 13rem;
+        label{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            width: 12rem;
+            font-size: 0.8rem;
+            padding-left: 0.5rem;
+            text-align: right;
+        }
+    }
+}
