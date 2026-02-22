@@ -1,21 +1,15 @@
 import { useEffect, useState } from "react";
 import useLocations from "../../hooks/useLocations";
-import useStatsArray from "../../hooks/useStatsArray";
 import statsKeysList from "../../json/statsKeysList.json";
+import statsPastDays from "../../json/statsPastDays.json";
 import './selectitems.css';
-import FetchApiStats from "../utils/FetchApiStats";
+// import FetchApiStats from "../utils/FetchApiStats";
 
 function StatSelectItems() {
-    const { statsArray, updateStatsArray } = useStatsArray();
-    const pastDays = 7;
     const {latitude, longitude } = useLocations();
-    const urlRoot = "https://api.open-meteo.com/v1/forecast?";
-    const urlCoord = `latitude=${latitude}&longitude=${longitude}`;
-    const urlBody = ["&hourly="];
-    const urlEnd = `&past_days=${pastDays}&forecast_days=1`;
     const [datas, setDatas] = useState([])
     const [cles, setCles] = useState([])
-    // const [urlAll, setUrlAll] = useState(null);
+    const [pastDays, setPastDays] = useState(7);
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -25,19 +19,32 @@ function StatSelectItems() {
         setCles(Object.keys(dataFromForm));
     };
     useEffect(()=>{
+        const urlRoot = "https://api.open-meteo.com/v1/forecast?";
+        const urlCoord = `latitude=${latitude}&longitude=${longitude}`;
+        const urlBody = ["&hourly="];
+        const urlEnd = `&past_days=${pastDays}&forecast_days=1`;
         cles.map((el)=>{
             urlBody.push(datas[el]);
             const temp = urlBody.toString().replace('=,', '=');
             const urlAll=(urlRoot+urlCoord+temp+urlEnd);
-            urlAll? FetchApiStats(urlAll, updateStatsArray):null;
+            // urlAll? FetchApiStats( urlAll ):null;
+            console.log("*-*-",urlAll);
+            
             
         })
     },[datas]) 
-
-    console.log(statsArray)
+    console.log("STAT",statsPastDays);
+    
     return (
         <>
         <div>StatSelectItems</div>
+        <div className="pastdays">
+            {statsPastDays.map((el)=>{
+                return(
+                    <button name="pastdays" key={el.id}>{el.btnText}</button>
+                )
+            })}
+        </div>
         <form className="select-box" onSubmit={handleSubmit}>
             {statsKeysList && statsKeysList.map((el)=>{
                 return(

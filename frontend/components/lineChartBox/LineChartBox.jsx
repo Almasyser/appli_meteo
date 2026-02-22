@@ -6,7 +6,6 @@ const LineChartBox = ({ datas }) => {
   const transformedData = transformDataForRecharts(datas, ["apparent_temperature","temperature_2m"]);
 
   function transformDataForRecharts(rawData, lineKeys, labelKey = "name") {
-    
     const labels = rawData[labelKey] || rawData[cles[0]].map((_, i) => `Point ${i + 1}`);
     return labels.map((label, index) => {
       const point = { [labelKey]: label };
@@ -17,10 +16,7 @@ const LineChartBox = ({ datas }) => {
   })};
 
   console.log(transformedData);
-  
-  
-    return(
-
+      return(
       <div className="chart-card">
       <h2>Sales & Revenue Trend</h2>
       {/* <ResponsiveContainer width="100%" height={300}>

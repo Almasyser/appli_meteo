@@ -1,0 +1,8 @@
+[
+    { "id": 0, "nbrDays": 7, "btnText": "1 semaine"},
+    { "id": 1, "nbrDays": 14, "btnText": "2 semaines"},
+    { "id": 2, "nbrDays": 21, "btnText": "3 semaines"},
+    { "id": 3, "nbrDays": 30, "btnText": "1 moid"},
+    { "id": 4, "nbrDays": 60, "btnText": "2 moid"},
+    { "id": 5, "nbrDays": 90, "btnText": "3 moid"}
+]

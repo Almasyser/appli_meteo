@@ -1,5 +1,7 @@
 import axios from "axios";
-function FetchApiStats( url, updateStatsArray ){
+import useStatsArray from "../../hooks/useStatsArray";
+function FetchApiStats( url ){
+  const { updateStatsArray } = useStatsArray(); 
   const fetchData = async () => {
     if (!url) return;
      try {

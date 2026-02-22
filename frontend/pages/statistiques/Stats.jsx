@@ -21,16 +21,13 @@ function Stats(){
   // const [cles, setCles]=useState();
   // useEffect(()=>{
   //   setCles(Object.keys(statsArray.hourly));
-
   // },[]);
 
   const handleGraph=()=>{
- 
-    console.log("click graph");
+     console.log("click graph");
   }
   const handleBrut=()=>{
- 
-    console.log("click brut");
+     console.log("click brut");
   }
   return (
     <>

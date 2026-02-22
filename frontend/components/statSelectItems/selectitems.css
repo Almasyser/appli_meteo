@@ -259,4 +259,8 @@
   font-size: 0.8rem;
   padding-left: 0.5rem;
   text-align: right;
+}
+
+.pastdays {
+  display: flex;
 }/*# sourceMappingURL=selectitems.css.map */
