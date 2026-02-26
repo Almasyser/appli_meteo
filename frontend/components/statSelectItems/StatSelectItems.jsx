@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import useLocations from "../../hooks/useLocations";
+import useStatsArray from "../../hooks/useStatsArray";
 import statsKeysList from "../../json/statsKeysList.json";
 import statsPastDays from "../../json/statsPastDays.json";
 import './selectitems.css';
-// import FetchApiStats from "../utils/FetchApiStats";
+import FetchApiStats from "../utils/FetchApiStats";
 
 function StatSelectItems() {
     const {latitude, longitude } = useLocations();
+    const { statsArray , updateStatsArray } = useStatsArray();
     const [datas, setDatas] = useState([])
     const [cles, setCles] = useState([])
     const [pastDays, setPastDays] = useState(7);
+    const [urlAll, setUrlAll] = useState()
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -26,14 +29,16 @@ function StatSelectItems() {
         cles.map((el)=>{
             urlBody.push(datas[el]);
             const temp = urlBody.toString().replace('=,', '=');
-            const urlAll=(urlRoot+urlCoord+temp+urlEnd);
-            // urlAll? FetchApiStats( urlAll ):null;
-            console.log("*-*-",urlAll);
-            
-            
+            setUrlAll(urlRoot+urlCoord+temp+urlEnd);
         })
     },[datas]) 
-    console.log("STAT",statsPastDays);
+    console.log("*-*-",urlAll);
+    const handleChange =(e)=>{
+        setPastDays(parseInt(e.target.value));
+    }
+    useEffect(()=>{
+        FetchApiStats( urlAll, updateStatsArray )
+    },[urlAll])
     
     return (
         <>
@@ -41,7 +46,11 @@ function StatSelectItems() {
         <div className="pastdays">
             {statsPastDays.map((el)=>{
                 return(
-                    <button name="pastdays" key={el.id}>{el.btnText}</button>
+                    <>
+                    <label id="pastdays" >
+                    <input type="radio" name="pastdays" htmlFor="pastdays" key={el.id} value={el.nbrDays} onChange={handleChange}/>
+                    {el.btnText}</label>
+                    </>
                 )
             })}
         </div>

@@ -13,3 +13,4 @@
   {"id":11, "checked":false ,"key": "wind_direction_10m", "name": "direction du vent"},
   {"id":12, "checked":false ,"key": "wind_speed_10m", "name": "vitesse du vent"}
 ]
+
