@@ -32,7 +32,7 @@ function StatSelectItems() {
             setUrlAll(urlRoot+urlCoord+temp+urlEnd);
         })
     },[datas]) 
-    console.log("*-*-",urlAll);
+    // console.log("*-*-",urlAll);
     const handleChange =(e)=>{
         setPastDays(parseInt(e.target.value));
     }

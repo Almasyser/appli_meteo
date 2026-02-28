@@ -18,7 +18,7 @@ function FiveDays(){
   const ref = useRef()
   const handleClick=(e)=>{
     setShowOneDay(true);
-    console.log("///",e.target.title);
+    // console.log("///",e.target.title);
     setDayId(e.target.title);
   }
   return (

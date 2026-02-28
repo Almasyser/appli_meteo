@@ -39,7 +39,7 @@ function OneDay({btn, showOneDay, setShowOneDay}){
         </span>
         <div className="oneDay-card-box">
           {myArray && intervals && intervals.map((el)=>{
-            const localId=(btn*24)-24+el; 
+            const localId=(btn*24)+el; 
             return(
               <span key={el} className="oneDay-card">
                 <div><h4><DateToHour today={myArray?.hourly?.time[localId] ?? "n/a"}/></h4><h4>{hourlyLabels[0].unit}</h4></div>

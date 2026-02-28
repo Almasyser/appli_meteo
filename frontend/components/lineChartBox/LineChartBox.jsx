@@ -15,7 +15,7 @@ const LineChartBox = ({ datas }) => {
     return point;
   })};
 
-  console.log(transformedData);
+  // console.log(transformedData);
       return(
       <div className="chart-card">
       <h2>Sales & Revenue Trend</h2>
