@@ -4,7 +4,7 @@ import useStatsArray from "../../hooks/useStatsArray";
 import statsKeysList from "../../json/statsKeysList.json";
 import statsPastDays from "../../json/statsPastDays.json";
 import './selectitems.css';
-import FetchApiStats from "../utils/FetchApiStats";
+// import FetchApiStats from "../utils/FetchApiStats";
 
 function StatSelectItems() {
     const {latitude, longitude } = useLocations();
@@ -37,8 +37,12 @@ function StatSelectItems() {
         setPastDays(parseInt(e.target.value));
     }
     useEffect(()=>{
-        FetchApiStats( urlAll, updateStatsArray )
+        // FetchApiStats( urlAll, updateStatsArray )
+        console.log("fecth api"); // suspension du fetch durant les tests graph.
+        // les comp recoivent le json de test.
+        
     },[urlAll])
+    // console.log("STATS", statsArray);
     
     return (
         <>
@@ -46,11 +50,10 @@ function StatSelectItems() {
         <div className="pastdays">
             {statsPastDays.map((el)=>{
                 return(
-                    <>
-                    <label id="pastdays" >
-                    <input type="radio" name="pastdays" htmlFor="pastdays" key={el.id} value={el.nbrDays} onChange={handleChange}/>
-                    {el.btnText}</label>
-                    </>
+                    <label id="pastdays" key={el.id}>
+                        <input type="radio" name="pastdays" htmlFor="pastdays" value={el.nbrDays} onChange={handleChange}/>
+                        {el.btnText}
+                    </label>
                 )
             })}
         </div>

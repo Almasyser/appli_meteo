@@ -1,16 +1,16 @@
 [
-  {"id": 0, "checked":false,"key": "apparent_temperature", "name": "Temp ressentie"},
-  {"id": 1, "checked":false ,"key": "cloud_cover", "name": "couverture nuageuse"},
-  {"id": 2, "checked":false ,"key": "precipitation", "name": "précipitations"},
-  {"id": 3, "checked":false ,"key": "precipitation_probability", "name": "probabilité de pluie"},
-  {"id": 4, "checked":false ,"key": "rain", "name": "pluie soutenue"},
-  {"id": 5, "checked":false ,"key": "relative_humidity_2m", "name": "taux d'humidité"},
-  {"id": 6, "checked":false ,"key": "showers", "name": "averses"},
-  {"id": 7, "checked":false ,"key": "snow_depth", "name": "hauteur de neige"},
-  {"id": 8, "checked":false ,"key": "snowfall", "name": "chutes de neige"},
-  {"id": 9, "checked":false ,"key": "surface_pressure", "name": "pression atmosphérique"},
-  {"id":10, "checked":false ,"key": "temperature_2m", "name": "température"},
-  {"id":11, "checked":false ,"key": "wind_direction_10m", "name": "direction du vent"},
-  {"id":12, "checked":false ,"key": "wind_speed_10m", "name": "vitesse du vent"}
+  {"id": 0,  "color": "#fde68a", "label": "apparent_temperature", "name": "Temp ressentie"},
+  {"id": 1,  "color": "#a5b4fc", "label": "cloud_cover", "name": "couverture nuageuse"},
+  {"id": 2,  "color": "#6366f1", "label": "precipitation", "name": "précipitations"},
+  {"id": 3,  "color": "#0ea5e9", "label": "precipitation_probability", "name": "probabilité de pluie"},
+  {"id": 4,  "color": "#0891b2", "label": "rain", "name": "pluie soutenue"},
+  {"id": 5,  "color": "#6ee7b7", "label": "relative_humidity_2m", "name": "taux d'humidité"},
+  {"id": 6,  "color": "#0e7490", "label": "showers", "name": "averses"},
+  {"id": 7,  "color": "#f0abfc", "label": "snow_depth", "name": "hauteur de neige"},
+  {"id": 8,  "color": "#c026d3", "label": "snowfall", "name": "chutes de neige"},
+  {"id": 9,  "color": "#fb923c", "label": "surface_pressure", "name": "pression atmosphérique"},
+  {"id": 10, "color": "#fee2e2", "label": "temperature_2m", "name": "température"},
+  {"id": 11, "color": "#65a30d", "label": "wind_direction_10m", "name": "direction du vent"},
+  {"id": 12, "color": "#bef264", "label": "wind_speed_10m", "name": "vitesse du vent"}
 ]
 

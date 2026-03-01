@@ -5,29 +5,22 @@ import useLocations from "../../hooks/useLocations";
 import useStatsArray from "../../hooks/useStatsArray";
 import StatSelectItems from "../../components/statSelectItems/StatSelectItems";
 import LineChartBox from "../../components/lineChartBox/LineChartBox";
-import lineCharts from "../../json/lineCharts.json";
+// json de test:
+import statsArrayTesting from "../../json/statsArrayTesting.json";
 import "./stats.css";
+import { Logger } from "sass";
 function Stats(){
-  const {statsArray, updateStatsArray} = useStatsArray();
-  const {latitude, longitude} = useLocations();
-  const [toggle, setToggle]= useState(false);
-
-
-
-
-
-
-  console.log("###",statsArray.hourly);
-  // const [cles, setCles]=useState();
-  // useEffect(()=>{
-  //   setCles(Object.keys(statsArray.hourly));
-  // },[]);
-
+  // const { statsArray, upddateStatsArray} = useStatsArray();
+  const { latitude, longitude } = useLocations();
+  const [ toggle, setToggle ]= useState(false);
+  const [ showGraph, setShowGraph ] = useState(false)
+  const cles = Object.keys(statsArrayTesting.hourly);
   const handleGraph=()=>{
-     console.log("click graph");
+    setShowGraph(!showGraph);
   }
   const handleBrut=()=>{
-     console.log("click brut");
+    console.log("click brut");
+
   }
   return (
     <>
@@ -38,6 +31,7 @@ function Stats(){
       <button onClick={handleBrut} >Données</button>
     </div>
     {toggle? <Navigate to="/home"/>:null}
+    {showGraph && <LineChartBox datas={statsArrayTesting} cles={cles}/>}
     </>
   )
 }
