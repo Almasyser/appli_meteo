@@ -1,6 +1,8 @@
 import { LineChart, BarChart, PieChart, Bar, Line, Pie, XAxis, YAxis, Tooltip, CartesianGrid, Legend, ResponsiveContainer } from "recharts";
 import statsKeysList from "../../json/statsKeysList.json";
 const LineChartBox = ({ datas, cles }) => {
+  console.log("datas",datas);
+  
   const rawDatas = datas.hourly;
   const temp = [...cles];
   const newCles = [...temp.splice(1,temp.length)]
@@ -14,7 +16,6 @@ const LineChartBox = ({ datas, cles }) => {
       });
     return point;
   })};
-  
   return(
     <div className="chart-card">
       <h2>Graphique</h2>
@@ -41,14 +42,12 @@ const LineChartBox = ({ datas, cles }) => {
           })}
         </BarChart>
         <PieChart data={transformedData} cx="50%" cy="50%" >
-
           {newCles && newCles.map((el, index)=>{
             return(
               <Pie key={el} nameKey={el} dataKey={el} fill={statsKeysList[index].color} />
             )
           })}
         </PieChart>
-
       </ResponsiveContainer> 
     </div> 
     )

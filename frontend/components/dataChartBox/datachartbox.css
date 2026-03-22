@@ -238,4 +238,19 @@
 @font-face {
   font-family: "digital";
   src: url("./count/COUNT.otf") format("opentype");
+}
+.data-table {
+  width: 100%;
+  height: 100%;
+}
+.data-table div {
+  width: 16rem;
+  display: flex;
+  justify-content: space-between;
+}
+.data-table div p {
+  color: gray;
+  font-size: 0.8rem;
+  padding: 1rem 0.5rem;
+  margin: 0;
 }/*# sourceMappingURL=datachartbox.css.map */

@@ -12,9 +12,7 @@ function Home () {
   const {latitude, longitude} = useLocations();
   useEffect(()=>{
     FetchApiStatic(latitude, longitude, updateMyArray);
-
   },[latitude, longitude, updateMyArray]);
-  console.log("###",Object.keys(myArray).length);
   return (
       <div className="body-container">
           <NavBar />

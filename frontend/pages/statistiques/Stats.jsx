@@ -11,12 +11,12 @@ import statsArrayTesting from "../../json/statsArrayTesting.json";
 import "./stats.css";
 
 function Stats(){
-  // const { statsArray, upddateStatsArray} = useStatsArray();
+  const { statsArray} = useStatsArray();
   const { latitude, longitude } = useLocations();
   const [ toggle, setToggle ]= useState(false);
   const [ showGraph, setShowGraph ] = useState(false);
   const [ showDonnees, setShowDonnees ] = useState(false);
-  const cles = Object.keys(statsArrayTesting.hourly);
+  const cles = Object.keys(statsArray.hourly);
   const handleGraph=()=>{
     setShowGraph(!showGraph);
     setShowDonnees(false);
@@ -34,8 +34,8 @@ function Stats(){
       <button onClick={handleDonnees} >Données</button>
     </div>
     {toggle? <Navigate to="/home"/>:null}
-    {showGraph && <LineChartBox datas={statsArrayTesting} cles={cles}/>}
-    {showDonnees && <DataChartBox datas={statsArrayTesting} cles={cles}/>}
+    {statsArray && showGraph && <LineChartBox datas={statsArray} cles={cles}/>}
+    {statsArray && showDonnees && <DataChartBox datas={statsArray} cles={cles}/>}
     </>
   )
 }

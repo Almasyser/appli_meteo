@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import useLocations from "../../hooks/useLocations";
 import "./location.css";
 function ModalLocation (){
-
-
   useEffect(()=>{
     if(typeof window != "undefined"){
       const value = localStorage.getItem("city_code")

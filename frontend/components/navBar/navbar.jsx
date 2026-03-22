@@ -1,19 +1,14 @@
 import { useState } from "react";
 import useLocations from "../../hooks/useLocations";
 import { Navigate } from "react-router-dom";
-import useArray from "../../hooks/useArray";
 import SelectCity from "../selectCity/SelectCity";
 import MapComponent from "../map/MapComponent";
 import "./navbar.css";
-import { shape } from "prop-types";
-
 function NavBar() {
-  const { myArray } = useArray();
   const {latitude, longitude} = useLocations();
   const [showSelect, setShowSelect] = useState(false);
   const [showMap, setShowMap] = useState(false);
   const [showStats, setShowStats] = useState(false);
-
   const handleSelect=()=>{
     setShowSelect(!showSelect);
     setShowMap(false);

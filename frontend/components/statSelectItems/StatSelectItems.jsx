@@ -4,7 +4,7 @@ import useStatsArray from "../../hooks/useStatsArray";
 import statsKeysList from "../../json/statsKeysList.json";
 import statsPastDays from "../../json/statsPastDays.json";
 import './selectitems.css';
-// import FetchApiStats from "../utils/FetchApiStats";
+import FetchApiStats from "../utils/FetchApiStats";
 
 function StatSelectItems() {
     const {latitude, longitude } = useLocations();
@@ -22,27 +22,29 @@ function StatSelectItems() {
         setCles(Object.keys(dataFromForm));
     };
     useEffect(()=>{
-        const urlRoot = "https://api.open-meteo.com/v1/forecast?";
-        const urlCoord = `latitude=${latitude}&longitude=${longitude}`;
         const urlBody = ["&hourly="];
-        const urlEnd = `&past_days=${pastDays}&forecast_days=1`;
         cles.map((el)=>{
             urlBody.push(datas[el]);
             const temp = urlBody.toString().replace('=,', '=');
-            setUrlAll(urlRoot+urlCoord+temp+urlEnd);
+            console.log("*-*-",temp);
         })
+        const urlRoot = "https://api.open-meteo.com/v1/forecast?";
+        const urlCoord = `latitude=${latitude}&longitude=${longitude}`;
+        const urlEnd = `&past_days=${pastDays}&forecast_days=1`;
+        setUrlAll(urlRoot+urlCoord+temp+urlEnd);
     },[datas]) 
-    // console.log("*-*-",urlAll);
     const handleChange =(e)=>{
         setPastDays(parseInt(e.target.value));
     }
     useEffect(()=>{
-        // FetchApiStats( urlAll, updateStatsArray )
+        FetchApiStats( urlAll, updateStatsArray )
         console.log("fecth api"); // suspension du fetch durant les tests graph.
         // les comp recoivent le json de test.
         
     },[urlAll])
     // console.log("STATS", statsArray);
+    console.log("url:",urlAll);
+    
     
     return (
         <>
