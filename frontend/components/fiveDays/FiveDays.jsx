@@ -8,6 +8,8 @@ import omm_codes from "../../json/omm_codes.json";
 import tags from "../../assets/tags";
 import parapluie from "../../assets/parapluie.png";
 import fleche_bas_128 from "../../assets/Fleche bas_128.png"
+import temp_mini from "../../assets/temp_mini.jpg";
+import temp_maxi from "../../assets/temp_maxi.jpg";
 import "./fiveDays.css";
 
 function FiveDays(){
@@ -21,6 +23,8 @@ function FiveDays(){
     // console.log("///",e.target.title);
     setDayId(e.target.title);
   }
+  console.log("555",myArray.daily);
+  
   return (
     <>
     <div className="fiveDays-box">
@@ -30,6 +34,11 @@ function FiveDays(){
             <div className="fiveDays-date">
               <p className="fiveDays-dayOfWeek"><DayOfWeek today={myArray.daily.sunset[btn]}/></p>
               <p className="fiveDays-dateJMA"><ConvertDataJMA dateISO={myArray.daily.sunset[btn]} /></p>
+            </div>
+            <div className="fiveDays-tempLine"><img src={temp_mini} alt="min"/><p className="fiveDays-temperature">{myArray.daily.temperature_2m_min[btn]}</p>
+            </div>
+            <div className="fiveDays-tempLine">
+              <img src={temp_maxi} alt="max"/><p className="fiveDays-temperature">{myArray.daily.temperature_2m_max[btn]}</p>
             </div>
             <span className="fiveDays-ephemeride"><img src={tags["Soleil"]} alt="@"/><p><DateToHour today={myArray.daily.sunrise[btn]}/></p></span>
             <span className="fiveDays-ephemeride"><img src={tags["Lune"]} alt="@"/><p><DateToHour today={myArray.daily.sunset[btn]}/></p></span>
@@ -49,3 +58,4 @@ function FiveDays(){
 }
 
 export default FiveDays;
+    

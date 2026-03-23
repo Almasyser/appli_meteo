@@ -69,6 +69,21 @@
     }
   }
 }
+.fiveDays-tempLine{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  img{
+    height: 28px;
+    width: 12px;
+  }
+}
+.fiveDays-temperature{
+  font-size: 0.8rem;
+  margin: 0;
+}
 .fiveDays-ephemeride{
   width: 100%;
   padding-top: 0.6rem;

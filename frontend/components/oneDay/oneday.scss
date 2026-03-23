@@ -17,7 +17,7 @@ h4{
   transform: translateX(-105%);
   margin-bottom: 2rem;
   padding: 3rem 3rem 0 1rem;
-  background: $windFond;
+  background: $fond;
   box-shadow: 0px -1px 8px 3px $sectionFond;
   transition: all $transition ease-in-out;
   &.active{
@@ -82,11 +82,12 @@ h4{
   min-width: 7rem;
   display: flex;
   flex-direction: column;
-  background: $fond2;
+  background: $fond;
   padding:  0 0.5rem;
   margin-top: 1rem;
-  border-radius: 4px;
-  box-shadow: 0px 0px 30px -9px $fond; //rgba(0,0,0,0.75);
+  border-radius: 8px;
+  box-shadow: -1px 1px 4px -2px $texte inset;
+  // box-shadow: 0px 0px 30px -9px $fond; //rgba(0,0,0,0.75);
   img{
     width: 24px;
     height: 28px;
